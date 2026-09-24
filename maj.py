@@ -1,3 +1,4 @@
+
 """Robot quotidien : analyse 10 matchs du jour et écrit data.json.
 La clé vient du secret GitHub API_FOOTBALL_KEY (jamais écrite ici).
 Pauses de 7 s entre requêtes (limite gratuite : 10 par minute).
@@ -23,6 +24,20 @@ def api(chemin):
     if j.get("errors"):
         raise RuntimeError(str(j["errors"]))
     return j.get("response", [])
+
+
+def essayer(chemin):
+    try:
+        return api(chemin)
+    except RuntimeError as e:
+        print("Ignoré :", chemin, e)
+        return []
+
+
+def derniers(liste, n=5):
+    finis = [f for f in liste if f["fixture"]["status"]["short"] in ("FT", "AET", "PEN")]
+    finis.sort(key=lambda f: f["fixture"]["date"])
+    return finis[-n:]
 
 
 def resultat(f, tid):
@@ -54,13 +69,11 @@ choisis = sorted(a_venir, key=rang)[:MAX]
 sortie = []
 for m in choisis:
     h, a, fid = m["teams"]["home"], m["teams"]["away"], m["fixture"]["id"]
-    forme_h = [resultat(f, h["id"]) for f in api(f"/fixtures?team={h['id']}&last=5")]
-    forme_a = [resultat(f, a["id"]) for f in api(f"/fixtures?team={a['id']}&last=5")]
-    face = api(f"/fixtures/headtohead?h2h={h['id']}-{a['id']}&last=5")
-    try:
-        pred = api(f"/predictions?fixture={fid}")
-    except RuntimeError:
-        pred = []
+    saison = m["league"]["season"]
+    forme_h = [resultat(f, h["id"]) for f in derniers(essayer(f"/fixtures?team={h['id']}&season={saison}"))]
+    forme_a = [resultat(f, a["id"]) for f in derniers(essayer(f"/fixtures?team={a['id']}&season={saison}"))]
+    face = derniers(essayer(f"/fixtures/headtohead?h2h={h['id']}-{a['id']}"))
+    pred = essayer(f"/predictions?fixture={fid}")
 
     base = [38.0, 28.0, 34.0]
     if pred:
