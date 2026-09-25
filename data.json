@@ -1,111 +1,11 @@
 {
- "maj": "2026-09-24T16:25:49.824724+00:00",
+ "maj": "2026-09-25T06:19:55.485328+00:00",
  "matchs": [
   {
-   "competition": "CECAFA U20 Championship",
-   "heure": "2026-09-24T12:30:00+00:00",
-   "domicile": "Sudan U20",
-   "exterieur": "Tanzania U20",
-   "proba": [
-    3,
-    48,
-    49
-   ],
-   "base_api": [
-    0,
-    50,
-    50
-   ],
-   "ajustement": -1.0,
-   "forme_dom": [],
-   "forme_ext": [],
-   "face_a_face": {
-    "dom": 0,
-    "nuls": 0,
-    "ext": 1
-   },
-   "absents": []
-  },
-  {
-   "competition": "Second League",
-   "heure": "2026-09-24T13:30:00+00:00",
-   "domicile": "Detonit Plachkovica",
-   "exterieur": "Ohrid",
-   "proba": [
-    9,
-    45,
-    46
-   ],
-   "base_api": [
-    10,
-    45,
-    45
-   ],
-   "ajustement": -1.0,
-   "forme_dom": [],
-   "forme_ext": [],
-   "face_a_face": {
-    "dom": 2,
-    "nuls": 0,
-    "ext": 3
-   },
-   "absents": []
-  },
-  {
-   "competition": "Second League",
-   "heure": "2026-09-24T13:30:00+00:00",
-   "domicile": "Teteks",
-   "exterieur": "FK Rabotnicki",
-   "proba": [
-    7,
-    45,
-    48
-   ],
-   "base_api": [
-    10,
-    45,
-    45
-   ],
-   "ajustement": -3.0,
-   "forme_dom": [],
-   "forme_ext": [],
-   "face_a_face": {
-    "dom": 0,
-    "nuls": 0,
-    "ext": 3
-   },
-   "absents": []
-  },
-  {
-   "competition": "3. liga - Center",
-   "heure": "2026-09-24T13:30:00+00:00",
-   "domicile": "Podkonice",
-   "exterieur": "Ružomberok II",
-   "proba": [
-    8,
-    45,
-    47
-   ],
-   "base_api": [
-    10,
-    45,
-    45
-   ],
-   "ajustement": -2.0,
-   "forme_dom": [],
-   "forme_ext": [],
-   "face_a_face": {
-    "dom": 0,
-    "nuls": 0,
-    "ext": 2
-   },
-   "absents": []
-  },
-  {
-   "competition": "Liga Alef",
-   "heure": "2026-09-24T16:30:00+00:00",
-   "domicile": "Hapoel Migdal HaEmek",
-   "exterieur": "Hapoel Nazareth Illit",
+   "competition": "Friendlies",
+   "heure": "2026-09-25T08:00:00+00:00",
+   "domicile": "Finland U17",
+   "exterieur": "France U17",
    "proba": [
     35,
     35,
@@ -120,42 +20,92 @@
    "forme_dom": [],
    "forme_ext": [],
    "face_a_face": {
-    "dom": 0,
-    "nuls": 0,
-    "ext": 0
-   },
-   "absents": []
-  },
-  {
-   "competition": "Liga Alef",
-   "heure": "2026-09-24T16:45:00+00:00",
-   "domicile": "Holon Yermiyahu",
-   "exterieur": "Kfar Saba 1928",
-   "proba": [
-    9,
-    45,
-    46
-   ],
-   "base_api": [
-    10,
-    45,
-    45
-   ],
-   "ajustement": -1.0,
-   "forme_dom": [],
-   "forme_ext": [],
-   "face_a_face": {
-    "dom": 0,
+    "dom": 1,
     "nuls": 0,
     "ext": 1
    },
    "absents": []
   },
   {
-   "competition": "Africa Cup of Nations U20",
-   "heure": "2026-09-24T17:00:00+00:00",
-   "domicile": "Libya U20",
-   "exterieur": "Egypt U20",
+   "competition": "1. Liga U19",
+   "heure": "2026-09-25T09:00:00+00:00",
+   "domicile": "Sparta Praha U19",
+   "exterieur": "Mladá Boleslav U19",
+   "proba": [
+    12,
+    45,
+    43
+   ],
+   "base_api": [
+    10,
+    45,
+    45
+   ],
+   "ajustement": 2.0,
+   "forme_dom": [],
+   "forme_ext": [],
+   "face_a_face": {
+    "dom": 3,
+    "nuls": 1,
+    "ext": 1
+   },
+   "absents": []
+  },
+  {
+   "competition": "Friendlies",
+   "heure": "2026-09-25T09:00:00+00:00",
+   "domicile": "Poland U17",
+   "exterieur": "Czechia U17",
+   "proba": [
+    47,
+    45,
+    8
+   ],
+   "base_api": [
+    45,
+    45,
+    10
+   ],
+   "ajustement": 2.0,
+   "forme_dom": [],
+   "forme_ext": [],
+   "face_a_face": {
+    "dom": 2,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "competition": "Premier League",
+   "heure": "2026-09-25T09:00:00+00:00",
+   "domicile": "Fakirerpool",
+   "exterieur": "Mohammedan Dhaka",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "base_api": [
+    0,
+    50,
+    50
+   ],
+   "ajustement": -1.0,
+   "forme_dom": [],
+   "forme_ext": [],
+   "face_a_face": {
+    "dom": 2,
+    "nuls": 0,
+    "ext": 3
+   },
+   "absents": []
+  },
+  {
+   "competition": "Federation Cup",
+   "heure": "2026-09-25T09:00:00+00:00",
+   "domicile": "Abahani",
+   "exterieur": "Chattogram",
    "proba": [
     33,
     34,
@@ -177,69 +127,94 @@
    "absents": []
   },
   {
-   "competition": "Premier League Women",
-   "heure": "2026-09-24T17:15:00+00:00",
-   "domicile": "Neom SC W",
-   "exterieur": "Al Ahli SC W",
+   "competition": "FIFA Asean Cup",
+   "heure": "2026-09-25T09:00:00+00:00",
+   "domicile": "Bangladesh",
+   "exterieur": "Malaysia",
    "proba": [
-    8,
+    3,
+    48,
+    49
+   ],
+   "base_api": [
+    0,
+    50,
+    50
+   ],
+   "ajustement": -1.0,
+   "forme_dom": [],
+   "forme_ext": [],
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 1
+   },
+   "absents": []
+  },
+  {
+   "competition": "U20 Elite League",
+   "heure": "2026-09-25T09:30:00+00:00",
+   "domicile": "Italy U20",
+   "exterieur": "England U20",
+   "proba": [
+    50,
+    47,
+    3
+   ],
+   "base_api": [
+    50,
+    50,
+    0
+   ],
+   "ajustement": 2.0,
+   "forme_dom": [],
+   "forme_ext": [],
+   "face_a_face": {
+    "dom": 3,
+    "nuls": 1,
+    "ext": 1
+   },
+   "absents": []
+  },
+  {
+   "competition": "Second League - Group 4",
+   "heure": "2026-09-25T09:30:00+00:00",
+   "domicile": "Dinamo Barnaul",
+   "exterieur": "Pobeda Nizhniy Novgorod",
+   "proba": [
+    10,
     45,
-    47
+    45
    ],
    "base_api": [
     10,
     45,
     45
    ],
-   "ajustement": -2.0,
-   "forme_dom": [],
-   "forme_ext": [],
-   "face_a_face": {
-    "dom": 0,
-    "nuls": 0,
-    "ext": 2
-   },
-   "absents": []
-  },
-  {
-   "competition": "Liga Alef",
-   "heure": "2026-09-24T17:15:00+00:00",
-   "domicile": "Hapoel Hadera",
-   "exterieur": "Maccabi Ashdod",
-   "proba": [
-    45,
-    45,
-    10
-   ],
-   "base_api": [
-    45,
-    45,
-    10
-   ],
    "ajustement": 0.0,
    "forme_dom": [],
    "forme_ext": [],
    "face_a_face": {
-    "dom": 0,
+    "dom": 1,
     "nuls": 0,
-    "ext": 0
+    "ext": 1
    },
    "absents": []
   },
   {
-   "competition": "UEFA U21 Championship - Qualification",
-   "heure": "2026-09-24T18:00:00+00:00",
-   "domicile": "Belgium U21",
-   "exterieur": "Belarus U21",
+   "competition": "Friendlies",
+   "heure": "2026-09-25T09:30:00+00:00",
+   "domicile": "Poland U19",
+   "exterieur": "Switzerland U19",
    "proba": [
-    45,
-    45,
-    10
+    33,
+    34,
+    33
    ],
    "base_api": [
-    45,
-    45,
-    10
+    33,
+    33,
+    33
    ],
    "ajustement": 0.0,
    "forme_dom": [],
@@ -248,6 +223,31 @@
     "dom": 0,
     "nuls": 1,
     "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "competition": "Friendlies",
+   "heure": "2026-09-25T10:00:00+00:00",
+   "domicile": "Australia",
+   "exterieur": "Brazil",
+   "proba": [
+    9,
+    45,
+    46
+   ],
+   "base_api": [
+    10,
+    45,
+    45
+   ],
+   "ajustement": -1.0,
+   "forme_dom": [],
+   "forme_ext": [],
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 1
    },
    "absents": []
   }
