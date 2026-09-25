@@ -1,4 +1,5 @@
-"""Robot quotidien : analyse les matchs du jour des grandes compétitions.
+"""Robot quotidien : analyse les matchs des grandes compétitions,
+et vérifie les résultats des prédictions de la veille.
 Deux sources : API-Football (matchs, blessures, ses prédictions)
 et football-data.org (forme actuelle des équipes, saison en cours).
 Clés dans les secrets GitHub : API_FOOTBALL_KEY, FOOTBALL_DATA_KEY.
@@ -6,7 +7,7 @@ Clés dans les secrets GitHub : API_FOOTBALL_KEY, FOOTBALL_DATA_KEY.
 import json
 import os
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import requests
 
@@ -16,8 +17,8 @@ AF = "https://v3.football.api-sports.io"
 FD = "https://api.football-data.org/v4"
 MAX = 10
 PTS = {"V": 3, "N": 1, "D": 0}
-# id API-Football -> code football-data.org
 CODES = {2: "CL", 39: "PL", 140: "PD", 135: "SA", 78: "BL1", 61: "FL1"}
+HIST = "historique.json"
 
 
 def af(chemin):
@@ -50,7 +51,51 @@ def normal(nom):
     return "".join(c for c in nom.lower() if c.isalnum())
 
 
-# Une seule fois : construit le nom -> id d'équipe football-data pour chaque grande compétition
+def resultat(f, tid):
+    cote = "home" if f["teams"]["home"]["id"] == tid else "away"
+    w = f["teams"][cote]["winner"]
+    return "V" if w is True else "D" if w is False else "N"
+
+
+def pct(s):
+    try:
+        return float(str(s).strip("%"))
+    except ValueError:
+        return None
+
+
+def issue_reelle(m):
+    """'dom', 'nul' ou 'ext' selon le score final, ou None si pas encore joué."""
+    s = m["score"]["fulltime"]
+    if s["home"] is None or s["away"] is None:
+        return None
+    if s["home"] > s["away"]:
+        return "dom"
+    if s["home"] < s["away"]:
+        return "ext"
+    return "nul"
+
+
+# --- 1) Vérifier les prédictions passées non encore confirmées ---
+try:
+    with open(HIST, encoding="utf-8") as f:
+        historique = json.load(f)
+except FileNotFoundError:
+    historique = []
+
+a_verifier = [h for h in historique if h.get("resultat_reel") is None]
+if a_verifier:
+    ids = {h["fixture_id"] for h in a_verifier}
+    for fid in ids:
+        res = af_ok(f"/fixtures?id={fid}")
+        if res:
+            issue = issue_reelle(res[0])
+            if issue:
+                for h in historique:
+                    if h["fixture_id"] == fid:
+                        h["resultat_reel"] = issue
+
+# --- 2) Analyser les matchs du jour ---
 noms_equipes = {}
 for code in set(CODES.values()):
     data = fd(f"/competitions/{code}/teams")
@@ -75,19 +120,6 @@ def forme_fd(nom_equipe):
         else:
             out.append("D")
     return out
-
-
-def resultat(f, tid):
-    cote = "home" if f["teams"]["home"]["id"] == tid else "away"
-    w = f["teams"][cote]["winner"]
-    return "V" if w is True else "D" if w is False else "N"
-
-
-def pct(s):
-    try:
-        return float(str(s).strip("%"))
-    except ValueError:
-        return None
 
 
 jour = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -141,7 +173,7 @@ for m in choisis:
     proba = [round(100 * dom / tot), 0, round(100 * ext / tot)]
     proba[1] = 100 - proba[0] - proba[2]
 
-    sortie.append({
+    match_sortie = {
         "competition": m["league"]["name"],
         "heure": m["fixture"]["date"],
         "domicile": h["name"],
@@ -153,9 +185,42 @@ for m in choisis:
         "forme_ext": forme_a,
         "face_a_face": {"dom": v_h, "nuls": nuls, "ext": v_a},
         "absents": absents,
+    }
+    sortie.append(match_sortie)
+    historique.append({
+        "fixture_id": fid,
+        "date": m["fixture"]["date"],
+        "domicile": h["name"],
+        "exterieur": a["name"],
+        "proba": proba,
+        "resultat_reel": None,
     })
+
+# Garde 60 jours d'historique pour ne pas grossir indéfiniment
+limite = (datetime.now(timezone.utc) - timedelta(days=60)).isoformat()
+historique = [h for h in historique if h["date"] >= limite]
+
+# --- 3) Calcul du taux de réussite (meilleur pari du modèle = résultat réel) ---
+confirmes = [h for h in historique if h["resultat_reel"] is not None]
+bons = 0
+for h in confirmes:
+    ordre = ["dom", "nul", "ext"]
+    meilleur = ordre[h["proba"].index(max(h["proba"]))]
+    if meilleur == h["resultat_reel"]:
+        bons += 1
+taux = round(100 * bons / len(confirmes)) if confirmes else None
 
 sortie.sort(key=lambda x: x["heure"])
 with open("data.json", "w", encoding="utf-8") as f:
-    json.dump({"maj": datetime.now(timezone.utc).isoformat(), "matchs": sortie}, f, ensure_ascii=False, indent=1)
-print(len(sortie), "matchs enregistrés (grandes compétitions uniquement)")
+    json.dump({
+        "maj": datetime.now(timezone.utc).isoformat(),
+        "matchs": sortie,
+        "historique": sorted(confirmes, key=lambda h: h["date"], reverse=True)[:20],
+        "taux_reussite": taux,
+        "nb_verifies": len(confirmes),
+    }, f, ensure_ascii=False, indent=1)
+
+with open(HIST, "w", encoding="utf-8") as f:
+    json.dump(historique, f, ensure_ascii=False, indent=1)
+
+print(len(sortie), "matchs du jour,", len(confirmes), "résultats vérifiés, taux :", taux)
