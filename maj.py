@@ -1,7 +1,7 @@
-
-"""Robot quotidien : analyse 10 matchs du jour et écrit data.json.
-La clé vient du secret GitHub API_FOOTBALL_KEY (jamais écrite ici).
-Pauses de 7 s entre requêtes (limite gratuite : 10 par minute).
+"""Robot quotidien : analyse les matchs du jour des grandes compétitions.
+Deux sources : API-Football (matchs, blessures, ses prédictions)
+et football-data.org (forme actuelle des équipes, saison en cours).
+Clés dans les secrets GitHub : API_FOOTBALL_KEY, FOOTBALL_DATA_KEY.
 """
 import json
 import os
@@ -10,34 +10,71 @@ from datetime import datetime, timezone
 
 import requests
 
-CLE = os.environ["API_FOOTBALL_KEY"]
-BASE = "https://v3.football.api-sports.io"
-GRANDES = [2, 3, 39, 140, 135, 78, 61]  # C1, C3, PL, Liga, Serie A, Bundesliga, L1
+CLE_AF = os.environ["API_FOOTBALL_KEY"]
+CLE_FD = os.environ["FOOTBALL_DATA_KEY"]
+AF = "https://v3.football.api-sports.io"
+FD = "https://api.football-data.org/v4"
 MAX = 10
 PTS = {"V": 3, "N": 1, "D": 0}
+# id API-Football -> code football-data.org
+CODES = {2: "CL", 39: "PL", 140: "PD", 135: "SA", 78: "BL1", 61: "FL1"}
 
 
-def api(chemin):
+def af(chemin):
     time.sleep(7)
-    r = requests.get(BASE + chemin, headers={"x-apisports-key": CLE}, timeout=30)
+    r = requests.get(AF + chemin, headers={"x-apisports-key": CLE_AF}, timeout=30)
     j = r.json()
     if j.get("errors"):
         raise RuntimeError(str(j["errors"]))
     return j.get("response", [])
 
 
-def essayer(chemin):
+def af_ok(chemin):
     try:
-        return api(chemin)
+        return af(chemin)
     except RuntimeError as e:
-        print("Ignoré :", chemin, e)
+        print("Ignoré (API-Football) :", chemin, e)
         return []
 
 
-def derniers(liste, n=5):
-    finis = [f for f in liste if f["fixture"]["status"]["short"] in ("FT", "AET", "PEN")]
-    finis.sort(key=lambda f: f["fixture"]["date"])
-    return finis[-n:]
+def fd(chemin):
+    time.sleep(6.5)
+    r = requests.get(FD + chemin, headers={"X-Auth-Token": CLE_FD}, timeout=30)
+    if r.status_code != 200:
+        print("Ignoré (football-data) :", chemin, r.status_code)
+        return {}
+    return r.json()
+
+
+def normal(nom):
+    return "".join(c for c in nom.lower() if c.isalnum())
+
+
+# Une seule fois : construit le nom -> id d'équipe football-data pour chaque grande compétition
+noms_equipes = {}
+for code in set(CODES.values()):
+    data = fd(f"/competitions/{code}/teams")
+    for e in data.get("teams", []):
+        noms_equipes[normal(e["name"])] = e["id"]
+        noms_equipes[normal(e["shortName"])] = e["id"]
+
+
+def forme_fd(nom_equipe):
+    tid = noms_equipes.get(normal(nom_equipe))
+    if not tid:
+        return []
+    data = fd(f"/teams/{tid}/matches?status=FINISHED&limit=5")
+    out = []
+    for m in data.get("matches", []):
+        w = m["score"]["winner"]
+        dom = m["homeTeam"]["id"] == tid
+        if w == "DRAW":
+            out.append("N")
+        elif (w == "HOME_TEAM") == dom:
+            out.append("V")
+        else:
+            out.append("D")
+    return out
 
 
 def resultat(f, tid):
@@ -54,26 +91,23 @@ def pct(s):
 
 
 jour = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-matchs = api("/fixtures?date=" + jour)
-blessures = api("/injuries?date=" + jour)
+matchs = af(f"/fixtures?date={jour}")
+blessures = af(f"/injuries?date={jour}")
 
-
-def rang(m):
-    i = GRANDES.index(m["league"]["id"]) if m["league"]["id"] in GRANDES else 99
-    return (i, m["fixture"]["date"])
-
-
-a_venir = [m for m in matchs if m["fixture"]["status"]["short"] in ("NS", "TBD")]
-choisis = sorted(a_venir, key=rang)[:MAX]
+a_venir = [
+    m for m in matchs
+    if m["fixture"]["status"]["short"] in ("NS", "TBD") and m["league"]["id"] in CODES
+]
+a_venir.sort(key=lambda m: m["fixture"]["date"])
+choisis = a_venir[:MAX]
 
 sortie = []
 for m in choisis:
     h, a, fid = m["teams"]["home"], m["teams"]["away"], m["fixture"]["id"]
-    saison = m["league"]["season"]
-    forme_h = [resultat(f, h["id"]) for f in derniers(essayer(f"/fixtures?team={h['id']}&season={saison}"))]
-    forme_a = [resultat(f, a["id"]) for f in derniers(essayer(f"/fixtures?team={a['id']}&season={saison}"))]
-    face = derniers(essayer(f"/fixtures/headtohead?h2h={h['id']}-{a['id']}"))
-    pred = essayer(f"/predictions?fixture={fid}")
+    forme_h = forme_fd(h["name"])
+    forme_a = forme_fd(a["name"])
+    face = af_ok(f"/fixtures/headtohead?h2h={h['id']}-{a['id']}&last=5")
+    pred = af_ok(f"/predictions?fixture={fid}")
 
     base = [38.0, 28.0, 34.0]
     if pred:
@@ -124,4 +158,4 @@ for m in choisis:
 sortie.sort(key=lambda x: x["heure"])
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump({"maj": datetime.now(timezone.utc).isoformat(), "matchs": sortie}, f, ensure_ascii=False, indent=1)
-print(len(sortie), "matchs enregistrés")
+print(len(sortie), "matchs enregistrés (grandes compétitions uniquement)")
