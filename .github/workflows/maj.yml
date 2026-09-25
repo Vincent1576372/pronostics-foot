@@ -17,6 +17,7 @@ jobs:
       - run: python maj.py
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
       - run: |
           git config user.name "robot"
           git config user.email "robot@users.noreply.github.com"
