@@ -1,6 +1,229 @@
 {
- "maj": "2026-09-26T06:15:21.672098+00:00",
- "matchs": [],
+ "maj": "2026-09-26T06:48:18.683497+00:00",
+ "matchs": [
+  {
+   "categorie": "secondaire",
+   "competition": "Friendlies Women",
+   "heure": "2026-09-26T07:00:00+00:00",
+   "domicile": "Papua New Guinea W",
+   "exterieur": "Vanuatu W",
+   "proba": [
+    45,
+    45,
+    10
+   ],
+   "base_api": [
+    45,
+    45,
+    10
+   ],
+   "ajustement": 0.0,
+   "forme_dom": [],
+   "forme_ext": [
+    "D"
+   ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "J3 League",
+   "heure": "2026-09-26T08:00:00+00:00",
+   "domicile": "Fukushima United",
+   "exterieur": "Parceiro Nagano",
+   "proba": [
+    10,
+    45,
+    45
+   ],
+   "base_api": [
+    10,
+    45,
+    45
+   ],
+   "ajustement": 0.0,
+   "forme_dom": [
+    "D"
+   ],
+   "forme_ext": [
+    "D"
+   ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "J3 League",
+   "heure": "2026-09-26T08:00:00+00:00",
+   "domicile": "Kitakyushu",
+   "exterieur": "Kagoshima United",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "base_api": [
+    0,
+    50,
+    50
+   ],
+   "ajustement": 0.0,
+   "forme_dom": [
+    "V"
+   ],
+   "forme_ext": [
+    "V"
+   ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "J3 League",
+   "heure": "2026-09-26T08:00:00+00:00",
+   "domicile": "Kamatamare Sanuki",
+   "exterieur": "FC Gifu",
+   "proba": [
+    10,
+    45,
+    45
+   ],
+   "base_api": [
+    10,
+    45,
+    45
+   ],
+   "ajustement": 0.0,
+   "forme_dom": [
+    "D"
+   ],
+   "forme_ext": [
+    "D"
+   ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "J3 League",
+   "heure": "2026-09-26T08:00:00+00:00",
+   "domicile": "Kochi United",
+   "exterieur": "Osaka",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "base_api": [
+    0,
+    50,
+    50
+   ],
+   "ajustement": -1.2,
+   "forme_dom": [
+    "N"
+   ],
+   "forme_ext": [
+    "V"
+   ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "J3 League",
+   "heure": "2026-09-26T08:00:00+00:00",
+   "domicile": "Thespakusatsu Gunma",
+   "exterieur": "Roasso Kumamoto",
+   "proba": [
+    9,
+    45,
+    46
+   ],
+   "base_api": [
+    10,
+    45,
+    45
+   ],
+   "ajustement": -0.6,
+   "forme_dom": [
+    "D"
+   ],
+   "forme_ext": [
+    "N"
+   ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "J3 League",
+   "heure": "2026-09-26T08:00:00+00:00",
+   "domicile": "FC Ryukyu",
+   "exterieur": "Ehime FC",
+   "proba": [
+    35,
+    35,
+    30
+   ],
+   "base_api": [
+    35,
+    35,
+    30
+   ],
+   "ajustement": 0.0,
+   "forme_dom": [
+    "V"
+   ],
+   "forme_ext": [
+    "V"
+   ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  }
+ ],
  "historique": [],
  "taux_reussite": null,
  "nb_verifies": 0
