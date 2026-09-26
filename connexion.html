@@ -79,6 +79,7 @@ button.go:disabled{opacity:.6}
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script>
 var firebaseConfig = {
   apiKey: "AIzaSyBkxmxGehi3FAl5wnncb9jYFAJ78Xq4NkM",
@@ -90,8 +91,9 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 var auth = firebase.auth();
+var db = firebase.firestore();
 
-auth.onAuthStateChanged(function(u){ if(u) window.location.href = "index.html"; });
+auth.onAuthStateChanged(function(u){ if(u) window.location.href = "accueil.html"; });
 
 function erreurFr(code){
   var m = {
@@ -141,7 +143,11 @@ document.getElementById("f-up").addEventListener("submit", function(e){
     document.getElementById("up-email").value.trim(),
     document.getElementById("up-pass").value
   ).then(function(cred){
-    return cred.user.updateProfile({displayName: nom});
+    return cred.user.updateProfile({displayName: nom}).then(function(){
+      return db.collection("utilisateurs").doc(cred.user.uid).set({
+        nom: nom, abonne: false, cree: new Date().toISOString()
+      });
+    });
   }).catch(function(err){
     msg.textContent = erreurFr(err.code); btn.disabled = false;
   });
