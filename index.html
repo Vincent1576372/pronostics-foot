@@ -21,7 +21,9 @@ nav button.on{background:var(--home);color:#fff;border-color:var(--home)}
 .score b{font-size:2.2rem;color:var(--home)}
 .m{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 15px;margin-bottom:10px}
 .meta{display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem}
-.t{font-weight:800;font-size:1.05rem;margin:2px 0 9px}
+.t{font-weight:800;font-size:1.05rem;margin:2px 0 6px}
+.mini{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 7px;border-radius:99px;margin-bottom:7px}
+.mini.sec{background:var(--draw);color:var(--ink)}
 .bar{display:flex;overflow:hidden;border-radius:8px;background:var(--line);height:26px;font-size:.85rem}
 .lg .bar{height:54px;font-size:1.05rem}
 .bar div{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
@@ -32,6 +34,8 @@ nav button.on{background:var(--home);color:#fff;border-color:var(--home)}
 .row{display:flex;justify-content:space-between;gap:10px;align-items:center}
 .b{display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;border-radius:6px;color:#fff;font-weight:700;font-size:.8rem;margin-right:4px}
 .V{background:var(--ok)}.N{background:var(--mid)}.D{background:var(--bad)}
+.src{font-size:.78rem;font-weight:700;padding:2px 7px;border-radius:99px}
+.src.actuelle{background:var(--ok);color:#fff}.src.historique{background:var(--mid);color:#fff}
 .tag{font-weight:700;font-size:.85rem;padding:3px 9px;border-radius:99px}
 .tag.ok{background:var(--ok);color:#fff}.tag.bad{background:var(--bad);color:#fff}
 .warn{margin-top:28px;padding:14px 16px;border-left:4px solid #F2B705;background:var(--card);font-size:.92rem;border-radius:0 10px 10px 0}
@@ -55,6 +59,7 @@ function jr(d){return new Date(d).toLocaleDateString("fr-FR",{day:"numeric",mont
 function bar(p,c){return '<div class="'+c+'"><div class="bar"><div class="h" style="width:'+p[0]+'%">'+p[0]+' %</div><div class="d" style="width:'+p[1]+'%">'+p[1]+' %</div><div class="a" style="width:'+p[2]+'%">'+p[2]+' %</div></div></div>'}
 function badges(l){return l.map(function(x){return '<span class="b '+esc(x)+'">'+esc(x)+'</span>'}).join("")||"—"}
 function libIssue(i){return i=="dom"?"Victoire domicile":i=="ext"?"Victoire extérieur":"Match nul"}
+function libSrc(s){return s=="actuelle"?"données actuelles":"données 2022-2024"}
 
 function majOnglets(){
 document.getElementById("tab-j").className=vue=="jour"?"on":"";
@@ -69,16 +74,24 @@ function home(){
 if(!D||!D.matchs.length){app.innerHTML='<h1>Matchs du jour</h1><p class="sub">Aucun match analysé pour le moment (pause du championnat, ou tous les matchs sont déjà passés). Reviens plus tard.</p>';return}
 var d=new Date(D.maj).toLocaleString("fr-FR",{day:"numeric",month:"long",hour:"2-digit",minute:"2-digit"});
 var h='<h1>Matchs du jour</h1><p class="sub">'+D.matchs.length+' matchs analysés · mis à jour le '+esc(d)+'</p>';
-D.matchs.forEach(function(m,i){h+='<button class="m" data-i="'+i+'"><span class="meta"><span>'+esc(m.competition)+'</span><span>'+hr(m.heure)+'</span></span><div class="t">'+esc(m.domicile)+' – '+esc(m.exterieur)+'</div>'+bar(m.proba,"sm")+'</button>'});
+D.matchs.forEach(function(m,i){
+h+='<button class="m" data-i="'+i+'"><span class="meta"><span>'+esc(m.competition)+'</span><span>'+hr(m.heure)+'</span></span>';
+if(m.categorie=="secondaire")h+='<span class="mini sec">Compétition secondaire</span><br>';
+h+='<div class="t">'+esc(m.domicile)+' – '+esc(m.exterieur)+'</div>'+bar(m.proba,"sm")+'</button>';
+});
 app.innerHTML=h;
 app.querySelectorAll(".m").forEach(function(b){b.onclick=function(){detail(+b.dataset.i)}});
 }
 
 function detail(i){
 var m=D.matchs[i],f=m.face_a_face;
-var h='<button class="back" id="bk">← Tous les matchs</button><h1>'+esc(m.domicile)+' – '+esc(m.exterieur)+'</h1><p class="sub">'+esc(m.competition)+' · coup d\'envoi '+hr(m.heure)+'</p>'+bar(m.proba,"lg")+
+var h='<button class="back" id="bk">← Tous les matchs</button>';
+if(m.categorie=="secondaire")h+='<span class="mini sec">Compétition secondaire</span>';
+h+='<h1>'+esc(m.domicile)+' – '+esc(m.exterieur)+'</h1><p class="sub">'+esc(m.competition)+' · coup d\'envoi '+hr(m.heure)+'</p>'+bar(m.proba,"lg")+
 '<div class="legend"><span><b>'+esc(m.domicile)+'</b> gagne</span><span>Nul</span><span><b>'+esc(m.exterieur)+'</b> gagne</span></div>'+
-'<h2>5 derniers matchs</h2><div class="p"><div class="row"><span>'+esc(m.domicile)+'</span><span>'+badges(m.forme_dom)+'</span></div></div><div class="p"><div class="row"><span>'+esc(m.exterieur)+'</span><span>'+badges(m.forme_ext)+'</span></div></div>'+
+'<h2>5 derniers matchs</h2>'+
+'<div class="p"><div class="row"><span>'+esc(m.domicile)+'</span><span>'+badges(m.forme_dom)+'</span></div>'+(m.source_dom?'<div class="note" style="margin:6px 0 0"><span class="src '+m.source_dom+'">'+libSrc(m.source_dom)+'</span></div>':'')+'</div>'+
+'<div class="p"><div class="row"><span>'+esc(m.exterieur)+'</span><span>'+badges(m.forme_ext)+'</span></div>'+(m.source_ext?'<div class="note" style="margin:6px 0 0"><span class="src '+m.source_ext+'">'+libSrc(m.source_ext)+'</span></div>':'')+'</div>'+
 '<h2>Confrontations directes (5 dernières)</h2><div class="p">'+esc(m.domicile)+' : '+f.dom+' victoire(s) · nuls : '+f.nuls+' · '+esc(m.exterieur)+' : '+f.ext+' victoire(s)</div>'+
 '<h2>Joueurs absents ou incertains</h2>';
 if(!m.absents.length)h+='<p class="note">Aucun joueur signalé pour ce match.</p>';
