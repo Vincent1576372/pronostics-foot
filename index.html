@@ -128,4 +128,27 @@ h+='<h1>'+esc(m.domicile)+' – '+esc(m.exterieur)+'</h1><p class="sub">'+esc(m.
 '<h2>Joueurs absents ou incertains</h2>';
 if(!m.absents.length)h+='<p class="note">Aucun joueur signalé pour ce match.</p>';
 m.absents.forEach(function(a){h+='<div class="p"><div class="row"><span><b>'+esc(a.joueur)+'</b><br><span class="note">'+esc(a.equipe)+(a.raison?' · '+esc(a.raison):'')+'</span></span><b>'+esc(a.statut)+'</b></div></div>'});
-h+='
+h+='<p class="note" style="margin-top:14px">Méthode : base de départ '+m.base_api.join(" / ")+' (domicile / nul / extérieur), puis ajustement selon la forme, les confrontations directes et les absences (ajustement : '+m.ajustement+' pts).</p>';
+app.innerHTML=h;window.scrollTo(0,0);
+document.getElementById("bk").onclick=function(){vue="jour";rendre()};
+}
+
+function resultats(){
+var h='<h1>Résultats</h1><p class="sub">Efficacité des prédictions passées de ce site.</p>';
+if(D.taux_reussite==null){h+='<p class="sub">Pas encore assez de matchs terminés pour calculer un taux.</p>';app.innerHTML=h;return}
+h+='<div class="score"><b>'+D.taux_reussite+' %</b><span>de bons pronostics sur les '+D.nb_verifies+' derniers matchs vérifiés</span></div>';
+h+='<h2>Derniers matchs vérifiés</h2>';
+(D.historique||[]).forEach(function(x){
+var ordre=["dom","nul","ext"],meilleur=ordre[x.proba.indexOf(Math.max.apply(null,x.proba))];
+var bon=meilleur==x.resultat_reel;
+h+='<div class="p"><div class="row"><span><b>'+esc(x.domicile)+' – '+esc(x.exterieur)+'</b><br><span class="note">'+jr(x.date)+' · prédit : '+libIssue(meilleur)+' ('+x.proba[ordre.indexOf(meilleur)]+' %)</span></span><span class="tag '+(bon?'ok':'bad')+'">'+(bon?'✓ ':'✗ ')+esc(libIssue(x.resultat_reel))+'</span></div></div>';
+});
+app.innerHTML=h;window.scrollTo(0,0);
+}
+
+function chargerDonnees(){
+fetch("data.json?t="+Date.now()).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){D=j;rendre()}).catch(function(){app.innerHTML='<h1>Matchs du jour</h1><p class="sub">Les données ne sont pas encore prêtes. Reviens un peu plus tard.</p>'});
+}
+</script>
+</body>
+</html>
