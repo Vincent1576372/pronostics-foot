@@ -4,12 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Prédictions Foot</title>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 <style>
 :root{--bg:#F3F5EF;--ink:#14201A;--muted:#5B6A61;--home:#1E4D3A;--draw:#B9C2B8;--away:#C8462B;--card:#FFF;--line:#D9DFD6;--ok:#1E7A4A;--mid:#B57F00;--bad:#C8462B}
 @media (prefers-color-scheme:dark){:root{--bg:#0F1712;--ink:#EAF0EA;--muted:#93A399;--home:#3A9670;--draw:#4A5A50;--away:#E0664A;--card:#17231C;--line:#2A3A30;--ok:#4CC58A;--mid:#E5B93C;--bad:#E0664A}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
 main{max-width:720px;margin:0 auto;padding:20px 18px 40px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.topbar span{font-weight:700}
+.topbar a{color:var(--muted);font-size:.85rem;text-decoration:none;border:1px solid var(--line);padding:5px 10px;border-radius:8px}
 h1{font-size:clamp(1.8rem,7vw,2.6rem);line-height:1.1;margin:22px 0 4px}
 h2{font-size:1.15rem;margin:26px 0 8px}
 .sub,.note{color:var(--muted);font-size:.92rem;margin:0 0 14px}
@@ -28,7 +33,7 @@ nav button.on{background:var(--home);color:#fff;border-color:var(--home)}
 .lg .bar{height:54px;font-size:1.05rem}
 .bar div{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
 .h{background:var(--home)}.d{background:var(--draw);color:var(--ink)!important}.a{background:var(--away)}
-.legend{display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:space-between;font-size:.9rem;margin-top:8px;color:var(--muted)}:space-between;font-size:.9rem;margin-top:8px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:space-between;font-size:.9rem;margin-top:8px;color:var(--muted)}
 .back{background:none;border:0;padding:6px 0;font-weight:600;color:var(--muted);margin-top:14px}
 .p{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin-bottom:8px}
 .row{display:flex;justify-content:space-between;gap:10px;align-items:center}
@@ -42,8 +47,11 @@ nav button.on{background:var(--home);color:#fff;border-color:var(--home)}
 </style>
 </head>
 <body>
-<main>
-<strong>Prédictions Foot</strong>
+<main id="main" style="display:none">
+<div class="topbar">
+<span>Prédictions Foot</span>
+<a href="#" id="deconnexion">Bonjour <span id="nomUser"></span> · Se déconnecter</a>
+</div>
 <nav>
 <button id="tab-j" class="on">Matchs du jour</button>
 <button id="tab-r">Résultats</button>
@@ -51,7 +59,31 @@ nav button.on{background:var(--home);color:#fff;border-color:var(--home)}
 <div id="app"><p class="sub">Chargement…</p></div>
 <div class="warn"><b>Une prédiction est une probabilité, pas une certitude.</b> Le football reste imprévisible. Ces chiffres ne sont pas un conseil de paris.</div>
 </main>
+
 <script>
+var firebaseConfig = {
+  apiKey: "AIzaSyBkxmxGehi3FAl5wnncb9jYFAJ78Xq4NkM",
+  authDomain: "vm-r-pronostic-football.firebaseapp.com",
+  projectId: "vm-r-pronostic-football",
+  storageBucket: "vm-r-pronostic-football.firebasestorage.app",
+  messagingSenderId: "608079906919",
+  appId: "1:608079906919:web:e3c10aad785303bd946cc2"
+};
+firebase.initializeApp(firebaseConfig);
+var auth = firebase.auth();
+
+auth.onAuthStateChanged(function(u){
+  if(!u){ window.location.href = "connexion.html"; return; }
+  document.getElementById("nomUser").textContent = u.displayName || u.email;
+  document.getElementById("main").style.display = "block";
+  chargerDonnees();
+});
+
+document.getElementById("deconnexion").onclick = function(e){
+  e.preventDefault();
+  auth.signOut();
+};
+
 var D=null,app=document.getElementById("app"),vue="jour";
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
 function hr(d){return new Date(d).toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"})}
@@ -96,25 +128,4 @@ h+='<h1>'+esc(m.domicile)+' – '+esc(m.exterieur)+'</h1><p class="sub">'+esc(m.
 '<h2>Joueurs absents ou incertains</h2>';
 if(!m.absents.length)h+='<p class="note">Aucun joueur signalé pour ce match.</p>';
 m.absents.forEach(function(a){h+='<div class="p"><div class="row"><span><b>'+esc(a.joueur)+'</b><br><span class="note">'+esc(a.equipe)+(a.raison?' · '+esc(a.raison):'')+'</span></span><b>'+esc(a.statut)+'</b></div></div>'});
-h+='<p class="note" style="margin-top:14px">Méthode : base de départ '+m.base_api.join(" / ")+' (domicile / nul / extérieur), puis ajustement selon la forme, les confrontations directes et les absences (ajustement : '+m.ajustement+' pts).</p>';
-app.innerHTML=h;window.scrollTo(0,0);
-document.getElementById("bk").onclick=function(){vue="jour";rendre()};
-}
-
-function resultats(){
-var h='<h1>Résultats</h1><p class="sub">Efficacité des prédictions passées de ce site.</p>';
-if(D.taux_reussite==null){h+='<p class="sub">Pas encore assez de matchs terminés pour calculer un taux.</p>';app.innerHTML=h;return}
-h+='<div class="score"><b>'+D.taux_reussite+' %</b><span>de bons pronostics sur les '+D.nb_verifies+' derniers matchs vérifiés</span></div>';
-h+='<h2>Derniers matchs vérifiés</h2>';
-(D.historique||[]).forEach(function(x){
-var ordre=["dom","nul","ext"],meilleur=ordre[x.proba.indexOf(Math.max.apply(null,x.proba))];
-var bon=meilleur==x.resultat_reel;
-h+='<div class="p"><div class="row"><span><b>'+esc(x.domicile)+' – '+esc(x.exterieur)+'</b><br><span class="note">'+jr(x.date)+' · prédit : '+libIssue(meilleur)+' ('+x.proba[ordre.indexOf(meilleur)]+' %)</span></span><span class="tag '+(bon?'ok':'bad')+'">'+(bon?'✓ ':'✗ ')+esc(libIssue(x.resultat_reel))+'</span></div></div>';
-});
-app.innerHTML=h;window.scrollTo(0,0);
-}
-
-fetch("data.json?t="+Date.now()).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){D=j;rendre()}).catch(function(){app.innerHTML='<h1>Matchs du jour</h1><p class="sub">Les données ne sont pas encore prêtes. Reviens un peu plus tard.</p>'});
-</script>
-</body>
-</html>
+h+='
