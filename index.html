@@ -14,6 +14,11 @@ h1{font-size:clamp(1.8rem,7vw,2.6rem);line-height:1.1;margin:22px 0 4px}
 h2{font-size:1.15rem;margin:26px 0 8px}
 .sub,.note{color:var(--muted);font-size:.92rem;margin:0 0 14px}
 button{font:inherit;color:inherit;cursor:pointer}
+nav{display:flex;gap:8px;margin:14px 0}
+nav button{flex:1;padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+nav button.on{background:var(--home);color:#fff;border-color:var(--home)}
+.score{display:flex;align-items:baseline;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:14px 0}
+.score b{font-size:2.2rem;color:var(--home)}
 .m{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 15px;margin-bottom:10px}
 .meta{display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem}
 .t{font-weight:800;font-size:1.05rem;margin:2px 0 9px}
@@ -24,46 +29,79 @@ button{font:inherit;color:inherit;cursor:pointer}
 .legend{display:flex;justify-content:space-between;font-size:.9rem;margin-top:8px;color:var(--muted)}
 .back{background:none;border:0;padding:6px 0;font-weight:600;color:var(--muted);margin-top:14px}
 .p{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 15px;margin-bottom:8px}
-.row{display:flex;justify-content:space-between;gap:10px}
+.row{display:flex;justify-content:space-between;gap:10px;align-items:center}
 .b{display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;border-radius:6px;color:#fff;font-weight:700;font-size:.8rem;margin-right:4px}
 .V{background:var(--ok)}.N{background:var(--mid)}.D{background:var(--bad)}
+.tag{font-weight:700;font-size:.85rem;padding:3px 9px;border-radius:99px}
+.tag.ok{background:var(--ok);color:#fff}.tag.bad{background:var(--bad);color:#fff}
 .warn{margin-top:28px;padding:14px 16px;border-left:4px solid #F2B705;background:var(--card);font-size:.92rem;border-radius:0 10px 10px 0}
 </style>
 </head>
 <body>
 <main>
 <strong>Prédictions Foot</strong>
+<nav>
+<button id="tab-j" class="on">Matchs du jour</button>
+<button id="tab-r">Résultats</button>
+</nav>
 <div id="app"><p class="sub">Chargement…</p></div>
 <div class="warn"><b>Une prédiction est une probabilité, pas une certitude.</b> Le football reste imprévisible. Ces chiffres ne sont pas un conseil de paris.</div>
 </main>
 <script>
-var D=null,app=document.getElementById("app");
+var D=null,app=document.getElementById("app"),vue="jour";
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
-function hr(m){return new Date(m.heure).toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"})}
+function hr(d){return new Date(d).toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"})}
+function jr(d){return new Date(d).toLocaleDateString("fr-FR",{day:"numeric",month:"short"})}
 function bar(p,c){return '<div class="'+c+'"><div class="bar"><div class="h" style="width:'+p[0]+'%">'+p[0]+' %</div><div class="d" style="width:'+p[1]+'%">'+p[1]+' %</div><div class="a" style="width:'+p[2]+'%">'+p[2]+' %</div></div></div>'}
 function badges(l){return l.map(function(x){return '<span class="b '+esc(x)+'">'+esc(x)+'</span>'}).join("")||"—"}
+function libIssue(i){return i=="dom"?"Victoire domicile":i=="ext"?"Victoire extérieur":"Match nul"}
+
+function majOnglets(){
+document.getElementById("tab-j").className=vue=="jour"?"on":"";
+document.getElementById("tab-r").className=vue=="res"?"on":"";
+}
+document.getElementById("tab-j").onclick=function(){vue="jour";majOnglets();rendre()};
+document.getElementById("tab-r").onclick=function(){vue="res";majOnglets();rendre()};
+
+function rendre(){ vue=="jour" ? home() : resultats() }
+
 function home(){
-if(!D||!D.matchs.length){app.innerHTML='<h1>Matchs du jour</h1><p class="sub">Aucun match analysé pour le moment. Reviens plus tard.</p>';return}
+if(!D||!D.matchs.length){app.innerHTML='<h1>Matchs du jour</h1><p class="sub">Aucun match analysé pour le moment (pause du championnat, ou tous les matchs sont déjà passés). Reviens plus tard.</p>';return}
 var d=new Date(D.maj).toLocaleString("fr-FR",{day:"numeric",month:"long",hour:"2-digit",minute:"2-digit"});
 var h='<h1>Matchs du jour</h1><p class="sub">'+D.matchs.length+' matchs analysés · mis à jour le '+esc(d)+'</p>';
-D.matchs.forEach(function(m,i){h+='<button class="m" data-i="'+i+'"><span class="meta"><span>'+esc(m.competition)+'</span><span>'+hr(m)+'</span></span><div class="t">'+esc(m.domicile)+' – '+esc(m.exterieur)+'</div>'+bar(m.proba,"sm")+'</button>'});
+D.matchs.forEach(function(m,i){h+='<button class="m" data-i="'+i+'"><span class="meta"><span>'+esc(m.competition)+'</span><span>'+hr(m.heure)+'</span></span><div class="t">'+esc(m.domicile)+' – '+esc(m.exterieur)+'</div>'+bar(m.proba,"sm")+'</button>'});
 app.innerHTML=h;
 app.querySelectorAll(".m").forEach(function(b){b.onclick=function(){detail(+b.dataset.i)}});
 }
+
 function detail(i){
 var m=D.matchs[i],f=m.face_a_face;
-var h='<button class="back" id="bk">← Tous les matchs</button><h1>'+esc(m.domicile)+' – '+esc(m.exterieur)+'</h1><p class="sub">'+esc(m.competition)+' · coup d\'envoi '+hr(m)+'</p>'+bar(m.proba,"lg")+
+var h='<button class="back" id="bk">← Tous les matchs</button><h1>'+esc(m.domicile)+' – '+esc(m.exterieur)+'</h1><p class="sub">'+esc(m.competition)+' · coup d\'envoi '+hr(m.heure)+'</p>'+bar(m.proba,"lg")+
 '<div class="legend"><span><b>'+esc(m.domicile)+'</b> gagne</span><span>Nul</span><span><b>'+esc(m.exterieur)+'</b> gagne</span></div>'+
 '<h2>5 derniers matchs</h2><div class="p"><div class="row"><span>'+esc(m.domicile)+'</span><span>'+badges(m.forme_dom)+'</span></div></div><div class="p"><div class="row"><span>'+esc(m.exterieur)+'</span><span>'+badges(m.forme_ext)+'</span></div></div>'+
-'<h2>Confrontations directes (5 derniers)</h2><div class="p">'+esc(m.domicile)+' : '+f.dom+' victoire(s) · nuls : '+f.nuls+' · '+esc(m.exterieur)+' : '+f.ext+' victoire(s)</div>'+
+'<h2>Confrontations directes (5 dernières)</h2><div class="p">'+esc(m.domicile)+' : '+f.dom+' victoire(s) · nuls : '+f.nuls+' · '+esc(m.exterieur)+' : '+f.ext+' victoire(s)</div>'+
 '<h2>Joueurs absents ou incertains</h2>';
 if(!m.absents.length)h+='<p class="note">Aucun joueur signalé pour ce match.</p>';
 m.absents.forEach(function(a){h+='<div class="p"><div class="row"><span><b>'+esc(a.joueur)+'</b><br><span class="note">'+esc(a.equipe)+(a.raison?' · '+esc(a.raison):'')+'</span></span><b>'+esc(a.statut)+'</b></div></div>'});
 h+='<p class="note" style="margin-top:14px">Méthode : base de départ '+m.base_api.join(" / ")+' (domicile / nul / extérieur), puis ajustement selon la forme, les confrontations directes et les absences (ajustement : '+m.ajustement+' pts).</p>';
 app.innerHTML=h;window.scrollTo(0,0);
-document.getElementById("bk").onclick=home;
+document.getElementById("bk").onclick=function(){vue="jour";rendre()};
 }
-fetch("data.json?t="+Date.now()).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){D=j;home()}).catch(function(){app.innerHTML='<h1>Matchs du jour</h1><p class="sub">Les données ne sont pas encore prêtes. Reviens un peu plus tard.</p>'});
+
+function resultats(){
+var h='<h1>Résultats</h1><p class="sub">Efficacité des prédictions passées de ce site.</p>';
+if(D.taux_reussite==null){h+='<p class="sub">Pas encore assez de matchs terminés pour calculer un taux.</p>';app.innerHTML=h;return}
+h+='<div class="score"><b>'+D.taux_reussite+' %</b><span>de bons pronostics sur les '+D.nb_verifies+' derniers matchs vérifiés</span></div>';
+h+='<h2>Derniers matchs vérifiés</h2>';
+(D.historique||[]).forEach(function(x){
+var ordre=["dom","nul","ext"],meilleur=ordre[x.proba.indexOf(Math.max.apply(null,x.proba))];
+var bon=meilleur==x.resultat_reel;
+h+='<div class="p"><div class="row"><span><b>'+esc(x.domicile)+' – '+esc(x.exterieur)+'</b><br><span class="note">'+jr(x.date)+' · prédit : '+libIssue(meilleur)+' ('+x.proba[ordre.indexOf(meilleur)]+' %)</span></span><span class="tag '+(bon?'ok':'bad')+'">'+(bon?'✓ ':'✗ ')+esc(libIssue(x.resultat_reel))+'</span></div></div>';
+});
+app.innerHTML=h;window.scrollTo(0,0);
+}
+
+fetch("data.json?t="+Date.now()).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){D=j;rendre()}).catch(function(){app.innerHTML='<h1>Matchs du jour</h1><p class="sub">Les données ne sont pas encore prêtes. Reviens un peu plus tard.</p>'});
 </script>
 </body>
 </html>
