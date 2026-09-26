@@ -1,7 +1,7 @@
-"""Robot quotidien : analyse les matchs des grandes compétitions,
-et vérifie les résultats des prédictions de la veille.
-Deux sources : API-Football (matchs, blessures, ses prédictions)
-et football-data.org (forme actuelle des équipes, saison en cours).
+"""Robot quotidien : 10 matchs des grandes compétitions (données actuelles
+via football-data.org) + 7 matchs de complément dans d'autres compétitions
+(données actuelles via TheSportsDB si l'équipe y est connue, sinon 2022-2024
+via API-Football, clairement indiqué). Vérifie aussi les résultats de la veille.
 Clés dans les secrets GitHub : API_FOOTBALL_KEY, FOOTBALL_DATA_KEY.
 """
 import json
@@ -15,9 +15,12 @@ CLE_AF = os.environ["API_FOOTBALL_KEY"]
 CLE_FD = os.environ["FOOTBALL_DATA_KEY"]
 AF = "https://v3.football.api-sports.io"
 FD = "https://api.football-data.org/v4"
-MAX = 10
+SDB = "https://www.thesportsdb.com/api/v1/json/3"  # clé publique de test
+MAX_GRANDES = 10
+MAX_PETITES = 7
 PTS = {"V": 3, "N": 1, "D": 0}
 CODES = {2: "CL", 39: "PL", 140: "PD", 135: "SA", 78: "BL1", 61: "FL1"}
+SAISONS_GRATUITES = [2024, 2023, 2022]
 HIST = "historique.json"
 
 
@@ -47,6 +50,16 @@ def fd(chemin):
     return r.json()
 
 
+def sdb(chemin, params):
+    time.sleep(2.1)
+    try:
+        r = requests.get(f"{SDB}/{chemin}", params=params, timeout=20)
+        return r.json() or {}
+    except Exception as e:
+        print("Ignoré (TheSportsDB) :", chemin, params, e)
+        return {}
+
+
 def normal(nom):
     return "".join(c for c in nom.lower() if c.isalnum())
 
@@ -65,7 +78,6 @@ def pct(s):
 
 
 def issue_reelle(m):
-    """'dom', 'nul' ou 'ext' selon le score final, ou None si pas encore joué."""
     s = m["score"]["fulltime"]
     if s["home"] is None or s["away"] is None:
         return None
@@ -76,6 +88,43 @@ def issue_reelle(m):
     return "nul"
 
 
+def derniers(liste, n=5):
+    finis = [f for f in liste if f["fixture"]["status"]["short"] in ("FT", "AET", "PEN")]
+    finis.sort(key=lambda f: f["fixture"]["date"])
+    return finis[-n:]
+
+
+def forme_af(team_id):
+    """Repli pour les petits matchs si TheSportsDB ne connaît pas l'équipe."""
+    for s in SAISONS_GRATUITES:
+        r = af_ok(f"/fixtures?team={team_id}&season={s}")
+        if r:
+            return [resultat(f, team_id) for f in derniers(r)]
+    return []
+
+
+def forme_sdb(nom_equipe):
+    """None = équipe non trouvée. [] ou liste = équipe trouvée (données actuelles)."""
+    data = sdb("searchteams.php", {"t": nom_equipe})
+    equipes = data.get("teams") or []
+    if not equipes:
+        return None
+    tid = equipes[0]["idTeam"]
+    data2 = sdb("eventslast.php", {"id": tid})
+    evenements = data2.get("results") or data2.get("events") or []
+    out = []
+    for e in evenements:
+        hs, as_ = e.get("intHomeScore"), e.get("intAwayScore")
+        if hs is None or as_ is None:
+            continue
+        hs, as_ = int(hs), int(as_)
+        est_domicile = normal(e.get("strHomeTeam", "")) == normal(nom_equipe)
+        score_lui = hs if est_domicile else as_
+        score_adv = as_ if est_domicile else hs
+        out.append("V" if score_lui > score_adv else ("D" if score_lui < score_adv else "N"))
+    return out
+
+
 # --- 1) Vérifier les prédictions passées non encore confirmées ---
 try:
     with open(HIST, encoding="utf-8") as f:
@@ -84,18 +133,16 @@ except FileNotFoundError:
     historique = []
 
 a_verifier = [h for h in historique if h.get("resultat_reel") is None]
-if a_verifier:
-    ids = {h["fixture_id"] for h in a_verifier}
-    for fid in ids:
-        res = af_ok(f"/fixtures?id={fid}")
-        if res:
-            issue = issue_reelle(res[0])
-            if issue:
-                for h in historique:
-                    if h["fixture_id"] == fid:
-                        h["resultat_reel"] = issue
+for fid in {h["fixture_id"] for h in a_verifier}:
+    res = af_ok(f"/fixtures?id={fid}")
+    if res:
+        issue = issue_reelle(res[0])
+        if issue:
+            for h in historique:
+                if h["fixture_id"] == fid:
+                    h["resultat_reel"] = issue
 
-# --- 2) Analyser les matchs du jour ---
+# --- 2) Préparer les noms d'équipes des grandes compétitions (football-data) ---
 noms_equipes = {}
 for code in set(CODES.values()):
     data = fd(f"/competitions/{code}/teams")
@@ -113,31 +160,38 @@ def forme_fd(nom_equipe):
     for m in data.get("matches", []):
         w = m["score"]["winner"]
         dom = m["homeTeam"]["id"] == tid
-        if w == "DRAW":
-            out.append("N")
-        elif (w == "HOME_TEAM") == dom:
-            out.append("V")
-        else:
-            out.append("D")
+        out.append("N" if w == "DRAW" else ("V" if (w == "HOME_TEAM") == dom else "D"))
     return out
 
 
+# --- 3) Sélectionner les matchs du jour ---
 jour = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 matchs = af(f"/fixtures?date={jour}")
 blessures = af(f"/injuries?date={jour}")
 
-a_venir = [
-    m for m in matchs
-    if m["fixture"]["status"]["short"] in ("NS", "TBD") and m["league"]["id"] in CODES
-]
+a_venir = [m for m in matchs if m["fixture"]["status"]["short"] in ("NS", "TBD")]
 a_venir.sort(key=lambda m: m["fixture"]["date"])
-choisis = a_venir[:MAX]
 
-sortie = []
-for m in choisis:
+grandes = [m for m in a_venir if m["league"]["id"] in CODES][:MAX_GRANDES]
+petites = [m for m in a_venir if m["league"]["id"] not in CODES][:MAX_PETITES]
+
+
+def forme_petit(team_id, nom):
+    r = forme_sdb(nom)
+    if r is not None:
+        return r, "actuelle"
+    return forme_af(team_id), "historique"
+
+
+def analyser(m, categorie):
     h, a, fid = m["teams"]["home"], m["teams"]["away"], m["fixture"]["id"]
-    forme_h = forme_fd(h["name"])
-    forme_a = forme_fd(a["name"])
+    if categorie == "principal":
+        forme_h, forme_a = forme_fd(h["name"]), forme_fd(a["name"])
+        src_h = src_a = "actuelle"
+    else:
+        forme_h, src_h = forme_petit(h["id"], h["name"])
+        forme_a, src_a = forme_petit(a["id"], a["name"])
+
     face = af_ok(f"/fixtures/headtohead?h2h={h['id']}-{a['id']}&last=5")
     pred = af_ok(f"/predictions?fixture={fid}")
 
@@ -173,7 +227,8 @@ for m in choisis:
     proba = [round(100 * dom / tot), 0, round(100 * ext / tot)]
     proba[1] = 100 - proba[0] - proba[2]
 
-    match_sortie = {
+    return {
+        "categorie": categorie,
         "competition": m["league"]["name"],
         "heure": m["fixture"]["date"],
         "domicile": h["name"],
@@ -183,30 +238,31 @@ for m in choisis:
         "ajustement": round(ajust, 1),
         "forme_dom": forme_h,
         "forme_ext": forme_a,
+        "source_dom": src_h,
+        "source_ext": src_a,
         "face_a_face": {"dom": v_h, "nuls": nuls, "ext": v_a},
         "absents": absents,
-    }
-    sortie.append(match_sortie)
-    historique.append({
-        "fixture_id": fid,
-        "date": m["fixture"]["date"],
-        "domicile": h["name"],
-        "exterieur": a["name"],
-        "proba": proba,
-        "resultat_reel": None,
-    })
+    }, fid
 
-# Garde 60 jours d'historique pour ne pas grossir indéfiniment
+
+sortie = []
+for m in grandes:
+    r, fid = analyser(m, "principal")
+    sortie.append(r)
+    historique.append({"fixture_id": fid, "date": r["heure"], "domicile": r["domicile"], "exterieur": r["exterieur"], "proba": r["proba"], "resultat_reel": None})
+for m in petites:
+    r, fid = analyser(m, "secondaire")
+    sortie.append(r)
+    historique.append({"fixture_id": fid, "date": r["heure"], "domicile": r["domicile"], "exterieur": r["exterieur"], "proba": r["proba"], "resultat_reel": None})
+
 limite = (datetime.now(timezone.utc) - timedelta(days=60)).isoformat()
 historique = [h for h in historique if h["date"] >= limite]
 
-# --- 3) Calcul du taux de réussite (meilleur pari du modèle = résultat réel) ---
 confirmes = [h for h in historique if h["resultat_reel"] is not None]
 bons = 0
 for h in confirmes:
     ordre = ["dom", "nul", "ext"]
-    meilleur = ordre[h["proba"].index(max(h["proba"]))]
-    if meilleur == h["resultat_reel"]:
+    if ordre[h["proba"].index(max(h["proba"]))] == h["resultat_reel"]:
         bons += 1
 taux = round(100 * bons / len(confirmes)) if confirmes else None
 
@@ -223,4 +279,4 @@ with open("data.json", "w", encoding="utf-8") as f:
 with open(HIST, "w", encoding="utf-8") as f:
     json.dump(historique, f, ensure_ascii=False, indent=1)
 
-print(len(sortie), "matchs du jour,", len(confirmes), "résultats vérifiés, taux :", taux)
+print(len(grandes), "grands matchs,", len(petites), "petits matchs,", len(confirmes), "vérifiés, taux :", taux)
