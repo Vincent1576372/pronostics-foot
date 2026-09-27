@@ -33,7 +33,7 @@ nav button.on{background:var(--home);color:#fff;border-color:var(--home)}
 .mini.lock{background:var(--lock);color:#fff}
 .bar{display:flex;overflow:hidden;border-radius:8px;background:var(--line);height:26px;font-size:.85rem}
 .lg .bar{height:54px;font-size:1.05rem}
-.bar div{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
+.bar div{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;white-space:nowrap;overflow:visible}
 .h{background:var(--home)}.d{background:var(--draw);color:var(--ink)!important}.a{background:var(--away)}
 .blur{filter:blur(6px);pointer-events:none;user-select:none}
 .upsell{background:var(--card);border:1px dashed var(--lock);border-radius:10px;padding:16px;margin:14px 0;text-align:center}
@@ -208,7 +208,9 @@ if(x.score)h+='<div class="score"><b>'+x.score[0]+' - '+x.score[1]+'</b><span>Sc
 h+=bar(x.proba,"lg");
 h+='<div class="legend"><span><b>'+esc(x.domicile)+'</b> gagne</span><span>Nul</span><span><b>'+esc(x.exterieur)+'</b> gagne</span></div>';
 h+='<h2>Buteurs</h2>';
-h+= (x.buteurs&&x.buteurs.length) ? butsHtml(x) : '<p class="note">Aucun but marqué dans ce match.</p>';
+if(x.buteurs&&x.buteurs.length){h+=butsHtml(x)}
+else if(x.score&&(x.score[0]+x.score[1])>0){h+='<p class="note">Détail des buteurs non disponible pour ce match.</p>'}
+else{h+='<p class="note">Aucun but marqué dans ce match.</p>'}
 h+='<h2>Notre prédiction</h2><div class="p"><div class="row"><span>Meilleur pari : '+libIssue(meilleur)+' ('+x.proba[ordre.indexOf(meilleur)]+' %)</span><span class="tag '+(bon?'ok':'bad')+'">'+(bon?'✓ Correct':'✗ Incorrect')+'</span></div></div>';
 app.innerHTML=h;window.scrollTo(0,0);
 document.getElementById("bk").onclick=function(){vue="res";rendre()};
