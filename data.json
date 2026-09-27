@@ -1,29 +1,33 @@
 {
- "maj": "2026-09-26T06:48:18.683497+00:00",
+ "maj": "2026-09-27T06:19:59.944485+00:00",
  "matchs": [
   {
    "categorie": "secondaire",
-   "competition": "Friendlies Women",
-   "heure": "2026-09-26T07:00:00+00:00",
-   "domicile": "Papua New Guinea W",
-   "exterieur": "Vanuatu W",
+   "competition": "Liga Premier Serie A",
+   "heure": "2026-09-27T00:00:00+00:00",
+   "domicile": "La Tribu de Cd. Juarez",
+   "exterieur": "Real Apodaca",
    "proba": [
-    45,
-    45,
-    10
+    46,
+    50,
+    4
    ],
    "base_api": [
-    45,
-    45,
-    10
+    50,
+    50,
+    0
    ],
-   "ajustement": 0.0,
+   "ajustement": -3.6,
    "forme_dom": [],
    "forme_ext": [
+    "D",
+    "V",
+    "D",
+    "V",
     "D"
    ],
-   "source_dom": "actuelle",
-   "source_ext": "actuelle",
+   "source_dom": "historique",
+   "source_ext": "historique",
    "face_a_face": {
     "dom": 0,
     "nuls": 0,
@@ -33,42 +37,10 @@
   },
   {
    "categorie": "secondaire",
-   "competition": "J3 League",
-   "heure": "2026-09-26T08:00:00+00:00",
-   "domicile": "Fukushima United",
-   "exterieur": "Parceiro Nagano",
-   "proba": [
-    10,
-    45,
-    45
-   ],
-   "base_api": [
-    10,
-    45,
-    45
-   ],
-   "ajustement": 0.0,
-   "forme_dom": [
-    "D"
-   ],
-   "forme_ext": [
-    "D"
-   ],
-   "source_dom": "actuelle",
-   "source_ext": "actuelle",
-   "face_a_face": {
-    "dom": 0,
-    "nuls": 0,
-    "ext": 0
-   },
-   "absents": []
-  },
-  {
-   "categorie": "secondaire",
-   "competition": "J3 League",
-   "heure": "2026-09-26T08:00:00+00:00",
-   "domicile": "Kitakyushu",
-   "exterieur": "Kagoshima United",
+   "competition": "Friendlies",
+   "heure": "2026-09-27T04:00:00+00:00",
+   "domicile": "Cook Islands",
+   "exterieur": "Tahiti",
    "proba": [
     3,
     48,
@@ -79,9 +51,9 @@
     50,
     50
    ],
-   "ajustement": 0.0,
+   "ajustement": -1.8,
    "forme_dom": [
-    "V"
+    "D"
    ],
    "forme_ext": [
     "V"
@@ -97,91 +69,27 @@
   },
   {
    "categorie": "secondaire",
-   "competition": "J3 League",
-   "heure": "2026-09-26T08:00:00+00:00",
-   "domicile": "Kamatamare Sanuki",
-   "exterieur": "FC Gifu",
+   "competition": "PFL",
+   "heure": "2026-09-27T07:00:00+00:00",
+   "domicile": "Kaya",
+   "exterieur": "Philippine Army",
    "proba": [
-    10,
-    45,
-    45
-   ],
-   "base_api": [
-    10,
-    45,
-    45
-   ],
-   "ajustement": 0.0,
-   "forme_dom": [
-    "D"
-   ],
-   "forme_ext": [
-    "D"
-   ],
-   "source_dom": "actuelle",
-   "source_ext": "actuelle",
-   "face_a_face": {
-    "dom": 0,
-    "nuls": 0,
-    "ext": 0
-   },
-   "absents": []
-  },
-  {
-   "categorie": "secondaire",
-   "competition": "J3 League",
-   "heure": "2026-09-26T08:00:00+00:00",
-   "domicile": "Kochi United",
-   "exterieur": "Osaka",
-   "proba": [
-    3,
+    49,
     48,
-    49
+    3
    ],
    "base_api": [
-    0,
     50,
-    50
+    50,
+    0
    ],
-   "ajustement": -1.2,
+   "ajustement": 1.8,
    "forme_dom": [
-    "N"
-   ],
-   "forme_ext": [
     "V"
    ],
-   "source_dom": "actuelle",
-   "source_ext": "actuelle",
-   "face_a_face": {
-    "dom": 0,
-    "nuls": 0,
-    "ext": 0
-   },
-   "absents": []
-  },
-  {
-   "categorie": "secondaire",
-   "competition": "J3 League",
-   "heure": "2026-09-26T08:00:00+00:00",
-   "domicile": "Thespakusatsu Gunma",
-   "exterieur": "Roasso Kumamoto",
-   "proba": [
-    9,
-    45,
-    46
-   ],
-   "base_api": [
-    10,
-    45,
-    45
-   ],
-   "ajustement": -0.6,
-   "forme_dom": [
+   "forme_ext": [
     "D"
    ],
-   "forme_ext": [
-    "N"
-   ],
    "source_dom": "actuelle",
    "source_ext": "actuelle",
    "face_a_face": {
@@ -193,10 +101,10 @@
   },
   {
    "categorie": "secondaire",
-   "competition": "J3 League",
-   "heure": "2026-09-26T08:00:00+00:00",
-   "domicile": "FC Ryukyu",
-   "exterieur": "Ehime FC",
+   "competition": "Friendlies",
+   "heure": "2026-09-27T07:00:00+00:00",
+   "domicile": "Fiji",
+   "exterieur": "Papua New Guinea",
    "proba": [
     35,
     35,
@@ -209,12 +117,112 @@
    ],
    "ajustement": 0.0,
    "forme_dom": [
+    "D"
+   ],
+   "forme_ext": [
+    "D"
+   ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "FIFA Asean Cup",
+   "heure": "2026-09-27T07:00:00+00:00",
+   "domicile": "Hong Kong",
+   "exterieur": "Laos",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "base_api": [
+    50,
+    50,
+    0
+   ],
+   "ajustement": 0.0,
+   "forme_dom": [
     "V"
    ],
    "forme_ext": [
     "V"
    ],
    "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "Druha Liga",
+   "heure": "2026-09-27T08:00:00+00:00",
+   "domicile": "Trostianets",
+   "exterieur": "Rebel",
+   "proba": [
+    12,
+    45,
+    43
+   ],
+   "base_api": [
+    10,
+    45,
+    45
+   ],
+   "ajustement": 2.4,
+   "forme_dom": [
+    "D",
+    "N",
+    "D",
+    "V",
+    "D"
+   ],
+   "forme_ext": [],
+   "source_dom": "historique",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "Liga 1 Feminin",
+   "heure": "2026-09-27T08:00:00+00:00",
+   "domicile": "Gloria Bistrița-Năsăud W",
+   "exterieur": "Univ. Craiova W",
+   "proba": [
+    50,
+    47,
+    3
+   ],
+   "base_api": [
+    50,
+    50,
+    0
+   ],
+   "ajustement": 3.6,
+   "forme_dom": [
+    "V",
+    "D",
+    "D",
+    "V",
+    "D"
+   ],
+   "forme_ext": [],
+   "source_dom": "historique",
    "source_ext": "actuelle",
    "face_a_face": {
     "dom": 0,
@@ -224,7 +232,92 @@
    "absents": []
   }
  ],
- "historique": [],
- "taux_reussite": null,
- "nb_verifies": 0
+ "historique": [
+  {
+   "fixture_id": 1555711,
+   "date": "2026-09-26T08:00:00+00:00",
+   "domicile": "Fukushima United",
+   "exterieur": "Parceiro Nagano",
+   "proba": [
+    10,
+    45,
+    45
+   ],
+   "resultat_reel": "dom"
+  },
+  {
+   "fixture_id": 1555712,
+   "date": "2026-09-26T08:00:00+00:00",
+   "domicile": "Kitakyushu",
+   "exterieur": "Kagoshima United",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "nul"
+  },
+  {
+   "fixture_id": 1555713,
+   "date": "2026-09-26T08:00:00+00:00",
+   "domicile": "Kamatamare Sanuki",
+   "exterieur": "FC Gifu",
+   "proba": [
+    10,
+    45,
+    45
+   ],
+   "resultat_reel": "ext"
+  },
+  {
+   "fixture_id": 1555715,
+   "date": "2026-09-26T08:00:00+00:00",
+   "domicile": "Kochi United",
+   "exterieur": "Osaka",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "ext"
+  },
+  {
+   "fixture_id": 1555716,
+   "date": "2026-09-26T08:00:00+00:00",
+   "domicile": "Thespakusatsu Gunma",
+   "exterieur": "Roasso Kumamoto",
+   "proba": [
+    9,
+    45,
+    46
+   ],
+   "resultat_reel": "ext"
+  },
+  {
+   "fixture_id": 1555719,
+   "date": "2026-09-26T08:00:00+00:00",
+   "domicile": "FC Ryukyu",
+   "exterieur": "Ehime FC",
+   "proba": [
+    35,
+    35,
+    30
+   ],
+   "resultat_reel": "nul"
+  },
+  {
+   "fixture_id": 1641079,
+   "date": "2026-09-26T07:00:00+00:00",
+   "domicile": "Papua New Guinea W",
+   "exterieur": "Vanuatu W",
+   "proba": [
+    45,
+    45,
+    10
+   ],
+   "resultat_reel": "dom"
+  }
+ ],
+ "taux_reussite": 43,
+ "nb_verifies": 7
 }

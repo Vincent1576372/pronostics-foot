@@ -9,7 +9,7 @@
    45,
    10
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom"
  },
  {
   "fixture_id": 1555711,
@@ -21,7 +21,7 @@
    45,
    45
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom"
  },
  {
   "fixture_id": 1555712,
@@ -33,7 +33,7 @@
    48,
    49
   ],
-  "resultat_reel": null
+  "resultat_reel": "nul"
  },
  {
   "fixture_id": 1555713,
@@ -45,7 +45,7 @@
    45,
    45
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext"
  },
  {
   "fixture_id": 1555715,
@@ -57,7 +57,7 @@
    48,
    49
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext"
  },
  {
   "fixture_id": 1555716,
@@ -69,7 +69,7 @@
    45,
    46
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext"
  },
  {
   "fixture_id": 1555719,
@@ -80,6 +80,90 @@
    35,
    35,
    30
+  ],
+  "resultat_reel": "nul"
+ },
+ {
+  "fixture_id": 1631740,
+  "date": "2026-09-27T00:00:00+00:00",
+  "domicile": "La Tribu de Cd. Juarez",
+  "exterieur": "Real Apodaca",
+  "proba": [
+   46,
+   50,
+   4
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640062,
+  "date": "2026-09-27T04:00:00+00:00",
+  "domicile": "Cook Islands",
+  "exterieur": "Tahiti",
+  "proba": [
+   3,
+   48,
+   49
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1639089,
+  "date": "2026-09-27T07:00:00+00:00",
+  "domicile": "Kaya",
+  "exterieur": "Philippine Army",
+  "proba": [
+   49,
+   48,
+   3
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640506,
+  "date": "2026-09-27T07:00:00+00:00",
+  "domicile": "Fiji",
+  "exterieur": "Papua New Guinea",
+  "proba": [
+   35,
+   35,
+   30
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1641706,
+  "date": "2026-09-27T07:00:00+00:00",
+  "domicile": "Hong Kong",
+  "exterieur": "Laos",
+  "proba": [
+   49,
+   48,
+   3
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1593025,
+  "date": "2026-09-27T08:00:00+00:00",
+  "domicile": "Trostianets",
+  "exterieur": "Rebel",
+  "proba": [
+   12,
+   45,
+   43
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1623498,
+  "date": "2026-09-27T08:00:00+00:00",
+  "domicile": "Gloria Bistrița-Năsăud W",
+  "exterieur": "Univ. Craiova W",
+  "proba": [
+   50,
+   47,
+   3
   ],
   "resultat_reel": null
  }
