@@ -1,7 +1,6 @@
-"""Robot de vérification : tourne toutes les 2 heures, ne fait qu'une chose,
-vérifier si des matchs déjà analysés sont maintenant terminés, et mettre à
-jour le taux de réussite. N'utilise que peu de requêtes (une par match en
-attente), pour rester dans le quota gratuit.
+"""Robot de vérification : tourne toutes les 2 heures. Vérifie si des matchs
+déjà analysés sont terminés, récupère le score final et les buteurs (avec la
+minute), et met à jour le taux de réussite. N'utilise que peu de requêtes.
 """
 import json
 import os
@@ -41,6 +40,21 @@ def issue_reelle(m):
     return "nul"
 
 
+def buteurs_de(fid):
+    evts = af_ok(f"/fixtures/events?fixture={fid}")
+    out = []
+    for e in evts:
+        if e.get("type") == "Goal":
+            out.append({
+                "equipe": e["team"]["name"],
+                "joueur": (e.get("player") or {}).get("name") or "?",
+                "minute": e["time"]["elapsed"],
+                "prolongation": e["time"].get("extra"),
+            })
+    out.sort(key=lambda x: (x["minute"] or 0))
+    return out
+
+
 try:
     with open(HIST, encoding="utf-8") as f:
         historique = json.load(f)
@@ -52,12 +66,19 @@ print(len(a_verifier), "match(s) en attente de résultat")
 
 for fid in {h["fixture_id"] for h in a_verifier}:
     res = af_ok(f"/fixtures?id={fid}")
-    if res:
-        issue = issue_reelle(res[0])
-        if issue:
-            for h in historique:
-                if h["fixture_id"] == fid:
-                    h["resultat_reel"] = issue
+    if not res:
+        continue
+    m = res[0]
+    issue = issue_reelle(m)
+    if not issue:
+        continue
+    score = [m["goals"]["home"], m["goals"]["away"]]
+    buteurs = buteurs_de(fid) if sum(score) > 0 else []
+    for h in historique:
+        if h["fixture_id"] == fid:
+            h["resultat_reel"] = issue
+            h["score"] = score
+            h["buteurs"] = buteurs
 
 with open(HIST, "w", encoding="utf-8") as f:
     json.dump(historique, f, ensure_ascii=False, indent=1)
@@ -76,7 +97,7 @@ try:
 except FileNotFoundError:
     data = {"matchs": []}
 
-data["historique"] = sorted(confirmes, key=lambda h: h["date"], reverse=True)[:20]
+data["historique"] = sorted(confirmes, key=lambda h: h["date"], reverse=True)[:30]
 data["taux_reussite"] = taux
 data["nb_verifies"] = len(confirmes)
 data["maj_resultats"] = datetime.now(timezone.utc).isoformat()
