@@ -179,7 +179,8 @@ var h='<h1>Résultats</h1><p class="sub">Efficacité des prédictions passées d
 if(D.taux_reussite==null){h+='<p class="sub">Pas encore assez de matchs terminés pour calculer un taux.</p>';app.innerHTML=h;return}
 h+='<div class="score"><b>'+D.taux_reussite+' %</b><span>de bons pronostics sur les '+D.nb_verifies+' derniers matchs vérifiés (toutes dates confondues)</span></div>';
 var groupes={},ordreJours=[];
-(D.historique||[]).forEach(function(x){
+(D.historique||[]).forEach(function(x,i){
+x._i=i;
 var lbl=jourLabel(x.date);
 if(!groupes[lbl]){groupes[lbl]=[];ordreJours.push(lbl)}
 groupes[lbl].push(x);
@@ -190,10 +191,27 @@ groupes[lbl].forEach(function(x){
 var ordre=["dom","nul","ext"],meilleur=ordre[x.proba.indexOf(Math.max.apply(null,x.proba))];
 var bon=meilleur==x.resultat_reel;
 var scoreTxt=x.score?(' · '+x.score[0]+' - '+x.score[1]):'';
-h+='<div class="p"><div class="row"><span><b>'+esc(x.domicile)+' – '+esc(x.exterieur)+'</b><br><span class="note">prédit : '+libIssue(meilleur)+' ('+x.proba[ordre.indexOf(meilleur)]+' %)'+scoreTxt+'</span>'+butsHtml(x)+'</span><span class="tag '+(bon?'ok':'bad')+'">'+(bon?'✓ ':'✗ ')+esc(libIssue(x.resultat_reel))+'</span></div></div>';
+h+='<button class="m" data-ri="'+x._i+'"><div class="row"><span><b>'+esc(x.domicile)+' – '+esc(x.exterieur)+'</b><br><span class="note">prédit : '+libIssue(meilleur)+' ('+x.proba[ordre.indexOf(meilleur)]+' %)'+scoreTxt+'</span></span><span class="tag '+(bon?'ok':'bad')+'">'+(bon?'✓ ':'✗ ')+esc(libIssue(x.resultat_reel))+'</span></div></button>';
 });
 });
 app.innerHTML=h;window.scrollTo(0,0);
+app.querySelectorAll(".m[data-ri]").forEach(function(b){b.onclick=function(){detailResultat(+b.dataset.ri)}});
+}
+
+function detailResultat(i){
+var x=D.historique[i];
+var ordre=["dom","nul","ext"],meilleur=ordre[x.proba.indexOf(Math.max.apply(null,x.proba))];
+var bon=meilleur==x.resultat_reel;
+var h='<button class="back" id="bk">← Tous les résultats</button>';
+h+='<h1>'+esc(x.domicile)+' – '+esc(x.exterieur)+'</h1><p class="sub">'+jr(x.date)+' à '+hr(x.date)+'</p>';
+if(x.score)h+='<div class="score"><b>'+x.score[0]+' - '+x.score[1]+'</b><span>Score final</span></div>';
+h+=bar(x.proba,"lg");
+h+='<div class="legend"><span><b>'+esc(x.domicile)+'</b> gagne</span><span>Nul</span><span><b>'+esc(x.exterieur)+'</b> gagne</span></div>';
+h+='<h2>Buteurs</h2>';
+h+= (x.buteurs&&x.buteurs.length) ? butsHtml(x) : '<p class="note">Aucun but marqué dans ce match.</p>';
+h+='<h2>Notre prédiction</h2><div class="p"><div class="row"><span>Meilleur pari : '+libIssue(meilleur)+' ('+x.proba[ordre.indexOf(meilleur)]+' %)</span><span class="tag '+(bon?'ok':'bad')+'">'+(bon?'✓ Correct':'✗ Incorrect')+'</span></div></div>';
+app.innerHTML=h;window.scrollTo(0,0);
+document.getElementById("bk").onclick=function(){vue="res";rendre()};
 }
 
 function chargerDonnees(){
