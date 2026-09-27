@@ -156,15 +156,42 @@ app.innerHTML=h;window.scrollTo(0,0);
 document.getElementById("bk").onclick=function(){vue="jour";rendre()};
 }
 
+function jourLabel(d){
+var dt=new Date(d),auj=new Date(),hier=new Date(auj);hier.setDate(auj.getDate()-1);
+var m=function(a,b){return a.toDateString()==b.toDateString()};
+if(m(dt,auj))return "Aujourd'hui";
+if(m(dt,hier))return "Hier";
+return dt.toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"});
+}
+function butsHtml(m){
+if(!m.buteurs||!m.buteurs.length)return "";
+var dom=m.buteurs.filter(function(b){return b.equipe==m.domicile});
+var ext=m.buteurs.filter(function(b){return b.equipe==m.exterieur});
+function lig(b){return b.joueur+" "+b.minute+"'"+(b.prolongation?("+"+b.prolongation):"")}
+var h='<div class="note" style="margin-top:6px">';
+if(dom.length)h+='<div>'+esc(m.domicile)+' : '+dom.map(lig).map(esc).join(", ")+'</div>';
+if(ext.length)h+='<div>'+esc(m.exterieur)+' : '+ext.map(lig).map(esc).join(", ")+'</div>';
+h+='</div>';
+return h;
+}
 function resultats(){
 var h='<h1>Résultats</h1><p class="sub">Efficacité des prédictions passées de ce site.</p>';
 if(D.taux_reussite==null){h+='<p class="sub">Pas encore assez de matchs terminés pour calculer un taux.</p>';app.innerHTML=h;return}
-h+='<div class="score"><b>'+D.taux_reussite+' %</b><span>de bons pronostics sur les '+D.nb_verifies+' derniers matchs vérifiés</span></div>';
-h+='<h2>Derniers matchs vérifiés</h2>';
+h+='<div class="score"><b>'+D.taux_reussite+' %</b><span>de bons pronostics sur les '+D.nb_verifies+' derniers matchs vérifiés (toutes dates confondues)</span></div>';
+var groupes={},ordreJours=[];
 (D.historique||[]).forEach(function(x){
+var lbl=jourLabel(x.date);
+if(!groupes[lbl]){groupes[lbl]=[];ordreJours.push(lbl)}
+groupes[lbl].push(x);
+});
+ordreJours.forEach(function(lbl){
+h+='<h2>'+esc(lbl)+'</h2>';
+groupes[lbl].forEach(function(x){
 var ordre=["dom","nul","ext"],meilleur=ordre[x.proba.indexOf(Math.max.apply(null,x.proba))];
 var bon=meilleur==x.resultat_reel;
-h+='<div class="p"><div class="row"><span><b>'+esc(x.domicile)+' – '+esc(x.exterieur)+'</b><br><span class="note">'+jr(x.date)+' · prédit : '+libIssue(meilleur)+' ('+x.proba[ordre.indexOf(meilleur)]+' %)</span></span><span class="tag '+(bon?'ok':'bad')+'">'+(bon?'✓ ':'✗ ')+esc(libIssue(x.resultat_reel))+'</span></div></div>';
+var scoreTxt=x.score?(' · '+x.score[0]+' - '+x.score[1]):'';
+h+='<div class="p"><div class="row"><span><b>'+esc(x.domicile)+' – '+esc(x.exterieur)+'</b><br><span class="note">prédit : '+libIssue(meilleur)+' ('+x.proba[ordre.indexOf(meilleur)]+' %)'+scoreTxt+'</span>'+butsHtml(x)+'</span><span class="tag '+(bon?'ok':'bad')+'">'+(bon?'✓ ':'✗ ')+esc(libIssue(x.resultat_reel))+'</span></div></div>';
+});
 });
 app.innerHTML=h;window.scrollTo(0,0);
 }
