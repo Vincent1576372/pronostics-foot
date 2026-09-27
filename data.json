@@ -234,6 +234,66 @@
  ],
  "historique": [
   {
+   "fixture_id": 1639089,
+   "date": "2026-09-27T07:00:00+00:00",
+   "domicile": "Kaya",
+   "exterieur": "Philippine Army",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "resultat_reel": "dom"
+  },
+  {
+   "fixture_id": 1640506,
+   "date": "2026-09-27T07:00:00+00:00",
+   "domicile": "Fiji",
+   "exterieur": "Papua New Guinea",
+   "proba": [
+    35,
+    35,
+    30
+   ],
+   "resultat_reel": "dom"
+  },
+  {
+   "fixture_id": 1641706,
+   "date": "2026-09-27T07:00:00+00:00",
+   "domicile": "Hong Kong",
+   "exterieur": "Laos",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "resultat_reel": "dom"
+  },
+  {
+   "fixture_id": 1640062,
+   "date": "2026-09-27T04:00:00+00:00",
+   "domicile": "Cook Islands",
+   "exterieur": "Tahiti",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "ext"
+  },
+  {
+   "fixture_id": 1631740,
+   "date": "2026-09-27T00:00:00+00:00",
+   "domicile": "La Tribu de Cd. Juarez",
+   "exterieur": "Real Apodaca",
+   "proba": [
+    46,
+    50,
+    4
+   ],
+   "resultat_reel": "dom"
+  },
+  {
    "fixture_id": 1555711,
    "date": "2026-09-26T08:00:00+00:00",
    "domicile": "Fukushima United",
@@ -318,6 +378,7 @@
    "resultat_reel": "dom"
   }
  ],
- "taux_reussite": 43,
- "nb_verifies": 7
+ "taux_reussite": 58,
+ "nb_verifies": 12,
+ "maj_resultats": "2026-09-27T09:51:37.313614+00:00"
 }
