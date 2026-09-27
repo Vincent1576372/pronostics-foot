@@ -33,7 +33,7 @@ nav button.on{background:var(--home);color:#fff;border-color:var(--home)}
 .mini.lock{background:var(--lock);color:#fff}
 .bar{display:flex;overflow:hidden;border-radius:8px;background:var(--line);height:26px;font-size:.85rem}
 .lg .bar{height:54px;font-size:1.05rem}
-.bar div{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;white-space:nowrap;overflow:visible}
+.bar div{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;white-space:nowrap;min-width:32px;flex-shrink:0}
 .h{background:var(--home)}.d{background:var(--draw);color:var(--ink)!important}.a{background:var(--away)}
 .blur{filter:blur(6px);pointer-events:none;user-select:none}
 .upsell{background:var(--card);border:1px dashed var(--lock);border-radius:10px;padding:16px;margin:14px 0;text-align:center}
@@ -101,7 +101,7 @@ var D=null,app=document.getElementById("app"),vue="jour";
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
 function hr(d){return new Date(d).toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"})}
 function jr(d){return new Date(d).toLocaleDateString("fr-FR",{day:"numeric",month:"short"})}
-function bar(p,c){return '<div class="'+c+'"><div class="bar"><div class="h" style="width:'+p[0]+'%">'+p[0]+' %</div><div class="d" style="width:'+p[1]+'%">'+p[1]+' %</div><div class="a" style="width:'+p[2]+'%">'+p[2]+' %</div></div></div>'}
+function bar(p,c){return '<div class="'+c+'"><div class="bar"><div class="h" style="flex:'+p[0]+' 1 0">'+p[0]+' %</div><div class="d" style="flex:'+p[1]+' 1 0">'+p[1]+' %</div><div class="a" style="flex:'+p[2]+' 1 0">'+p[2]+' %</div></div></div>'}
 function badges(l){return l.map(function(x){return '<span class="b '+esc(x)+'">'+esc(x)+'</span>'}).join("")||"—"}
 function libIssue(i){return i=="dom"?"Victoire domicile":i=="ext"?"Victoire extérieur":"Match nul"}
 function libSrc(s){return s=="actuelle"?"données actuelles":"données 2022-2024"}
