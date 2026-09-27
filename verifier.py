@@ -61,7 +61,7 @@ try:
 except FileNotFoundError:
     historique = []
 
-a_verifier = [h for h in historique if h.get("resultat_reel") is None or "score" not in h] if h.get("resultat_reel") is None]
+a_verifier = [h for h in historique if h.get("resultat_reel") is None or "score" not in h] if h.get("resultat_reel") is None or "score" not in h] if h.get("resultat_reel") is None]
 print(len(a_verifier), "match(s) en attente de résultat")
 
 for fid in {h["fixture_id"] for h in a_verifier}:
