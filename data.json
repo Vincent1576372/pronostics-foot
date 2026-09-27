@@ -260,7 +260,43 @@
     48,
     3
    ],
-   "resultat_reel": "dom"
+   "resultat_reel": "dom",
+   "score": [
+    5,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Kaya",
+     "joueur": "S. Avanzini",
+     "minute": 6,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kaya",
+     "joueur": "G. Rey",
+     "minute": 12,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kaya",
+     "joueur": "S. Kim",
+     "minute": 40,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kaya",
+     "joueur": "M. Ott",
+     "minute": 55,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kaya",
+     "joueur": "A. Ortega",
+     "minute": 88,
+     "prolongation": null
+    }
+   ]
   },
   {
    "fixture_id": 1640506,
@@ -272,7 +308,25 @@
     35,
     30
    ],
-   "resultat_reel": "dom"
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Fiji",
+     "joueur": "?",
+     "minute": 18,
+     "prolongation": null
+    },
+    {
+     "equipe": "Fiji",
+     "joueur": "?",
+     "minute": 24,
+     "prolongation": null
+    }
+   ]
   },
   {
    "fixture_id": 1641706,
@@ -284,7 +338,37 @@
     48,
     3
    ],
-   "resultat_reel": "dom"
+   "resultat_reel": "dom",
+   "score": [
+    4,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Hong Kong",
+     "joueur": "Sun Ming-Him",
+     "minute": 12,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hong Kong",
+     "joueur": "Everton Camargo",
+     "minute": 33,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hong Kong",
+     "joueur": "Luis Eduardo Chebel Klein Nunes",
+     "minute": 55,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hong Kong",
+     "joueur": "Matthew Elliot Wing Kai Chin Orr",
+     "minute": 90,
+     "prolongation": 1
+    }
+   ]
   },
   {
    "fixture_id": 1640062,
@@ -296,7 +380,12 @@
     48,
     49
    ],
-   "resultat_reel": "ext"
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    3
+   ],
+   "buteurs": []
   },
   {
    "fixture_id": 1631740,
@@ -308,7 +397,12 @@
     50,
     4
    ],
-   "resultat_reel": "dom"
+   "resultat_reel": "dom",
+   "score": [
+    3,
+    1
+   ],
+   "buteurs": []
   },
   {
    "fixture_id": 1555711,
@@ -320,7 +414,55 @@
     45,
     45
    ],
-   "resultat_reel": "dom"
+   "resultat_reel": "dom",
+   "score": [
+    4,
+    3
+   ],
+   "buteurs": [
+    {
+     "equipe": "Parceiro Nagano",
+     "joueur": "E. Gyotoku",
+     "minute": 6,
+     "prolongation": null
+    },
+    {
+     "equipe": "Fukushima United",
+     "joueur": "Y. Okada",
+     "minute": 34,
+     "prolongation": null
+    },
+    {
+     "equipe": "Parceiro Nagano",
+     "joueur": "R. Yamanaka",
+     "minute": 46,
+     "prolongation": null
+    },
+    {
+     "equipe": "Parceiro Nagano",
+     "joueur": "S. Yoshizawa",
+     "minute": 56,
+     "prolongation": null
+    },
+    {
+     "equipe": "Fukushima United",
+     "joueur": "K. Shimizu",
+     "minute": 77,
+     "prolongation": null
+    },
+    {
+     "equipe": "Fukushima United",
+     "joueur": "S. Izumi",
+     "minute": 84,
+     "prolongation": null
+    },
+    {
+     "equipe": "Fukushima United",
+     "joueur": "Y. Okada",
+     "minute": 90,
+     "prolongation": null
+    }
+   ]
   },
   {
    "fixture_id": 1555712,
@@ -332,7 +474,25 @@
     48,
     49
    ],
-   "resultat_reel": "nul"
+   "resultat_reel": "nul",
+   "score": [
+    1,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Kitakyushu",
+     "joueur": "S. Yasumitsu",
+     "minute": 63,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kagoshima United",
+     "joueur": "Juanma Delgado",
+     "minute": 87,
+     "prolongation": null
+    }
+   ]
   },
   {
    "fixture_id": 1555713,
@@ -344,7 +504,55 @@
     45,
     45
    ],
-   "resultat_reel": "ext"
+   "resultat_reel": "ext",
+   "score": [
+    3,
+    4
+   ],
+   "buteurs": [
+    {
+     "equipe": "FC Gifu",
+     "joueur": "H. Kanda",
+     "minute": 2,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kamatamare Sanuki",
+     "joueur": "R. Yonezawa",
+     "minute": 10,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kamatamare Sanuki",
+     "joueur": "R. Sano",
+     "minute": 27,
+     "prolongation": null
+    },
+    {
+     "equipe": "FC Gifu",
+     "joueur": "H. Kanda",
+     "minute": 32,
+     "prolongation": null
+    },
+    {
+     "equipe": "FC Gifu",
+     "joueur": "R. Kita",
+     "minute": 44,
+     "prolongation": null
+    },
+    {
+     "equipe": "FC Gifu",
+     "joueur": "H. Kanda",
+     "minute": 60,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kamatamare Sanuki",
+     "joueur": "Y. Murakami",
+     "minute": 87,
+     "prolongation": null
+    }
+   ]
   },
   {
    "fixture_id": 1555715,
@@ -356,7 +564,37 @@
     48,
     49
    ],
-   "resultat_reel": "ext"
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    4
+   ],
+   "buteurs": [
+    {
+     "equipe": "Osaka",
+     "joueur": "S. Tachino",
+     "minute": 45,
+     "prolongation": 2
+    },
+    {
+     "equipe": "Osaka",
+     "joueur": "K. Isa",
+     "minute": 54,
+     "prolongation": null
+    },
+    {
+     "equipe": "Osaka",
+     "joueur": "Y. Shimoda",
+     "minute": 74,
+     "prolongation": null
+    },
+    {
+     "equipe": "Osaka",
+     "joueur": "T. Toya",
+     "minute": 80,
+     "prolongation": null
+    }
+   ]
   },
   {
    "fixture_id": 1555716,
@@ -368,7 +606,19 @@
     45,
     46
    ],
-   "resultat_reel": "ext"
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Roasso Kumamoto",
+     "joueur": "Y. Katori",
+     "minute": 71,
+     "prolongation": null
+    }
+   ]
   },
   {
    "fixture_id": 1555719,
@@ -380,7 +630,25 @@
     35,
     30
    ],
-   "resultat_reel": "nul"
+   "resultat_reel": "nul",
+   "score": [
+    1,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Ehime FC",
+     "joueur": "H. Fujiharu",
+     "minute": 61,
+     "prolongation": null
+    },
+    {
+     "equipe": "FC Ryukyu",
+     "joueur": "Y. Koki",
+     "minute": 90,
+     "prolongation": 2
+    }
+   ]
   },
   {
    "fixture_id": 1641079,
@@ -392,10 +660,28 @@
     45,
     10
    ],
-   "resultat_reel": "dom"
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Papua New Guinea W",
+     "joueur": "P. Pala",
+     "minute": 47,
+     "prolongation": null
+    },
+    {
+     "equipe": "Papua New Guinea W",
+     "joueur": "K. Kalapai",
+     "minute": 70,
+     "prolongation": null
+    }
+   ]
   }
  ],
  "taux_reussite": 62,
  "nb_verifies": 13,
- "maj_resultats": "2026-09-27T12:15:18.337188+00:00"
+ "maj_resultats": "2026-09-27T14:31:23.915160+00:00"
 }
