@@ -234,6 +234,23 @@
  ],
  "historique": [
   {
+   "fixture_id": 1593025,
+   "date": "2026-09-27T08:00:00+00:00",
+   "domicile": "Trostianets",
+   "exterieur": "Rebel",
+   "proba": [
+    12,
+    45,
+    43
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    2,
+    2
+   ],
+   "buteurs": []
+  },
+  {
    "fixture_id": 1639089,
    "date": "2026-09-27T07:00:00+00:00",
    "domicile": "Kaya",
@@ -378,7 +395,7 @@
    "resultat_reel": "dom"
   }
  ],
- "taux_reussite": 58,
- "nb_verifies": 12,
- "maj_resultats": "2026-09-27T10:11:51.442442+00:00"
+ "taux_reussite": 62,
+ "nb_verifies": 13,
+ "maj_resultats": "2026-09-27T10:56:38.224875+00:00"
 }
