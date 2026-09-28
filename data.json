@@ -226,6 +226,156 @@
  ],
  "historique": [
   {
+   "fixture_id": 1629000,
+   "date": "2026-09-28T10:25:00+00:00",
+   "domicile": "Japan",
+   "exterieur": "Venezuela",
+   "proba": [
+    37,
+    35,
+    28
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Venezuela",
+     "joueur": "K. Kelsy",
+     "minute": 46,
+     "prolongation": null
+    },
+    {
+     "equipe": "Japan",
+     "joueur": "A. Ueda",
+     "minute": 49,
+     "prolongation": null
+    },
+    {
+     "equipe": "Japan",
+     "joueur": "A. Ueda",
+     "minute": 90,
+     "prolongation": 6
+    }
+   ]
+  },
+  {
+   "fixture_id": 1581920,
+   "date": "2026-09-28T10:00:00+00:00",
+   "domicile": "Polissya II",
+   "exterieur": "Kolos Kovalivka II",
+   "proba": [
+    8,
+    45,
+    47
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    3
+   ],
+   "buteurs": [
+    {
+     "equipe": "Kolos Kovalivka II",
+     "joueur": "D. Kolesnyk",
+     "minute": 19,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kolos Kovalivka II",
+     "joueur": "R. Taranukha",
+     "minute": 82,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kolos Kovalivka II",
+     "joueur": "I. Melnychenko",
+     "minute": 90,
+     "prolongation": 1
+    }
+   ]
+  },
+  {
+   "fixture_id": 1636776,
+   "date": "2026-09-28T09:00:00+00:00",
+   "domicile": "Tensung",
+   "exterieur": "RTC",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    5
+   ],
+   "buteurs": [
+    {
+     "equipe": "RTC",
+     "joueur": "pema zangpo",
+     "minute": 7,
+     "prolongation": null
+    },
+    {
+     "equipe": "RTC",
+     "joueur": "nima gyeltshen",
+     "minute": 28,
+     "prolongation": null
+    },
+    {
+     "equipe": "Tensung",
+     "joueur": "?",
+     "minute": 32,
+     "prolongation": null
+    },
+    {
+     "equipe": "RTC",
+     "joueur": "nima gyeltshen",
+     "minute": 42,
+     "prolongation": null
+    },
+    {
+     "equipe": "RTC",
+     "joueur": "?",
+     "minute": 44,
+     "prolongation": null
+    },
+    {
+     "equipe": "RTC",
+     "joueur": "Riku Ichimura",
+     "minute": 66,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1641708,
+   "date": "2026-09-28T09:00:00+00:00",
+   "domicile": "Singapore",
+   "exterieur": "Bangladesh",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    1,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Singapore",
+     "joueur": "Harhys Stewart",
+     "minute": 35,
+     "prolongation": null
+    }
+   ]
+  },
+  {
    "fixture_id": 1593025,
    "date": "2026-09-27T08:00:00+00:00",
    "domicile": "Trostianets",
@@ -709,7 +859,7 @@
    ]
   }
  ],
- "taux_reussite": 64,
- "nb_verifies": 14,
- "maj_resultats": "2026-09-28T10:41:02.976704+00:00"
+ "taux_reussite": 72,
+ "nb_verifies": 18,
+ "maj_resultats": "2026-09-28T12:47:14.406533+00:00"
 }
