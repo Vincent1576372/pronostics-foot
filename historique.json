@@ -456,6 +456,30 @@
    47,
    3
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   13,
+   1
+  ],
+  "buteurs": [
+   {
+    "equipe": "Gloria Bistrița-Năsăud W",
+    "joueur": "?",
+    "minute": 1,
+    "prolongation": null
+   },
+   {
+    "equipe": "Gloria Bistrița-Năsăud W",
+    "joueur": "?",
+    "minute": 1,
+    "prolongation": null
+   },
+   {
+    "equipe": "Gloria Bistrița-Năsăud W",
+    "joueur": "?",
+    "minute": 8,
+    "prolongation": null
+   }
+  ]
  }
 ]

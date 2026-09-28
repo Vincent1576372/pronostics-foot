@@ -251,6 +251,42 @@
    "buteurs": []
   },
   {
+   "fixture_id": 1623498,
+   "date": "2026-09-27T08:00:00+00:00",
+   "domicile": "Gloria Bistrița-Năsăud W",
+   "exterieur": "Univ. Craiova W",
+   "proba": [
+    50,
+    47,
+    3
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    13,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Gloria Bistrița-Năsăud W",
+     "joueur": "?",
+     "minute": 1,
+     "prolongation": null
+    },
+    {
+     "equipe": "Gloria Bistrița-Năsăud W",
+     "joueur": "?",
+     "minute": 1,
+     "prolongation": null
+    },
+    {
+     "equipe": "Gloria Bistrița-Năsăud W",
+     "joueur": "?",
+     "minute": 8,
+     "prolongation": null
+    }
+   ]
+  },
+  {
    "fixture_id": 1639089,
    "date": "2026-09-27T07:00:00+00:00",
    "domicile": "Kaya",
@@ -681,7 +717,7 @@
    ]
   }
  ],
- "taux_reussite": 62,
- "nb_verifies": 13,
- "maj_resultats": "2026-09-28T00:18:44.839592+00:00"
+ "taux_reussite": 64,
+ "nb_verifies": 14,
+ "maj_resultats": "2026-09-28T02:12:07.428118+00:00"
 }
