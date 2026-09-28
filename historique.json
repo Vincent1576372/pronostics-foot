@@ -481,5 +481,89 @@
     "prolongation": null
    }
   ]
+ },
+ {
+  "fixture_id": 1636776,
+  "date": "2026-09-28T09:00:00+00:00",
+  "domicile": "Tensung",
+  "exterieur": "RTC",
+  "proba": [
+   3,
+   48,
+   49
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1641708,
+  "date": "2026-09-28T09:00:00+00:00",
+  "domicile": "Singapore",
+  "exterieur": "Bangladesh",
+  "proba": [
+   49,
+   48,
+   3
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1581920,
+  "date": "2026-09-28T10:00:00+00:00",
+  "domicile": "Polissya II",
+  "exterieur": "Kolos Kovalivka II",
+  "proba": [
+   8,
+   45,
+   47
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1629000,
+  "date": "2026-09-28T10:25:00+00:00",
+  "domicile": "Japan",
+  "exterieur": "Venezuela",
+  "proba": [
+   37,
+   35,
+   28
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1628999,
+  "date": "2026-09-28T11:00:00+00:00",
+  "domicile": "South Korea",
+  "exterieur": "Uruguay",
+  "proba": [
+   47,
+   45,
+   8
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1638596,
+  "date": "2026-09-28T12:00:00+00:00",
+  "domicile": "Tajikistan",
+  "exterieur": "Palestine",
+  "proba": [
+   35,
+   35,
+   30
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640507,
+  "date": "2026-09-28T12:00:00+00:00",
+  "domicile": "Kyrgyzstan",
+  "exterieur": "Lebanon",
+  "proba": [
+   34,
+   33,
+   33
+  ],
+  "resultat_reel": null
  }
 ]

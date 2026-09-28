@@ -1,46 +1,12 @@
 {
- "maj": "2026-09-27T06:19:59.944485+00:00",
+ "maj": "2026-09-28T07:13:59.812103+00:00",
  "matchs": [
   {
    "categorie": "secondaire",
-   "competition": "Liga Premier Serie A",
-   "heure": "2026-09-27T00:00:00+00:00",
-   "domicile": "La Tribu de Cd. Juarez",
-   "exterieur": "Real Apodaca",
-   "proba": [
-    46,
-    50,
-    4
-   ],
-   "base_api": [
-    50,
-    50,
-    0
-   ],
-   "ajustement": -3.6,
-   "forme_dom": [],
-   "forme_ext": [
-    "D",
-    "V",
-    "D",
-    "V",
-    "D"
-   ],
-   "source_dom": "historique",
-   "source_ext": "historique",
-   "face_a_face": {
-    "dom": 0,
-    "nuls": 0,
-    "ext": 0
-   },
-   "absents": []
-  },
-  {
-   "categorie": "secondaire",
-   "competition": "Friendlies",
-   "heure": "2026-09-27T04:00:00+00:00",
-   "domicile": "Cook Islands",
-   "exterieur": "Tahiti",
+   "competition": "Premier League",
+   "heure": "2026-09-28T09:00:00+00:00",
+   "domicile": "Tensung",
+   "exterieur": "RTC",
    "proba": [
     3,
     48,
@@ -50,70 +16,6 @@
     0,
     50,
     50
-   ],
-   "ajustement": -1.8,
-   "forme_dom": [
-    "D"
-   ],
-   "forme_ext": [
-    "V"
-   ],
-   "source_dom": "actuelle",
-   "source_ext": "actuelle",
-   "face_a_face": {
-    "dom": 0,
-    "nuls": 0,
-    "ext": 0
-   },
-   "absents": []
-  },
-  {
-   "categorie": "secondaire",
-   "competition": "PFL",
-   "heure": "2026-09-27T07:00:00+00:00",
-   "domicile": "Kaya",
-   "exterieur": "Philippine Army",
-   "proba": [
-    49,
-    48,
-    3
-   ],
-   "base_api": [
-    50,
-    50,
-    0
-   ],
-   "ajustement": 1.8,
-   "forme_dom": [
-    "V"
-   ],
-   "forme_ext": [
-    "D"
-   ],
-   "source_dom": "actuelle",
-   "source_ext": "actuelle",
-   "face_a_face": {
-    "dom": 0,
-    "nuls": 0,
-    "ext": 0
-   },
-   "absents": []
-  },
-  {
-   "categorie": "secondaire",
-   "competition": "Friendlies",
-   "heure": "2026-09-27T07:00:00+00:00",
-   "domicile": "Fiji",
-   "exterieur": "Papua New Guinea",
-   "proba": [
-    35,
-    35,
-    30
-   ],
-   "base_api": [
-    35,
-    35,
-    30
    ],
    "ajustement": 0.0,
    "forme_dom": [
@@ -134,9 +36,9 @@
   {
    "categorie": "secondaire",
    "competition": "FIFA Asean Cup",
-   "heure": "2026-09-27T07:00:00+00:00",
-   "domicile": "Hong Kong",
-   "exterieur": "Laos",
+   "heure": "2026-09-28T09:00:00+00:00",
+   "domicile": "Singapore",
+   "exterieur": "Bangladesh",
    "proba": [
     49,
     48,
@@ -149,7 +51,39 @@
    ],
    "ajustement": 0.0,
    "forme_dom": [
-    "V"
+    "D"
+   ],
+   "forme_ext": [
+    "D"
+   ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "Persha Liga",
+   "heure": "2026-09-28T10:00:00+00:00",
+   "domicile": "Polissya II",
+   "exterieur": "Kolos Kovalivka II",
+   "proba": [
+    8,
+    45,
+    47
+   ],
+   "base_api": [
+    10,
+    45,
+    45
+   ],
+   "ajustement": -1.8,
+   "forme_dom": [
+    "D"
    ],
    "forme_ext": [
     "V"
@@ -165,30 +99,28 @@
   },
   {
    "categorie": "secondaire",
-   "competition": "Druha Liga",
-   "heure": "2026-09-27T08:00:00+00:00",
-   "domicile": "Trostianets",
-   "exterieur": "Rebel",
+   "competition": "Friendlies",
+   "heure": "2026-09-28T10:25:00+00:00",
+   "domicile": "Japan",
+   "exterieur": "Venezuela",
    "proba": [
-    12,
-    45,
-    43
+    37,
+    35,
+    28
    ],
    "base_api": [
-    10,
-    45,
-    45
+    35,
+    35,
+    30
    ],
-   "ajustement": 2.4,
+   "ajustement": 1.8,
    "forme_dom": [
-    "D",
-    "N",
-    "D",
-    "V",
+    "V"
+   ],
+   "forme_ext": [
     "D"
    ],
-   "forme_ext": [],
-   "source_dom": "historique",
+   "source_dom": "actuelle",
    "source_ext": "actuelle",
    "face_a_face": {
     "dom": 0,
@@ -199,30 +131,90 @@
   },
   {
    "categorie": "secondaire",
-   "competition": "Liga 1 Feminin",
-   "heure": "2026-09-27T08:00:00+00:00",
-   "domicile": "Gloria Bistrița-Năsăud W",
-   "exterieur": "Univ. Craiova W",
+   "competition": "Friendlies",
+   "heure": "2026-09-28T11:00:00+00:00",
+   "domicile": "South Korea",
+   "exterieur": "Uruguay",
    "proba": [
-    50,
     47,
-    3
+    45,
+    8
    ],
    "base_api": [
-    50,
-    50,
-    0
+    45,
+    45,
+    10
    ],
-   "ajustement": 3.6,
+   "ajustement": 1.8,
    "forme_dom": [
-    "V",
-    "D",
-    "D",
-    "V",
+    "V"
+   ],
+   "forme_ext": [
     "D"
    ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "Friendlies",
+   "heure": "2026-09-28T12:00:00+00:00",
+   "domicile": "Tajikistan",
+   "exterieur": "Palestine",
+   "proba": [
+    35,
+    35,
+    30
+   ],
+   "base_api": [
+    35,
+    35,
+    30
+   ],
+   "ajustement": 0.0,
+   "forme_dom": [
+    "N"
+   ],
+   "forme_ext": [
+    "N"
+   ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "Friendlies",
+   "heure": "2026-09-28T12:00:00+00:00",
+   "domicile": "Kyrgyzstan",
+   "exterieur": "Lebanon",
+   "proba": [
+    34,
+    33,
+    33
+   ],
+   "base_api": [
+    33,
+    33,
+    33
+   ],
+   "ajustement": 0.6,
+   "forme_dom": [
+    "N"
+   ],
    "forme_ext": [],
-   "source_dom": "historique",
+   "source_dom": "actuelle",
    "source_ext": "actuelle",
    "face_a_face": {
     "dom": 0,
@@ -718,6 +710,5 @@
   }
  ],
  "taux_reussite": 64,
- "nb_verifies": 14,
- "maj_resultats": "2026-09-28T06:17:26.038157+00:00"
+ "nb_verifies": 14
 }
