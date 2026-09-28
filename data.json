@@ -226,6 +226,71 @@
  ],
  "historique": [
   {
+   "fixture_id": 1638596,
+   "date": "2026-09-28T12:00:00+00:00",
+   "domicile": "Tajikistan",
+   "exterieur": "Palestine",
+   "proba": [
+    35,
+    35,
+    30
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    2,
+    4
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1628999,
+   "date": "2026-09-28T11:00:00+00:00",
+   "domicile": "South Korea",
+   "exterieur": "Uruguay",
+   "proba": [
+    47,
+    45,
+    8
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    4
+   ],
+   "buteurs": [
+    {
+     "equipe": "Uruguay",
+     "joueur": "D. Nunez",
+     "minute": 13,
+     "prolongation": null
+    },
+    {
+     "equipe": "Uruguay",
+     "joueur": "G. de Arrascaeta",
+     "minute": 27,
+     "prolongation": null
+    },
+    {
+     "equipe": "Uruguay",
+     "joueur": "G. Varela",
+     "minute": 43,
+     "prolongation": null
+    },
+    {
+     "equipe": "Uruguay",
+     "joueur": "D. Nunez",
+     "minute": 62,
+     "prolongation": null
+    },
+    {
+     "equipe": "South Korea",
+     "joueur": "Lee Kang-In",
+     "minute": 80,
+     "prolongation": null
+    }
+   ]
+  },
+  {
    "fixture_id": 1629000,
    "date": "2026-09-28T10:25:00+00:00",
    "domicile": "Japan",
@@ -859,7 +924,7 @@
    ]
   }
  ],
- "taux_reussite": 72,
- "nb_verifies": 18,
- "maj_resultats": "2026-09-28T12:47:14.406533+00:00"
+ "taux_reussite": 65,
+ "nb_verifies": 20,
+ "maj_resultats": "2026-09-28T14:42:33.902426+00:00"
 }
