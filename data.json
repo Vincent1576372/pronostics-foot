@@ -226,6 +226,120 @@
  ],
  "historique": [
   {
+   "fixture_id": 1632086,
+   "date": "2026-09-29T09:30:00+00:00",
+   "domicile": "France U20",
+   "exterieur": "England U20",
+   "proba": [
+    11,
+    45,
+    44
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    2
+   ],
+   "buteurs": [
+    {
+     "equipe": "England U20",
+     "joueur": "S. Mheuka",
+     "minute": 10,
+     "prolongation": null
+    },
+    {
+     "equipe": "England U20",
+     "joueur": "M. Moore",
+     "minute": 16,
+     "prolongation": null
+    },
+    {
+     "equipe": "France U20",
+     "joueur": "?",
+     "minute": 68,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1640263,
+   "date": "2026-09-29T09:00:00+00:00",
+   "domicile": "ATK Mohun Bagan",
+   "exterieur": "NorthEast United",
+   "proba": [
+    43,
+    45,
+    12
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    1,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "ATK Mohun Bagan",
+     "joueur": "?",
+     "minute": 49,
+     "prolongation": null
+    },
+    {
+     "equipe": "ATK Mohun Bagan",
+     "joueur": "?",
+     "minute": 70,
+     "prolongation": null
+    },
+    {
+     "equipe": "NorthEast United",
+     "joueur": "E. Gonzalez",
+     "minute": 72,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1641710,
+   "date": "2026-09-29T09:00:00+00:00",
+   "domicile": "Philippines",
+   "exterieur": "Pakistan",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    2,
+    2
+   ],
+   "buteurs": [
+    {
+     "equipe": "Philippines",
+     "joueur": "Sandro Reyes",
+     "minute": 24,
+     "prolongation": null
+    },
+    {
+     "equipe": "Philippines",
+     "joueur": "Bjorn Martin Kristensen",
+     "minute": 32,
+     "prolongation": null
+    },
+    {
+     "equipe": "Pakistan",
+     "joueur": "Ali Khan",
+     "minute": 47,
+     "prolongation": null
+    },
+    {
+     "equipe": "Pakistan",
+     "joueur": "Abdul Arshad",
+     "minute": 62,
+     "prolongation": null
+    }
+   ]
+  },
+  {
    "fixture_id": 1641082,
    "date": "2026-09-29T07:00:00+00:00",
    "domicile": "Fiji W",
@@ -948,7 +1062,7 @@
    ]
   }
  ],
- "taux_reussite": 67,
- "nb_verifies": 21,
- "maj_resultats": "2026-09-29T10:42:44.460895+00:00"
+ "taux_reussite": 62,
+ "nb_verifies": 24,
+ "maj_resultats": "2026-09-29T12:47:05.227787+00:00"
 }

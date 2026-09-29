@@ -779,7 +779,31 @@
    45,
    12
   ],
-  "resultat_reel": null
+  "resultat_reel": "nul",
+  "score": [
+   1,
+   1
+  ],
+  "buteurs": [
+   {
+    "equipe": "ATK Mohun Bagan",
+    "joueur": "?",
+    "minute": 49,
+    "prolongation": null
+   },
+   {
+    "equipe": "ATK Mohun Bagan",
+    "joueur": "?",
+    "minute": 70,
+    "prolongation": null
+   },
+   {
+    "equipe": "NorthEast United",
+    "joueur": "E. Gonzalez",
+    "minute": 72,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1641710,
@@ -791,7 +815,37 @@
    48,
    3
   ],
-  "resultat_reel": null
+  "resultat_reel": "nul",
+  "score": [
+   2,
+   2
+  ],
+  "buteurs": [
+   {
+    "equipe": "Philippines",
+    "joueur": "Sandro Reyes",
+    "minute": 24,
+    "prolongation": null
+   },
+   {
+    "equipe": "Philippines",
+    "joueur": "Bjorn Martin Kristensen",
+    "minute": 32,
+    "prolongation": null
+   },
+   {
+    "equipe": "Pakistan",
+    "joueur": "Ali Khan",
+    "minute": 47,
+    "prolongation": null
+   },
+   {
+    "equipe": "Pakistan",
+    "joueur": "Abdul Arshad",
+    "minute": 62,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1632086,
@@ -803,6 +857,30 @@
    45,
    44
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   1,
+   2
+  ],
+  "buteurs": [
+   {
+    "equipe": "England U20",
+    "joueur": "S. Mheuka",
+    "minute": 10,
+    "prolongation": null
+   },
+   {
+    "equipe": "England U20",
+    "joueur": "M. Moore",
+    "minute": 16,
+    "prolongation": null
+   },
+   {
+    "equipe": "France U20",
+    "joueur": "?",
+    "minute": 68,
+    "prolongation": null
+   }
+  ]
  }
 ]
