@@ -719,7 +719,19 @@
    45,
    10
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   1,
+   0
+  ],
+  "buteurs": [
+   {
+    "equipe": "Fiji W",
+    "joueur": "?",
+    "minute": 56,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1640225,

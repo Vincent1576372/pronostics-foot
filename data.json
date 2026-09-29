@@ -226,6 +226,30 @@
  ],
  "historique": [
   {
+   "fixture_id": 1641082,
+   "date": "2026-09-29T07:00:00+00:00",
+   "domicile": "Fiji W",
+   "exterieur": "New Caledonia W",
+   "proba": [
+    45,
+    45,
+    10
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    1,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Fiji W",
+     "joueur": "?",
+     "minute": 56,
+     "prolongation": null
+    }
+   ]
+  },
+  {
    "fixture_id": 1638596,
    "date": "2026-09-28T12:00:00+00:00",
    "domicile": "Tajikistan",
@@ -924,7 +948,7 @@
    ]
   }
  ],
- "taux_reussite": 65,
- "nb_verifies": 20,
- "maj_resultats": "2026-09-29T08:42:34.461888+00:00"
+ "taux_reussite": 67,
+ "nb_verifies": 21,
+ "maj_resultats": "2026-09-29T10:42:44.460895+00:00"
 }
