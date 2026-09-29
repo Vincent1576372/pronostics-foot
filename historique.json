@@ -708,5 +708,89 @@
    33
   ],
   "resultat_reel": null
+ },
+ {
+  "fixture_id": 1641082,
+  "date": "2026-09-29T07:00:00+00:00",
+  "domicile": "Fiji W",
+  "exterieur": "New Caledonia W",
+  "proba": [
+   45,
+   45,
+   10
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640225,
+  "date": "2026-09-29T09:00:00+00:00",
+  "domicile": "Mohammedan Dhaka",
+  "exterieur": "Arambagh",
+  "proba": [
+   3,
+   48,
+   49
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640226,
+  "date": "2026-09-29T09:00:00+00:00",
+  "domicile": "Dhaka Wanderers",
+  "exterieur": "Bashundhara Kings",
+  "proba": [
+   48,
+   49,
+   3
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640227,
+  "date": "2026-09-29T09:00:00+00:00",
+  "domicile": "Bangladesh Police",
+  "exterieur": "City Club",
+  "proba": [
+   35,
+   33,
+   32
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640263,
+  "date": "2026-09-29T09:00:00+00:00",
+  "domicile": "ATK Mohun Bagan",
+  "exterieur": "NorthEast United",
+  "proba": [
+   43,
+   45,
+   12
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1641710,
+  "date": "2026-09-29T09:00:00+00:00",
+  "domicile": "Philippines",
+  "exterieur": "Pakistan",
+  "proba": [
+   49,
+   48,
+   3
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1632086,
+  "date": "2026-09-29T09:30:00+00:00",
+  "domicile": "France U20",
+  "exterieur": "England U20",
+  "proba": [
+   11,
+   45,
+   44
+  ],
+  "resultat_reel": null
  }
 ]
