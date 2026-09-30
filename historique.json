@@ -893,7 +893,31 @@
    45,
    8
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   2,
+   1
+  ],
+  "buteurs": [
+   {
+    "equipe": "New Caledonia",
+    "joueur": "W. Read",
+    "minute": 40,
+    "prolongation": null
+   },
+   {
+    "equipe": "Fiji",
+    "joueur": "S. Wara",
+    "minute": 50,
+    "prolongation": null
+   },
+   {
+    "equipe": "Fiji",
+    "joueur": "M. Dau",
+    "minute": 66,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1640417,
@@ -905,7 +929,43 @@
    45,
    45
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   0,
+   4
+  ],
+  "buteurs": [
+   {
+    "equipe": "Ulaanbaatar",
+    "joueur": "?",
+    "minute": 7,
+    "prolongation": null
+   },
+   {
+    "equipe": "Ulaanbaatar",
+    "joueur": "?",
+    "minute": 60,
+    "prolongation": null
+   },
+   {
+    "equipe": "Ulaanbaatar",
+    "joueur": "?",
+    "minute": 75,
+    "prolongation": null
+   },
+   {
+    "equipe": "Ulaanbaatar",
+    "joueur": "?",
+    "minute": 87,
+    "prolongation": null
+   },
+   {
+    "equipe": "Ulaanbaatar",
+    "joueur": "?",
+    "minute": 90,
+    "prolongation": 2
+   }
+  ]
  },
  {
   "fixture_id": 1642893,
@@ -917,7 +977,31 @@
    34,
    33
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   2,
+   1
+  ],
+  "buteurs": [
+   {
+    "equipe": "Arges Pitesti",
+    "joueur": "?",
+    "minute": 18,
+    "prolongation": null
+   },
+   {
+    "equipe": "Cetate Deva",
+    "joueur": "?",
+    "minute": 50,
+    "prolongation": null
+   },
+   {
+    "equipe": "Arges Pitesti",
+    "joueur": "?",
+    "minute": 79,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1632351,

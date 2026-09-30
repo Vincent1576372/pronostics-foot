@@ -234,6 +234,126 @@
  ],
  "historique": [
   {
+   "fixture_id": 1640417,
+   "date": "2026-09-30T08:00:00+00:00",
+   "domicile": "Khovd",
+   "exterieur": "Ulaanbaatar",
+   "proba": [
+    10,
+    45,
+    45
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    4
+   ],
+   "buteurs": [
+    {
+     "equipe": "Ulaanbaatar",
+     "joueur": "?",
+     "minute": 7,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ulaanbaatar",
+     "joueur": "?",
+     "minute": 60,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ulaanbaatar",
+     "joueur": "?",
+     "minute": 75,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ulaanbaatar",
+     "joueur": "?",
+     "minute": 87,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ulaanbaatar",
+     "joueur": "?",
+     "minute": 90,
+     "prolongation": 2
+    }
+   ]
+  },
+  {
+   "fixture_id": 1642893,
+   "date": "2026-09-30T08:00:00+00:00",
+   "domicile": "Arges Pitesti",
+   "exterieur": "Cetate Deva",
+   "proba": [
+    33,
+    34,
+    33
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Arges Pitesti",
+     "joueur": "?",
+     "minute": 18,
+     "prolongation": null
+    },
+    {
+     "equipe": "Cetate Deva",
+     "joueur": "?",
+     "minute": 50,
+     "prolongation": null
+    },
+    {
+     "equipe": "Arges Pitesti",
+     "joueur": "?",
+     "minute": 79,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1640510,
+   "date": "2026-09-30T07:00:00+00:00",
+   "domicile": "Fiji",
+   "exterieur": "New Caledonia",
+   "proba": [
+    47,
+    45,
+    8
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "New Caledonia",
+     "joueur": "W. Read",
+     "minute": 40,
+     "prolongation": null
+    },
+    {
+     "equipe": "Fiji",
+     "joueur": "S. Wara",
+     "minute": 50,
+     "prolongation": null
+    },
+    {
+     "equipe": "Fiji",
+     "joueur": "M. Dau",
+     "minute": 66,
+     "prolongation": null
+    }
+   ]
+  },
+  {
    "fixture_id": 1632086,
    "date": "2026-09-29T09:30:00+00:00",
    "domicile": "France U20",
@@ -1070,7 +1190,7 @@
    ]
   }
  ],
- "taux_reussite": 62,
- "nb_verifies": 24,
- "maj_resultats": "2026-09-30T08:43:27.258873+00:00"
+ "taux_reussite": 59,
+ "nb_verifies": 27,
+ "maj_resultats": "2026-09-30T10:42:42.138998+00:00"
 }
