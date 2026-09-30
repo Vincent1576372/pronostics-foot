@@ -942,8 +942,135 @@
      "prolongation": null
     }
    ]
+  },
+  {
+   "fixture_id": 1555715,
+   "date": "2026-09-26T08:00:00+00:00",
+   "domicile": "Kochi United",
+   "exterieur": "Osaka",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    4
+   ],
+   "buteurs": [
+    {
+     "equipe": "Osaka",
+     "joueur": "S. Tachino",
+     "minute": 45,
+     "prolongation": 2
+    },
+    {
+     "equipe": "Osaka",
+     "joueur": "K. Isa",
+     "minute": 54,
+     "prolongation": null
+    },
+    {
+     "equipe": "Osaka",
+     "joueur": "Y. Shimoda",
+     "minute": 74,
+     "prolongation": null
+    },
+    {
+     "equipe": "Osaka",
+     "joueur": "T. Toya",
+     "minute": 80,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1555716,
+   "date": "2026-09-26T08:00:00+00:00",
+   "domicile": "Thespakusatsu Gunma",
+   "exterieur": "Roasso Kumamoto",
+   "proba": [
+    9,
+    45,
+    46
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Roasso Kumamoto",
+     "joueur": "Y. Katori",
+     "minute": 71,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1555719,
+   "date": "2026-09-26T08:00:00+00:00",
+   "domicile": "FC Ryukyu",
+   "exterieur": "Ehime FC",
+   "proba": [
+    35,
+    35,
+    30
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    1,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Ehime FC",
+     "joueur": "H. Fujiharu",
+     "minute": 61,
+     "prolongation": null
+    },
+    {
+     "equipe": "FC Ryukyu",
+     "joueur": "Y. Koki",
+     "minute": 90,
+     "prolongation": 2
+    }
+   ]
+  },
+  {
+   "fixture_id": 1641079,
+   "date": "2026-09-26T07:00:00+00:00",
+   "domicile": "Papua New Guinea W",
+   "exterieur": "Vanuatu W",
+   "proba": [
+    45,
+    45,
+    10
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Papua New Guinea W",
+     "joueur": "P. Pala",
+     "minute": 47,
+     "prolongation": null
+    },
+    {
+     "equipe": "Papua New Guinea W",
+     "joueur": "K. Kalapai",
+     "minute": 70,
+     "prolongation": null
+    }
+   ]
   }
  ],
  "taux_reussite": 62,
- "nb_verifies": 24
+ "nb_verifies": 24,
+ "maj_resultats": "2026-09-30T06:46:46.856788+00:00"
 }
