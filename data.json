@@ -234,6 +234,106 @@
  ],
  "historique": [
   {
+   "fixture_id": 1632351,
+   "date": "2026-09-30T09:00:00+00:00",
+   "domicile": "South Korea U18",
+   "exterieur": "England U18",
+   "proba": [
+    29,
+    33,
+    38
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    2
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1640069,
+   "date": "2026-09-30T09:00:00+00:00",
+   "domicile": "Poland U17",
+   "exterieur": "Georgia U17",
+   "proba": [
+    46,
+    45,
+    9
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    3,
+    1
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1640262,
+   "date": "2026-09-30T09:00:00+00:00",
+   "domicile": "East Bengal II",
+   "exterieur": "Minerva Punjab",
+   "proba": [
+    33,
+    35,
+    32
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Minerva Punjab",
+     "joueur": "Diego Raposo",
+     "minute": 41,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1641712,
+   "date": "2026-09-30T09:00:00+00:00",
+   "domicile": "Timor-Leste",
+   "exterieur": "Cambodia",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    2,
+    2
+   ],
+   "buteurs": [
+    {
+     "equipe": "Timor-Leste",
+     "joueur": "João Pedro da Silva Freitas",
+     "minute": 17,
+     "prolongation": null
+    },
+    {
+     "equipe": "Cambodia",
+     "joueur": "Andres Nieto",
+     "minute": 28,
+     "prolongation": null
+    },
+    {
+     "equipe": "Cambodia",
+     "joueur": "Andres Nieto",
+     "minute": 38,
+     "prolongation": null
+    },
+    {
+     "equipe": "Timor-Leste",
+     "joueur": "Alexandro Bakhito Corsino Lemos",
+     "minute": 58,
+     "prolongation": null
+    }
+   ]
+  },
+  {
    "fixture_id": 1640417,
    "date": "2026-09-30T08:00:00+00:00",
    "domicile": "Khovd",
@@ -1158,39 +1258,9 @@
      "prolongation": 2
     }
    ]
-  },
-  {
-   "fixture_id": 1641079,
-   "date": "2026-09-26T07:00:00+00:00",
-   "domicile": "Papua New Guinea W",
-   "exterieur": "Vanuatu W",
-   "proba": [
-    45,
-    45,
-    10
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    2,
-    0
-   ],
-   "buteurs": [
-    {
-     "equipe": "Papua New Guinea W",
-     "joueur": "P. Pala",
-     "minute": 47,
-     "prolongation": null
-    },
-    {
-     "equipe": "Papua New Guinea W",
-     "joueur": "K. Kalapai",
-     "minute": 70,
-     "prolongation": null
-    }
-   ]
   }
  ],
- "taux_reussite": 59,
- "nb_verifies": 27,
- "maj_resultats": "2026-09-30T10:42:42.138998+00:00"
+ "taux_reussite": 58,
+ "nb_verifies": 31,
+ "maj_resultats": "2026-09-30T12:49:49.784961+00:00"
 }

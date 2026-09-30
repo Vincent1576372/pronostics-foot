@@ -1013,7 +1013,12 @@
    33,
    38
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   1,
+   2
+  ],
+  "buteurs": []
  },
  {
   "fixture_id": 1640069,
@@ -1025,7 +1030,12 @@
    45,
    9
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   3,
+   1
+  ],
+  "buteurs": []
  },
  {
   "fixture_id": 1640262,
@@ -1037,7 +1047,19 @@
    35,
    32
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   0,
+   1
+  ],
+  "buteurs": [
+   {
+    "equipe": "Minerva Punjab",
+    "joueur": "Diego Raposo",
+    "minute": 41,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1641712,
@@ -1049,6 +1071,36 @@
    48,
    49
   ],
-  "resultat_reel": null
+  "resultat_reel": "nul",
+  "score": [
+   2,
+   2
+  ],
+  "buteurs": [
+   {
+    "equipe": "Timor-Leste",
+    "joueur": "João Pedro da Silva Freitas",
+    "minute": 17,
+    "prolongation": null
+   },
+   {
+    "equipe": "Cambodia",
+    "joueur": "Andres Nieto",
+    "minute": 28,
+    "prolongation": null
+   },
+   {
+    "equipe": "Cambodia",
+    "joueur": "Andres Nieto",
+    "minute": 38,
+    "prolongation": null
+   },
+   {
+    "equipe": "Timor-Leste",
+    "joueur": "Alexandro Bakhito Corsino Lemos",
+    "minute": 58,
+    "prolongation": null
+   }
+  ]
  }
 ]
