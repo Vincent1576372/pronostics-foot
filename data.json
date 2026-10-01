@@ -228,6 +228,148 @@
  ],
  "historique": [
   {
+   "fixture_id": 1643339,
+   "date": "2026-10-01T10:10:00+00:00",
+   "domicile": "Japan",
+   "exterieur": "Ecuador",
+   "proba": [
+    33,
+    34,
+    33
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    0,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1643205,
+   "date": "2026-10-01T10:00:00+00:00",
+   "domicile": "Olimpija Ljubljana",
+   "exterieur": "NK Slaven Belupo",
+   "proba": [
+    12,
+    45,
+    43
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "NK Slaven Belupo",
+     "joueur": "I. Nestorovski",
+     "minute": 3,
+     "prolongation": null
+    },
+    {
+     "equipe": "Olimpija Ljubljana",
+     "joueur": "I. Tuci",
+     "minute": 15,
+     "prolongation": null
+    },
+    {
+     "equipe": "Olimpija Ljubljana",
+     "joueur": "R. Miskovic",
+     "minute": 61,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1638595,
+   "date": "2026-10-01T09:30:00+00:00",
+   "domicile": "Venezuela U17",
+   "exterieur": "England U17",
+   "proba": [
+    8,
+    45,
+    47
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    1
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1640072,
+   "date": "2026-10-01T09:30:00+00:00",
+   "domicile": "Poland U19",
+   "exterieur": "Kazakhstan U19",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    3,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Poland U19",
+     "joueur": "?",
+     "minute": 22,
+     "prolongation": null
+    },
+    {
+     "equipe": "Poland U19",
+     "joueur": "?",
+     "minute": 50,
+     "prolongation": null
+    },
+    {
+     "equipe": "Poland U19",
+     "joueur": "?",
+     "minute": 64,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1642983,
+   "date": "2026-10-01T09:30:00+00:00",
+   "domicile": "Slovakia U19",
+   "exterieur": "Switzerland U19",
+   "proba": [
+    10,
+    45,
+    45
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Switzerland U19",
+     "joueur": "?",
+     "minute": 7,
+     "prolongation": null
+    },
+    {
+     "equipe": "Slovakia U19",
+     "joueur": "?",
+     "minute": 21,
+     "prolongation": null
+    },
+    {
+     "equipe": "Slovakia U19",
+     "joueur": "?",
+     "minute": 72,
+     "prolongation": null
+    }
+   ]
+  },
+  {
    "fixture_id": 1637962,
    "date": "2026-10-01T08:00:00+00:00",
    "domicile": "North District",
@@ -1073,218 +1215,9 @@
     3
    ],
    "buteurs": []
-  },
-  {
-   "fixture_id": 1631740,
-   "date": "2026-09-27T00:00:00+00:00",
-   "domicile": "La Tribu de Cd. Juarez",
-   "exterieur": "Real Apodaca",
-   "proba": [
-    46,
-    50,
-    4
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    3,
-    1
-   ],
-   "buteurs": []
-  },
-  {
-   "fixture_id": 1555711,
-   "date": "2026-09-26T08:00:00+00:00",
-   "domicile": "Fukushima United",
-   "exterieur": "Parceiro Nagano",
-   "proba": [
-    10,
-    45,
-    45
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    4,
-    3
-   ],
-   "buteurs": [
-    {
-     "equipe": "Parceiro Nagano",
-     "joueur": "E. Gyotoku",
-     "minute": 6,
-     "prolongation": null
-    },
-    {
-     "equipe": "Fukushima United",
-     "joueur": "Y. Okada",
-     "minute": 34,
-     "prolongation": null
-    },
-    {
-     "equipe": "Parceiro Nagano",
-     "joueur": "R. Yamanaka",
-     "minute": 46,
-     "prolongation": null
-    },
-    {
-     "equipe": "Parceiro Nagano",
-     "joueur": "S. Yoshizawa",
-     "minute": 56,
-     "prolongation": null
-    },
-    {
-     "equipe": "Fukushima United",
-     "joueur": "K. Shimizu",
-     "minute": 77,
-     "prolongation": null
-    },
-    {
-     "equipe": "Fukushima United",
-     "joueur": "S. Izumi",
-     "minute": 84,
-     "prolongation": null
-    },
-    {
-     "equipe": "Fukushima United",
-     "joueur": "Y. Okada",
-     "minute": 90,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1555712,
-   "date": "2026-09-26T08:00:00+00:00",
-   "domicile": "Kitakyushu",
-   "exterieur": "Kagoshima United",
-   "proba": [
-    3,
-    48,
-    49
-   ],
-   "resultat_reel": "nul",
-   "score": [
-    1,
-    1
-   ],
-   "buteurs": [
-    {
-     "equipe": "Kitakyushu",
-     "joueur": "S. Yasumitsu",
-     "minute": 63,
-     "prolongation": null
-    },
-    {
-     "equipe": "Kagoshima United",
-     "joueur": "Juanma Delgado",
-     "minute": 87,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1555713,
-   "date": "2026-09-26T08:00:00+00:00",
-   "domicile": "Kamatamare Sanuki",
-   "exterieur": "FC Gifu",
-   "proba": [
-    10,
-    45,
-    45
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    3,
-    4
-   ],
-   "buteurs": [
-    {
-     "equipe": "FC Gifu",
-     "joueur": "H. Kanda",
-     "minute": 2,
-     "prolongation": null
-    },
-    {
-     "equipe": "Kamatamare Sanuki",
-     "joueur": "R. Yonezawa",
-     "minute": 10,
-     "prolongation": null
-    },
-    {
-     "equipe": "Kamatamare Sanuki",
-     "joueur": "R. Sano",
-     "minute": 27,
-     "prolongation": null
-    },
-    {
-     "equipe": "FC Gifu",
-     "joueur": "H. Kanda",
-     "minute": 32,
-     "prolongation": null
-    },
-    {
-     "equipe": "FC Gifu",
-     "joueur": "R. Kita",
-     "minute": 44,
-     "prolongation": null
-    },
-    {
-     "equipe": "FC Gifu",
-     "joueur": "H. Kanda",
-     "minute": 60,
-     "prolongation": null
-    },
-    {
-     "equipe": "Kamatamare Sanuki",
-     "joueur": "Y. Murakami",
-     "minute": 87,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1555715,
-   "date": "2026-09-26T08:00:00+00:00",
-   "domicile": "Kochi United",
-   "exterieur": "Osaka",
-   "proba": [
-    3,
-    48,
-    49
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    0,
-    4
-   ],
-   "buteurs": [
-    {
-     "equipe": "Osaka",
-     "joueur": "S. Tachino",
-     "minute": 45,
-     "prolongation": 2
-    },
-    {
-     "equipe": "Osaka",
-     "joueur": "K. Isa",
-     "minute": 54,
-     "prolongation": null
-    },
-    {
-     "equipe": "Osaka",
-     "joueur": "Y. Shimoda",
-     "minute": 74,
-     "prolongation": null
-    },
-    {
-     "equipe": "Osaka",
-     "joueur": "T. Toya",
-     "minute": 80,
-     "prolongation": null
-    }
-   ]
   }
  ],
  "taux_reussite": 58,
- "nb_verifies": 33,
- "maj_resultats": "2026-10-01T10:42:30.812329+00:00"
+ "nb_verifies": 38,
+ "maj_resultats": "2026-10-01T12:48:36.762800+00:00"
 }
