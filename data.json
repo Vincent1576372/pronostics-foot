@@ -228,6 +228,90 @@
  ],
  "historique": [
   {
+   "fixture_id": 1637962,
+   "date": "2026-10-01T08:00:00+00:00",
+   "domicile": "North District",
+   "exterieur": "Southern District",
+   "proba": [
+    33,
+    34,
+    33
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "North District",
+     "joueur": "Vinicius Soares",
+     "minute": 59,
+     "prolongation": null
+    },
+    {
+     "equipe": "Southern District",
+     "joueur": "S. Golubovic",
+     "minute": 90,
+     "prolongation": 3
+    },
+    {
+     "equipe": "North District",
+     "joueur": "Samuel Granada",
+     "minute": 90,
+     "prolongation": 7
+    }
+   ]
+  },
+  {
+   "fixture_id": 1640436,
+   "date": "2026-10-01T08:00:00+00:00",
+   "domicile": "Erchim",
+   "exterieur": "Central Stallions",
+   "proba": [
+    8,
+    45,
+    47
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    4
+   ],
+   "buteurs": [
+    {
+     "equipe": "Central Stallions",
+     "joueur": "B. Usukh-Ireedui",
+     "minute": 40,
+     "prolongation": null
+    },
+    {
+     "equipe": "Central Stallions",
+     "joueur": "P. Enkhbileg",
+     "minute": 79,
+     "prolongation": null
+    },
+    {
+     "equipe": "Central Stallions",
+     "joueur": "O. Enkh-Orgil",
+     "minute": 81,
+     "prolongation": null
+    },
+    {
+     "equipe": "Central Stallions",
+     "joueur": "K. Kutsuwada",
+     "minute": 89,
+     "prolongation": null
+    },
+    {
+     "equipe": "Erchim",
+     "joueur": "B. Tuguldur",
+     "minute": 90,
+     "prolongation": 3
+    }
+   ]
+  },
+  {
    "fixture_id": 1632351,
    "date": "2026-09-30T09:00:00+00:00",
    "domicile": "South Korea U18",
@@ -1198,63 +1282,9 @@
      "prolongation": null
     }
    ]
-  },
-  {
-   "fixture_id": 1555716,
-   "date": "2026-09-26T08:00:00+00:00",
-   "domicile": "Thespakusatsu Gunma",
-   "exterieur": "Roasso Kumamoto",
-   "proba": [
-    9,
-    45,
-    46
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    0,
-    1
-   ],
-   "buteurs": [
-    {
-     "equipe": "Roasso Kumamoto",
-     "joueur": "Y. Katori",
-     "minute": 71,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1555719,
-   "date": "2026-09-26T08:00:00+00:00",
-   "domicile": "FC Ryukyu",
-   "exterieur": "Ehime FC",
-   "proba": [
-    35,
-    35,
-    30
-   ],
-   "resultat_reel": "nul",
-   "score": [
-    1,
-    1
-   ],
-   "buteurs": [
-    {
-     "equipe": "Ehime FC",
-     "joueur": "H. Fujiharu",
-     "minute": 61,
-     "prolongation": null
-    },
-    {
-     "equipe": "FC Ryukyu",
-     "joueur": "Y. Koki",
-     "minute": 90,
-     "prolongation": 2
-    }
-   ]
   }
  ],
  "taux_reussite": 58,
- "nb_verifies": 31,
- "maj_resultats": "2026-10-01T08:43:52.259674+00:00"
+ "nb_verifies": 33,
+ "maj_resultats": "2026-10-01T10:42:30.812329+00:00"
 }

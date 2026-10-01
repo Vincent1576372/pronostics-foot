@@ -1113,7 +1113,31 @@
    34,
    33
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   2,
+   1
+  ],
+  "buteurs": [
+   {
+    "equipe": "North District",
+    "joueur": "Vinicius Soares",
+    "minute": 59,
+    "prolongation": null
+   },
+   {
+    "equipe": "Southern District",
+    "joueur": "S. Golubovic",
+    "minute": 90,
+    "prolongation": 3
+   },
+   {
+    "equipe": "North District",
+    "joueur": "Samuel Granada",
+    "minute": 90,
+    "prolongation": 7
+   }
+  ]
  },
  {
   "fixture_id": 1640436,
@@ -1125,7 +1149,43 @@
    45,
    47
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   1,
+   4
+  ],
+  "buteurs": [
+   {
+    "equipe": "Central Stallions",
+    "joueur": "B. Usukh-Ireedui",
+    "minute": 40,
+    "prolongation": null
+   },
+   {
+    "equipe": "Central Stallions",
+    "joueur": "P. Enkhbileg",
+    "minute": 79,
+    "prolongation": null
+   },
+   {
+    "equipe": "Central Stallions",
+    "joueur": "O. Enkh-Orgil",
+    "minute": 81,
+    "prolongation": null
+   },
+   {
+    "equipe": "Central Stallions",
+    "joueur": "K. Kutsuwada",
+    "minute": 89,
+    "prolongation": null
+   },
+   {
+    "equipe": "Erchim",
+    "joueur": "B. Tuguldur",
+    "minute": 90,
+    "prolongation": 3
+   }
+  ]
  },
  {
   "fixture_id": 1638595,
