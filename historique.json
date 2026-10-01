@@ -1102,5 +1102,89 @@
     "prolongation": null
    }
   ]
+ },
+ {
+  "fixture_id": 1637962,
+  "date": "2026-10-01T08:00:00+00:00",
+  "domicile": "North District",
+  "exterieur": "Southern District",
+  "proba": [
+   33,
+   34,
+   33
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640436,
+  "date": "2026-10-01T08:00:00+00:00",
+  "domicile": "Erchim",
+  "exterieur": "Central Stallions",
+  "proba": [
+   8,
+   45,
+   47
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1638595,
+  "date": "2026-10-01T09:30:00+00:00",
+  "domicile": "Venezuela U17",
+  "exterieur": "England U17",
+  "proba": [
+   8,
+   45,
+   47
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640072,
+  "date": "2026-10-01T09:30:00+00:00",
+  "domicile": "Poland U19",
+  "exterieur": "Kazakhstan U19",
+  "proba": [
+   49,
+   48,
+   3
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1642983,
+  "date": "2026-10-01T09:30:00+00:00",
+  "domicile": "Slovakia U19",
+  "exterieur": "Switzerland U19",
+  "proba": [
+   10,
+   45,
+   45
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1643205,
+  "date": "2026-10-01T10:00:00+00:00",
+  "domicile": "Olimpija Ljubljana",
+  "exterieur": "NK Slaven Belupo",
+  "proba": [
+   12,
+   45,
+   43
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1643339,
+  "date": "2026-10-01T10:10:00+00:00",
+  "domicile": "Japan",
+  "exterieur": "Ecuador",
+  "proba": [
+   33,
+   34,
+   33
+  ],
+  "resultat_reel": null
  }
 ]
