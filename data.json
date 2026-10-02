@@ -873,8 +873,349 @@
      "prolongation": null
     }
    ]
+  },
+  {
+   "fixture_id": 1629000,
+   "date": "2026-09-28T10:25:00+00:00",
+   "domicile": "Japan",
+   "exterieur": "Venezuela",
+   "proba": [
+    37,
+    35,
+    28
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Venezuela",
+     "joueur": "K. Kelsy",
+     "minute": 46,
+     "prolongation": null
+    },
+    {
+     "equipe": "Japan",
+     "joueur": "A. Ueda",
+     "minute": 49,
+     "prolongation": null
+    },
+    {
+     "equipe": "Japan",
+     "joueur": "A. Ueda",
+     "minute": 90,
+     "prolongation": 6
+    }
+   ]
+  },
+  {
+   "fixture_id": 1581920,
+   "date": "2026-09-28T10:00:00+00:00",
+   "domicile": "Polissya II",
+   "exterieur": "Kolos Kovalivka II",
+   "proba": [
+    8,
+    45,
+    47
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    3
+   ],
+   "buteurs": [
+    {
+     "equipe": "Kolos Kovalivka II",
+     "joueur": "D. Kolesnyk",
+     "minute": 19,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kolos Kovalivka II",
+     "joueur": "R. Taranukha",
+     "minute": 82,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kolos Kovalivka II",
+     "joueur": "I. Melnychenko",
+     "minute": 90,
+     "prolongation": 1
+    }
+   ]
+  },
+  {
+   "fixture_id": 1636776,
+   "date": "2026-09-28T09:00:00+00:00",
+   "domicile": "Tensung",
+   "exterieur": "RTC",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    5
+   ],
+   "buteurs": [
+    {
+     "equipe": "RTC",
+     "joueur": "pema zangpo",
+     "minute": 7,
+     "prolongation": null
+    },
+    {
+     "equipe": "RTC",
+     "joueur": "nima gyeltshen",
+     "minute": 28,
+     "prolongation": null
+    },
+    {
+     "equipe": "Tensung",
+     "joueur": "?",
+     "minute": 32,
+     "prolongation": null
+    },
+    {
+     "equipe": "RTC",
+     "joueur": "nima gyeltshen",
+     "minute": 42,
+     "prolongation": null
+    },
+    {
+     "equipe": "RTC",
+     "joueur": "?",
+     "minute": 44,
+     "prolongation": null
+    },
+    {
+     "equipe": "RTC",
+     "joueur": "Riku Ichimura",
+     "minute": 66,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1641708,
+   "date": "2026-09-28T09:00:00+00:00",
+   "domicile": "Singapore",
+   "exterieur": "Bangladesh",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    1,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Singapore",
+     "joueur": "Harhys Stewart",
+     "minute": 35,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1593025,
+   "date": "2026-09-27T08:00:00+00:00",
+   "domicile": "Trostianets",
+   "exterieur": "Rebel",
+   "proba": [
+    12,
+    45,
+    43
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    2,
+    2
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1623498,
+   "date": "2026-09-27T08:00:00+00:00",
+   "domicile": "Gloria Bistrița-Năsăud W",
+   "exterieur": "Univ. Craiova W",
+   "proba": [
+    50,
+    47,
+    3
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    13,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Gloria Bistrița-Năsăud W",
+     "joueur": "?",
+     "minute": 1,
+     "prolongation": null
+    },
+    {
+     "equipe": "Gloria Bistrița-Năsăud W",
+     "joueur": "?",
+     "minute": 1,
+     "prolongation": null
+    },
+    {
+     "equipe": "Gloria Bistrița-Năsăud W",
+     "joueur": "?",
+     "minute": 8,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1639089,
+   "date": "2026-09-27T07:00:00+00:00",
+   "domicile": "Kaya",
+   "exterieur": "Philippine Army",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    5,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Kaya",
+     "joueur": "S. Avanzini",
+     "minute": 6,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kaya",
+     "joueur": "G. Rey",
+     "minute": 12,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kaya",
+     "joueur": "S. Kim",
+     "minute": 40,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kaya",
+     "joueur": "M. Ott",
+     "minute": 55,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kaya",
+     "joueur": "A. Ortega",
+     "minute": 88,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1640506,
+   "date": "2026-09-27T07:00:00+00:00",
+   "domicile": "Fiji",
+   "exterieur": "Papua New Guinea",
+   "proba": [
+    35,
+    35,
+    30
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Fiji",
+     "joueur": "?",
+     "minute": 18,
+     "prolongation": null
+    },
+    {
+     "equipe": "Fiji",
+     "joueur": "?",
+     "minute": 24,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1641706,
+   "date": "2026-09-27T07:00:00+00:00",
+   "domicile": "Hong Kong",
+   "exterieur": "Laos",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    4,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Hong Kong",
+     "joueur": "Sun Ming-Him",
+     "minute": 12,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hong Kong",
+     "joueur": "Everton Camargo",
+     "minute": 33,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hong Kong",
+     "joueur": "Luis Eduardo Chebel Klein Nunes",
+     "minute": 55,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hong Kong",
+     "joueur": "Matthew Elliot Wing Kai Chin Orr",
+     "minute": 90,
+     "prolongation": 1
+    }
+   ]
+  },
+  {
+   "fixture_id": 1640062,
+   "date": "2026-09-27T04:00:00+00:00",
+   "domicile": "Cook Islands",
+   "exterieur": "Tahiti",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    3
+   ],
+   "buteurs": []
   }
  ],
  "taux_reussite": 58,
- "nb_verifies": 38
+ "nb_verifies": 38,
+ "maj_resultats": "2026-10-02T06:47:33.379742+00:00"
 }
