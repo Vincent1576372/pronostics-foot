@@ -1339,7 +1339,25 @@
    45,
    10
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   2,
+   0
+  ],
+  "buteurs": [
+   {
+    "equipe": "Lokomotiv Plovdiv",
+    "joueur": "?",
+    "minute": 29,
+    "prolongation": null
+   },
+   {
+    "equipe": "Lokomotiv Plovdiv",
+    "joueur": "?",
+    "minute": 64,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1642915,
@@ -1351,7 +1369,43 @@
    48,
    49
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   3,
+   2
+  ],
+  "buteurs": [
+   {
+    "equipe": "CS Afumati",
+    "joueur": "L. Lis",
+    "minute": 38,
+    "prolongation": null
+   },
+   {
+    "equipe": "Petrolul Ploiesti",
+    "joueur": "D. N'Lundulu",
+    "minute": 62,
+    "prolongation": null
+   },
+   {
+    "equipe": "Petrolul Ploiesti",
+    "joueur": "A. Dumitrescu",
+    "minute": 68,
+    "prolongation": null
+   },
+   {
+    "equipe": "Petrolul Ploiesti",
+    "joueur": "F. Quizera",
+    "minute": 74,
+    "prolongation": null
+   },
+   {
+    "equipe": "CS Afumati",
+    "joueur": "C. McCarthy",
+    "minute": 80,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1640101,

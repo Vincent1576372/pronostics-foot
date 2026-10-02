@@ -226,6 +226,84 @@
  ],
  "historique": [
   {
+   "fixture_id": 1642915,
+   "date": "2026-10-02T08:30:00+00:00",
+   "domicile": "Petrolul Ploiesti",
+   "exterieur": "CS Afumati",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    3,
+    2
+   ],
+   "buteurs": [
+    {
+     "equipe": "CS Afumati",
+     "joueur": "L. Lis",
+     "minute": 38,
+     "prolongation": null
+    },
+    {
+     "equipe": "Petrolul Ploiesti",
+     "joueur": "D. N'Lundulu",
+     "minute": 62,
+     "prolongation": null
+    },
+    {
+     "equipe": "Petrolul Ploiesti",
+     "joueur": "A. Dumitrescu",
+     "minute": 68,
+     "prolongation": null
+    },
+    {
+     "equipe": "Petrolul Ploiesti",
+     "joueur": "F. Quizera",
+     "minute": 74,
+     "prolongation": null
+    },
+    {
+     "equipe": "CS Afumati",
+     "joueur": "C. McCarthy",
+     "minute": 80,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1643215,
+   "date": "2026-10-02T08:00:00+00:00",
+   "domicile": "Lokomotiv Plovdiv",
+   "exterieur": "Arda Kardzhali",
+   "proba": [
+    45,
+    45,
+    10
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Lokomotiv Plovdiv",
+     "joueur": "?",
+     "minute": 29,
+     "prolongation": null
+    },
+    {
+     "equipe": "Lokomotiv Plovdiv",
+     "joueur": "?",
+     "minute": 64,
+     "prolongation": null
+    }
+   ]
+  },
+  {
    "fixture_id": 1643339,
    "date": "2026-10-01T10:10:00+00:00",
    "domicile": "Japan",
@@ -1154,68 +1232,9 @@
      "prolongation": null
     }
    ]
-  },
-  {
-   "fixture_id": 1641706,
-   "date": "2026-09-27T07:00:00+00:00",
-   "domicile": "Hong Kong",
-   "exterieur": "Laos",
-   "proba": [
-    49,
-    48,
-    3
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    4,
-    0
-   ],
-   "buteurs": [
-    {
-     "equipe": "Hong Kong",
-     "joueur": "Sun Ming-Him",
-     "minute": 12,
-     "prolongation": null
-    },
-    {
-     "equipe": "Hong Kong",
-     "joueur": "Everton Camargo",
-     "minute": 33,
-     "prolongation": null
-    },
-    {
-     "equipe": "Hong Kong",
-     "joueur": "Luis Eduardo Chebel Klein Nunes",
-     "minute": 55,
-     "prolongation": null
-    },
-    {
-     "equipe": "Hong Kong",
-     "joueur": "Matthew Elliot Wing Kai Chin Orr",
-     "minute": 90,
-     "prolongation": 1
-    }
-   ]
-  },
-  {
-   "fixture_id": 1640062,
-   "date": "2026-09-27T04:00:00+00:00",
-   "domicile": "Cook Islands",
-   "exterieur": "Tahiti",
-   "proba": [
-    3,
-    48,
-    49
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    1,
-    3
-   ],
-   "buteurs": []
   }
  ],
  "taux_reussite": 58,
- "nb_verifies": 38,
- "maj_resultats": "2026-10-02T08:41:37.620867+00:00"
+ "nb_verifies": 40,
+ "maj_resultats": "2026-10-02T10:42:28.298871+00:00"
 }
