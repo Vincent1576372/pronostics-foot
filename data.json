@@ -226,6 +226,186 @@
  ],
  "historique": [
   {
+   "fixture_id": 1640101,
+   "date": "2026-10-02T09:00:00+00:00",
+   "domicile": "Chattogram",
+   "exterieur": "Bangladesh Police",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    3
+   ],
+   "buteurs": [
+    {
+     "equipe": "Bangladesh Police",
+     "joueur": "M. Mollah",
+     "minute": 43,
+     "prolongation": null
+    },
+    {
+     "equipe": "Bangladesh Police",
+     "joueur": "J. Ngong Sam",
+     "minute": 45,
+     "prolongation": null
+    },
+    {
+     "equipe": "Bangladesh Police",
+     "joueur": "S. Kagimu",
+     "minute": 90,
+     "prolongation": 3
+    }
+   ]
+  },
+  {
+   "fixture_id": 1640102,
+   "date": "2026-10-02T09:00:00+00:00",
+   "domicile": "Fakirerpool",
+   "exterieur": "Mohammedan Dhaka",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Mohammedan Dhaka",
+     "joueur": "M. J. Hasan Shanta",
+     "minute": 18,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1640106,
+   "date": "2026-10-02T09:00:00+00:00",
+   "domicile": "PWD Sports Club",
+   "exterieur": "Brothers Union",
+   "proba": [
+    46,
+    45,
+    9
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    1,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Brothers Union",
+     "joueur": "J. Santana",
+     "minute": 26,
+     "prolongation": null
+    },
+    {
+     "equipe": "PWD Sports Club",
+     "joueur": "Y. Mbida",
+     "minute": 60,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1641716,
+   "date": "2026-10-02T09:00:00+00:00",
+   "domicile": "Thailand",
+   "exterieur": "Philippines",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    2
+   ],
+   "buteurs": [
+    {
+     "equipe": "Philippines",
+     "joueur": "Bjorn Martin Kristensen",
+     "minute": 3,
+     "prolongation": null
+    },
+    {
+     "equipe": "Thailand",
+     "joueur": "Iklas Sanron",
+     "minute": 55,
+     "prolongation": null
+    },
+    {
+     "equipe": "Philippines",
+     "joueur": "Bjorn Martin Kristensen",
+     "minute": 68,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1641717,
+   "date": "2026-10-02T09:00:00+00:00",
+   "domicile": "Vietnam",
+   "exterieur": "Pakistan",
+   "proba": [
+    47,
+    45,
+    8
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    4,
+    2
+   ],
+   "buteurs": [
+    {
+     "equipe": "Pakistan",
+     "joueur": "Mohib Ullah",
+     "minute": 31,
+     "prolongation": null
+    },
+    {
+     "equipe": "Vietnam",
+     "joueur": "Nguyen Hai Long",
+     "minute": 50,
+     "prolongation": null
+    },
+    {
+     "equipe": "Vietnam",
+     "joueur": "Nguyen Hoang Duc",
+     "minute": 57,
+     "prolongation": null
+    },
+    {
+     "equipe": "Vietnam",
+     "joueur": "Nguyen Dinh Bac",
+     "minute": 80,
+     "prolongation": null
+    },
+    {
+     "equipe": "Pakistan",
+     "joueur": "Kaleemullah Khan",
+     "minute": 88,
+     "prolongation": null
+    },
+    {
+     "equipe": "Vietnam",
+     "joueur": "Lee Williams",
+     "minute": 90,
+     "prolongation": 1
+    }
+   ]
+  },
+  {
    "fixture_id": 1642915,
    "date": "2026-10-02T08:30:00+00:00",
    "domicile": "Petrolul Ploiesti",
@@ -1077,164 +1257,9 @@
      "prolongation": null
     }
    ]
-  },
-  {
-   "fixture_id": 1641708,
-   "date": "2026-09-28T09:00:00+00:00",
-   "domicile": "Singapore",
-   "exterieur": "Bangladesh",
-   "proba": [
-    49,
-    48,
-    3
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    1,
-    0
-   ],
-   "buteurs": [
-    {
-     "equipe": "Singapore",
-     "joueur": "Harhys Stewart",
-     "minute": 35,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1593025,
-   "date": "2026-09-27T08:00:00+00:00",
-   "domicile": "Trostianets",
-   "exterieur": "Rebel",
-   "proba": [
-    12,
-    45,
-    43
-   ],
-   "resultat_reel": "nul",
-   "score": [
-    2,
-    2
-   ],
-   "buteurs": []
-  },
-  {
-   "fixture_id": 1623498,
-   "date": "2026-09-27T08:00:00+00:00",
-   "domicile": "Gloria Bistrița-Năsăud W",
-   "exterieur": "Univ. Craiova W",
-   "proba": [
-    50,
-    47,
-    3
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    13,
-    1
-   ],
-   "buteurs": [
-    {
-     "equipe": "Gloria Bistrița-Năsăud W",
-     "joueur": "?",
-     "minute": 1,
-     "prolongation": null
-    },
-    {
-     "equipe": "Gloria Bistrița-Năsăud W",
-     "joueur": "?",
-     "minute": 1,
-     "prolongation": null
-    },
-    {
-     "equipe": "Gloria Bistrița-Năsăud W",
-     "joueur": "?",
-     "minute": 8,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1639089,
-   "date": "2026-09-27T07:00:00+00:00",
-   "domicile": "Kaya",
-   "exterieur": "Philippine Army",
-   "proba": [
-    49,
-    48,
-    3
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    5,
-    0
-   ],
-   "buteurs": [
-    {
-     "equipe": "Kaya",
-     "joueur": "S. Avanzini",
-     "minute": 6,
-     "prolongation": null
-    },
-    {
-     "equipe": "Kaya",
-     "joueur": "G. Rey",
-     "minute": 12,
-     "prolongation": null
-    },
-    {
-     "equipe": "Kaya",
-     "joueur": "S. Kim",
-     "minute": 40,
-     "prolongation": null
-    },
-    {
-     "equipe": "Kaya",
-     "joueur": "M. Ott",
-     "minute": 55,
-     "prolongation": null
-    },
-    {
-     "equipe": "Kaya",
-     "joueur": "A. Ortega",
-     "minute": 88,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1640506,
-   "date": "2026-09-27T07:00:00+00:00",
-   "domicile": "Fiji",
-   "exterieur": "Papua New Guinea",
-   "proba": [
-    35,
-    35,
-    30
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    2,
-    0
-   ],
-   "buteurs": [
-    {
-     "equipe": "Fiji",
-     "joueur": "?",
-     "minute": 18,
-     "prolongation": null
-    },
-    {
-     "equipe": "Fiji",
-     "joueur": "?",
-     "minute": 24,
-     "prolongation": null
-    }
-   ]
   }
  ],
  "taux_reussite": 58,
- "nb_verifies": 40,
- "maj_resultats": "2026-10-02T10:42:28.298871+00:00"
+ "nb_verifies": 45,
+ "maj_resultats": "2026-10-02T12:47:54.619485+00:00"
 }

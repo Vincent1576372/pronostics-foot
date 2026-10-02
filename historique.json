@@ -1417,7 +1417,31 @@
    48,
    49
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   0,
+   3
+  ],
+  "buteurs": [
+   {
+    "equipe": "Bangladesh Police",
+    "joueur": "M. Mollah",
+    "minute": 43,
+    "prolongation": null
+   },
+   {
+    "equipe": "Bangladesh Police",
+    "joueur": "J. Ngong Sam",
+    "minute": 45,
+    "prolongation": null
+   },
+   {
+    "equipe": "Bangladesh Police",
+    "joueur": "S. Kagimu",
+    "minute": 90,
+    "prolongation": 3
+   }
+  ]
  },
  {
   "fixture_id": 1640102,
@@ -1429,7 +1453,19 @@
    48,
    49
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   0,
+   1
+  ],
+  "buteurs": [
+   {
+    "equipe": "Mohammedan Dhaka",
+    "joueur": "M. J. Hasan Shanta",
+    "minute": 18,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1640106,
@@ -1441,7 +1477,25 @@
    45,
    9
   ],
-  "resultat_reel": null
+  "resultat_reel": "nul",
+  "score": [
+   1,
+   1
+  ],
+  "buteurs": [
+   {
+    "equipe": "Brothers Union",
+    "joueur": "J. Santana",
+    "minute": 26,
+    "prolongation": null
+   },
+   {
+    "equipe": "PWD Sports Club",
+    "joueur": "Y. Mbida",
+    "minute": 60,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1641716,
@@ -1453,7 +1507,31 @@
    48,
    3
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   1,
+   2
+  ],
+  "buteurs": [
+   {
+    "equipe": "Philippines",
+    "joueur": "Bjorn Martin Kristensen",
+    "minute": 3,
+    "prolongation": null
+   },
+   {
+    "equipe": "Thailand",
+    "joueur": "Iklas Sanron",
+    "minute": 55,
+    "prolongation": null
+   },
+   {
+    "equipe": "Philippines",
+    "joueur": "Bjorn Martin Kristensen",
+    "minute": 68,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1641717,
@@ -1465,6 +1543,48 @@
    45,
    8
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   4,
+   2
+  ],
+  "buteurs": [
+   {
+    "equipe": "Pakistan",
+    "joueur": "Mohib Ullah",
+    "minute": 31,
+    "prolongation": null
+   },
+   {
+    "equipe": "Vietnam",
+    "joueur": "Nguyen Hai Long",
+    "minute": 50,
+    "prolongation": null
+   },
+   {
+    "equipe": "Vietnam",
+    "joueur": "Nguyen Hoang Duc",
+    "minute": 57,
+    "prolongation": null
+   },
+   {
+    "equipe": "Vietnam",
+    "joueur": "Nguyen Dinh Bac",
+    "minute": 80,
+    "prolongation": null
+   },
+   {
+    "equipe": "Pakistan",
+    "joueur": "Kaleemullah Khan",
+    "minute": 88,
+    "prolongation": null
+   },
+   {
+    "equipe": "Vietnam",
+    "joueur": "Lee Williams",
+    "minute": 90,
+    "prolongation": 1
+   }
+  ]
  }
 ]
