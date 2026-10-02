@@ -1328,5 +1328,89 @@
    0
   ],
   "buteurs": []
+ },
+ {
+  "fixture_id": 1643215,
+  "date": "2026-10-02T08:00:00+00:00",
+  "domicile": "Lokomotiv Plovdiv",
+  "exterieur": "Arda Kardzhali",
+  "proba": [
+   45,
+   45,
+   10
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1642915,
+  "date": "2026-10-02T08:30:00+00:00",
+  "domicile": "Petrolul Ploiesti",
+  "exterieur": "CS Afumati",
+  "proba": [
+   3,
+   48,
+   49
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640101,
+  "date": "2026-10-02T09:00:00+00:00",
+  "domicile": "Chattogram",
+  "exterieur": "Bangladesh Police",
+  "proba": [
+   3,
+   48,
+   49
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640102,
+  "date": "2026-10-02T09:00:00+00:00",
+  "domicile": "Fakirerpool",
+  "exterieur": "Mohammedan Dhaka",
+  "proba": [
+   3,
+   48,
+   49
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640106,
+  "date": "2026-10-02T09:00:00+00:00",
+  "domicile": "PWD Sports Club",
+  "exterieur": "Brothers Union",
+  "proba": [
+   46,
+   45,
+   9
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1641716,
+  "date": "2026-10-02T09:00:00+00:00",
+  "domicile": "Thailand",
+  "exterieur": "Philippines",
+  "proba": [
+   49,
+   48,
+   3
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1641717,
+  "date": "2026-10-02T09:00:00+00:00",
+  "domicile": "Vietnam",
+  "exterieur": "Pakistan",
+  "proba": [
+   47,
+   45,
+   8
+  ],
+  "resultat_reel": null
  }
 ]
