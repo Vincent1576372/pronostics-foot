@@ -900,8 +900,374 @@
      "prolongation": null
     }
    ]
+  },
+  {
+   "fixture_id": 1640510,
+   "date": "2026-09-30T07:00:00+00:00",
+   "domicile": "Fiji",
+   "exterieur": "New Caledonia",
+   "proba": [
+    47,
+    45,
+    8
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "New Caledonia",
+     "joueur": "W. Read",
+     "minute": 40,
+     "prolongation": null
+    },
+    {
+     "equipe": "Fiji",
+     "joueur": "S. Wara",
+     "minute": 50,
+     "prolongation": null
+    },
+    {
+     "equipe": "Fiji",
+     "joueur": "M. Dau",
+     "minute": 66,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1632086,
+   "date": "2026-09-29T09:30:00+00:00",
+   "domicile": "France U20",
+   "exterieur": "England U20",
+   "proba": [
+    11,
+    45,
+    44
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    2
+   ],
+   "buteurs": [
+    {
+     "equipe": "England U20",
+     "joueur": "S. Mheuka",
+     "minute": 10,
+     "prolongation": null
+    },
+    {
+     "equipe": "England U20",
+     "joueur": "M. Moore",
+     "minute": 16,
+     "prolongation": null
+    },
+    {
+     "equipe": "France U20",
+     "joueur": "?",
+     "minute": 68,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1640263,
+   "date": "2026-09-29T09:00:00+00:00",
+   "domicile": "ATK Mohun Bagan",
+   "exterieur": "NorthEast United",
+   "proba": [
+    43,
+    45,
+    12
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    1,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "ATK Mohun Bagan",
+     "joueur": "?",
+     "minute": 49,
+     "prolongation": null
+    },
+    {
+     "equipe": "ATK Mohun Bagan",
+     "joueur": "?",
+     "minute": 70,
+     "prolongation": null
+    },
+    {
+     "equipe": "NorthEast United",
+     "joueur": "E. Gonzalez",
+     "minute": 72,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1641710,
+   "date": "2026-09-29T09:00:00+00:00",
+   "domicile": "Philippines",
+   "exterieur": "Pakistan",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    2,
+    2
+   ],
+   "buteurs": [
+    {
+     "equipe": "Philippines",
+     "joueur": "Sandro Reyes",
+     "minute": 24,
+     "prolongation": null
+    },
+    {
+     "equipe": "Philippines",
+     "joueur": "Bjorn Martin Kristensen",
+     "minute": 32,
+     "prolongation": null
+    },
+    {
+     "equipe": "Pakistan",
+     "joueur": "Ali Khan",
+     "minute": 47,
+     "prolongation": null
+    },
+    {
+     "equipe": "Pakistan",
+     "joueur": "Abdul Arshad",
+     "minute": 62,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1641082,
+   "date": "2026-09-29T07:00:00+00:00",
+   "domicile": "Fiji W",
+   "exterieur": "New Caledonia W",
+   "proba": [
+    45,
+    45,
+    10
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    1,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Fiji W",
+     "joueur": "?",
+     "minute": 56,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1638596,
+   "date": "2026-09-28T12:00:00+00:00",
+   "domicile": "Tajikistan",
+   "exterieur": "Palestine",
+   "proba": [
+    35,
+    35,
+    30
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    2,
+    4
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1628999,
+   "date": "2026-09-28T11:00:00+00:00",
+   "domicile": "South Korea",
+   "exterieur": "Uruguay",
+   "proba": [
+    47,
+    45,
+    8
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    4
+   ],
+   "buteurs": [
+    {
+     "equipe": "Uruguay",
+     "joueur": "D. Nunez",
+     "minute": 13,
+     "prolongation": null
+    },
+    {
+     "equipe": "Uruguay",
+     "joueur": "G. de Arrascaeta",
+     "minute": 27,
+     "prolongation": null
+    },
+    {
+     "equipe": "Uruguay",
+     "joueur": "G. Varela",
+     "minute": 43,
+     "prolongation": null
+    },
+    {
+     "equipe": "Uruguay",
+     "joueur": "D. Nunez",
+     "minute": 62,
+     "prolongation": null
+    },
+    {
+     "equipe": "South Korea",
+     "joueur": "Lee Kang-In",
+     "minute": 80,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1629000,
+   "date": "2026-09-28T10:25:00+00:00",
+   "domicile": "Japan",
+   "exterieur": "Venezuela",
+   "proba": [
+    37,
+    35,
+    28
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Venezuela",
+     "joueur": "K. Kelsy",
+     "minute": 46,
+     "prolongation": null
+    },
+    {
+     "equipe": "Japan",
+     "joueur": "A. Ueda",
+     "minute": 49,
+     "prolongation": null
+    },
+    {
+     "equipe": "Japan",
+     "joueur": "A. Ueda",
+     "minute": 90,
+     "prolongation": 6
+    }
+   ]
+  },
+  {
+   "fixture_id": 1581920,
+   "date": "2026-09-28T10:00:00+00:00",
+   "domicile": "Polissya II",
+   "exterieur": "Kolos Kovalivka II",
+   "proba": [
+    8,
+    45,
+    47
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    3
+   ],
+   "buteurs": [
+    {
+     "equipe": "Kolos Kovalivka II",
+     "joueur": "D. Kolesnyk",
+     "minute": 19,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kolos Kovalivka II",
+     "joueur": "R. Taranukha",
+     "minute": 82,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kolos Kovalivka II",
+     "joueur": "I. Melnychenko",
+     "minute": 90,
+     "prolongation": 1
+    }
+   ]
+  },
+  {
+   "fixture_id": 1636776,
+   "date": "2026-09-28T09:00:00+00:00",
+   "domicile": "Tensung",
+   "exterieur": "RTC",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    5
+   ],
+   "buteurs": [
+    {
+     "equipe": "RTC",
+     "joueur": "pema zangpo",
+     "minute": 7,
+     "prolongation": null
+    },
+    {
+     "equipe": "RTC",
+     "joueur": "nima gyeltshen",
+     "minute": 28,
+     "prolongation": null
+    },
+    {
+     "equipe": "Tensung",
+     "joueur": "?",
+     "minute": 32,
+     "prolongation": null
+    },
+    {
+     "equipe": "RTC",
+     "joueur": "nima gyeltshen",
+     "minute": 42,
+     "prolongation": null
+    },
+    {
+     "equipe": "RTC",
+     "joueur": "?",
+     "minute": 44,
+     "prolongation": null
+    },
+    {
+     "equipe": "RTC",
+     "joueur": "Riku Ichimura",
+     "minute": 66,
+     "prolongation": null
+    }
+   ]
   }
  ],
  "taux_reussite": 58,
- "nb_verifies": 45
+ "nb_verifies": 45,
+ "maj_resultats": "2026-10-03T06:56:24.315310+00:00"
 }
