@@ -234,6 +234,117 @@
  ],
  "historique": [
   {
+   "fixture_id": 1567447,
+   "date": "2026-10-03T07:00:00+00:00",
+   "domicile": "Machida Zelvia",
+   "exterieur": "Kyoto Sanga",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    0,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1569848,
+   "date": "2026-10-03T07:00:00+00:00",
+   "domicile": "Jinju Citizen",
+   "exterieur": "Geoje Citizen",
+   "proba": [
+    43,
+    45,
+    12
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    0,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1606678,
+   "date": "2026-10-03T07:00:00+00:00",
+   "domicile": "Ventforet Kofu",
+   "exterieur": "Kataller Toyama",
+   "proba": [
+    10,
+    45,
+    45
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    2
+   ],
+   "buteurs": [
+    {
+     "equipe": "Kataller Toyama",
+     "joueur": "T. Yoshihira",
+     "minute": 51,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ventforet Kofu",
+     "joueur": "Y. Hiratsuka",
+     "minute": 64,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kataller Toyama",
+     "joueur": "Y. Kunitake",
+     "minute": 69,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1637226,
+   "date": "2026-10-03T07:00:00+00:00",
+   "domicile": "UWC W",
+   "exterieur": "Pretoria U. W",
+   "proba": [
+    35,
+    35,
+    30
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Pretoria U. W",
+     "joueur": "?",
+     "minute": 27,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1643497,
+   "date": "2026-10-03T07:00:00+00:00",
+   "domicile": "Ararat",
+   "exterieur": "Ararat-Armenia",
+   "proba": [
+    5,
+    45,
+    50
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    4
+   ],
+   "buteurs": []
+  },
+  {
    "fixture_id": 1640101,
    "date": "2026-10-02T09:00:00+00:00",
    "domicile": "Chattogram",
@@ -1074,200 +1185,9 @@
      "prolongation": null
     }
    ]
-  },
-  {
-   "fixture_id": 1638596,
-   "date": "2026-09-28T12:00:00+00:00",
-   "domicile": "Tajikistan",
-   "exterieur": "Palestine",
-   "proba": [
-    35,
-    35,
-    30
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    2,
-    4
-   ],
-   "buteurs": []
-  },
-  {
-   "fixture_id": 1628999,
-   "date": "2026-09-28T11:00:00+00:00",
-   "domicile": "South Korea",
-   "exterieur": "Uruguay",
-   "proba": [
-    47,
-    45,
-    8
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    1,
-    4
-   ],
-   "buteurs": [
-    {
-     "equipe": "Uruguay",
-     "joueur": "D. Nunez",
-     "minute": 13,
-     "prolongation": null
-    },
-    {
-     "equipe": "Uruguay",
-     "joueur": "G. de Arrascaeta",
-     "minute": 27,
-     "prolongation": null
-    },
-    {
-     "equipe": "Uruguay",
-     "joueur": "G. Varela",
-     "minute": 43,
-     "prolongation": null
-    },
-    {
-     "equipe": "Uruguay",
-     "joueur": "D. Nunez",
-     "minute": 62,
-     "prolongation": null
-    },
-    {
-     "equipe": "South Korea",
-     "joueur": "Lee Kang-In",
-     "minute": 80,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1629000,
-   "date": "2026-09-28T10:25:00+00:00",
-   "domicile": "Japan",
-   "exterieur": "Venezuela",
-   "proba": [
-    37,
-    35,
-    28
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    2,
-    1
-   ],
-   "buteurs": [
-    {
-     "equipe": "Venezuela",
-     "joueur": "K. Kelsy",
-     "minute": 46,
-     "prolongation": null
-    },
-    {
-     "equipe": "Japan",
-     "joueur": "A. Ueda",
-     "minute": 49,
-     "prolongation": null
-    },
-    {
-     "equipe": "Japan",
-     "joueur": "A. Ueda",
-     "minute": 90,
-     "prolongation": 6
-    }
-   ]
-  },
-  {
-   "fixture_id": 1581920,
-   "date": "2026-09-28T10:00:00+00:00",
-   "domicile": "Polissya II",
-   "exterieur": "Kolos Kovalivka II",
-   "proba": [
-    8,
-    45,
-    47
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    0,
-    3
-   ],
-   "buteurs": [
-    {
-     "equipe": "Kolos Kovalivka II",
-     "joueur": "D. Kolesnyk",
-     "minute": 19,
-     "prolongation": null
-    },
-    {
-     "equipe": "Kolos Kovalivka II",
-     "joueur": "R. Taranukha",
-     "minute": 82,
-     "prolongation": null
-    },
-    {
-     "equipe": "Kolos Kovalivka II",
-     "joueur": "I. Melnychenko",
-     "minute": 90,
-     "prolongation": 1
-    }
-   ]
-  },
-  {
-   "fixture_id": 1636776,
-   "date": "2026-09-28T09:00:00+00:00",
-   "domicile": "Tensung",
-   "exterieur": "RTC",
-   "proba": [
-    3,
-    48,
-    49
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    1,
-    5
-   ],
-   "buteurs": [
-    {
-     "equipe": "RTC",
-     "joueur": "pema zangpo",
-     "minute": 7,
-     "prolongation": null
-    },
-    {
-     "equipe": "RTC",
-     "joueur": "nima gyeltshen",
-     "minute": 28,
-     "prolongation": null
-    },
-    {
-     "equipe": "Tensung",
-     "joueur": "?",
-     "minute": 32,
-     "prolongation": null
-    },
-    {
-     "equipe": "RTC",
-     "joueur": "nima gyeltshen",
-     "minute": 42,
-     "prolongation": null
-    },
-    {
-     "equipe": "RTC",
-     "joueur": "?",
-     "minute": 44,
-     "prolongation": null
-    },
-    {
-     "equipe": "RTC",
-     "joueur": "Riku Ichimura",
-     "minute": 66,
-     "prolongation": null
-    }
-   ]
   }
  ],
- "taux_reussite": 58,
- "nb_verifies": 45,
- "maj_resultats": "2026-10-03T08:45:04.235897+00:00"
+ "taux_reussite": 56,
+ "nb_verifies": 50,
+ "maj_resultats": "2026-10-03T10:54:44.699265+00:00"
 }

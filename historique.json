@@ -1609,7 +1609,12 @@
    48,
    3
   ],
-  "resultat_reel": null
+  "resultat_reel": "nul",
+  "score": [
+   0,
+   0
+  ],
+  "buteurs": []
  },
  {
   "fixture_id": 1569848,
@@ -1621,7 +1626,12 @@
    45,
    12
   ],
-  "resultat_reel": null
+  "resultat_reel": "nul",
+  "score": [
+   0,
+   0
+  ],
+  "buteurs": []
  },
  {
   "fixture_id": 1606678,
@@ -1633,7 +1643,31 @@
    45,
    45
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   1,
+   2
+  ],
+  "buteurs": [
+   {
+    "equipe": "Kataller Toyama",
+    "joueur": "T. Yoshihira",
+    "minute": 51,
+    "prolongation": null
+   },
+   {
+    "equipe": "Ventforet Kofu",
+    "joueur": "Y. Hiratsuka",
+    "minute": 64,
+    "prolongation": null
+   },
+   {
+    "equipe": "Kataller Toyama",
+    "joueur": "Y. Kunitake",
+    "minute": 69,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1637226,
@@ -1645,7 +1679,19 @@
    35,
    30
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   0,
+   1
+  ],
+  "buteurs": [
+   {
+    "equipe": "Pretoria U. W",
+    "joueur": "?",
+    "minute": 27,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1643497,
@@ -1657,7 +1703,12 @@
    45,
    50
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   0,
+   4
+  ],
+  "buteurs": []
  },
  {
   "fixture_id": 1643252,
