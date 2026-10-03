@@ -1586,5 +1586,89 @@
     "prolongation": 1
    }
   ]
+ },
+ {
+  "fixture_id": 1643496,
+  "date": "2026-10-03T03:00:00+00:00",
+  "domicile": "Goa",
+  "exterieur": "Dempo",
+  "proba": [
+   33,
+   34,
+   33
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1567447,
+  "date": "2026-10-03T07:00:00+00:00",
+  "domicile": "Machida Zelvia",
+  "exterieur": "Kyoto Sanga",
+  "proba": [
+   49,
+   48,
+   3
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1569848,
+  "date": "2026-10-03T07:00:00+00:00",
+  "domicile": "Jinju Citizen",
+  "exterieur": "Geoje Citizen",
+  "proba": [
+   43,
+   45,
+   12
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1606678,
+  "date": "2026-10-03T07:00:00+00:00",
+  "domicile": "Ventforet Kofu",
+  "exterieur": "Kataller Toyama",
+  "proba": [
+   10,
+   45,
+   45
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1637226,
+  "date": "2026-10-03T07:00:00+00:00",
+  "domicile": "UWC W",
+  "exterieur": "Pretoria U. W",
+  "proba": [
+   35,
+   35,
+   30
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1643497,
+  "date": "2026-10-03T07:00:00+00:00",
+  "domicile": "Ararat",
+  "exterieur": "Ararat-Armenia",
+  "proba": [
+   5,
+   45,
+   50
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1643252,
+  "date": "2026-10-03T07:45:00+00:00",
+  "domicile": "LDF",
+  "exterieur": "Manonyane",
+  "proba": [
+   46,
+   45,
+   9
+  ],
+  "resultat_reel": null
  }
 ]
