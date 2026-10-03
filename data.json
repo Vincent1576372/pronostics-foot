@@ -234,6 +234,23 @@
  ],
  "historique": [
   {
+   "fixture_id": 1643252,
+   "date": "2026-10-03T07:45:00+00:00",
+   "domicile": "LDF",
+   "exterieur": "Manonyane",
+   "proba": [
+    46,
+    45,
+    9
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    0,
+    0
+   ],
+   "buteurs": []
+  },
+  {
    "fixture_id": 1567447,
    "date": "2026-10-03T07:00:00+00:00",
    "domicile": "Machida Zelvia",
@@ -341,6 +358,23 @@
    "score": [
     0,
     4
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1643496,
+   "date": "2026-10-03T03:00:00+00:00",
+   "domicile": "Goa",
+   "exterieur": "Dempo",
+   "proba": [
+    33,
+    34,
+    33
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    2
    ],
    "buteurs": []
   },
@@ -1119,75 +1153,9 @@
      "prolongation": null
     }
    ]
-  },
-  {
-   "fixture_id": 1641710,
-   "date": "2026-09-29T09:00:00+00:00",
-   "domicile": "Philippines",
-   "exterieur": "Pakistan",
-   "proba": [
-    49,
-    48,
-    3
-   ],
-   "resultat_reel": "nul",
-   "score": [
-    2,
-    2
-   ],
-   "buteurs": [
-    {
-     "equipe": "Philippines",
-     "joueur": "Sandro Reyes",
-     "minute": 24,
-     "prolongation": null
-    },
-    {
-     "equipe": "Philippines",
-     "joueur": "Bjorn Martin Kristensen",
-     "minute": 32,
-     "prolongation": null
-    },
-    {
-     "equipe": "Pakistan",
-     "joueur": "Ali Khan",
-     "minute": 47,
-     "prolongation": null
-    },
-    {
-     "equipe": "Pakistan",
-     "joueur": "Abdul Arshad",
-     "minute": 62,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1641082,
-   "date": "2026-09-29T07:00:00+00:00",
-   "domicile": "Fiji W",
-   "exterieur": "New Caledonia W",
-   "proba": [
-    45,
-    45,
-    10
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    1,
-    0
-   ],
-   "buteurs": [
-    {
-     "equipe": "Fiji W",
-     "joueur": "?",
-     "minute": 56,
-     "prolongation": null
-    }
-   ]
   }
  ],
- "taux_reussite": 56,
- "nb_verifies": 50,
- "maj_resultats": "2026-10-03T10:54:44.699265+00:00"
+ "taux_reussite": 54,
+ "nb_verifies": 52,
+ "maj_resultats": "2026-10-03T16:21:10.623395+00:00"
 }

@@ -1597,7 +1597,12 @@
    34,
    33
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   0,
+   2
+  ],
+  "buteurs": []
  },
  {
   "fixture_id": 1567447,
@@ -1720,6 +1725,11 @@
    45,
    9
   ],
-  "resultat_reel": null
+  "resultat_reel": "nul",
+  "score": [
+   0,
+   0
+  ],
+  "buteurs": []
  }
 ]
