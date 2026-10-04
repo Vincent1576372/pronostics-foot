@@ -1731,5 +1731,89 @@
    0
   ],
   "buteurs": []
+ },
+ {
+  "fixture_id": 1635987,
+  "date": "2026-10-04T01:00:00+00:00",
+  "domicile": "Los Cabos United",
+  "exterieur": "Cordobés",
+  "proba": [
+   49,
+   45,
+   6
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1565737,
+  "date": "2026-10-04T08:30:00+00:00",
+  "domicile": "Ružomberok II",
+  "exterieur": "Banská Byst II",
+  "proba": [
+   36,
+   35,
+   29
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1566109,
+  "date": "2026-10-04T08:30:00+00:00",
+  "domicile": "Trenčín II",
+  "exterieur": "Nitra",
+  "proba": [
+   3,
+   49,
+   48
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1566111,
+  "date": "2026-10-04T08:30:00+00:00",
+  "domicile": "DAC II",
+  "exterieur": "Komárno II",
+  "proba": [
+   35,
+   35,
+   30
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1589726,
+  "date": "2026-10-04T08:30:00+00:00",
+  "domicile": "Videm",
+  "exterieur": "Šampion Celje",
+  "proba": [
+   35,
+   35,
+   30
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1607023,
+  "date": "2026-10-04T09:00:00+00:00",
+  "domicile": "Ingolstadt W",
+  "exterieur": "Bochum W",
+  "proba": [
+   10,
+   45,
+   45
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1637228,
+  "date": "2026-10-04T09:00:00+00:00",
+  "domicile": "University of Johannesburg W",
+  "exterieur": "Tshwane University W",
+  "proba": [
+   45,
+   45,
+   10
+  ],
+  "resultat_reel": null
  }
 ]
