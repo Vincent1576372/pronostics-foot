@@ -707,7 +707,37 @@
    33,
    33
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   3,
+   1
+  ],
+  "buteurs": [
+   {
+    "equipe": "Kyrgyzstan",
+    "joueur": "O. Abdurakhmanov",
+    "minute": 19,
+    "prolongation": null
+   },
+   {
+    "equipe": "Kyrgyzstan",
+    "joueur": "A. Shukurov",
+    "minute": 31,
+    "prolongation": null
+   },
+   {
+    "equipe": "Lebanon",
+    "joueur": "P. Budib",
+    "minute": 62,
+    "prolongation": null
+   },
+   {
+    "equipe": "Kyrgyzstan",
+    "joueur": "A. Shukurov",
+    "minute": 64,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1641082,
