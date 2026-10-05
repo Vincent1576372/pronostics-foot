@@ -228,6 +228,91 @@
  ],
  "historique": [
   {
+   "fixture_id": 1607023,
+   "date": "2026-10-04T09:00:00+00:00",
+   "domicile": "Ingolstadt W",
+   "exterieur": "Bochum W",
+   "proba": [
+    10,
+    45,
+    45
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    3,
+    3
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1565737,
+   "date": "2026-10-04T08:30:00+00:00",
+   "domicile": "Ružomberok II",
+   "exterieur": "Banská Byst II",
+   "proba": [
+    36,
+    35,
+    29
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    3,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1566109,
+   "date": "2026-10-04T08:30:00+00:00",
+   "domicile": "Trenčín II",
+   "exterieur": "Nitra",
+   "proba": [
+    3,
+    49,
+    48
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    2,
+    4
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1566111,
+   "date": "2026-10-04T08:30:00+00:00",
+   "domicile": "DAC II",
+   "exterieur": "Komárno II",
+   "proba": [
+    35,
+    35,
+    30
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    4,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1589726,
+   "date": "2026-10-04T08:30:00+00:00",
+   "domicile": "Videm",
+   "exterieur": "Šampion Celje",
+   "proba": [
+    35,
+    35,
+    30
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    1,
+    0
+   ],
+   "buteurs": []
+  },
+  {
    "fixture_id": 1643252,
    "date": "2026-10-03T07:45:00+00:00",
    "domicile": "LDF",
@@ -955,201 +1040,9 @@
      "prolongation": null
     }
    ]
-  },
-  {
-   "fixture_id": 1640417,
-   "date": "2026-09-30T08:00:00+00:00",
-   "domicile": "Khovd",
-   "exterieur": "Ulaanbaatar",
-   "proba": [
-    10,
-    45,
-    45
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    0,
-    4
-   ],
-   "buteurs": [
-    {
-     "equipe": "Ulaanbaatar",
-     "joueur": "?",
-     "minute": 7,
-     "prolongation": null
-    },
-    {
-     "equipe": "Ulaanbaatar",
-     "joueur": "?",
-     "minute": 60,
-     "prolongation": null
-    },
-    {
-     "equipe": "Ulaanbaatar",
-     "joueur": "?",
-     "minute": 75,
-     "prolongation": null
-    },
-    {
-     "equipe": "Ulaanbaatar",
-     "joueur": "?",
-     "minute": 87,
-     "prolongation": null
-    },
-    {
-     "equipe": "Ulaanbaatar",
-     "joueur": "?",
-     "minute": 90,
-     "prolongation": 2
-    }
-   ]
-  },
-  {
-   "fixture_id": 1642893,
-   "date": "2026-09-30T08:00:00+00:00",
-   "domicile": "Arges Pitesti",
-   "exterieur": "Cetate Deva",
-   "proba": [
-    33,
-    34,
-    33
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    2,
-    1
-   ],
-   "buteurs": [
-    {
-     "equipe": "Arges Pitesti",
-     "joueur": "?",
-     "minute": 18,
-     "prolongation": null
-    },
-    {
-     "equipe": "Cetate Deva",
-     "joueur": "?",
-     "minute": 50,
-     "prolongation": null
-    },
-    {
-     "equipe": "Arges Pitesti",
-     "joueur": "?",
-     "minute": 79,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1640510,
-   "date": "2026-09-30T07:00:00+00:00",
-   "domicile": "Fiji",
-   "exterieur": "New Caledonia",
-   "proba": [
-    47,
-    45,
-    8
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    2,
-    1
-   ],
-   "buteurs": [
-    {
-     "equipe": "New Caledonia",
-     "joueur": "W. Read",
-     "minute": 40,
-     "prolongation": null
-    },
-    {
-     "equipe": "Fiji",
-     "joueur": "S. Wara",
-     "minute": 50,
-     "prolongation": null
-    },
-    {
-     "equipe": "Fiji",
-     "joueur": "M. Dau",
-     "minute": 66,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1632086,
-   "date": "2026-09-29T09:30:00+00:00",
-   "domicile": "France U20",
-   "exterieur": "England U20",
-   "proba": [
-    11,
-    45,
-    44
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    1,
-    2
-   ],
-   "buteurs": [
-    {
-     "equipe": "England U20",
-     "joueur": "S. Mheuka",
-     "minute": 10,
-     "prolongation": null
-    },
-    {
-     "equipe": "England U20",
-     "joueur": "M. Moore",
-     "minute": 16,
-     "prolongation": null
-    },
-    {
-     "equipe": "France U20",
-     "joueur": "?",
-     "minute": 68,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1640263,
-   "date": "2026-09-29T09:00:00+00:00",
-   "domicile": "ATK Mohun Bagan",
-   "exterieur": "NorthEast United",
-   "proba": [
-    43,
-    45,
-    12
-   ],
-   "resultat_reel": "nul",
-   "score": [
-    1,
-    1
-   ],
-   "buteurs": [
-    {
-     "equipe": "ATK Mohun Bagan",
-     "joueur": "?",
-     "minute": 49,
-     "prolongation": null
-    },
-    {
-     "equipe": "ATK Mohun Bagan",
-     "joueur": "?",
-     "minute": 70,
-     "prolongation": null
-    },
-    {
-     "equipe": "NorthEast United",
-     "joueur": "E. Gonzalez",
-     "minute": 72,
-     "prolongation": null
-    }
-   ]
   }
  ],
- "taux_reussite": 55,
- "nb_verifies": 53,
- "maj_resultats": "2026-10-04T22:40:34.923191+00:00"
+ "taux_reussite": 57,
+ "nb_verifies": 58,
+ "maj_resultats": "2026-10-05T00:51:22.646344+00:00"
 }

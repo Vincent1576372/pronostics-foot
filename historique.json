@@ -1784,7 +1784,12 @@
    35,
    29
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   3,
+   0
+  ],
+  "buteurs": []
  },
  {
   "fixture_id": 1566109,
@@ -1796,7 +1801,12 @@
    49,
    48
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   2,
+   4
+  ],
+  "buteurs": []
  },
  {
   "fixture_id": 1566111,
@@ -1808,7 +1818,12 @@
    35,
    30
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   4,
+   0
+  ],
+  "buteurs": []
  },
  {
   "fixture_id": 1589726,
@@ -1820,7 +1835,12 @@
    35,
    30
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   1,
+   0
+  ],
+  "buteurs": []
  },
  {
   "fixture_id": 1607023,
@@ -1832,7 +1852,12 @@
    45,
    45
   ],
-  "resultat_reel": null
+  "resultat_reel": "nul",
+  "score": [
+   3,
+   3
+  ],
+  "buteurs": []
  },
  {
   "fixture_id": 1637228,
