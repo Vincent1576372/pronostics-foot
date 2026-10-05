@@ -1870,5 +1870,89 @@
    10
   ],
   "resultat_reel": null
+ },
+ {
+  "fixture_id": 1635988,
+  "date": "2026-10-05T01:05:00+00:00",
+  "domicile": "Celaya",
+  "exterieur": "Jaguares de Chiapas",
+  "proba": [
+   48,
+   49,
+   3
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1643812,
+  "date": "2026-10-05T06:30:00+00:00",
+  "domicile": "Ecuador",
+  "exterieur": "Panama",
+  "proba": [
+   46,
+   45,
+   9
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640437,
+  "date": "2026-10-05T08:00:00+00:00",
+  "domicile": "Hunters",
+  "exterieur": "Amtat FC",
+  "proba": [
+   47,
+   45,
+   8
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640516,
+  "date": "2026-10-05T08:30:00+00:00",
+  "domicile": "Hungary U18",
+  "exterieur": "Italy U18",
+  "proba": [
+   6,
+   45,
+   49
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1643006,
+  "date": "2026-10-05T09:00:00+00:00",
+  "domicile": "Finland U18",
+  "exterieur": "Wales U18",
+  "proba": [
+   46,
+   45,
+   9
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1643934,
+  "date": "2026-10-05T09:00:00+00:00",
+  "domicile": "Malaysia",
+  "exterieur": "Vietnam",
+  "proba": [
+   45,
+   45,
+   10
+  ],
+  "resultat_reel": null
+ },
+ {
+  "fixture_id": 1640831,
+  "date": "2026-10-05T10:00:00+00:00",
+  "domicile": "Wales U19",
+  "exterieur": "Northern Ireland U19",
+  "proba": [
+   32,
+   33,
+   35
+  ],
+  "resultat_reel": null
  }
 ]
