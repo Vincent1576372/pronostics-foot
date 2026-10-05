@@ -1772,7 +1772,12 @@
    45,
    6
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   0,
+   2
+  ],
+  "buteurs": []
  },
  {
   "fixture_id": 1565737,
@@ -1893,7 +1898,121 @@
    45,
    9
   ],
-  "resultat_reel": null
+  "resultat_reel": "nul",
+  "score": [
+   1,
+   1
+  ],
+  "buteurs": [
+   {
+    "equipe": "Panama",
+    "joueur": "Josue Vergara",
+    "minute": 38,
+    "prolongation": null
+   },
+   {
+    "equipe": "Ecuador",
+    "joueur": "Juan Riquelme Angulo",
+    "minute": 58,
+    "prolongation": null
+   },
+   {
+    "equipe": "Panama",
+    "joueur": "Amir Murillo",
+    "minute": 92,
+    "prolongation": null
+   },
+   {
+    "equipe": "Ecuador",
+    "joueur": "Pedro Vite",
+    "minute": 93,
+    "prolongation": null
+   },
+   {
+    "equipe": "Panama",
+    "joueur": "Carlos Harvey",
+    "minute": 93,
+    "prolongation": null
+   },
+   {
+    "equipe": "Ecuador",
+    "joueur": "Anthony Valencia",
+    "minute": 94,
+    "prolongation": null
+   },
+   {
+    "equipe": "Panama",
+    "joueur": "Víctor Griffith",
+    "minute": 95,
+    "prolongation": null
+   },
+   {
+    "equipe": "Ecuador",
+    "joueur": "John Yeboah",
+    "minute": 96,
+    "prolongation": null
+   },
+   {
+    "equipe": "Panama",
+    "joueur": "Tomás Rodríguez",
+    "minute": 97,
+    "prolongation": null
+   },
+   {
+    "equipe": "Ecuador",
+    "joueur": "Nilson Angulo",
+    "minute": 97,
+    "prolongation": null
+   },
+   {
+    "equipe": "Panama",
+    "joueur": "Rafael Mosquera",
+    "minute": 98,
+    "prolongation": null
+   },
+   {
+    "equipe": "Ecuador",
+    "joueur": "Keny arroyo",
+    "minute": 99,
+    "prolongation": null
+   },
+   {
+    "equipe": "Panama",
+    "joueur": "César Blackman",
+    "minute": 100,
+    "prolongation": null
+   },
+   {
+    "equipe": "Ecuador",
+    "joueur": "Willian Pacho",
+    "minute": 100,
+    "prolongation": null
+   },
+   {
+    "equipe": "Panama",
+    "joueur": "Dilan Herbert",
+    "minute": 101,
+    "prolongation": null
+   },
+   {
+    "equipe": "Ecuador",
+    "joueur": "Fricio Caicedo",
+    "minute": 102,
+    "prolongation": null
+   },
+   {
+    "equipe": "Panama",
+    "joueur": "Deivis Murillo",
+    "minute": 102,
+    "prolongation": null
+   },
+   {
+    "equipe": "Ecuador",
+    "joueur": "Juan Riquelme Angulo",
+    "minute": 103,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1640437,

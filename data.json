@@ -231,6 +231,132 @@
  ],
  "historique": [
   {
+   "fixture_id": 1643812,
+   "date": "2026-10-05T06:30:00+00:00",
+   "domicile": "Ecuador",
+   "exterieur": "Panama",
+   "proba": [
+    46,
+    45,
+    9
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    1,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Panama",
+     "joueur": "Josue Vergara",
+     "minute": 38,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Juan Riquelme Angulo",
+     "minute": 58,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "Amir Murillo",
+     "minute": 92,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Pedro Vite",
+     "minute": 93,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "Carlos Harvey",
+     "minute": 93,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Anthony Valencia",
+     "minute": 94,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "Víctor Griffith",
+     "minute": 95,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "John Yeboah",
+     "minute": 96,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "Tomás Rodríguez",
+     "minute": 97,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Nilson Angulo",
+     "minute": 97,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "Rafael Mosquera",
+     "minute": 98,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Keny arroyo",
+     "minute": 99,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "César Blackman",
+     "minute": 100,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Willian Pacho",
+     "minute": 100,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "Dilan Herbert",
+     "minute": 101,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Fricio Caicedo",
+     "minute": 102,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "Deivis Murillo",
+     "minute": 102,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Juan Riquelme Angulo",
+     "minute": 103,
+     "prolongation": null
+    }
+   ]
+  },
+  {
    "fixture_id": 1607023,
    "date": "2026-10-04T09:00:00+00:00",
    "domicile": "Ingolstadt W",
@@ -312,6 +438,23 @@
    "score": [
     1,
     0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1635987,
+   "date": "2026-10-04T01:00:00+00:00",
+   "domicile": "Los Cabos United",
+   "exterieur": "Cordobés",
+   "proba": [
+    49,
+    45,
+    6
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    2
    ],
    "buteurs": []
   },
@@ -977,75 +1120,9 @@
     1
    ],
    "buteurs": []
-  },
-  {
-   "fixture_id": 1640262,
-   "date": "2026-09-30T09:00:00+00:00",
-   "domicile": "East Bengal II",
-   "exterieur": "Minerva Punjab",
-   "proba": [
-    33,
-    35,
-    32
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    0,
-    1
-   ],
-   "buteurs": [
-    {
-     "equipe": "Minerva Punjab",
-     "joueur": "Diego Raposo",
-     "minute": 41,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1641712,
-   "date": "2026-09-30T09:00:00+00:00",
-   "domicile": "Timor-Leste",
-   "exterieur": "Cambodia",
-   "proba": [
-    3,
-    48,
-    49
-   ],
-   "resultat_reel": "nul",
-   "score": [
-    2,
-    2
-   ],
-   "buteurs": [
-    {
-     "equipe": "Timor-Leste",
-     "joueur": "João Pedro da Silva Freitas",
-     "minute": 17,
-     "prolongation": null
-    },
-    {
-     "equipe": "Cambodia",
-     "joueur": "Andres Nieto",
-     "minute": 28,
-     "prolongation": null
-    },
-    {
-     "equipe": "Cambodia",
-     "joueur": "Andres Nieto",
-     "minute": 38,
-     "prolongation": null
-    },
-    {
-     "equipe": "Timor-Leste",
-     "joueur": "Alexandro Bakhito Corsino Lemos",
-     "minute": 58,
-     "prolongation": null
-    }
-   ]
   }
  ],
- "taux_reussite": 57,
- "nb_verifies": 58,
- "maj_resultats": "2026-10-05T06:53:13.168357+00:00"
+ "taux_reussite": 55,
+ "nb_verifies": 60,
+ "maj_resultats": "2026-10-05T08:45:56.689195+00:00"
 }
