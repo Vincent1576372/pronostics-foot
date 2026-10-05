@@ -734,8 +734,318 @@
     0
    ],
    "buteurs": []
+  },
+  {
+   "fixture_id": 1643205,
+   "date": "2026-10-01T10:00:00+00:00",
+   "domicile": "Olimpija Ljubljana",
+   "exterieur": "NK Slaven Belupo",
+   "proba": [
+    12,
+    45,
+    43
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "NK Slaven Belupo",
+     "joueur": "I. Nestorovski",
+     "minute": 3,
+     "prolongation": null
+    },
+    {
+     "equipe": "Olimpija Ljubljana",
+     "joueur": "I. Tuci",
+     "minute": 15,
+     "prolongation": null
+    },
+    {
+     "equipe": "Olimpija Ljubljana",
+     "joueur": "R. Miskovic",
+     "minute": 61,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1638595,
+   "date": "2026-10-01T09:30:00+00:00",
+   "domicile": "Venezuela U17",
+   "exterieur": "England U17",
+   "proba": [
+    8,
+    45,
+    47
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    1
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1640072,
+   "date": "2026-10-01T09:30:00+00:00",
+   "domicile": "Poland U19",
+   "exterieur": "Kazakhstan U19",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    3,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Poland U19",
+     "joueur": "?",
+     "minute": 22,
+     "prolongation": null
+    },
+    {
+     "equipe": "Poland U19",
+     "joueur": "?",
+     "minute": 50,
+     "prolongation": null
+    },
+    {
+     "equipe": "Poland U19",
+     "joueur": "?",
+     "minute": 64,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1642983,
+   "date": "2026-10-01T09:30:00+00:00",
+   "domicile": "Slovakia U19",
+   "exterieur": "Switzerland U19",
+   "proba": [
+    10,
+    45,
+    45
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Switzerland U19",
+     "joueur": "?",
+     "minute": 7,
+     "prolongation": null
+    },
+    {
+     "equipe": "Slovakia U19",
+     "joueur": "?",
+     "minute": 21,
+     "prolongation": null
+    },
+    {
+     "equipe": "Slovakia U19",
+     "joueur": "?",
+     "minute": 72,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1637962,
+   "date": "2026-10-01T08:00:00+00:00",
+   "domicile": "North District",
+   "exterieur": "Southern District",
+   "proba": [
+    33,
+    34,
+    33
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "North District",
+     "joueur": "Vinicius Soares",
+     "minute": 59,
+     "prolongation": null
+    },
+    {
+     "equipe": "Southern District",
+     "joueur": "S. Golubovic",
+     "minute": 90,
+     "prolongation": 3
+    },
+    {
+     "equipe": "North District",
+     "joueur": "Samuel Granada",
+     "minute": 90,
+     "prolongation": 7
+    }
+   ]
+  },
+  {
+   "fixture_id": 1640436,
+   "date": "2026-10-01T08:00:00+00:00",
+   "domicile": "Erchim",
+   "exterieur": "Central Stallions",
+   "proba": [
+    8,
+    45,
+    47
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    4
+   ],
+   "buteurs": [
+    {
+     "equipe": "Central Stallions",
+     "joueur": "B. Usukh-Ireedui",
+     "minute": 40,
+     "prolongation": null
+    },
+    {
+     "equipe": "Central Stallions",
+     "joueur": "P. Enkhbileg",
+     "minute": 79,
+     "prolongation": null
+    },
+    {
+     "equipe": "Central Stallions",
+     "joueur": "O. Enkh-Orgil",
+     "minute": 81,
+     "prolongation": null
+    },
+    {
+     "equipe": "Central Stallions",
+     "joueur": "K. Kutsuwada",
+     "minute": 89,
+     "prolongation": null
+    },
+    {
+     "equipe": "Erchim",
+     "joueur": "B. Tuguldur",
+     "minute": 90,
+     "prolongation": 3
+    }
+   ]
+  },
+  {
+   "fixture_id": 1632351,
+   "date": "2026-09-30T09:00:00+00:00",
+   "domicile": "South Korea U18",
+   "exterieur": "England U18",
+   "proba": [
+    29,
+    33,
+    38
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    2
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1640069,
+   "date": "2026-09-30T09:00:00+00:00",
+   "domicile": "Poland U17",
+   "exterieur": "Georgia U17",
+   "proba": [
+    46,
+    45,
+    9
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    3,
+    1
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1640262,
+   "date": "2026-09-30T09:00:00+00:00",
+   "domicile": "East Bengal II",
+   "exterieur": "Minerva Punjab",
+   "proba": [
+    33,
+    35,
+    32
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Minerva Punjab",
+     "joueur": "Diego Raposo",
+     "minute": 41,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1641712,
+   "date": "2026-09-30T09:00:00+00:00",
+   "domicile": "Timor-Leste",
+   "exterieur": "Cambodia",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    2,
+    2
+   ],
+   "buteurs": [
+    {
+     "equipe": "Timor-Leste",
+     "joueur": "João Pedro da Silva Freitas",
+     "minute": 17,
+     "prolongation": null
+    },
+    {
+     "equipe": "Cambodia",
+     "joueur": "Andres Nieto",
+     "minute": 28,
+     "prolongation": null
+    },
+    {
+     "equipe": "Cambodia",
+     "joueur": "Andres Nieto",
+     "minute": 38,
+     "prolongation": null
+    },
+    {
+     "equipe": "Timor-Leste",
+     "joueur": "Alexandro Bakhito Corsino Lemos",
+     "minute": 58,
+     "prolongation": null
+    }
+   ]
   }
  ],
  "taux_reussite": 57,
- "nb_verifies": 58
+ "nb_verifies": 58,
+ "maj_resultats": "2026-10-05T06:53:13.168357+00:00"
 }
