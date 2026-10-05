@@ -2084,7 +2084,12 @@
    45,
    49
   ],
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   1,
+   3
+  ],
+  "buteurs": []
  },
  {
   "fixture_id": 1643006,
@@ -2096,7 +2101,12 @@
    45,
    9
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   2,
+   0
+  ],
+  "buteurs": []
  },
  {
   "fixture_id": 1643934,
@@ -2108,7 +2118,19 @@
    45,
    10
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   1,
+   0
+  ],
+  "buteurs": [
+   {
+    "equipe": "Malaysia",
+    "joueur": "Fergus Tierney",
+    "minute": 62,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1640831,
@@ -2120,6 +2142,11 @@
    33,
    35
   ],
-  "resultat_reel": null
+  "resultat_reel": "nul",
+  "score": [
+   0,
+   0
+  ],
+  "buteurs": []
  }
 ]

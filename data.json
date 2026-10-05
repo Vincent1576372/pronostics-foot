@@ -231,6 +231,81 @@
  ],
  "historique": [
   {
+   "fixture_id": 1640831,
+   "date": "2026-10-05T10:00:00+00:00",
+   "domicile": "Wales U19",
+   "exterieur": "Northern Ireland U19",
+   "proba": [
+    32,
+    33,
+    35
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    0,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1643006,
+   "date": "2026-10-05T09:00:00+00:00",
+   "domicile": "Finland U18",
+   "exterieur": "Wales U18",
+   "proba": [
+    46,
+    45,
+    9
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1643934,
+   "date": "2026-10-05T09:00:00+00:00",
+   "domicile": "Malaysia",
+   "exterieur": "Vietnam",
+   "proba": [
+    45,
+    45,
+    10
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    1,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Malaysia",
+     "joueur": "Fergus Tierney",
+     "minute": 62,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1640516,
+   "date": "2026-10-05T08:30:00+00:00",
+   "domicile": "Hungary U18",
+   "exterieur": "Italy U18",
+   "proba": [
+    6,
+    45,
+    49
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    3
+   ],
+   "buteurs": []
+  },
+  {
    "fixture_id": 1640437,
    "date": "2026-10-05T08:00:00+00:00",
    "domicile": "Hunters",
@@ -1026,146 +1101,9 @@
      "prolongation": null
     }
    ]
-  },
-  {
-   "fixture_id": 1642983,
-   "date": "2026-10-01T09:30:00+00:00",
-   "domicile": "Slovakia U19",
-   "exterieur": "Switzerland U19",
-   "proba": [
-    10,
-    45,
-    45
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    2,
-    1
-   ],
-   "buteurs": [
-    {
-     "equipe": "Switzerland U19",
-     "joueur": "?",
-     "minute": 7,
-     "prolongation": null
-    },
-    {
-     "equipe": "Slovakia U19",
-     "joueur": "?",
-     "minute": 21,
-     "prolongation": null
-    },
-    {
-     "equipe": "Slovakia U19",
-     "joueur": "?",
-     "minute": 72,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1637962,
-   "date": "2026-10-01T08:00:00+00:00",
-   "domicile": "North District",
-   "exterieur": "Southern District",
-   "proba": [
-    33,
-    34,
-    33
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    2,
-    1
-   ],
-   "buteurs": [
-    {
-     "equipe": "North District",
-     "joueur": "Vinicius Soares",
-     "minute": 59,
-     "prolongation": null
-    },
-    {
-     "equipe": "Southern District",
-     "joueur": "S. Golubovic",
-     "minute": 90,
-     "prolongation": 3
-    },
-    {
-     "equipe": "North District",
-     "joueur": "Samuel Granada",
-     "minute": 90,
-     "prolongation": 7
-    }
-   ]
-  },
-  {
-   "fixture_id": 1640436,
-   "date": "2026-10-01T08:00:00+00:00",
-   "domicile": "Erchim",
-   "exterieur": "Central Stallions",
-   "proba": [
-    8,
-    45,
-    47
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    1,
-    4
-   ],
-   "buteurs": [
-    {
-     "equipe": "Central Stallions",
-     "joueur": "B. Usukh-Ireedui",
-     "minute": 40,
-     "prolongation": null
-    },
-    {
-     "equipe": "Central Stallions",
-     "joueur": "P. Enkhbileg",
-     "minute": 79,
-     "prolongation": null
-    },
-    {
-     "equipe": "Central Stallions",
-     "joueur": "O. Enkh-Orgil",
-     "minute": 81,
-     "prolongation": null
-    },
-    {
-     "equipe": "Central Stallions",
-     "joueur": "K. Kutsuwada",
-     "minute": 89,
-     "prolongation": null
-    },
-    {
-     "equipe": "Erchim",
-     "joueur": "B. Tuguldur",
-     "minute": 90,
-     "prolongation": 3
-    }
-   ]
-  },
-  {
-   "fixture_id": 1632351,
-   "date": "2026-09-30T09:00:00+00:00",
-   "domicile": "South Korea U18",
-   "exterieur": "England U18",
-   "proba": [
-    29,
-    33,
-    38
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    1,
-    2
-   ],
-   "buteurs": []
   }
  ],
- "taux_reussite": 56,
- "nb_verifies": 61,
- "maj_resultats": "2026-10-05T10:43:47.200462+00:00"
+ "taux_reussite": 57,
+ "nb_verifies": 65,
+ "maj_resultats": "2026-10-05T12:50:04.691093+00:00"
 }
