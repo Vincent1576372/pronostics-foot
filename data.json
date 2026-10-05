@@ -231,6 +231,66 @@
  ],
  "historique": [
   {
+   "fixture_id": 1640437,
+   "date": "2026-10-05T08:00:00+00:00",
+   "domicile": "Hunters",
+   "exterieur": "Amtat FC",
+   "proba": [
+    47,
+    45,
+    8
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    6,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Hunters",
+     "joueur": "T. Munkhbaatar",
+     "minute": 12,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hunters",
+     "joueur": "A. Sumyabazar",
+     "minute": 20,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hunters",
+     "joueur": "P. Bilegjargal",
+     "minute": 32,
+     "prolongation": null
+    },
+    {
+     "equipe": "Amtat FC",
+     "joueur": "T. Bilguun",
+     "minute": 50,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hunters",
+     "joueur": "T. Munkhbaatar",
+     "minute": 52,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hunters",
+     "joueur": "P. Bilegjargal",
+     "minute": 68,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hunters",
+     "joueur": "T. Munkhbaatar",
+     "minute": 76,
+     "prolongation": null
+    }
+   ]
+  },
+  {
    "fixture_id": 1643812,
    "date": "2026-10-05T06:30:00+00:00",
    "domicile": "Ecuador",
@@ -1103,26 +1163,9 @@
     2
    ],
    "buteurs": []
-  },
-  {
-   "fixture_id": 1640069,
-   "date": "2026-09-30T09:00:00+00:00",
-   "domicile": "Poland U17",
-   "exterieur": "Georgia U17",
-   "proba": [
-    46,
-    45,
-    9
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    3,
-    1
-   ],
-   "buteurs": []
   }
  ],
- "taux_reussite": 55,
- "nb_verifies": 60,
- "maj_resultats": "2026-10-05T08:45:56.689195+00:00"
+ "taux_reussite": 56,
+ "nb_verifies": 61,
+ "maj_resultats": "2026-10-05T10:43:47.200462+00:00"
 }

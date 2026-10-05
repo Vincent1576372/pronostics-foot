@@ -2024,7 +2024,55 @@
    45,
    8
   ],
-  "resultat_reel": null
+  "resultat_reel": "dom",
+  "score": [
+   6,
+   1
+  ],
+  "buteurs": [
+   {
+    "equipe": "Hunters",
+    "joueur": "T. Munkhbaatar",
+    "minute": 12,
+    "prolongation": null
+   },
+   {
+    "equipe": "Hunters",
+    "joueur": "A. Sumyabazar",
+    "minute": 20,
+    "prolongation": null
+   },
+   {
+    "equipe": "Hunters",
+    "joueur": "P. Bilegjargal",
+    "minute": 32,
+    "prolongation": null
+   },
+   {
+    "equipe": "Amtat FC",
+    "joueur": "T. Bilguun",
+    "minute": 50,
+    "prolongation": null
+   },
+   {
+    "equipe": "Hunters",
+    "joueur": "T. Munkhbaatar",
+    "minute": 52,
+    "prolongation": null
+   },
+   {
+    "equipe": "Hunters",
+    "joueur": "P. Bilegjargal",
+    "minute": 68,
+    "prolongation": null
+   },
+   {
+    "equipe": "Hunters",
+    "joueur": "T. Munkhbaatar",
+    "minute": 76,
+    "prolongation": null
+   }
+  ]
  },
  {
   "fixture_id": 1640516,
