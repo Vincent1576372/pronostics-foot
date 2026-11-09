@@ -47,14 +47,26 @@ def fd(chemin, params=None):
     return {}
 
 
+ENTETES = {
+    "User-Agent": "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Mobile Safari/537.36",
+    "Accept": "application/json",
+}
+
+
 def sdb(chemin, params):
-    time.sleep(2.1)
-    try:
-        r = requests.get(f"{SDB}/{chemin}", params=params, timeout=20)
-        return r.json() or {}
-    except Exception as e:
-        print("Ignore (TheSportsDB) :", chemin, params, e)
-        return {}
+    for essai in range(3):
+        time.sleep(2.1 if essai == 0 else 8)
+        try:
+            r = requests.get(f"{SDB}/{chemin}", params=params, headers=ENTETES, timeout=25)
+        except Exception as e:
+            print("Ignore (TheSportsDB) :", chemin, params, e)
+            continue
+        try:
+            return r.json() or {}
+        except ValueError:
+            print("TheSportsDB reponse non JSON : code", r.status_code,
+                  "debut :", r.text[:120].replace("\n", " "))
+    return {}
 
 
 def normal(nom):
