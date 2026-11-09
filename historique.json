@@ -773,7 +773,8 @@
    48,
    49
   ],
-  "resultat_reel": null
+  "resultat_reel": null,
+  "tentatives": 1
  },
  {
   "fixture_id": 1640226,
@@ -785,7 +786,8 @@
    49,
    3
   ],
-  "resultat_reel": null
+  "resultat_reel": null,
+  "tentatives": 1
  },
  {
   "fixture_id": 1640227,
@@ -797,7 +799,8 @@
    33,
    32
   ],
-  "resultat_reel": null
+  "resultat_reel": null,
+  "tentatives": 1
  },
  {
   "fixture_id": 1640263,
@@ -1874,7 +1877,8 @@
    45,
    10
   ],
-  "resultat_reel": null
+  "resultat_reel": null,
+  "tentatives": 1
  },
  {
   "fixture_id": 1635988,
@@ -1886,7 +1890,8 @@
    49,
    3
   ],
-  "resultat_reel": null
+  "resultat_reel": null,
+  "tentatives": 1
  },
  {
   "fixture_id": 1643812,
