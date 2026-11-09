@@ -36,6 +36,25 @@
  ],
  "historique": [
   {
+   "source": "sdb",
+   "fixture_id": "2420125",
+   "date": "2026-11-09T16:00:00+00:00",
+   "competition": "Georgian Erovnuli Liga",
+   "domicile": "Iberia 1999",
+   "exterieur": "Gagra",
+   "proba": [
+    45,
+    27,
+    28
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    1,
+    0
+   ],
+   "buteurs": []
+  },
+  {
    "fixture_id": 1640831,
    "date": "2026-10-05T10:00:00+00:00",
    "domicile": "Wales U19",
@@ -870,45 +889,9 @@
     1
    ],
    "buteurs": []
-  },
-  {
-   "fixture_id": 1640072,
-   "date": "2026-10-01T09:30:00+00:00",
-   "domicile": "Poland U19",
-   "exterieur": "Kazakhstan U19",
-   "proba": [
-    49,
-    48,
-    3
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    3,
-    0
-   ],
-   "buteurs": [
-    {
-     "equipe": "Poland U19",
-     "joueur": "?",
-     "minute": 22,
-     "prolongation": null
-    },
-    {
-     "equipe": "Poland U19",
-     "joueur": "?",
-     "minute": 50,
-     "prolongation": null
-    },
-    {
-     "equipe": "Poland U19",
-     "joueur": "?",
-     "minute": 64,
-     "prolongation": null
-    }
-   ]
   }
  ],
- "taux_reussite": 57,
- "nb_verifies": 65,
- "maj_resultats": "2026-11-09T10:01:25.333563+00:00"
+ "taux_reussite": 58,
+ "nb_verifies": 66,
+ "maj_resultats": "2026-11-09T20:54:49.526565+00:00"
 }
