@@ -13,7 +13,7 @@ import requests
 
 CLE_FD = os.environ["FOOTBALL_DATA_KEY"]
 FD = "https://api.football-data.org/v4"
-SDB = "https://www.thesportsdb.com/api/v1/json/3"  # cle publique de test
+SDB = "https://www.thesportsdb.com/api/v1/json/123"  # cle publique de test
 CODES = ["CL", "PL", "PD", "SA", "BL1", "FL1"]
 GRANDES_LIGUES = {
     "uefachampionsleague", "englishpremierleague", "spanishlaliga",
