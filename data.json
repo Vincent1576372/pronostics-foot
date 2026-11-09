@@ -1,6 +1,39 @@
 {
- "maj": "2026-11-09T08:50:30.425036+00:00",
- "matchs": [],
+ "maj": "2026-11-09T09:21:24.832165+00:00",
+ "matchs": [
+  {
+   "categorie": "secondaire",
+   "competition": "Georgian Erovnuli Liga",
+   "heure": "2026-11-09T16:00:00+00:00",
+   "domicile": "Iberia 1999",
+   "exterieur": "Gagra",
+   "proba": [
+    45,
+    27,
+    28
+   ],
+   "base_api": [
+    44,
+    27,
+    29
+   ],
+   "ajustement": 1.2,
+   "forme_dom": [
+    "V"
+   ],
+   "forme_ext": [
+    "N"
+   ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  }
+ ],
  "historique": [
   {
    "fixture_id": 1640831,

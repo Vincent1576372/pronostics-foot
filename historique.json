@@ -2148,5 +2148,19 @@
    0
   ],
   "buteurs": []
+ },
+ {
+  "source": "sdb",
+  "fixture_id": "2420125",
+  "date": "2026-11-09T16:00:00+00:00",
+  "competition": "Georgian Erovnuli Liga",
+  "domicile": "Iberia 1999",
+  "exterieur": "Gagra",
+  "proba": [
+   45,
+   27,
+   28
+  ],
+  "resultat_reel": null
  }
 ]
