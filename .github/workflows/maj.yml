@@ -19,7 +19,6 @@ jobs:
       - run: pip install requests
       - run: python maj.py
         env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
           FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
       - run: |
           git config user.name "robot"
