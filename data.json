@@ -1,12 +1,12 @@
 {
- "maj": "2026-11-09T15:23:51.847737+00:00",
+ "maj": "2026-11-10T14:26:58.098712+00:00",
  "matchs": [
   {
    "categorie": "secondaire",
-   "competition": "Georgian Erovnuli Liga",
-   "heure": "2026-11-09T16:00:00+00:00",
-   "domicile": "Iberia 1999",
-   "exterieur": "Gagra",
+   "competition": "Denmark A-Liga",
+   "heure": "2026-11-10T18:00:00+00:00",
+   "domicile": "Midtjylland Women",
+   "exterieur": "Odense Q",
    "proba": [
     45,
     27,
@@ -17,12 +17,44 @@
     27,
     29
    ],
-   "ajustement": 1.2,
+   "ajustement": 0.6,
+   "forme_dom": [
+    "N"
+   ],
+   "forme_ext": [
+    "D"
+   ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "English National League South",
+   "heure": "2026-11-10T19:45:00+00:00",
+   "domicile": "Salisbury",
+   "exterieur": "Braintree Town",
+   "proba": [
+    44,
+    27,
+    29
+   ],
+   "base_api": [
+    44,
+    27,
+    29
+   ],
+   "ajustement": 0.0,
    "forme_dom": [
     "V"
    ],
    "forme_ext": [
-    "N"
+    "V"
    ],
    "source_dom": "actuelle",
    "source_ext": "actuelle",

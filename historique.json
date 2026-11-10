@@ -2172,5 +2172,33 @@
    0
   ],
   "buteurs": []
+ },
+ {
+  "source": "sdb",
+  "fixture_id": "2522946",
+  "date": "2026-11-10T18:00:00+00:00",
+  "competition": "Denmark A-Liga",
+  "domicile": "Midtjylland Women",
+  "exterieur": "Odense Q",
+  "proba": [
+   45,
+   27,
+   28
+  ],
+  "resultat_reel": null
+ },
+ {
+  "source": "sdb",
+  "fixture_id": "2529632",
+  "date": "2026-11-10T19:45:00+00:00",
+  "competition": "English National League South",
+  "domicile": "Salisbury",
+  "exterieur": "Braintree Town",
+  "proba": [
+   44,
+   27,
+   29
+  ],
+  "resultat_reel": null
  }
 ]
