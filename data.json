@@ -69,6 +69,25 @@
  "historique": [
   {
    "source": "sdb",
+   "fixture_id": "2522946",
+   "date": "2026-11-10T18:00:00+00:00",
+   "competition": "Denmark A-Liga",
+   "domicile": "Midtjylland Women",
+   "exterieur": "Odense Q",
+   "proba": [
+    45,
+    27,
+    28
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "source": "sdb",
    "fixture_id": "2420125",
    "date": "2026-11-09T16:00:00+00:00",
    "competition": "Georgian Erovnuli Liga",
@@ -904,26 +923,9 @@
      "prolongation": null
     }
    ]
-  },
-  {
-   "fixture_id": 1638595,
-   "date": "2026-10-01T09:30:00+00:00",
-   "domicile": "Venezuela U17",
-   "exterieur": "England U17",
-   "proba": [
-    8,
-    45,
-    47
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    0,
-    1
-   ],
-   "buteurs": []
   }
  ],
  "taux_reussite": 58,
- "nb_verifies": 66,
- "maj_resultats": "2026-11-10T12:51:39.125056+00:00"
+ "nb_verifies": 67,
+ "maj_resultats": "2026-11-10T20:56:09.400005+00:00"
 }
