@@ -69,6 +69,25 @@
  "historique": [
   {
    "source": "sdb",
+   "fixture_id": "2529632",
+   "date": "2026-11-10T19:45:00+00:00",
+   "competition": "English National League South",
+   "domicile": "Salisbury",
+   "exterieur": "Braintree Town",
+   "proba": [
+    44,
+    27,
+    29
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "source": "sdb",
    "fixture_id": "2522946",
    "date": "2026-11-10T18:00:00+00:00",
    "competition": "Denmark A-Liga",
@@ -887,45 +906,9 @@
     0
    ],
    "buteurs": []
-  },
-  {
-   "fixture_id": 1643205,
-   "date": "2026-10-01T10:00:00+00:00",
-   "domicile": "Olimpija Ljubljana",
-   "exterieur": "NK Slaven Belupo",
-   "proba": [
-    12,
-    45,
-    43
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    2,
-    1
-   ],
-   "buteurs": [
-    {
-     "equipe": "NK Slaven Belupo",
-     "joueur": "I. Nestorovski",
-     "minute": 3,
-     "prolongation": null
-    },
-    {
-     "equipe": "Olimpija Ljubljana",
-     "joueur": "I. Tuci",
-     "minute": 15,
-     "prolongation": null
-    },
-    {
-     "equipe": "Olimpija Ljubljana",
-     "joueur": "R. Miskovic",
-     "minute": 61,
-     "prolongation": null
-    }
-   ]
   }
  ],
- "taux_reussite": 58,
- "nb_verifies": 67,
- "maj_resultats": "2026-11-10T20:56:09.400005+00:00"
+ "taux_reussite": 59,
+ "nb_verifies": 68,
+ "maj_resultats": "2026-11-11T02:02:43.916214+00:00"
 }
