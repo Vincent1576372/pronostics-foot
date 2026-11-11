@@ -50,6 +50,21 @@ nav button.on{background:var(--home);color:#fff;border-color:var(--home)}
 .tag{font-weight:700;font-size:.85rem;padding:3px 9px;border-radius:99px}
 .tag.ok{background:var(--ok);color:#fff}.tag.bad{background:var(--bad);color:#fff}
 .warn{margin-top:28px;padding:14px 16px;border-left:4px solid #F2B705;background:var(--card);font-size:.92rem;border-radius:0 10px 10px 0}
+.fams{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px}
+.fam{flex:0 0 auto;padding:7px 13px;border:1px solid var(--line);border-radius:99px;background:var(--card);font-size:.88rem;font-weight:600}
+.fam.on{background:var(--home);color:#fff;border-color:var(--home)}
+.mk{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:8px;overflow:hidden}
+.mk summary{list-style:none;cursor:pointer;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700}
+.mk summary::-webkit-details-marker{display:none}
+.mk summary::after{content:"▾";color:var(--muted);font-weight:400}
+.mk[open] summary::after{content:"▴"}
+.mk .nm1{flex:1;min-width:0}
+.mk .top{color:var(--muted);font-size:.8rem;font-weight:600;max-width:42%;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.est{font-size:.68rem;font-weight:700;padding:2px 7px;border-radius:99px;background:var(--draw);color:var(--ink);margin-left:6px;white-space:nowrap}
+.iss{display:flex;justify-content:space-between;gap:10px;padding:9px 15px;border-top:1px solid var(--line);font-size:.92rem;position:relative}
+.iss i{position:absolute;left:0;top:0;bottom:0;background:var(--home);opacity:.15}
+.iss .nm,.iss .pc{position:relative}
+.iss .pc{font-weight:800;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -131,6 +146,40 @@ app.innerHTML=h;
 app.querySelectorAll(".m").forEach(function(b){b.onclick=function(){detail(+b.dataset.i)}});
 }
 
+var famActive="Résultat";
+function fmt(p){return (p>=10?String(Math.round(p)):String(Math.round(p*10)/10)).replace(".",",")}
+function fmt1(x){return (Math.round(x*10)/10).toFixed(1).replace(".",",")}
+function nomEq(t,m){return String(t).replace(/Domicile/g,function(){return m.domicile}).replace(/Extérieur/g,function(){return m.exterieur}).replace(/(\d)\.(\d)/g,"$1,$2")}
+function butsAtt(m){
+if(!m.buts_attendus)return "";
+return '<p class="note" style="margin-top:12px">Buts attendus : <b>'+esc(m.domicile)+' '+fmt1(m.buts_attendus[0])+'</b> – <b>'+fmt1(m.buts_attendus[1])+' '+esc(m.exterieur)+'</b></p>';
+}
+function marchesHtml(m){
+if(!m.marches||!m.marches.length)return "";
+var fams=[];
+m.marches.forEach(function(x){if(fams.indexOf(x.groupe)<0)fams.push(x.groupe)});
+if(fams.indexOf(famActive)<0)famActive=fams[0];
+var h='<h2>Tous les marchés</h2><p class="note">Probabilité estimée de chaque issue. Touche un marché pour voir le détail. « estimation » = calcul plus approximatif.</p><div class="fams">';
+fams.forEach(function(f){h+='<button class="fam'+(f==famActive?' on':'')+'" data-fam="'+esc(f)+'">'+esc(f)+'</button>'});
+h+='</div>';
+m.marches.filter(function(x){return x.groupe==famActive}).forEach(function(x){
+var top=x.issues.reduce(function(a,b){return b.p>a.p?b:a});
+h+='<details class="mk"><summary><span class="nm1">'+esc(nomEq(x.nom,m))+(x.approx?'<span class="est">estimation</span>':'')+'</span><span class="top">'+esc(nomEq(top.n,m))+' · '+fmt(top.p)+' %</span></summary>';
+x.issues.forEach(function(s){h+='<div class="iss"><i style="width:'+Math.min(100,s.p)+'%"></i><span class="nm">'+esc(nomEq(s.n,m))+'</span><span class="pc">'+fmt(s.p)+' %</span></div>'});
+h+='</details>';
+});
+return h;
+}
+function brancherMarches(m){
+var c=document.getElementById("mkt");if(!c)return;
+c.querySelectorAll(".fam").forEach(function(b){b.onclick=function(){famActive=b.getAttribute("data-fam");c.innerHTML=marchesHtml(m);brancherMarches(m)}});
+}
+function methodeTxt(m){
+var aj=m.ajustement||0;
+if(!m.buts_attendus)return "Méthode : probabilités estimées à partir de la forme récente et des confrontations directes.";
+return "Méthode : on estime les buts que chaque équipe devrait marquer ("+fmt1(m.buts_attendus[0])+" et "+fmt1(m.buts_attendus[1])+"), d'après leurs buts marqués et encaissés, puis on calcule la probabilité de chaque score et de chaque marché. Base du 1X2 : "+m.base_api.join(" / ")+" (domicile / nul / extérieur), puis ajustement selon la forme et les confrontations directes ("+(aj>0?"+":"")+aj+" pts). Les marchés « estimation » appliquent la répartition moyenne des buts dans le temps. Les blessures ne sont pas prises en compte.";
+}
+
 function detail(i){
 var m=D.matchs[i],f=m.face_a_face;
 if(verrouille(m)){
@@ -144,15 +193,14 @@ var h='<button class="back" id="bk">← Tous les matchs</button>';
 if(m.categorie=="secondaire")h+='<span class="mini sec">Compétition secondaire</span>';
 h+='<h1>'+esc(m.domicile)+' – '+esc(m.exterieur)+'</h1><p class="sub">'+esc(m.competition)+' · coup d\'envoi '+hr(m.heure)+'</p>'+bar(m.proba,"lg")+
 '<div class="legend"><span><b>'+esc(m.domicile)+'</b> gagne</span><span>Nul</span><span><b>'+esc(m.exterieur)+'</b> gagne</span></div>'+
+butsAtt(m)+'<div id="mkt">'+marchesHtml(m)+'</div>'+
 '<h2>5 derniers matchs</h2>'+
 '<div class="p"><div class="row"><span>'+esc(m.domicile)+'</span><span>'+badges(m.forme_dom)+'</span></div>'+(m.source_dom?'<div class="note" style="margin:6px 0 0"><span class="src '+m.source_dom+'">'+libSrc(m.source_dom)+'</span></div>':'')+'</div>'+
 '<div class="p"><div class="row"><span>'+esc(m.exterieur)+'</span><span>'+badges(m.forme_ext)+'</span></div>'+(m.source_ext?'<div class="note" style="margin:6px 0 0"><span class="src '+m.source_ext+'">'+libSrc(m.source_ext)+'</span></div>':'')+'</div>'+
 '<h2>Confrontations directes (5 dernières)</h2><div class="p">'+esc(m.domicile)+' : '+f.dom+' victoire(s) · nuls : '+f.nuls+' · '+esc(m.exterieur)+' : '+f.ext+' victoire(s)</div>'+
-'<h2>Joueurs absents ou incertains</h2>';
-if(!m.absents.length)h+='<p class="note">Aucun joueur signalé pour ce match.</p>';
-m.absents.forEach(function(a){h+='<div class="p"><div class="row"><span><b>'+esc(a.joueur)+'</b><br><span class="note">'+esc(a.equipe)+(a.raison?' · '+esc(a.raison):'')+'</span></span><b>'+esc(a.statut)+'</b></div></div>'});
-h+='<p class="note" style="margin-top:14px">Méthode : base de départ '+m.base_api.join(" / ")+' (domicile / nul / extérieur), puis ajustement selon la forme, les confrontations directes et les absences (ajustement : '+m.ajustement+' pts).</p>';
-app.innerHTML=h;window.scrollTo(0,0);
+'';
+h+='<p class="note" style="margin-top:14px">'+esc(methodeTxt(m))+'</p>';
+app.innerHTML=h;brancherMarches(m);window.scrollTo(0,0);
 document.getElementById("bk").onclick=function(){vue="jour";rendre()};
 }
 
