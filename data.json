@@ -1,12 +1,42 @@
 {
- "maj": "2026-11-10T14:26:58.098712+00:00",
+ "maj": "2026-11-11T04:58:29.038703+00:00",
  "matchs": [
   {
    "categorie": "secondaire",
-   "competition": "Denmark A-Liga",
-   "heure": "2026-11-10T18:00:00+00:00",
-   "domicile": "Midtjylland Women",
-   "exterieur": "Odense Q",
+   "competition": "Polish III liga Group III",
+   "heure": "2026-11-11T14:00:00+00:00",
+   "domicile": "Barycz Sułów",
+   "exterieur": "Miedź Legnica II",
+   "proba": [
+    44,
+    27,
+    29
+   ],
+   "base_api": [
+    44,
+    27,
+    29
+   ],
+   "ajustement": 0.0,
+   "forme_dom": [],
+   "forme_ext": [
+    "V"
+   ],
+   "source_dom": "",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": []
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "Spanish Segunda Federación Group 3",
+   "heure": "2026-11-11T18:30:00+00:00",
+   "domicile": "Alcoyano",
+   "exterieur": "Elche Ilicitano",
    "proba": [
     45,
     27,
@@ -35,10 +65,10 @@
   },
   {
    "categorie": "secondaire",
-   "competition": "English National League South",
-   "heure": "2026-11-10T19:45:00+00:00",
-   "domicile": "Salisbury",
-   "exterieur": "Braintree Town",
+   "competition": "Brazilian Serie B",
+   "heure": "2026-11-11T22:00:00+00:00",
+   "domicile": "Londrina",
+   "exterieur": "Náutico",
    "proba": [
     44,
     27,
@@ -51,10 +81,10 @@
    ],
    "ajustement": 0.0,
    "forme_dom": [
-    "V"
+    "D"
    ],
    "forme_ext": [
-    "V"
+    "D"
    ],
    "source_dom": "actuelle",
    "source_ext": "actuelle",

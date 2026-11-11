@@ -2210,5 +2210,47 @@
    0
   ],
   "buteurs": []
+ },
+ {
+  "source": "sdb",
+  "fixture_id": "2509205",
+  "date": "2026-11-11T14:00:00+00:00",
+  "competition": "Polish III liga Group III",
+  "domicile": "Barycz Sułów",
+  "exterieur": "Miedź Legnica II",
+  "proba": [
+   44,
+   27,
+   29
+  ],
+  "resultat_reel": null
+ },
+ {
+  "source": "sdb",
+  "fixture_id": "2510236",
+  "date": "2026-11-11T18:30:00+00:00",
+  "competition": "Spanish Segunda Federación Group 3",
+  "domicile": "Alcoyano",
+  "exterieur": "Elche Ilicitano",
+  "proba": [
+   45,
+   27,
+   28
+  ],
+  "resultat_reel": null
+ },
+ {
+  "source": "sdb",
+  "fixture_id": "2431542",
+  "date": "2026-11-11T22:00:00+00:00",
+  "competition": "Brazilian Serie B",
+  "domicile": "Londrina",
+  "exterieur": "Náutico",
+  "proba": [
+   44,
+   27,
+   29
+  ],
+  "resultat_reel": null
  }
 ]
