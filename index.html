@@ -122,15 +122,19 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var auth = firebase.auth();
 var db = firebase.firestore();
-var ABONNE = false;
+var ABONNE = false, DIAG = "";
 
 auth.onAuthStateChanged(function(u){
   if(!u){ window.location.href = "connexion.html"; return; }
   document.getElementById("main").style.display = "block";
   db.collection("utilisateurs").doc(u.uid).get().then(function(snap){
     ABONNE = !!(snap.exists && snap.data().abonne);
+    DIAG = "e-mail : " + u.email + " · UID : " + u.uid + " · document : " + (snap.exists ? "trouvé" : "INTROUVABLE") + (snap.exists ? " · abonne = " + String(snap.data().abonne) : "");
     chargerDonnees();
-  }).catch(function(){ chargerDonnees(); });
+  }).catch(function(e){
+    DIAG = "e-mail : " + u.email + " · UID : " + u.uid + " · erreur de lecture : " + ((e && (e.code || e.message)) || e);
+    chargerDonnees();
+  });
 });
 
 document.getElementById("deconnexion").onclick = function(e){
@@ -168,6 +172,7 @@ if(m.categorie=="secondaire")h+='<span class="mini sec">Compétition secondaire<
 if(verr)h+='<span class="mini lock">🔒 Réservé aux abonnés</span>';
 h+='<br><div class="t">'+esc(m.domicile)+' – '+esc(m.exterieur)+'</div>'+bar(m.proba,"sm"+(verr?" blur":""))+'</button>';
 });
+if(!ABONNE&&DIAG)h+='<p class="note" style="font-size:.72rem;word-break:break-all;margin-top:26px;opacity:.85">Diagnostic : '+esc(DIAG)+'</p>';
 app.innerHTML=h;
 app.querySelectorAll(".m").forEach(function(b){b.onclick=function(){detail(+b.dataset.i)}});
 }
