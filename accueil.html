@@ -41,21 +41,10 @@ ul.av li::before{content:"✓";position:absolute;left:0;color:var(--home);font-w
 <p class="sub">Voici ton espace VM_R. Le football se lit dans les chiffres.</p>
 
 <div class="card">
-<h2>Passe Premium</h2>
-<ul class="av">
-<li>Tous les pronostics, y compris les matchs à forte probabilité (≥ 50 %)</li>
-<li>L'historique complet des résultats et du taux de réussite</li>
-<li>L'analyse détaillée : forme, confrontations directes, joueurs absents</li>
-</ul>
-<div class="prix">Abonnement <span>· bientôt disponible</span></div>
-<button class="cta" id="btn-abonner">S'abonner</button>
-</div>
-
-<div class="card">
-<h2>Matchs gratuits aujourd'hui</h2>
+<h2>Matchs du jour</h2>
 <p class="note" id="gratuits-note">Chargement…</p>
 <div id="gratuits"></div>
-<button class="cta alt" onclick="window.location.href='index.html'">Voir tous les matchs</button>
+<button class="cta" onclick="window.location.href='index.html'">Voir tous les matchs</button>
 </div>
 
 </main>
@@ -80,16 +69,15 @@ auth.onAuthStateChanged(function(u){
 });
 
 document.getElementById("deconnexion").onclick = function(e){ e.preventDefault(); auth.signOut(); };
-document.getElementById("btn-abonner").onclick = function(){ alert("Les abonnements arrivent bientôt sur VM_R !"); };
 
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
 function hr(d){return new Date(d).toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"})}
 
 fetch("data.json?t="+Date.now()).then(function(r){return r.json()}).then(function(D){
-  var gratuits = (D.matchs||[]).filter(function(m){ return Math.max.apply(null,m.proba) < 50; });
+  var gratuits = (D.matchs||[]).slice(0, 5);
   var box = document.getElementById("gratuits"), note = document.getElementById("gratuits-note");
-  if(!gratuits.length){ note.textContent = "Aucun match gratuit pour le moment."; return; }
-  note.textContent = gratuits.length + " match(s) accessible(s) sans abonnement :";
+  if(!gratuits.length){ note.textContent = "Aucun match analysé pour le moment (pause du championnat)."; return; }
+  note.textContent = (D.matchs.length) + " match(s) analysé(s) aujourd'hui" + (D.matchs.length > gratuits.length ? " (les " + gratuits.length + " premiers) :" : " :");
   var h = "";
   gratuits.forEach(function(m){
     h += '<button class="m" onclick="window.location.href=\'index.html\'"><span class="meta"><span>'+esc(m.competition)+'</span><span>'+hr(m.heure)+'</span></span><div class="t">'+esc(m.domicile)+' – '+esc(m.exterieur)+'</div><span class="pct">'+Math.max.apply(null,m.proba)+' % de confiance</span></button>';
