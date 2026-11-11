@@ -130,7 +130,20 @@ auth.onAuthStateChanged(function(u){
   db.collection("utilisateurs").doc(u.uid).get().then(function(snap){
     ABONNE = !!(snap.exists && snap.data().abonne);
     DIAG = "e-mail : " + u.email + " · UID : " + u.uid + " · document : " + (snap.exists ? "trouvé" : "INTROUVABLE") + (snap.exists ? " · abonne = " + String(snap.data().abonne) : "");
-    chargerDonnees();
+    if(!snap.exists){
+      db.collection("utilisateurs").doc(u.uid).set({
+        nom: u.displayName || "", email: u.email || "", abonne: false,
+        cree: firebase.firestore.FieldValue.serverTimestamp()
+      }).then(function(){
+        DIAG += " · document créé automatiquement (abonne = false)";
+        chargerDonnees();
+      }).catch(function(e){
+        DIAG += " · création impossible : " + ((e && (e.code || e.message)) || e);
+        chargerDonnees();
+      });
+    } else {
+      chargerDonnees();
+    }
   }).catch(function(e){
     DIAG = "e-mail : " + u.email + " · UID : " + u.uid + " · erreur de lecture : " + ((e && (e.code || e.message)) || e);
     chargerDonnees();
