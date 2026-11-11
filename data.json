@@ -1,1 +1,4841 @@
-{"maj":"2026-11-11T13:40:19.433411+00:00","matchs":[{"categorie":"secondaire","competition":"Polish III liga Group III","heure":"2026-11-11T14:00:00+00:00","domicile":"Barycz Sułów","exterieur":"Miedź Legnica II","proba":[24,24,52],"base_api":[24,24,52],"ajustement":0,"buts_attendus":[1.24,1.91],"forme_dom":[],"forme_ext":["V"],"source_dom":"","source_ext":"actuelle","face_a_face":{"dom":0,"nuls":0,"ext":0},"absents":[],"marches":[{"groupe":"Résultat","nom":"Résultat du match (1X2)","approx":false,"issues":[{"n":"Domicile","p":23.8},{"n":"Nul","p":23.9},{"n":"Extérieur","p":52.3}]},{"groupe":"Résultat","nom":"Double chance","approx":false,"issues":[{"n":"Domicile ou nul","p":47.7},{"n":"Domicile ou extérieur","p":76.1},{"n":"Nul ou extérieur","p":76.2}]},{"groupe":"Résultat","nom":"Remboursé si match nul","approx":false,"issues":[{"n":"Domicile","p":31.2},{"n":"Extérieur","p":68.8}]},{"groupe":"Résultat","nom":"Va gagner par","approx":false,"issues":[{"n":"Domicile par 1 but","p":13.8},{"n":"Domicile par 2 buts","p":6.8},{"n":"Domicile par 3 buts","p":2.4},{"n":"Domicile par 4 buts ou plus","p":0.8},{"n":"Nul","p":23.9},{"n":"Extérieur par 1 but","p":21.8},{"n":"Extérieur par 2 buts","p":16.2},{"n":"Extérieur par 3 buts","p":8.8},{"n":"Extérieur par 4 buts ou plus","p":5.7}]},{"groupe":"Résultat","nom":"Victoire sans encaisser de but","approx":false,"issues":[{"n":"Domicile","p":9.7},{"n":"Extérieur","p":23.9}]},{"groupe":"Résultat","nom":"N'encaisse pas de but","approx":false,"issues":[{"n":"Domicile n'encaisse pas","p":14.8},{"n":"Extérieur n'encaisse pas","p":29.0}]},{"groupe":"Résultat","nom":"Handicap européen Domicile (-2)","approx":false,"issues":[{"n":"Domicile (-2)","p":3.2},{"n":"Nul (-2)","p":6.8},{"n":"Extérieur (+2)","p":90.0}]},{"groupe":"Résultat","nom":"Handicap européen Domicile (-1)","approx":false,"issues":[{"n":"Domicile (-1)","p":10.0},{"n":"Nul (-1)","p":13.8},{"n":"Extérieur (+1)","p":76.2}]},{"groupe":"Résultat","nom":"Handicap européen Domicile (+1)","approx":false,"issues":[{"n":"Domicile (+1)","p":47.7},{"n":"Nul (+1)","p":21.8},{"n":"Extérieur (-1)","p":30.6}]},{"groupe":"Résultat","nom":"Handicap européen Domicile (+2)","approx":false,"issues":[{"n":"Domicile (+2)","p":69.4},{"n":"Nul (+2)","p":16.2},{"n":"Extérieur (-2)","p":14.4}]},{"groupe":"Résultat","nom":"Handicap asiatique Domicile (-1.5)","approx":false,"issues":[{"n":"Domicile (-1.5)","p":10.0},{"n":"Extérieur (+1.5)","p":90.0}]},{"groupe":"Résultat","nom":"Handicap asiatique Domicile (-0.5)","approx":false,"issues":[{"n":"Domicile (-0.5)","p":23.8},{"n":"Extérieur (+0.5)","p":76.2}]},{"groupe":"Résultat","nom":"Handicap asiatique Domicile (+0.5)","approx":false,"issues":[{"n":"Domicile (+0.5)","p":47.7},{"n":"Extérieur (-0.5)","p":52.3}]},{"groupe":"Résultat","nom":"Handicap asiatique Domicile (+1.5)","approx":false,"issues":[{"n":"Domicile (+1.5)","p":69.4},{"n":"Extérieur (-1.5)","p":30.6}]},{"groupe":"Buts","nom":"Total de buts (0.5)","approx":false,"issues":[{"n":"Plus de 0.5","p":94.9},{"n":"Moins de 0.5","p":5.1}]},{"groupe":"Buts","nom":"Total de buts (1.5)","approx":false,"issues":[{"n":"Plus de 1.5","p":83.0},{"n":"Moins de 1.5","p":17.0}]},{"groupe":"Buts","nom":"Total de buts (2.5)","approx":false,"issues":[{"n":"Plus de 2.5","p":61.0},{"n":"Moins de 2.5","p":39.0}]},{"groupe":"Buts","nom":"Total de buts (3.5)","approx":false,"issues":[{"n":"Plus de 3.5","p":38.6},{"n":"Moins de 3.5","p":61.4}]},{"groupe":"Buts","nom":"Total de buts (4.5)","approx":false,"issues":[{"n":"Plus de 4.5","p":21.1},{"n":"Moins de 4.5","p":78.9}]},{"groupe":"Buts","nom":"Total de buts (5.5)","approx":false,"issues":[{"n":"Plus de 5.5","p":10.0},{"n":"Moins de 5.5","p":90.0}]},{"groupe":"Buts","nom":"Total Domicile (0.5)","approx":false,"issues":[{"n":"Plus de 0.5","p":71.0},{"n":"Moins de 0.5","p":29.0}]},{"groupe":"Buts","nom":"Total Domicile (1.5)","approx":false,"issues":[{"n":"Plus de 1.5","p":35.1},{"n":"Moins de 1.5","p":64.9}]},{"groupe":"Buts","nom":"Total Domicile (2.5)","approx":false,"issues":[{"n":"Plus de 2.5","p":12.9},{"n":"Moins de 2.5","p":87.1}]},{"groupe":"Buts","nom":"Total Extérieur (0.5)","approx":false,"issues":[{"n":"Plus de 0.5","p":85.2},{"n":"Moins de 0.5","p":14.8}]},{"groupe":"Buts","nom":"Total Extérieur (1.5)","approx":false,"issues":[{"n":"Plus de 1.5","p":57.0},{"n":"Moins de 1.5","p":43.0}]},{"groupe":"Buts","nom":"Total Extérieur (2.5)","approx":false,"issues":[{"n":"Plus de 2.5","p":30.0},{"n":"Moins de 2.5","p":70.0}]},{"groupe":"Buts","nom":"Les deux équipes marquent","approx":false,"issues":[{"n":"Oui","p":61.3},{"n":"Non","p":38.7}]},{"groupe":"Buts","nom":"Total de buts pair / impair","approx":false,"issues":[{"n":"Pair","p":51.7},{"n":"Impair","p":48.3}]},{"groupe":"Buts","nom":"Domicile : total pair / impair","approx":false,"issues":[{"n":"Pair","p":54.2},{"n":"Impair","p":45.8}]},{"groupe":"Buts","nom":"Extérieur : total pair / impair","approx":false,"issues":[{"n":"Pair","p":51.1},{"n":"Impair","p":48.9}]},{"groupe":"Buts","nom":"Nombre exact de buts dans le match","approx":false,"issues":[{"n":"0","p":5.1},{"n":"1","p":11.9},{"n":"2","p":22.1},{"n":"3","p":22.3},{"n":"4","p":17.6},{"n":"5 ou plus","p":21.1}]},{"groupe":"Buts","nom":"Nombre exact de buts Domicile","approx":false,"issues":[{"n":"0","p":29.0},{"n":"1","p":35.9},{"n":"2","p":22.2},{"n":"3 ou plus","p":12.9}]},{"groupe":"Buts","nom":"Nombre exact de buts Extérieur","approx":false,"issues":[{"n":"0","p":14.8},{"n":"1","p":28.2},{"n":"2","p":27.0},{"n":"3 ou plus","p":30.0}]},{"groupe":"Buts","nom":"Multi-buts","approx":false,"issues":[{"n":"1-2 buts","p":33.9},{"n":"1-3 buts","p":56.3},{"n":"2-3 buts","p":44.4},{"n":"2-4 buts","p":62.0},{"n":"3-5 buts","p":51.0},{"n":"4-6 buts","p":34.5}]},{"groupe":"Buts","nom":"Au moins une équipe marque","approx":false,"issues":[{"n":"Oui","p":94.9},{"n":"Non (0-0)","p":5.1}]},{"groupe":"Buts","nom":"Une seule équipe marque","approx":false,"issues":[{"n":"Oui","p":33.6},{"n":"Non","p":66.4}]},{"groupe":"Combinés","nom":"Résultat + Total (1.5)","approx":false,"issues":[{"n":"Domicile et plus de 1.5","p":19.3},{"n":"Domicile et moins de 1.5","p":4.5},{"n":"Nul et plus de 1.5","p":18.8},{"n":"Nul et moins de 1.5","p":5.1},{"n":"Extérieur et plus de 1.5","p":44.9},{"n":"Extérieur et moins de 1.5","p":7.4}]},{"groupe":"Combinés","nom":"Résultat + Total (2.5)","approx":false,"issues":[{"n":"Domicile et plus de 2.5","p":16.0},{"n":"Domicile et moins de 2.5","p":7.8},{"n":"Nul et plus de 2.5","p":7.8},{"n":"Nul et moins de 2.5","p":16.0},{"n":"Extérieur et plus de 2.5","p":37.1},{"n":"Extérieur et moins de 2.5","p":15.2}]},{"groupe":"Combinés","nom":"Résultat + Total (3.5)","approx":false,"issues":[{"n":"Domicile et plus de 3.5","p":8.4},{"n":"Domicile et moins de 3.5","p":15.4},{"n":"Nul et plus de 3.5","p":7.8},{"n":"Nul et moins de 3.5","p":16.0},{"n":"Extérieur et plus de 3.5","p":22.4},{"n":"Extérieur et moins de 3.5","p":29.9}]},{"groupe":"Combinés","nom":"Résultat + Les deux équipes marquent","approx":false,"issues":[{"n":"Domicile et les deux marquent","p":14.1},{"n":"Domicile et une équipe ne marque pas","p":9.7},{"n":"Nul et les deux marquent","p":18.8},{"n":"Nul et une équipe ne marque pas","p":5.1},{"n":"Extérieur et les deux marquent","p":28.4},{"n":"Extérieur et une équipe ne marque pas","p":23.9}]},{"groupe":"Combinés","nom":"Double chance + Total (2.5)","approx":false,"issues":[{"n":"Domicile ou nul et plus de 2.5","p":23.8},{"n":"Domicile ou nul et moins de 2.5","p":23.8},{"n":"Domicile ou extérieur et plus de 2.5","p":53.1},{"n":"Domicile ou extérieur et moins de 2.5","p":23.0},{"n":"Nul ou extérieur et plus de 2.5","p":44.9},{"n":"Nul ou extérieur et moins de 2.5","p":31.3}]},{"groupe":"Combinés","nom":"Double chance + Les deux équipes marquent","approx":false,"issues":[{"n":"Domicile ou nul et les deux marquent","p":32.9},{"n":"Domicile ou nul et une équipe ne marque pas","p":14.8},{"n":"Domicile ou extérieur et les deux marquent","p":42.5},{"n":"Domicile ou extérieur et une équipe ne marque pas","p":33.6},{"n":"Nul ou extérieur et les deux marquent","p":47.2},{"n":"Nul ou extérieur et une équipe ne marque pas","p":29.0}]},{"groupe":"Combinés","nom":"Les deux équipes marquent + Total (2.5)","approx":false,"issues":[{"n":"Oui et plus de 2.5","p":50.4},{"n":"Oui et moins de 2.5","p":11.0},{"n":"Non et plus de 2.5","p":10.6},{"n":"Non et moins de 2.5","p":28.1}]},{"groupe":"Score exact","nom":"Score exact","approx":false,"issues":[{"n":"1-1","p":11.0},{"n":"1-2","p":9.7},{"n":"0-2","p":7.8},{"n":"0-1","p":7.4},{"n":"2-1","p":6.3},{"n":"1-3","p":6.2},{"n":"2-2","p":6.0},{"n":"0-0","p":5.1},{"n":"0-3","p":5.0},{"n":"1-0","p":4.5},{"n":"2-3","p":3.8},{"n":"2-0","p":3.3},{"n":"1-4","p":3.0},{"n":"3-1","p":2.6},{"n":"3-2","p":2.5},{"n":"Autre score","p":16.0}]},{"groupe":"Déroulement","nom":"Équipe qui marque le premier but","approx":false,"issues":[{"n":"Domicile","p":37.2},{"n":"Extérieur","p":57.7},{"n":"Aucun but","p":5.1}]},{"groupe":"Déroulement","nom":"Équipe qui marque le dernier but","approx":false,"issues":[{"n":"Domicile","p":37.2},{"n":"Extérieur","p":57.7},{"n":"Aucun but","p":5.1}]},{"groupe":"Déroulement","nom":"Premier but et résultat final","approx":false,"issues":[{"n":"Domicile marque en premier et gagne","p":19.2},{"n":"Domicile marque en premier et fait nul","p":9.4},{"n":"Domicile marque en premier et perd","p":8.6},{"n":"Extérieur marque en premier et gagne","p":43.8},{"n":"Extérieur marque en premier et fait nul","p":9.4},{"n":"Extérieur marque en premier et perd","p":4.5},{"n":"Aucun but","p":5.1}]},{"groupe":"Déroulement","nom":"Revient au score et gagne","approx":true,"issues":[{"n":"Domicile revient et gagne","p":5.0},{"n":"Extérieur revient et gagne","p":9.3},{"n":"Aucune remontée","p":85.7}]},{"groupe":"Mi-temps","nom":"Résultat à la mi-temps","approx":true,"issues":[{"n":"Domicile","p":22.3},{"n":"Nul","p":37.3},{"n":"Extérieur","p":40.4}]},{"groupe":"Mi-temps","nom":"Mi-temps / Fin du match","approx":true,"issues":[{"n":"Domicile / Domicile","p":13.6},{"n":"Domicile / Nul","p":5.4},{"n":"Domicile / Extérieur","p":3.2},{"n":"Nul / Domicile","p":8.3},{"n":"Nul / Nul","p":13.0},{"n":"Nul / Extérieur","p":15.9},{"n":"Extérieur / Domicile","p":1.8},{"n":"Extérieur / Nul","p":5.4},{"n":"Extérieur / Extérieur","p":33.2}]},{"groupe":"Mi-temps","nom":"Total de buts en 1re mi-temps (0.5)","approx":true,"issues":[{"n":"Plus de 0.5","p":75.8},{"n":"Moins de 0.5","p":24.2}]},{"groupe":"Mi-temps","nom":"Total de buts en 1re mi-temps (1.5)","approx":true,"issues":[{"n":"Plus de 1.5","p":41.4},{"n":"Moins de 1.5","p":58.6}]},{"groupe":"Mi-temps","nom":"Total de buts en 1re mi-temps (2.5)","approx":true,"issues":[{"n":"Plus de 2.5","p":17.1},{"n":"Moins de 2.5","p":82.9}]},{"groupe":"Mi-temps","nom":"Total de buts en 2e mi-temps (0.5)","approx":true,"issues":[{"n":"Plus de 0.5","p":82.3},{"n":"Moins de 0.5","p":17.7}]},{"groupe":"Mi-temps","nom":"Total de buts en 2e mi-temps (1.5)","approx":true,"issues":[{"n":"Plus de 1.5","p":51.7},{"n":"Moins de 1.5","p":48.3}]},{"groupe":"Mi-temps","nom":"Total de buts en 2e mi-temps (2.5)","approx":true,"issues":[{"n":"Plus de 2.5","p":25.1},{"n":"Moins de 2.5","p":74.9}]},{"groupe":"Mi-temps","nom":"Mi-temps avec le plus de buts","approx":true,"issues":[{"n":"1re mi-temps","p":31.6},{"n":"Égalité","p":23.3},{"n":"2e mi-temps","p":45.1}]},{"groupe":"Mi-temps","nom":"But en 1re mi-temps","approx":true,"issues":[{"n":"Oui","p":75.8},{"n":"Non","p":24.2}]},{"groupe":"Mi-temps","nom":"But en 2e mi-temps","approx":true,"issues":[{"n":"Oui","p":82.3},{"n":"Non","p":17.7}]},{"groupe":"Mi-temps","nom":"But dans chaque mi-temps","approx":true,"issues":[{"n":"Oui","p":62.4},{"n":"Non","p":37.6}]},{"groupe":"Mi-temps","nom":"Les deux équipes marquent en 1re mi-temps","approx":true,"issues":[{"n":"Oui","p":24.6},{"n":"Non","p":75.4}]},{"groupe":"Mi-temps","nom":"Les deux équipes marquent en 2e mi-temps","approx":true,"issues":[{"n":"Oui","p":32.1},{"n":"Non","p":67.9}]},{"groupe":"Mi-temps","nom":"Moment du premier but","approx":true,"issues":[{"n":"1-15 min","p":35.4},{"n":"16-30 min","p":24.0},{"n":"31-45 min","p":15.7},{"n":"46-60 min","p":10.0},{"n":"61-75 min","p":6.1},{"n":"76-90 min","p":3.7},{"n":"Aucun but","p":5.1}]}]},{"categorie":"secondaire","competition":"Spanish Segunda Federación Group 3","heure":"2026-11-11T18:30:00+00:00","domicile":"Alcoyano","exterieur":"Elche Ilicitano","proba":[58,23,19],"base_api":[58,23,19],"ajustement":0,"buts_attendus":[2.06,1.11],"forme_dom":["N"],"forme_ext":["D"],"source_dom":"actuelle","source_ext":"actuelle","face_a_face":{"dom":0,"nuls":0,"ext":0},"absents":[],"marches":[{"groupe":"Résultat","nom":"Résultat du match (1X2)","approx":false,"issues":[{"n":"Domicile","p":58.5},{"n":"Nul","p":22.4},{"n":"Extérieur","p":19.1}]},{"groupe":"Résultat","nom":"Double chance","approx":false,"issues":[{"n":"Domicile ou nul","p":80.9},{"n":"Domicile ou extérieur","p":77.6},{"n":"Nul ou extérieur","p":41.5}]},{"groupe":"Résultat","nom":"Remboursé si match nul","approx":false,"issues":[{"n":"Domicile","p":75.4},{"n":"Extérieur","p":24.6}]},{"groupe":"Résultat","nom":"Va gagner par","approx":false,"issues":[{"n":"Domicile par 1 but","p":22.3},{"n":"Domicile par 2 buts","p":18.0},{"n":"Domicile par 3 buts","p":10.5},{"n":"Domicile par 4 buts ou plus","p":7.6},{"n":"Nul","p":22.4},{"n":"Extérieur par 1 but","p":11.7},{"n":"Extérieur par 2 buts","p":5.2},{"n":"Extérieur par 3 buts","p":1.7},{"n":"Extérieur par 4 buts ou plus","p":0.5}]},{"groupe":"Résultat","nom":"Victoire sans encaisser de but","approx":false,"issues":[{"n":"Domicile","p":27.9},{"n":"Extérieur","p":7.8}]},{"groupe":"Résultat","nom":"N'encaisse pas de but","approx":false,"issues":[{"n":"Domicile n'encaisse pas","p":32.9},{"n":"Extérieur n'encaisse pas","p":12.7}]},{"groupe":"Résultat","nom":"Handicap européen Domicile (-2)","approx":false,"issues":[{"n":"Domicile (-2)","p":18.1},{"n":"Nul (-2)","p":18.0},{"n":"Extérieur (+2)","p":63.9}]},{"groupe":"Résultat","nom":"Handicap européen Domicile (-1)","approx":false,"issues":[{"n":"Domicile (-1)","p":36.1},{"n":"Nul (-1)","p":22.3},{"n":"Extérieur (+1)","p":41.5}]},{"groupe":"Résultat","nom":"Handicap européen Domicile (+1)","approx":false,"issues":[{"n":"Domicile (+1)","p":80.9},{"n":"Nul (+1)","p":11.7},{"n":"Extérieur (-1)","p":7.4}]},{"groupe":"Résultat","nom":"Handicap européen Domicile (+2)","approx":false,"issues":[{"n":"Domicile (+2)","p":92.6},{"n":"Nul (+2)","p":5.2},{"n":"Extérieur (-2)","p":2.2}]},{"groupe":"Résultat","nom":"Handicap asiatique Domicile (-1.5)","approx":false,"issues":[{"n":"Domicile (-1.5)","p":36.1},{"n":"Extérieur (+1.5)","p":63.9}]},{"groupe":"Résultat","nom":"Handicap asiatique Domicile (-0.5)","approx":false,"issues":[{"n":"Domicile (-0.5)","p":58.5},{"n":"Extérieur (+0.5)","p":41.5}]},{"groupe":"Résultat","nom":"Handicap asiatique Domicile (+0.5)","approx":false,"issues":[{"n":"Domicile (+0.5)","p":80.9},{"n":"Extérieur (-0.5)","p":19.1}]},{"groupe":"Résultat","nom":"Handicap asiatique Domicile (+1.5)","approx":false,"issues":[{"n":"Domicile (+1.5)","p":92.6},{"n":"Extérieur (-1.5)","p":7.4}]},{"groupe":"Buts","nom":"Total de buts (0.5)","approx":false,"issues":[{"n":"Plus de 0.5","p":95.0},{"n":"Moins de 0.5","p":5.0}]},{"groupe":"Buts","nom":"Total de buts (1.5)","approx":false,"issues":[{"n":"Plus de 1.5","p":83.3},{"n":"Moins de 1.5","p":16.7}]},{"groupe":"Buts","nom":"Total de buts (2.5)","approx":false,"issues":[{"n":"Plus de 2.5","p":61.5},{"n":"Moins de 2.5","p":38.5}]},{"groupe":"Buts","nom":"Total de buts (3.5)","approx":false,"issues":[{"n":"Plus de 3.5","p":39.2},{"n":"Moins de 3.5","p":60.8}]},{"groupe":"Buts","nom":"Total de buts (4.5)","approx":false,"issues":[{"n":"Plus de 4.5","p":21.5},{"n":"Moins de 4.5","p":78.5}]},{"groupe":"Buts","nom":"Total de buts (5.5)","approx":false,"issues":[{"n":"Plus de 5.5","p":10.2},{"n":"Moins de 5.5","p":89.8}]},{"groupe":"Buts","nom":"Total Domicile (0.5)","approx":false,"issues":[{"n":"Plus de 0.5","p":87.3},{"n":"Moins de 0.5","p":12.7}]},{"groupe":"Buts","nom":"Total Domicile (1.5)","approx":false,"issues":[{"n":"Plus de 1.5","p":61.0},{"n":"Moins de 1.5","p":39.0}]},{"groupe":"Buts","nom":"Total Domicile (2.5)","approx":false,"issues":[{"n":"Plus de 2.5","p":34.0},{"n":"Moins de 2.5","p":66.0}]},{"groupe":"Buts","nom":"Total Extérieur (0.5)","approx":false,"issues":[{"n":"Plus de 0.5","p":67.1},{"n":"Moins de 0.5","p":32.9}]},{"groupe":"Buts","nom":"Total Extérieur (1.5)","approx":false,"issues":[{"n":"Plus de 1.5","p":30.5},{"n":"Moins de 1.5","p":69.5}]},{"groupe":"Buts","nom":"Total Extérieur (2.5)","approx":false,"issues":[{"n":"Plus de 2.5","p":10.2},{"n":"Moins de 2.5","p":89.8}]},{"groupe":"Buts","nom":"Les deux équipes marquent","approx":false,"issues":[{"n":"Oui","p":59.3},{"n":"Non","p":40.7}]},{"groupe":"Buts","nom":"Total de buts pair / impair","approx":false,"issues":[{"n":"Pair","p":51.6},{"n":"Impair","p":48.4}]},{"groupe":"Buts","nom":"Domicile : total pair / impair","approx":false,"issues":[{"n":"Pair","p":50.8},{"n":"Impair","p":49.2}]},{"groupe":"Buts","nom":"Extérieur : total pair / impair","approx":false,"issues":[{"n":"Pair","p":55.4},{"n":"Impair","p":44.6}]},{"groupe":"Buts","nom":"Nombre exact de buts dans le match","approx":false,"issues":[{"n":"0","p":5.0},{"n":"1","p":11.7},{"n":"2","p":21.8},{"n":"3","p":22.3},{"n":"4","p":17.7},{"n":"5 ou plus","p":21.5}]},{"groupe":"Buts","nom":"Nombre exact de buts Domicile","approx":false,"issues":[{"n":"0","p":12.7},{"n":"1","p":26.2},{"n":"2","p":27.0},{"n":"3 ou plus","p":34.0}]},{"groupe":"Buts","nom":"Nombre exact de buts Extérieur","approx":false,"issues":[{"n":"0","p":32.9},{"n":"1","p":36.6},{"n":"2","p":20.3},{"n":"3 ou plus","p":10.2}]},{"groupe":"Buts","nom":"Multi-buts","approx":false,"issues":[{"n":"1-2 buts","p":33.6},{"n":"1-3 buts","p":55.9},{"n":"2-3 buts","p":44.1},{"n":"2-4 buts","p":61.8},{"n":"3-5 buts","p":51.2},{"n":"4-6 buts","p":34.9}]},{"groupe":"Buts","nom":"Au moins une équipe marque","approx":false,"issues":[{"n":"Oui","p":95.0},{"n":"Non (0-0)","p":5.0}]},{"groupe":"Buts","nom":"Une seule équipe marque","approx":false,"issues":[{"n":"Oui","p":35.7},{"n":"Non","p":64.3}]},{"groupe":"Combinés","nom":"Résultat + Total (1.5)","approx":false,"issues":[{"n":"Domicile et plus de 1.5","p":50.6},{"n":"Domicile et moins de 1.5","p":7.9},{"n":"Nul et plus de 1.5","p":17.5},{"n":"Nul et moins de 1.5","p":5.0},{"n":"Extérieur et plus de 1.5","p":15.2},{"n":"Extérieur et moins de 1.5","p":3.9}]},{"groupe":"Combinés","nom":"Résultat + Total (2.5)","approx":false,"issues":[{"n":"Domicile et plus de 2.5","p":41.7},{"n":"Domicile et moins de 2.5","p":16.8},{"n":"Nul et plus de 2.5","p":7.1},{"n":"Nul et moins de 2.5","p":15.3},{"n":"Extérieur et plus de 2.5","p":12.6},{"n":"Extérieur et moins de 2.5","p":6.5}]},{"groupe":"Combinés","nom":"Résultat + Total (3.5)","approx":false,"issues":[{"n":"Domicile et plus de 3.5","p":25.7},{"n":"Domicile et moins de 3.5","p":32.8},{"n":"Nul et plus de 3.5","p":7.1},{"n":"Nul et moins de 3.5","p":15.3},{"n":"Extérieur et plus de 3.5","p":6.3},{"n":"Extérieur et moins de 3.5","p":12.8}]},{"groupe":"Combinés","nom":"Résultat + Les deux équipes marquent","approx":false,"issues":[{"n":"Domicile et les deux marquent","p":30.5},{"n":"Domicile et une équipe ne marque pas","p":27.9},{"n":"Nul et les deux marquent","p":17.5},{"n":"Nul et une équipe ne marque pas","p":5.0},{"n":"Extérieur et les deux marquent","p":11.3},{"n":"Extérieur et une équipe ne marque pas","p":7.8}]},{"groupe":"Combinés","nom":"Double chance + Total (2.5)","approx":false,"issues":[{"n":"Domicile ou nul et plus de 2.5","p":48.8},{"n":"Domicile ou nul et moins de 2.5","p":32.1},{"n":"Domicile ou extérieur et plus de 2.5","p":54.3},{"n":"Domicile ou extérieur et moins de 2.5","p":23.2},{"n":"Nul ou extérieur et plus de 2.5","p":19.8},{"n":"Nul ou extérieur et moins de 2.5","p":21.8}]},{"groupe":"Combinés","nom":"Double chance + Les deux équipes marquent","approx":false,"issues":[{"n":"Domicile ou nul et les deux marquent","p":48.0},{"n":"Domicile ou nul et une équipe ne marque pas","p":32.9},{"n":"Domicile ou extérieur et les deux marquent","p":41.9},{"n":"Domicile ou extérieur et une équipe ne marque pas","p":35.7},{"n":"Nul ou extérieur et les deux marquent","p":28.8},{"n":"Nul ou extérieur et une équipe ne marque pas","p":12.7}]},{"groupe":"Combinés","nom":"Les deux équipes marquent + Total (2.5)","approx":false,"issues":[{"n":"Oui et plus de 2.5","p":49.0},{"n":"Oui et moins de 2.5","p":10.4},{"n":"Non et plus de 2.5","p":12.5},{"n":"Non et moins de 2.5","p":28.2}]},{"groupe":"Score exact","nom":"Score exact","approx":false,"issues":[{"n":"1-1","p":10.4},{"n":"2-1","p":9.9},{"n":"2-0","p":8.9},{"n":"1-0","p":7.9},{"n":"3-1","p":6.8},{"n":"3-0","p":6.1},{"n":"2-2","p":5.5},{"n":"1-2","p":5.3},{"n":"0-0","p":5.0},{"n":"0-1","p":3.9},{"n":"3-2","p":3.8},{"n":"4-1","p":3.5},{"n":"4-0","p":3.1},{"n":"0-2","p":2.6},{"n":"2-3","p":2.0},{"n":"Autre score","p":15.4}]},{"groupe":"Déroulement","nom":"Équipe qui marque le premier but","approx":false,"issues":[{"n":"Domicile","p":61.8},{"n":"Extérieur","p":33.2},{"n":"Aucun but","p":5.0}]},{"groupe":"Déroulement","nom":"Équipe qui marque le dernier but","approx":false,"issues":[{"n":"Domicile","p":61.8},{"n":"Extérieur","p":33.2},{"n":"Aucun but","p":5.0}]},{"groupe":"Déroulement","nom":"Premier but et résultat final","approx":false,"issues":[{"n":"Domicile marque en premier et gagne","p":49.4},{"n":"Domicile marque en premier et fait nul","p":8.7},{"n":"Domicile marque en premier et perd","p":3.7},{"n":"Extérieur marque en premier et gagne","p":15.4},{"n":"Extérieur marque en premier et fait nul","p":8.7},{"n":"Extérieur marque en premier et perd","p":9.0},{"n":"Aucun but","p":5.0}]},{"groupe":"Déroulement","nom":"Revient au score et gagne","approx":true,"issues":[{"n":"Domicile revient et gagne","p":9.8},{"n":"Extérieur revient et gagne","p":4.0},{"n":"Aucune remontée","p":86.2}]},{"groupe":"Mi-temps","nom":"Résultat à la mi-temps","approx":true,"issues":[{"n":"Domicile","p":44.4},{"n":"Nul","p":36.5},{"n":"Extérieur","p":19.1}]},{"groupe":"Mi-temps","nom":"Mi-temps / Fin du match","approx":true,"issues":[{"n":"Domicile / Domicile","p":37.9},{"n":"Domicile / Nul","p":5.0},{"n":"Domicile / Extérieur","p":1.5},{"n":"Nul / Domicile","p":17.2},{"n":"Nul / Nul","p":12.4},{"n":"Nul / Extérieur","p":6.9},{"n":"Extérieur / Domicile","p":3.3},{"n":"Extérieur / Nul","p":5.0},{"n":"Extérieur / Extérieur","p":10.8}]},{"groupe":"Mi-temps","nom":"Total de buts en 1re mi-temps (0.5)","approx":true,"issues":[{"n":"Plus de 0.5","p":76.0},{"n":"Moins de 0.5","p":24.0}]},{"groupe":"Mi-temps","nom":"Total de buts en 1re mi-temps (1.5)","approx":true,"issues":[{"n":"Plus de 1.5","p":41.8},{"n":"Moins de 1.5","p":58.2}]},{"groupe":"Mi-temps","nom":"Total de buts en 1re mi-temps (2.5)","approx":true,"issues":[{"n":"Plus de 2.5","p":17.3},{"n":"Moins de 2.5","p":82.7}]},{"groupe":"Mi-temps","nom":"Total de buts en 2e mi-temps (0.5)","approx":true,"issues":[{"n":"Plus de 0.5","p":82.5},{"n":"Moins de 0.5","p":17.5}]},{"groupe":"Mi-temps","nom":"Total de buts en 2e mi-temps (1.5)","approx":true,"issues":[{"n":"Plus de 1.5","p":52.1},{"n":"Moins de 1.5","p":47.9}]},{"groupe":"Mi-temps","nom":"Total de buts en 2e mi-temps (2.5)","approx":true,"issues":[{"n":"Plus de 2.5","p":25.5},{"n":"Moins de 2.5","p":74.5}]},{"groupe":"Mi-temps","nom":"Mi-temps avec le plus de buts","approx":true,"issues":[{"n":"1re mi-temps","p":31.6},{"n":"Égalité","p":23.2},{"n":"2e mi-temps","p":45.2}]},{"groupe":"Mi-temps","nom":"But en 1re mi-temps","approx":true,"issues":[{"n":"Oui","p":76.0},{"n":"Non","p":24.0}]},{"groupe":"Mi-temps","nom":"But en 2e mi-temps","approx":true,"issues":[{"n":"Oui","p":82.5},{"n":"Non","p":17.5}]},{"groupe":"Mi-temps","nom":"But dans chaque mi-temps","approx":true,"issues":[{"n":"Oui","p":62.7},{"n":"Non","p":37.3}]},{"groupe":"Mi-temps","nom":"Les deux équipes marquent en 1re mi-temps","approx":true,"issues":[{"n":"Oui","p":23.8},{"n":"Non","p":76.2}]},{"groupe":"Mi-temps","nom":"Les deux équipes marquent en 2e mi-temps","approx":true,"issues":[{"n":"Oui","p":31.0},{"n":"Non","p":69.0}]},{"groupe":"Mi-temps","nom":"Moment du premier but","approx":true,"issues":[{"n":"1-15 min","p":35.6},{"n":"16-30 min","p":24.1},{"n":"31-45 min","p":15.7},{"n":"46-60 min","p":9.9},{"n":"61-75 min","p":6.0},{"n":"76-90 min","p":3.7},{"n":"Aucun but","p":5.0}]}]},{"categorie":"secondaire","competition":"Brazilian Serie B","heure":"2026-11-11T22:00:00+00:00","domicile":"Londrina","exterieur":"Náutico","proba":[48,26,26],"base_api":[48,26,26],"ajustement":0,"buts_attendus":[1.71,1.22],"forme_dom":["D"],"forme_ext":["D"],"source_dom":"actuelle","source_ext":"actuelle","face_a_face":{"dom":0,"nuls":0,"ext":0},"absents":[],"marches":[{"groupe":"Résultat","nom":"Résultat du match (1X2)","approx":false,"issues":[{"n":"Domicile","p":48.0},{"n":"Nul","p":25.6},{"n":"Extérieur","p":26.4}]},{"groupe":"Résultat","nom":"Double chance","approx":false,"issues":[{"n":"Domicile ou nul","p":73.6},{"n":"Domicile ou extérieur","p":74.4},{"n":"Nul ou extérieur","p":52.0}]},{"groupe":"Résultat","nom":"Remboursé si match nul","approx":false,"issues":[{"n":"Domicile","p":64.5},{"n":"Extérieur","p":35.5}]},{"groupe":"Résultat","nom":"Va gagner par","approx":false,"issues":[{"n":"Domicile par 1 but","p":21.7},{"n":"Domicile par 2 buts","p":14.9},{"n":"Domicile par 3 buts","p":7.3},{"n":"Domicile par 4 buts ou plus","p":4.1},{"n":"Nul","p":25.6},{"n":"Extérieur par 1 but","p":15.2},{"n":"Extérieur par 2 buts","p":7.6},{"n":"Extérieur par 3 buts","p":2.7},{"n":"Extérieur par 4 buts ou plus","p":0.9}]},{"groupe":"Résultat","nom":"Victoire sans encaisser de but","approx":false,"issues":[{"n":"Domicile","p":23.3},{"n":"Extérieur","p":11.8}]},{"groupe":"Résultat","nom":"N'encaisse pas de but","approx":false,"issues":[{"n":"Domicile n'encaisse pas","p":29.6},{"n":"Extérieur n'encaisse pas","p":18.1}]},{"groupe":"Résultat","nom":"Handicap européen Domicile (-2)","approx":false,"issues":[{"n":"Domicile (-2)","p":11.4},{"n":"Nul (-2)","p":14.9},{"n":"Extérieur (+2)","p":73.7}]},{"groupe":"Résultat","nom":"Handicap européen Domicile (-1)","approx":false,"issues":[{"n":"Domicile (-1)","p":26.3},{"n":"Nul (-1)","p":21.7},{"n":"Extérieur (+1)","p":52.0}]},{"groupe":"Résultat","nom":"Handicap européen Domicile (+1)","approx":false,"issues":[{"n":"Domicile (+1)","p":73.6},{"n":"Nul (+1)","p":15.2},{"n":"Extérieur (-1)","p":11.1}]},{"groupe":"Résultat","nom":"Handicap européen Domicile (+2)","approx":false,"issues":[{"n":"Domicile (+2)","p":88.9},{"n":"Nul (+2)","p":7.6},{"n":"Extérieur (-2)","p":3.6}]},{"groupe":"Résultat","nom":"Handicap asiatique Domicile (-1.5)","approx":false,"issues":[{"n":"Domicile (-1.5)","p":26.3},{"n":"Extérieur (+1.5)","p":73.7}]},{"groupe":"Résultat","nom":"Handicap asiatique Domicile (-0.5)","approx":false,"issues":[{"n":"Domicile (-0.5)","p":48.0},{"n":"Extérieur (+0.5)","p":52.0}]},{"groupe":"Résultat","nom":"Handicap asiatique Domicile (+0.5)","approx":false,"issues":[{"n":"Domicile (+0.5)","p":73.6},{"n":"Extérieur (-0.5)","p":26.4}]},{"groupe":"Résultat","nom":"Handicap asiatique Domicile (+1.5)","approx":false,"issues":[{"n":"Domicile (+1.5)","p":88.9},{"n":"Extérieur (-1.5)","p":11.1}]},{"groupe":"Buts","nom":"Total de buts (0.5)","approx":false,"issues":[{"n":"Plus de 0.5","p":93.8},{"n":"Moins de 0.5","p":6.2}]},{"groupe":"Buts","nom":"Total de buts (1.5)","approx":false,"issues":[{"n":"Plus de 1.5","p":79.9},{"n":"Moins de 1.5","p":20.1}]},{"groupe":"Buts","nom":"Total de buts (2.5)","approx":false,"issues":[{"n":"Plus de 2.5","p":56.1},{"n":"Moins de 2.5","p":43.9}]},{"groupe":"Buts","nom":"Total de buts (3.5)","approx":false,"issues":[{"n":"Plus de 3.5","p":33.7},{"n":"Moins de 3.5","p":66.3}]},{"groupe":"Buts","nom":"Total de buts (4.5)","approx":false,"issues":[{"n":"Plus de 4.5","p":17.3},{"n":"Moins de 4.5","p":82.7}]},{"groupe":"Buts","nom":"Total de buts (5.5)","approx":false,"issues":[{"n":"Plus de 5.5","p":7.7},{"n":"Moins de 5.5","p":92.3}]},{"groupe":"Buts","nom":"Total Domicile (0.5)","approx":false,"issues":[{"n":"Plus de 0.5","p":81.9},{"n":"Moins de 0.5","p":18.1}]},{"groupe":"Buts","nom":"Total Domicile (1.5)","approx":false,"issues":[{"n":"Plus de 1.5","p":51.0},{"n":"Moins de 1.5","p":49.0}]},{"groupe":"Buts","nom":"Total Domicile (2.5)","approx":false,"issues":[{"n":"Plus de 2.5","p":24.5},{"n":"Moins de 2.5","p":75.5}]},{"groupe":"Buts","nom":"Total Extérieur (0.5)","approx":false,"issues":[{"n":"Plus de 0.5","p":70.4},{"n":"Moins de 0.5","p":29.6}]},{"groupe":"Buts","nom":"Total Extérieur (1.5)","approx":false,"issues":[{"n":"Plus de 1.5","p":34.4},{"n":"Moins de 1.5","p":65.6}]},{"groupe":"Buts","nom":"Total Extérieur (2.5)","approx":false,"issues":[{"n":"Plus de 2.5","p":12.5},{"n":"Moins de 2.5","p":87.5}]},{"groupe":"Buts","nom":"Les deux équipes marquent","approx":false,"issues":[{"n":"Oui","p":58.6},{"n":"Non","p":41.4}]},{"groupe":"Buts","nom":"Total de buts pair / impair","approx":false,"issues":[{"n":"Pair","p":51.9},{"n":"Impair","p":48.1}]},{"groupe":"Buts","nom":"Domicile : total pair / impair","approx":false,"issues":[{"n":"Pair","p":51.6},{"n":"Impair","p":48.4}]},{"groupe":"Buts","nom":"Extérieur : total pair / impair","approx":false,"issues":[{"n":"Pair","p":54.4},{"n":"Impair","p":45.6}]},{"groupe":"Buts","nom":"Nombre exact de buts dans le match","approx":false,"issues":[{"n":"0","p":6.2},{"n":"1","p":13.9},{"n":"2","p":23.8},{"n":"3","p":22.4},{"n":"4","p":16.4},{"n":"5 ou plus","p":17.3}]},{"groupe":"Buts","nom":"Nombre exact de buts Domicile","approx":false,"issues":[{"n":"0","p":18.1},{"n":"1","p":30.9},{"n":"2","p":26.4},{"n":"3 ou plus","p":24.5}]},{"groupe":"Buts","nom":"Nombre exact de buts Extérieur","approx":false,"issues":[{"n":"0","p":29.6},{"n":"1","p":36.0},{"n":"2","p":22.0},{"n":"3 ou plus","p":12.5}]},{"groupe":"Buts","nom":"Multi-buts","approx":false,"issues":[{"n":"1-2 buts","p":37.7},{"n":"1-3 buts","p":60.1},{"n":"2-3 buts","p":46.2},{"n":"2-4 buts","p":62.6},{"n":"3-5 buts","p":48.4},{"n":"4-6 buts","p":30.7}]},{"groupe":"Buts","nom":"Au moins une équipe marque","approx":false,"issues":[{"n":"Oui","p":93.8},{"n":"Non (0-0)","p":6.2}]},{"groupe":"Buts","nom":"Une seule équipe marque","approx":false,"issues":[{"n":"Oui","p":35.2},{"n":"Non","p":64.8}]},{"groupe":"Combinés","nom":"Résultat + Total (1.5)","approx":false,"issues":[{"n":"Domicile et plus de 1.5","p":39.8},{"n":"Domicile et moins de 1.5","p":8.3},{"n":"Nul et plus de 1.5","p":19.4},{"n":"Nul et moins de 1.5","p":6.2},{"n":"Extérieur et plus de 1.5","p":20.8},{"n":"Extérieur et moins de 1.5","p":5.6}]},{"groupe":"Combinés","nom":"Résultat + Total (2.5)","approx":false,"issues":[{"n":"Domicile et plus de 2.5","p":31.9},{"n":"Domicile et moins de 2.5","p":16.1},{"n":"Nul et plus de 2.5","p":7.3},{"n":"Nul et moins de 2.5","p":18.3},{"n":"Extérieur et plus de 2.5","p":16.8},{"n":"Extérieur et moins de 2.5","p":9.6}]},{"groupe":"Combinés","nom":"Résultat + Total (3.5)","approx":false,"issues":[{"n":"Domicile et plus de 3.5","p":18.0},{"n":"Domicile et moins de 3.5","p":30.1},{"n":"Nul et plus de 3.5","p":7.3},{"n":"Nul et moins de 3.5","p":18.3},{"n":"Extérieur et plus de 3.5","p":8.4},{"n":"Extérieur et moins de 3.5","p":18.0}]},{"groupe":"Combinés","nom":"Résultat + Les deux équipes marquent","approx":false,"issues":[{"n":"Domicile et les deux marquent","p":24.7},{"n":"Domicile et une équipe ne marque pas","p":23.3},{"n":"Nul et les deux marquent","p":19.4},{"n":"Nul et une équipe ne marque pas","p":6.2},{"n":"Extérieur et les deux marquent","p":14.5},{"n":"Extérieur et une équipe ne marque pas","p":11.8}]},{"groupe":"Combinés","nom":"Double chance + Total (2.5)","approx":false,"issues":[{"n":"Domicile ou nul et plus de 2.5","p":39.3},{"n":"Domicile ou nul et moins de 2.5","p":34.3},{"n":"Domicile ou extérieur et plus de 2.5","p":48.7},{"n":"Domicile ou extérieur et moins de 2.5","p":25.7},{"n":"Nul ou extérieur et plus de 2.5","p":24.1},{"n":"Nul ou extérieur et moins de 2.5","p":27.9}]},{"groupe":"Combinés","nom":"Double chance + Les deux équipes marquent","approx":false,"issues":[{"n":"Domicile ou nul et les deux marquent","p":44.1},{"n":"Domicile ou nul et une équipe ne marque pas","p":29.6},{"n":"Domicile ou extérieur et les deux marquent","p":39.2},{"n":"Domicile ou extérieur et une équipe ne marque pas","p":35.2},{"n":"Nul ou extérieur et les deux marquent","p":33.9},{"n":"Nul ou extérieur et une équipe ne marque pas","p":18.1}]},{"groupe":"Combinés","nom":"Les deux équipes marquent + Total (2.5)","approx":false,"issues":[{"n":"Oui et plus de 2.5","p":46.6},{"n":"Oui et moins de 2.5","p":12.0},{"n":"Non et plus de 2.5","p":9.5},{"n":"Non et moins de 2.5","p":31.9}]},{"groupe":"Score exact","nom":"Score exact","approx":false,"issues":[{"n":"1-1","p":12.0},{"n":"2-1","p":9.5},{"n":"1-0","p":8.3},{"n":"2-0","p":7.8},{"n":"1-2","p":6.8},{"n":"0-0","p":6.2},{"n":"2-2","p":5.8},{"n":"0-1","p":5.6},{"n":"3-1","p":5.4},{"n":"3-0","p":4.5},{"n":"0-2","p":4.0},{"n":"3-2","p":3.3},{"n":"1-3","p":2.8},{"n":"2-3","p":2.4},{"n":"4-1","p":2.3},{"n":"Autre score","p":13.3}]},{"groupe":"Déroulement","nom":"Équipe qui marque le premier but","approx":false,"issues":[{"n":"Domicile","p":54.8},{"n":"Extérieur","p":38.9},{"n":"Aucun but","p":6.2}]},{"groupe":"Déroulement","nom":"Équipe qui marque le dernier but","approx":false,"issues":[{"n":"Domicile","p":54.8},{"n":"Extérieur","p":38.9},{"n":"Aucun but","p":6.2}]},{"groupe":"Déroulement","nom":"Premier but et résultat final","approx":false,"issues":[{"n":"Domicile marque en premier et gagne","p":40.5},{"n":"Domicile marque en premier et fait nul","p":9.7},{"n":"Domicile marque en premier et perd","p":4.7},{"n":"Extérieur marque en premier et gagne","p":21.7},{"n":"Extérieur marque en premier et fait nul","p":9.7},{"n":"Extérieur marque en premier et perd","p":7.5},{"n":"Aucun but","p":6.2}]},{"groupe":"Déroulement","nom":"Revient au score et gagne","approx":true,"issues":[{"n":"Domicile revient et gagne","p":8.1},{"n":"Extérieur revient et gagne","p":5.0},{"n":"Aucune remontée","p":86.8}]},{"groupe":"Mi-temps","nom":"Résultat à la mi-temps","approx":true,"issues":[{"n":"Domicile","p":37.1},{"n":"Nul","p":39.3},{"n":"Extérieur","p":23.6}]},{"groupe":"Mi-temps","nom":"Mi-temps / Fin du match","approx":true,"issues":[{"n":"Domicile / Domicile","p":29.8},{"n":"Domicile / Nul","p":5.5},{"n":"Domicile / Extérieur","p":1.8},{"n":"Nul / Domicile","p":15.4},{"n":"Nul / Nul","p":14.5},{"n":"Nul / Extérieur","p":9.4},{"n":"Extérieur / Domicile","p":2.9},{"n":"Extérieur / Nul","p":5.5},{"n":"Extérieur / Extérieur","p":15.2}]},{"groupe":"Mi-temps","nom":"Total de buts en 1re mi-temps (0.5)","approx":true,"issues":[{"n":"Plus de 0.5","p":73.2},{"n":"Moins de 0.5","p":26.8}]},{"groupe":"Mi-temps","nom":"Total de buts en 1re mi-temps (1.5)","approx":true,"issues":[{"n":"Plus de 1.5","p":38.0},{"n":"Moins de 1.5","p":62.0}]},{"groupe":"Mi-temps","nom":"Total de buts en 1re mi-temps (2.5)","approx":true,"issues":[{"n":"Plus de 2.5","p":14.7},{"n":"Moins de 2.5","p":85.3}]},{"groupe":"Mi-temps","nom":"Total de buts en 2e mi-temps (0.5)","approx":true,"issues":[{"n":"Plus de 0.5","p":80.0},{"n":"Moins de 0.5","p":20.0}]},{"groupe":"Mi-temps","nom":"Total de buts en 2e mi-temps (1.5)","approx":true,"issues":[{"n":"Plus de 1.5","p":47.9},{"n":"Moins de 1.5","p":52.1}]},{"groupe":"Mi-temps","nom":"Total de buts en 2e mi-temps (2.5)","approx":true,"issues":[{"n":"Plus de 2.5","p":21.9},{"n":"Moins de 2.5","p":78.1}]},{"groupe":"Mi-temps","nom":"Mi-temps avec le plus de buts","approx":true,"issues":[{"n":"1re mi-temps","p":31.3},{"n":"Égalité","p":24.3},{"n":"2e mi-temps","p":44.3}]},{"groupe":"Mi-temps","nom":"But en 1re mi-temps","approx":true,"issues":[{"n":"Oui","p":73.2},{"n":"Non","p":26.8}]},{"groupe":"Mi-temps","nom":"But en 2e mi-temps","approx":true,"issues":[{"n":"Oui","p":80.0},{"n":"Non","p":20.0}]},{"groupe":"Mi-temps","nom":"But dans chaque mi-temps","approx":true,"issues":[{"n":"Oui","p":58.6},{"n":"Non","p":41.4}]},{"groupe":"Mi-temps","nom":"Les deux équipes marquent en 1re mi-temps","approx":true,"issues":[{"n":"Oui","p":22.7},{"n":"Non","p":77.3}]},{"groupe":"Mi-temps","nom":"Les deux équipes marquent en 2e mi-temps","approx":true,"issues":[{"n":"Oui","p":29.8},{"n":"Non","p":70.2}]},{"groupe":"Mi-temps","nom":"Moment du premier but","approx":true,"issues":[{"n":"1-15 min","p":33.3},{"n":"16-30 min","p":23.4},{"n":"31-45 min","p":15.9},{"n":"46-60 min","p":10.4},{"n":"61-75 min","p":6.6},{"n":"76-90 min","p":4.2},{"n":"Aucun but","p":6.2}]}]}],"historique":[{"source":"sdb","fixture_id":"2529632","date":"2026-11-10T19:45:00+00:00","competition":"English National League South","domicile":"Salisbury","exterieur":"Braintree Town","proba":[44,27,29],"resultat_reel":"dom","score":[2,0],"buteurs":[]},{"source":"sdb","fixture_id":"2522946","date":"2026-11-10T18:00:00+00:00","competition":"Denmark A-Liga","domicile":"Midtjylland Women","exterieur":"Odense Q","proba":[45,27,28],"resultat_reel":"dom","score":[2,0],"buteurs":[]},{"source":"sdb","fixture_id":"2420125","date":"2026-11-09T16:00:00+00:00","competition":"Georgian Erovnuli Liga","domicile":"Iberia 1999","exterieur":"Gagra","proba":[45,27,28],"resultat_reel":"dom","score":[1,0],"buteurs":[]},{"fixture_id":1640831,"date":"2026-10-05T10:00:00+00:00","domicile":"Wales U19","exterieur":"Northern Ireland U19","proba":[32,33,35],"resultat_reel":"nul","score":[0,0],"buteurs":[]},{"fixture_id":1643006,"date":"2026-10-05T09:00:00+00:00","domicile":"Finland U18","exterieur":"Wales U18","proba":[46,45,9],"resultat_reel":"dom","score":[2,0],"buteurs":[]},{"fixture_id":1643934,"date":"2026-10-05T09:00:00+00:00","domicile":"Malaysia","exterieur":"Vietnam","proba":[45,45,10],"resultat_reel":"dom","score":[1,0],"buteurs":[{"equipe":"Malaysia","joueur":"Fergus Tierney","minute":62,"prolongation":null}]},{"fixture_id":1640516,"date":"2026-10-05T08:30:00+00:00","domicile":"Hungary U18","exterieur":"Italy U18","proba":[6,45,49],"resultat_reel":"ext","score":[1,3],"buteurs":[]},{"fixture_id":1640437,"date":"2026-10-05T08:00:00+00:00","domicile":"Hunters","exterieur":"Amtat FC","proba":[47,45,8],"resultat_reel":"dom","score":[6,1],"buteurs":[{"equipe":"Hunters","joueur":"T. Munkhbaatar","minute":12,"prolongation":null},{"equipe":"Hunters","joueur":"A. Sumyabazar","minute":20,"prolongation":null},{"equipe":"Hunters","joueur":"P. Bilegjargal","minute":32,"prolongation":null},{"equipe":"Amtat FC","joueur":"T. Bilguun","minute":50,"prolongation":null},{"equipe":"Hunters","joueur":"T. Munkhbaatar","minute":52,"prolongation":null},{"equipe":"Hunters","joueur":"P. Bilegjargal","minute":68,"prolongation":null},{"equipe":"Hunters","joueur":"T. Munkhbaatar","minute":76,"prolongation":null}]},{"fixture_id":1643812,"date":"2026-10-05T06:30:00+00:00","domicile":"Ecuador","exterieur":"Panama","proba":[46,45,9],"resultat_reel":"nul","score":[1,1],"buteurs":[{"equipe":"Panama","joueur":"Josue Vergara","minute":38,"prolongation":null},{"equipe":"Ecuador","joueur":"Juan Riquelme Angulo","minute":58,"prolongation":null},{"equipe":"Panama","joueur":"Amir Murillo","minute":92,"prolongation":null},{"equipe":"Ecuador","joueur":"Pedro Vite","minute":93,"prolongation":null},{"equipe":"Panama","joueur":"Carlos Harvey","minute":93,"prolongation":null},{"equipe":"Ecuador","joueur":"Anthony Valencia","minute":94,"prolongation":null},{"equipe":"Panama","joueur":"Víctor Griffith","minute":95,"prolongation":null},{"equipe":"Ecuador","joueur":"John Yeboah","minute":96,"prolongation":null},{"equipe":"Panama","joueur":"Tomás Rodríguez","minute":97,"prolongation":null},{"equipe":"Ecuador","joueur":"Nilson Angulo","minute":97,"prolongation":null},{"equipe":"Panama","joueur":"Rafael Mosquera","minute":98,"prolongation":null},{"equipe":"Ecuador","joueur":"Keny arroyo","minute":99,"prolongation":null},{"equipe":"Panama","joueur":"César Blackman","minute":100,"prolongation":null},{"equipe":"Ecuador","joueur":"Willian Pacho","minute":100,"prolongation":null},{"equipe":"Panama","joueur":"Dilan Herbert","minute":101,"prolongation":null},{"equipe":"Ecuador","joueur":"Fricio Caicedo","minute":102,"prolongation":null},{"equipe":"Panama","joueur":"Deivis Murillo","minute":102,"prolongation":null},{"equipe":"Ecuador","joueur":"Juan Riquelme Angulo","minute":103,"prolongation":null}]},{"fixture_id":1607023,"date":"2026-10-04T09:00:00+00:00","domicile":"Ingolstadt W","exterieur":"Bochum W","proba":[10,45,45],"resultat_reel":"nul","score":[3,3],"buteurs":[]},{"fixture_id":1565737,"date":"2026-10-04T08:30:00+00:00","domicile":"Ružomberok II","exterieur":"Banská Byst II","proba":[36,35,29],"resultat_reel":"dom","score":[3,0],"buteurs":[]},{"fixture_id":1566109,"date":"2026-10-04T08:30:00+00:00","domicile":"Trenčín II","exterieur":"Nitra","proba":[3,49,48],"resultat_reel":"ext","score":[2,4],"buteurs":[]},{"fixture_id":1566111,"date":"2026-10-04T08:30:00+00:00","domicile":"DAC II","exterieur":"Komárno II","proba":[35,35,30],"resultat_reel":"dom","score":[4,0],"buteurs":[]},{"fixture_id":1589726,"date":"2026-10-04T08:30:00+00:00","domicile":"Videm","exterieur":"Šampion Celje","proba":[35,35,30],"resultat_reel":"dom","score":[1,0],"buteurs":[]},{"fixture_id":1635987,"date":"2026-10-04T01:00:00+00:00","domicile":"Los Cabos United","exterieur":"Cordobés","proba":[49,45,6],"resultat_reel":"ext","score":[0,2],"buteurs":[]},{"fixture_id":1643252,"date":"2026-10-03T07:45:00+00:00","domicile":"LDF","exterieur":"Manonyane","proba":[46,45,9],"resultat_reel":"nul","score":[0,0],"buteurs":[]},{"fixture_id":1567447,"date":"2026-10-03T07:00:00+00:00","domicile":"Machida Zelvia","exterieur":"Kyoto Sanga","proba":[49,48,3],"resultat_reel":"nul","score":[0,0],"buteurs":[]},{"fixture_id":1569848,"date":"2026-10-03T07:00:00+00:00","domicile":"Jinju Citizen","exterieur":"Geoje Citizen","proba":[43,45,12],"resultat_reel":"nul","score":[0,0],"buteurs":[]},{"fixture_id":1606678,"date":"2026-10-03T07:00:00+00:00","domicile":"Ventforet Kofu","exterieur":"Kataller Toyama","proba":[10,45,45],"resultat_reel":"ext","score":[1,2],"buteurs":[{"equipe":"Kataller Toyama","joueur":"T. Yoshihira","minute":51,"prolongation":null},{"equipe":"Ventforet Kofu","joueur":"Y. Hiratsuka","minute":64,"prolongation":null},{"equipe":"Kataller Toyama","joueur":"Y. Kunitake","minute":69,"prolongation":null}]},{"fixture_id":1637226,"date":"2026-10-03T07:00:00+00:00","domicile":"UWC W","exterieur":"Pretoria U. W","proba":[35,35,30],"resultat_reel":"ext","score":[0,1],"buteurs":[{"equipe":"Pretoria U. W","joueur":"?","minute":27,"prolongation":null}]},{"fixture_id":1643497,"date":"2026-10-03T07:00:00+00:00","domicile":"Ararat","exterieur":"Ararat-Armenia","proba":[5,45,50],"resultat_reel":"ext","score":[0,4],"buteurs":[]},{"fixture_id":1643496,"date":"2026-10-03T03:00:00+00:00","domicile":"Goa","exterieur":"Dempo","proba":[33,34,33],"resultat_reel":"ext","score":[0,2],"buteurs":[]},{"fixture_id":1640101,"date":"2026-10-02T09:00:00+00:00","domicile":"Chattogram","exterieur":"Bangladesh Police","proba":[3,48,49],"resultat_reel":"ext","score":[0,3],"buteurs":[{"equipe":"Bangladesh Police","joueur":"M. Mollah","minute":43,"prolongation":null},{"equipe":"Bangladesh Police","joueur":"J. Ngong Sam","minute":45,"prolongation":null},{"equipe":"Bangladesh Police","joueur":"S. Kagimu","minute":90,"prolongation":3}]},{"fixture_id":1640102,"date":"2026-10-02T09:00:00+00:00","domicile":"Fakirerpool","exterieur":"Mohammedan Dhaka","proba":[3,48,49],"resultat_reel":"ext","score":[0,1],"buteurs":[{"equipe":"Mohammedan Dhaka","joueur":"M. J. Hasan Shanta","minute":18,"prolongation":null}]},{"fixture_id":1640106,"date":"2026-10-02T09:00:00+00:00","domicile":"PWD Sports Club","exterieur":"Brothers Union","proba":[46,45,9],"resultat_reel":"nul","score":[1,1],"buteurs":[{"equipe":"Brothers Union","joueur":"J. Santana","minute":26,"prolongation":null},{"equipe":"PWD Sports Club","joueur":"Y. Mbida","minute":60,"prolongation":null}]},{"fixture_id":1641716,"date":"2026-10-02T09:00:00+00:00","domicile":"Thailand","exterieur":"Philippines","proba":[49,48,3],"resultat_reel":"ext","score":[1,2],"buteurs":[{"equipe":"Philippines","joueur":"Bjorn Martin Kristensen","minute":3,"prolongation":null},{"equipe":"Thailand","joueur":"Iklas Sanron","minute":55,"prolongation":null},{"equipe":"Philippines","joueur":"Bjorn Martin Kristensen","minute":68,"prolongation":null}]},{"fixture_id":1641717,"date":"2026-10-02T09:00:00+00:00","domicile":"Vietnam","exterieur":"Pakistan","proba":[47,45,8],"resultat_reel":"dom","score":[4,2],"buteurs":[{"equipe":"Pakistan","joueur":"Mohib Ullah","minute":31,"prolongation":null},{"equipe":"Vietnam","joueur":"Nguyen Hai Long","minute":50,"prolongation":null},{"equipe":"Vietnam","joueur":"Nguyen Hoang Duc","minute":57,"prolongation":null},{"equipe":"Vietnam","joueur":"Nguyen Dinh Bac","minute":80,"prolongation":null},{"equipe":"Pakistan","joueur":"Kaleemullah Khan","minute":88,"prolongation":null},{"equipe":"Vietnam","joueur":"Lee Williams","minute":90,"prolongation":1}]},{"fixture_id":1642915,"date":"2026-10-02T08:30:00+00:00","domicile":"Petrolul Ploiesti","exterieur":"CS Afumati","proba":[3,48,49],"resultat_reel":"dom","score":[3,2],"buteurs":[{"equipe":"CS Afumati","joueur":"L. Lis","minute":38,"prolongation":null},{"equipe":"Petrolul Ploiesti","joueur":"D. N'Lundulu","minute":62,"prolongation":null},{"equipe":"Petrolul Ploiesti","joueur":"A. Dumitrescu","minute":68,"prolongation":null},{"equipe":"Petrolul Ploiesti","joueur":"F. Quizera","minute":74,"prolongation":null},{"equipe":"CS Afumati","joueur":"C. McCarthy","minute":80,"prolongation":null}]},{"fixture_id":1643215,"date":"2026-10-02T08:00:00+00:00","domicile":"Lokomotiv Plovdiv","exterieur":"Arda Kardzhali","proba":[45,45,10],"resultat_reel":"dom","score":[2,0],"buteurs":[{"equipe":"Lokomotiv Plovdiv","joueur":"?","minute":29,"prolongation":null},{"equipe":"Lokomotiv Plovdiv","joueur":"?","minute":64,"prolongation":null}]},{"fixture_id":1643339,"date":"2026-10-01T10:10:00+00:00","domicile":"Japan","exterieur":"Ecuador","proba":[33,34,33],"resultat_reel":"nul","score":[0,0],"buteurs":[]}],"taux_reussite":59,"nb_verifies":68,"maj_resultats":"2026-11-11T09:41:03.297258+00:00"}
+{
+ "maj": "2026-11-11T13:40:19.433411+00:00",
+ "matchs": [
+  {
+   "categorie": "secondaire",
+   "competition": "Polish III liga Group III",
+   "heure": "2026-11-11T14:00:00+00:00",
+   "domicile": "Barycz Sułów",
+   "exterieur": "Miedź Legnica II",
+   "proba": [
+    24,
+    24,
+    52
+   ],
+   "base_api": [
+    24,
+    24,
+    52
+   ],
+   "ajustement": 0,
+   "buts_attendus": [
+    1.24,
+    1.91
+   ],
+   "forme_dom": [],
+   "forme_ext": [
+    "V"
+   ],
+   "source_dom": "",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": [],
+   "marches": [
+    {
+     "groupe": "Résultat",
+     "nom": "Résultat du match (1X2)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 23.8
+      },
+      {
+       "n": "Nul",
+       "p": 23.9
+      },
+      {
+       "n": "Extérieur",
+       "p": 52.3
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Double chance",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile ou nul",
+       "p": 47.7
+      },
+      {
+       "n": "Domicile ou extérieur",
+       "p": 76.1
+      },
+      {
+       "n": "Nul ou extérieur",
+       "p": 76.2
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Remboursé si match nul",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 31.2
+      },
+      {
+       "n": "Extérieur",
+       "p": 68.8
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Va gagner par",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile par 1 but",
+       "p": 13.8
+      },
+      {
+       "n": "Domicile par 2 buts",
+       "p": 6.8
+      },
+      {
+       "n": "Domicile par 3 buts",
+       "p": 2.4
+      },
+      {
+       "n": "Domicile par 4 buts ou plus",
+       "p": 0.8
+      },
+      {
+       "n": "Nul",
+       "p": 23.9
+      },
+      {
+       "n": "Extérieur par 1 but",
+       "p": 21.8
+      },
+      {
+       "n": "Extérieur par 2 buts",
+       "p": 16.2
+      },
+      {
+       "n": "Extérieur par 3 buts",
+       "p": 8.8
+      },
+      {
+       "n": "Extérieur par 4 buts ou plus",
+       "p": 5.7
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Victoire sans encaisser de but",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 9.7
+      },
+      {
+       "n": "Extérieur",
+       "p": 23.9
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "N'encaisse pas de but",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile n'encaisse pas",
+       "p": 14.8
+      },
+      {
+       "n": "Extérieur n'encaisse pas",
+       "p": 29.0
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap européen Domicile (-2)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (-2)",
+       "p": 3.2
+      },
+      {
+       "n": "Nul (-2)",
+       "p": 6.8
+      },
+      {
+       "n": "Extérieur (+2)",
+       "p": 90.0
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap européen Domicile (-1)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (-1)",
+       "p": 10.0
+      },
+      {
+       "n": "Nul (-1)",
+       "p": 13.8
+      },
+      {
+       "n": "Extérieur (+1)",
+       "p": 76.2
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap européen Domicile (+1)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (+1)",
+       "p": 47.7
+      },
+      {
+       "n": "Nul (+1)",
+       "p": 21.8
+      },
+      {
+       "n": "Extérieur (-1)",
+       "p": 30.6
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap européen Domicile (+2)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (+2)",
+       "p": 69.4
+      },
+      {
+       "n": "Nul (+2)",
+       "p": 16.2
+      },
+      {
+       "n": "Extérieur (-2)",
+       "p": 14.4
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap asiatique Domicile (-1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (-1.5)",
+       "p": 10.0
+      },
+      {
+       "n": "Extérieur (+1.5)",
+       "p": 90.0
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap asiatique Domicile (-0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (-0.5)",
+       "p": 23.8
+      },
+      {
+       "n": "Extérieur (+0.5)",
+       "p": 76.2
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap asiatique Domicile (+0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (+0.5)",
+       "p": 47.7
+      },
+      {
+       "n": "Extérieur (-0.5)",
+       "p": 52.3
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap asiatique Domicile (+1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (+1.5)",
+       "p": 69.4
+      },
+      {
+       "n": "Extérieur (-1.5)",
+       "p": 30.6
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 94.9
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 5.1
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 83.0
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 17.0
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 61.0
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 39.0
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (3.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 3.5",
+       "p": 38.6
+      },
+      {
+       "n": "Moins de 3.5",
+       "p": 61.4
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (4.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 4.5",
+       "p": 21.1
+      },
+      {
+       "n": "Moins de 4.5",
+       "p": 78.9
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (5.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 5.5",
+       "p": 10.0
+      },
+      {
+       "n": "Moins de 5.5",
+       "p": 90.0
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Domicile (0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 71.0
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 29.0
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Domicile (1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 35.1
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 64.9
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Domicile (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 12.9
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 87.1
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Extérieur (0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 85.2
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 14.8
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Extérieur (1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 57.0
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 43.0
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Extérieur (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 30.0
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 70.0
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Les deux équipes marquent",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 61.3
+      },
+      {
+       "n": "Non",
+       "p": 38.7
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts pair / impair",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Pair",
+       "p": 51.7
+      },
+      {
+       "n": "Impair",
+       "p": 48.3
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Domicile : total pair / impair",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Pair",
+       "p": 54.2
+      },
+      {
+       "n": "Impair",
+       "p": 45.8
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Extérieur : total pair / impair",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Pair",
+       "p": 51.1
+      },
+      {
+       "n": "Impair",
+       "p": 48.9
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Nombre exact de buts dans le match",
+     "approx": false,
+     "issues": [
+      {
+       "n": "0",
+       "p": 5.1
+      },
+      {
+       "n": "1",
+       "p": 11.9
+      },
+      {
+       "n": "2",
+       "p": 22.1
+      },
+      {
+       "n": "3",
+       "p": 22.3
+      },
+      {
+       "n": "4",
+       "p": 17.6
+      },
+      {
+       "n": "5 ou plus",
+       "p": 21.1
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Nombre exact de buts Domicile",
+     "approx": false,
+     "issues": [
+      {
+       "n": "0",
+       "p": 29.0
+      },
+      {
+       "n": "1",
+       "p": 35.9
+      },
+      {
+       "n": "2",
+       "p": 22.2
+      },
+      {
+       "n": "3 ou plus",
+       "p": 12.9
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Nombre exact de buts Extérieur",
+     "approx": false,
+     "issues": [
+      {
+       "n": "0",
+       "p": 14.8
+      },
+      {
+       "n": "1",
+       "p": 28.2
+      },
+      {
+       "n": "2",
+       "p": 27.0
+      },
+      {
+       "n": "3 ou plus",
+       "p": 30.0
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Multi-buts",
+     "approx": false,
+     "issues": [
+      {
+       "n": "1-2 buts",
+       "p": 33.9
+      },
+      {
+       "n": "1-3 buts",
+       "p": 56.3
+      },
+      {
+       "n": "2-3 buts",
+       "p": 44.4
+      },
+      {
+       "n": "2-4 buts",
+       "p": 62.0
+      },
+      {
+       "n": "3-5 buts",
+       "p": 51.0
+      },
+      {
+       "n": "4-6 buts",
+       "p": 34.5
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Au moins une équipe marque",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 94.9
+      },
+      {
+       "n": "Non (0-0)",
+       "p": 5.1
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Une seule équipe marque",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 33.6
+      },
+      {
+       "n": "Non",
+       "p": 66.4
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Résultat + Total (1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile et plus de 1.5",
+       "p": 19.3
+      },
+      {
+       "n": "Domicile et moins de 1.5",
+       "p": 4.5
+      },
+      {
+       "n": "Nul et plus de 1.5",
+       "p": 18.8
+      },
+      {
+       "n": "Nul et moins de 1.5",
+       "p": 5.1
+      },
+      {
+       "n": "Extérieur et plus de 1.5",
+       "p": 44.9
+      },
+      {
+       "n": "Extérieur et moins de 1.5",
+       "p": 7.4
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Résultat + Total (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile et plus de 2.5",
+       "p": 16.0
+      },
+      {
+       "n": "Domicile et moins de 2.5",
+       "p": 7.8
+      },
+      {
+       "n": "Nul et plus de 2.5",
+       "p": 7.8
+      },
+      {
+       "n": "Nul et moins de 2.5",
+       "p": 16.0
+      },
+      {
+       "n": "Extérieur et plus de 2.5",
+       "p": 37.1
+      },
+      {
+       "n": "Extérieur et moins de 2.5",
+       "p": 15.2
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Résultat + Total (3.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile et plus de 3.5",
+       "p": 8.4
+      },
+      {
+       "n": "Domicile et moins de 3.5",
+       "p": 15.4
+      },
+      {
+       "n": "Nul et plus de 3.5",
+       "p": 7.8
+      },
+      {
+       "n": "Nul et moins de 3.5",
+       "p": 16.0
+      },
+      {
+       "n": "Extérieur et plus de 3.5",
+       "p": 22.4
+      },
+      {
+       "n": "Extérieur et moins de 3.5",
+       "p": 29.9
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Résultat + Les deux équipes marquent",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile et les deux marquent",
+       "p": 14.1
+      },
+      {
+       "n": "Domicile et une équipe ne marque pas",
+       "p": 9.7
+      },
+      {
+       "n": "Nul et les deux marquent",
+       "p": 18.8
+      },
+      {
+       "n": "Nul et une équipe ne marque pas",
+       "p": 5.1
+      },
+      {
+       "n": "Extérieur et les deux marquent",
+       "p": 28.4
+      },
+      {
+       "n": "Extérieur et une équipe ne marque pas",
+       "p": 23.9
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Double chance + Total (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile ou nul et plus de 2.5",
+       "p": 23.8
+      },
+      {
+       "n": "Domicile ou nul et moins de 2.5",
+       "p": 23.8
+      },
+      {
+       "n": "Domicile ou extérieur et plus de 2.5",
+       "p": 53.1
+      },
+      {
+       "n": "Domicile ou extérieur et moins de 2.5",
+       "p": 23.0
+      },
+      {
+       "n": "Nul ou extérieur et plus de 2.5",
+       "p": 44.9
+      },
+      {
+       "n": "Nul ou extérieur et moins de 2.5",
+       "p": 31.3
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Double chance + Les deux équipes marquent",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile ou nul et les deux marquent",
+       "p": 32.9
+      },
+      {
+       "n": "Domicile ou nul et une équipe ne marque pas",
+       "p": 14.8
+      },
+      {
+       "n": "Domicile ou extérieur et les deux marquent",
+       "p": 42.5
+      },
+      {
+       "n": "Domicile ou extérieur et une équipe ne marque pas",
+       "p": 33.6
+      },
+      {
+       "n": "Nul ou extérieur et les deux marquent",
+       "p": 47.2
+      },
+      {
+       "n": "Nul ou extérieur et une équipe ne marque pas",
+       "p": 29.0
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Les deux équipes marquent + Total (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Oui et plus de 2.5",
+       "p": 50.4
+      },
+      {
+       "n": "Oui et moins de 2.5",
+       "p": 11.0
+      },
+      {
+       "n": "Non et plus de 2.5",
+       "p": 10.6
+      },
+      {
+       "n": "Non et moins de 2.5",
+       "p": 28.1
+      }
+     ]
+    },
+    {
+     "groupe": "Score exact",
+     "nom": "Score exact",
+     "approx": false,
+     "issues": [
+      {
+       "n": "1-1",
+       "p": 11.0
+      },
+      {
+       "n": "1-2",
+       "p": 9.7
+      },
+      {
+       "n": "0-2",
+       "p": 7.8
+      },
+      {
+       "n": "0-1",
+       "p": 7.4
+      },
+      {
+       "n": "2-1",
+       "p": 6.3
+      },
+      {
+       "n": "1-3",
+       "p": 6.2
+      },
+      {
+       "n": "2-2",
+       "p": 6.0
+      },
+      {
+       "n": "0-0",
+       "p": 5.1
+      },
+      {
+       "n": "0-3",
+       "p": 5.0
+      },
+      {
+       "n": "1-0",
+       "p": 4.5
+      },
+      {
+       "n": "2-3",
+       "p": 3.8
+      },
+      {
+       "n": "2-0",
+       "p": 3.3
+      },
+      {
+       "n": "1-4",
+       "p": 3.0
+      },
+      {
+       "n": "3-1",
+       "p": 2.6
+      },
+      {
+       "n": "3-2",
+       "p": 2.5
+      },
+      {
+       "n": "Autre score",
+       "p": 16.0
+      }
+     ]
+    },
+    {
+     "groupe": "Déroulement",
+     "nom": "Équipe qui marque le premier but",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 37.2
+      },
+      {
+       "n": "Extérieur",
+       "p": 57.7
+      },
+      {
+       "n": "Aucun but",
+       "p": 5.1
+      }
+     ]
+    },
+    {
+     "groupe": "Déroulement",
+     "nom": "Équipe qui marque le dernier but",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 37.2
+      },
+      {
+       "n": "Extérieur",
+       "p": 57.7
+      },
+      {
+       "n": "Aucun but",
+       "p": 5.1
+      }
+     ]
+    },
+    {
+     "groupe": "Déroulement",
+     "nom": "Premier but et résultat final",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile marque en premier et gagne",
+       "p": 19.2
+      },
+      {
+       "n": "Domicile marque en premier et fait nul",
+       "p": 9.4
+      },
+      {
+       "n": "Domicile marque en premier et perd",
+       "p": 8.6
+      },
+      {
+       "n": "Extérieur marque en premier et gagne",
+       "p": 43.8
+      },
+      {
+       "n": "Extérieur marque en premier et fait nul",
+       "p": 9.4
+      },
+      {
+       "n": "Extérieur marque en premier et perd",
+       "p": 4.5
+      },
+      {
+       "n": "Aucun but",
+       "p": 5.1
+      }
+     ]
+    },
+    {
+     "groupe": "Déroulement",
+     "nom": "Revient au score et gagne",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Domicile revient et gagne",
+       "p": 5.0
+      },
+      {
+       "n": "Extérieur revient et gagne",
+       "p": 9.3
+      },
+      {
+       "n": "Aucune remontée",
+       "p": 85.7
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Résultat à la mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 22.3
+      },
+      {
+       "n": "Nul",
+       "p": 37.3
+      },
+      {
+       "n": "Extérieur",
+       "p": 40.4
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Mi-temps / Fin du match",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Domicile / Domicile",
+       "p": 13.6
+      },
+      {
+       "n": "Domicile / Nul",
+       "p": 5.4
+      },
+      {
+       "n": "Domicile / Extérieur",
+       "p": 3.2
+      },
+      {
+       "n": "Nul / Domicile",
+       "p": 8.3
+      },
+      {
+       "n": "Nul / Nul",
+       "p": 13.0
+      },
+      {
+       "n": "Nul / Extérieur",
+       "p": 15.9
+      },
+      {
+       "n": "Extérieur / Domicile",
+       "p": 1.8
+      },
+      {
+       "n": "Extérieur / Nul",
+       "p": 5.4
+      },
+      {
+       "n": "Extérieur / Extérieur",
+       "p": 33.2
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 1re mi-temps (0.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 75.8
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 24.2
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 1re mi-temps (1.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 41.4
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 58.6
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 1re mi-temps (2.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 17.1
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 82.9
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 2e mi-temps (0.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 82.3
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 17.7
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 2e mi-temps (1.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 51.7
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 48.3
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 2e mi-temps (2.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 25.1
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 74.9
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Mi-temps avec le plus de buts",
+     "approx": true,
+     "issues": [
+      {
+       "n": "1re mi-temps",
+       "p": 31.6
+      },
+      {
+       "n": "Égalité",
+       "p": 23.3
+      },
+      {
+       "n": "2e mi-temps",
+       "p": 45.1
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "But en 1re mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 75.8
+      },
+      {
+       "n": "Non",
+       "p": 24.2
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "But en 2e mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 82.3
+      },
+      {
+       "n": "Non",
+       "p": 17.7
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "But dans chaque mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 62.4
+      },
+      {
+       "n": "Non",
+       "p": 37.6
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Les deux équipes marquent en 1re mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 24.6
+      },
+      {
+       "n": "Non",
+       "p": 75.4
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Les deux équipes marquent en 2e mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 32.1
+      },
+      {
+       "n": "Non",
+       "p": 67.9
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Moment du premier but",
+     "approx": true,
+     "issues": [
+      {
+       "n": "1-15 min",
+       "p": 35.4
+      },
+      {
+       "n": "16-30 min",
+       "p": 24.0
+      },
+      {
+       "n": "31-45 min",
+       "p": 15.7
+      },
+      {
+       "n": "46-60 min",
+       "p": 10.0
+      },
+      {
+       "n": "61-75 min",
+       "p": 6.1
+      },
+      {
+       "n": "76-90 min",
+       "p": 3.7
+      },
+      {
+       "n": "Aucun but",
+       "p": 5.1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "Spanish Segunda Federación Group 3",
+   "heure": "2026-11-11T18:30:00+00:00",
+   "domicile": "Alcoyano",
+   "exterieur": "Elche Ilicitano",
+   "proba": [
+    58,
+    23,
+    19
+   ],
+   "base_api": [
+    58,
+    23,
+    19
+   ],
+   "ajustement": 0,
+   "buts_attendus": [
+    2.06,
+    1.11
+   ],
+   "forme_dom": [
+    "N"
+   ],
+   "forme_ext": [
+    "D"
+   ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": [],
+   "marches": [
+    {
+     "groupe": "Résultat",
+     "nom": "Résultat du match (1X2)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 58.5
+      },
+      {
+       "n": "Nul",
+       "p": 22.4
+      },
+      {
+       "n": "Extérieur",
+       "p": 19.1
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Double chance",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile ou nul",
+       "p": 80.9
+      },
+      {
+       "n": "Domicile ou extérieur",
+       "p": 77.6
+      },
+      {
+       "n": "Nul ou extérieur",
+       "p": 41.5
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Remboursé si match nul",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 75.4
+      },
+      {
+       "n": "Extérieur",
+       "p": 24.6
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Va gagner par",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile par 1 but",
+       "p": 22.3
+      },
+      {
+       "n": "Domicile par 2 buts",
+       "p": 18.0
+      },
+      {
+       "n": "Domicile par 3 buts",
+       "p": 10.5
+      },
+      {
+       "n": "Domicile par 4 buts ou plus",
+       "p": 7.6
+      },
+      {
+       "n": "Nul",
+       "p": 22.4
+      },
+      {
+       "n": "Extérieur par 1 but",
+       "p": 11.7
+      },
+      {
+       "n": "Extérieur par 2 buts",
+       "p": 5.2
+      },
+      {
+       "n": "Extérieur par 3 buts",
+       "p": 1.7
+      },
+      {
+       "n": "Extérieur par 4 buts ou plus",
+       "p": 0.5
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Victoire sans encaisser de but",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 27.9
+      },
+      {
+       "n": "Extérieur",
+       "p": 7.8
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "N'encaisse pas de but",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile n'encaisse pas",
+       "p": 32.9
+      },
+      {
+       "n": "Extérieur n'encaisse pas",
+       "p": 12.7
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap européen Domicile (-2)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (-2)",
+       "p": 18.1
+      },
+      {
+       "n": "Nul (-2)",
+       "p": 18.0
+      },
+      {
+       "n": "Extérieur (+2)",
+       "p": 63.9
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap européen Domicile (-1)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (-1)",
+       "p": 36.1
+      },
+      {
+       "n": "Nul (-1)",
+       "p": 22.3
+      },
+      {
+       "n": "Extérieur (+1)",
+       "p": 41.5
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap européen Domicile (+1)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (+1)",
+       "p": 80.9
+      },
+      {
+       "n": "Nul (+1)",
+       "p": 11.7
+      },
+      {
+       "n": "Extérieur (-1)",
+       "p": 7.4
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap européen Domicile (+2)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (+2)",
+       "p": 92.6
+      },
+      {
+       "n": "Nul (+2)",
+       "p": 5.2
+      },
+      {
+       "n": "Extérieur (-2)",
+       "p": 2.2
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap asiatique Domicile (-1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (-1.5)",
+       "p": 36.1
+      },
+      {
+       "n": "Extérieur (+1.5)",
+       "p": 63.9
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap asiatique Domicile (-0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (-0.5)",
+       "p": 58.5
+      },
+      {
+       "n": "Extérieur (+0.5)",
+       "p": 41.5
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap asiatique Domicile (+0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (+0.5)",
+       "p": 80.9
+      },
+      {
+       "n": "Extérieur (-0.5)",
+       "p": 19.1
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap asiatique Domicile (+1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (+1.5)",
+       "p": 92.6
+      },
+      {
+       "n": "Extérieur (-1.5)",
+       "p": 7.4
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 95.0
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 5.0
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 83.3
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 16.7
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 61.5
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 38.5
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (3.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 3.5",
+       "p": 39.2
+      },
+      {
+       "n": "Moins de 3.5",
+       "p": 60.8
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (4.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 4.5",
+       "p": 21.5
+      },
+      {
+       "n": "Moins de 4.5",
+       "p": 78.5
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (5.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 5.5",
+       "p": 10.2
+      },
+      {
+       "n": "Moins de 5.5",
+       "p": 89.8
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Domicile (0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 87.3
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 12.7
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Domicile (1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 61.0
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 39.0
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Domicile (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 34.0
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 66.0
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Extérieur (0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 67.1
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 32.9
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Extérieur (1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 30.5
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 69.5
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Extérieur (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 10.2
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 89.8
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Les deux équipes marquent",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 59.3
+      },
+      {
+       "n": "Non",
+       "p": 40.7
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts pair / impair",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Pair",
+       "p": 51.6
+      },
+      {
+       "n": "Impair",
+       "p": 48.4
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Domicile : total pair / impair",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Pair",
+       "p": 50.8
+      },
+      {
+       "n": "Impair",
+       "p": 49.2
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Extérieur : total pair / impair",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Pair",
+       "p": 55.4
+      },
+      {
+       "n": "Impair",
+       "p": 44.6
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Nombre exact de buts dans le match",
+     "approx": false,
+     "issues": [
+      {
+       "n": "0",
+       "p": 5.0
+      },
+      {
+       "n": "1",
+       "p": 11.7
+      },
+      {
+       "n": "2",
+       "p": 21.8
+      },
+      {
+       "n": "3",
+       "p": 22.3
+      },
+      {
+       "n": "4",
+       "p": 17.7
+      },
+      {
+       "n": "5 ou plus",
+       "p": 21.5
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Nombre exact de buts Domicile",
+     "approx": false,
+     "issues": [
+      {
+       "n": "0",
+       "p": 12.7
+      },
+      {
+       "n": "1",
+       "p": 26.2
+      },
+      {
+       "n": "2",
+       "p": 27.0
+      },
+      {
+       "n": "3 ou plus",
+       "p": 34.0
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Nombre exact de buts Extérieur",
+     "approx": false,
+     "issues": [
+      {
+       "n": "0",
+       "p": 32.9
+      },
+      {
+       "n": "1",
+       "p": 36.6
+      },
+      {
+       "n": "2",
+       "p": 20.3
+      },
+      {
+       "n": "3 ou plus",
+       "p": 10.2
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Multi-buts",
+     "approx": false,
+     "issues": [
+      {
+       "n": "1-2 buts",
+       "p": 33.6
+      },
+      {
+       "n": "1-3 buts",
+       "p": 55.9
+      },
+      {
+       "n": "2-3 buts",
+       "p": 44.1
+      },
+      {
+       "n": "2-4 buts",
+       "p": 61.8
+      },
+      {
+       "n": "3-5 buts",
+       "p": 51.2
+      },
+      {
+       "n": "4-6 buts",
+       "p": 34.9
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Au moins une équipe marque",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 95.0
+      },
+      {
+       "n": "Non (0-0)",
+       "p": 5.0
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Une seule équipe marque",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 35.7
+      },
+      {
+       "n": "Non",
+       "p": 64.3
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Résultat + Total (1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile et plus de 1.5",
+       "p": 50.6
+      },
+      {
+       "n": "Domicile et moins de 1.5",
+       "p": 7.9
+      },
+      {
+       "n": "Nul et plus de 1.5",
+       "p": 17.5
+      },
+      {
+       "n": "Nul et moins de 1.5",
+       "p": 5.0
+      },
+      {
+       "n": "Extérieur et plus de 1.5",
+       "p": 15.2
+      },
+      {
+       "n": "Extérieur et moins de 1.5",
+       "p": 3.9
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Résultat + Total (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile et plus de 2.5",
+       "p": 41.7
+      },
+      {
+       "n": "Domicile et moins de 2.5",
+       "p": 16.8
+      },
+      {
+       "n": "Nul et plus de 2.5",
+       "p": 7.1
+      },
+      {
+       "n": "Nul et moins de 2.5",
+       "p": 15.3
+      },
+      {
+       "n": "Extérieur et plus de 2.5",
+       "p": 12.6
+      },
+      {
+       "n": "Extérieur et moins de 2.5",
+       "p": 6.5
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Résultat + Total (3.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile et plus de 3.5",
+       "p": 25.7
+      },
+      {
+       "n": "Domicile et moins de 3.5",
+       "p": 32.8
+      },
+      {
+       "n": "Nul et plus de 3.5",
+       "p": 7.1
+      },
+      {
+       "n": "Nul et moins de 3.5",
+       "p": 15.3
+      },
+      {
+       "n": "Extérieur et plus de 3.5",
+       "p": 6.3
+      },
+      {
+       "n": "Extérieur et moins de 3.5",
+       "p": 12.8
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Résultat + Les deux équipes marquent",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile et les deux marquent",
+       "p": 30.5
+      },
+      {
+       "n": "Domicile et une équipe ne marque pas",
+       "p": 27.9
+      },
+      {
+       "n": "Nul et les deux marquent",
+       "p": 17.5
+      },
+      {
+       "n": "Nul et une équipe ne marque pas",
+       "p": 5.0
+      },
+      {
+       "n": "Extérieur et les deux marquent",
+       "p": 11.3
+      },
+      {
+       "n": "Extérieur et une équipe ne marque pas",
+       "p": 7.8
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Double chance + Total (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile ou nul et plus de 2.5",
+       "p": 48.8
+      },
+      {
+       "n": "Domicile ou nul et moins de 2.5",
+       "p": 32.1
+      },
+      {
+       "n": "Domicile ou extérieur et plus de 2.5",
+       "p": 54.3
+      },
+      {
+       "n": "Domicile ou extérieur et moins de 2.5",
+       "p": 23.2
+      },
+      {
+       "n": "Nul ou extérieur et plus de 2.5",
+       "p": 19.8
+      },
+      {
+       "n": "Nul ou extérieur et moins de 2.5",
+       "p": 21.8
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Double chance + Les deux équipes marquent",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile ou nul et les deux marquent",
+       "p": 48.0
+      },
+      {
+       "n": "Domicile ou nul et une équipe ne marque pas",
+       "p": 32.9
+      },
+      {
+       "n": "Domicile ou extérieur et les deux marquent",
+       "p": 41.9
+      },
+      {
+       "n": "Domicile ou extérieur et une équipe ne marque pas",
+       "p": 35.7
+      },
+      {
+       "n": "Nul ou extérieur et les deux marquent",
+       "p": 28.8
+      },
+      {
+       "n": "Nul ou extérieur et une équipe ne marque pas",
+       "p": 12.7
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Les deux équipes marquent + Total (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Oui et plus de 2.5",
+       "p": 49.0
+      },
+      {
+       "n": "Oui et moins de 2.5",
+       "p": 10.4
+      },
+      {
+       "n": "Non et plus de 2.5",
+       "p": 12.5
+      },
+      {
+       "n": "Non et moins de 2.5",
+       "p": 28.2
+      }
+     ]
+    },
+    {
+     "groupe": "Score exact",
+     "nom": "Score exact",
+     "approx": false,
+     "issues": [
+      {
+       "n": "1-1",
+       "p": 10.4
+      },
+      {
+       "n": "2-1",
+       "p": 9.9
+      },
+      {
+       "n": "2-0",
+       "p": 8.9
+      },
+      {
+       "n": "1-0",
+       "p": 7.9
+      },
+      {
+       "n": "3-1",
+       "p": 6.8
+      },
+      {
+       "n": "3-0",
+       "p": 6.1
+      },
+      {
+       "n": "2-2",
+       "p": 5.5
+      },
+      {
+       "n": "1-2",
+       "p": 5.3
+      },
+      {
+       "n": "0-0",
+       "p": 5.0
+      },
+      {
+       "n": "0-1",
+       "p": 3.9
+      },
+      {
+       "n": "3-2",
+       "p": 3.8
+      },
+      {
+       "n": "4-1",
+       "p": 3.5
+      },
+      {
+       "n": "4-0",
+       "p": 3.1
+      },
+      {
+       "n": "0-2",
+       "p": 2.6
+      },
+      {
+       "n": "2-3",
+       "p": 2.0
+      },
+      {
+       "n": "Autre score",
+       "p": 15.4
+      }
+     ]
+    },
+    {
+     "groupe": "Déroulement",
+     "nom": "Équipe qui marque le premier but",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 61.8
+      },
+      {
+       "n": "Extérieur",
+       "p": 33.2
+      },
+      {
+       "n": "Aucun but",
+       "p": 5.0
+      }
+     ]
+    },
+    {
+     "groupe": "Déroulement",
+     "nom": "Équipe qui marque le dernier but",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 61.8
+      },
+      {
+       "n": "Extérieur",
+       "p": 33.2
+      },
+      {
+       "n": "Aucun but",
+       "p": 5.0
+      }
+     ]
+    },
+    {
+     "groupe": "Déroulement",
+     "nom": "Premier but et résultat final",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile marque en premier et gagne",
+       "p": 49.4
+      },
+      {
+       "n": "Domicile marque en premier et fait nul",
+       "p": 8.7
+      },
+      {
+       "n": "Domicile marque en premier et perd",
+       "p": 3.7
+      },
+      {
+       "n": "Extérieur marque en premier et gagne",
+       "p": 15.4
+      },
+      {
+       "n": "Extérieur marque en premier et fait nul",
+       "p": 8.7
+      },
+      {
+       "n": "Extérieur marque en premier et perd",
+       "p": 9.0
+      },
+      {
+       "n": "Aucun but",
+       "p": 5.0
+      }
+     ]
+    },
+    {
+     "groupe": "Déroulement",
+     "nom": "Revient au score et gagne",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Domicile revient et gagne",
+       "p": 9.8
+      },
+      {
+       "n": "Extérieur revient et gagne",
+       "p": 4.0
+      },
+      {
+       "n": "Aucune remontée",
+       "p": 86.2
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Résultat à la mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 44.4
+      },
+      {
+       "n": "Nul",
+       "p": 36.5
+      },
+      {
+       "n": "Extérieur",
+       "p": 19.1
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Mi-temps / Fin du match",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Domicile / Domicile",
+       "p": 37.9
+      },
+      {
+       "n": "Domicile / Nul",
+       "p": 5.0
+      },
+      {
+       "n": "Domicile / Extérieur",
+       "p": 1.5
+      },
+      {
+       "n": "Nul / Domicile",
+       "p": 17.2
+      },
+      {
+       "n": "Nul / Nul",
+       "p": 12.4
+      },
+      {
+       "n": "Nul / Extérieur",
+       "p": 6.9
+      },
+      {
+       "n": "Extérieur / Domicile",
+       "p": 3.3
+      },
+      {
+       "n": "Extérieur / Nul",
+       "p": 5.0
+      },
+      {
+       "n": "Extérieur / Extérieur",
+       "p": 10.8
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 1re mi-temps (0.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 76.0
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 24.0
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 1re mi-temps (1.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 41.8
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 58.2
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 1re mi-temps (2.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 17.3
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 82.7
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 2e mi-temps (0.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 82.5
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 17.5
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 2e mi-temps (1.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 52.1
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 47.9
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 2e mi-temps (2.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 25.5
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 74.5
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Mi-temps avec le plus de buts",
+     "approx": true,
+     "issues": [
+      {
+       "n": "1re mi-temps",
+       "p": 31.6
+      },
+      {
+       "n": "Égalité",
+       "p": 23.2
+      },
+      {
+       "n": "2e mi-temps",
+       "p": 45.2
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "But en 1re mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 76.0
+      },
+      {
+       "n": "Non",
+       "p": 24.0
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "But en 2e mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 82.5
+      },
+      {
+       "n": "Non",
+       "p": 17.5
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "But dans chaque mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 62.7
+      },
+      {
+       "n": "Non",
+       "p": 37.3
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Les deux équipes marquent en 1re mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 23.8
+      },
+      {
+       "n": "Non",
+       "p": 76.2
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Les deux équipes marquent en 2e mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 31.0
+      },
+      {
+       "n": "Non",
+       "p": 69.0
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Moment du premier but",
+     "approx": true,
+     "issues": [
+      {
+       "n": "1-15 min",
+       "p": 35.6
+      },
+      {
+       "n": "16-30 min",
+       "p": 24.1
+      },
+      {
+       "n": "31-45 min",
+       "p": 15.7
+      },
+      {
+       "n": "46-60 min",
+       "p": 9.9
+      },
+      {
+       "n": "61-75 min",
+       "p": 6.0
+      },
+      {
+       "n": "76-90 min",
+       "p": 3.7
+      },
+      {
+       "n": "Aucun but",
+       "p": 5.0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "categorie": "secondaire",
+   "competition": "Brazilian Serie B",
+   "heure": "2026-11-11T22:00:00+00:00",
+   "domicile": "Londrina",
+   "exterieur": "Náutico",
+   "proba": [
+    48,
+    26,
+    26
+   ],
+   "base_api": [
+    48,
+    26,
+    26
+   ],
+   "ajustement": 0,
+   "buts_attendus": [
+    1.71,
+    1.22
+   ],
+   "forme_dom": [
+    "D"
+   ],
+   "forme_ext": [
+    "D"
+   ],
+   "source_dom": "actuelle",
+   "source_ext": "actuelle",
+   "face_a_face": {
+    "dom": 0,
+    "nuls": 0,
+    "ext": 0
+   },
+   "absents": [],
+   "marches": [
+    {
+     "groupe": "Résultat",
+     "nom": "Résultat du match (1X2)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 48.0
+      },
+      {
+       "n": "Nul",
+       "p": 25.6
+      },
+      {
+       "n": "Extérieur",
+       "p": 26.4
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Double chance",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile ou nul",
+       "p": 73.6
+      },
+      {
+       "n": "Domicile ou extérieur",
+       "p": 74.4
+      },
+      {
+       "n": "Nul ou extérieur",
+       "p": 52.0
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Remboursé si match nul",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 64.5
+      },
+      {
+       "n": "Extérieur",
+       "p": 35.5
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Va gagner par",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile par 1 but",
+       "p": 21.7
+      },
+      {
+       "n": "Domicile par 2 buts",
+       "p": 14.9
+      },
+      {
+       "n": "Domicile par 3 buts",
+       "p": 7.3
+      },
+      {
+       "n": "Domicile par 4 buts ou plus",
+       "p": 4.1
+      },
+      {
+       "n": "Nul",
+       "p": 25.6
+      },
+      {
+       "n": "Extérieur par 1 but",
+       "p": 15.2
+      },
+      {
+       "n": "Extérieur par 2 buts",
+       "p": 7.6
+      },
+      {
+       "n": "Extérieur par 3 buts",
+       "p": 2.7
+      },
+      {
+       "n": "Extérieur par 4 buts ou plus",
+       "p": 0.9
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Victoire sans encaisser de but",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 23.3
+      },
+      {
+       "n": "Extérieur",
+       "p": 11.8
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "N'encaisse pas de but",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile n'encaisse pas",
+       "p": 29.6
+      },
+      {
+       "n": "Extérieur n'encaisse pas",
+       "p": 18.1
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap européen Domicile (-2)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (-2)",
+       "p": 11.4
+      },
+      {
+       "n": "Nul (-2)",
+       "p": 14.9
+      },
+      {
+       "n": "Extérieur (+2)",
+       "p": 73.7
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap européen Domicile (-1)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (-1)",
+       "p": 26.3
+      },
+      {
+       "n": "Nul (-1)",
+       "p": 21.7
+      },
+      {
+       "n": "Extérieur (+1)",
+       "p": 52.0
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap européen Domicile (+1)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (+1)",
+       "p": 73.6
+      },
+      {
+       "n": "Nul (+1)",
+       "p": 15.2
+      },
+      {
+       "n": "Extérieur (-1)",
+       "p": 11.1
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap européen Domicile (+2)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (+2)",
+       "p": 88.9
+      },
+      {
+       "n": "Nul (+2)",
+       "p": 7.6
+      },
+      {
+       "n": "Extérieur (-2)",
+       "p": 3.6
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap asiatique Domicile (-1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (-1.5)",
+       "p": 26.3
+      },
+      {
+       "n": "Extérieur (+1.5)",
+       "p": 73.7
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap asiatique Domicile (-0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (-0.5)",
+       "p": 48.0
+      },
+      {
+       "n": "Extérieur (+0.5)",
+       "p": 52.0
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap asiatique Domicile (+0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (+0.5)",
+       "p": 73.6
+      },
+      {
+       "n": "Extérieur (-0.5)",
+       "p": 26.4
+      }
+     ]
+    },
+    {
+     "groupe": "Résultat",
+     "nom": "Handicap asiatique Domicile (+1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile (+1.5)",
+       "p": 88.9
+      },
+      {
+       "n": "Extérieur (-1.5)",
+       "p": 11.1
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 93.8
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 6.2
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 79.9
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 20.1
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 56.1
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 43.9
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (3.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 3.5",
+       "p": 33.7
+      },
+      {
+       "n": "Moins de 3.5",
+       "p": 66.3
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (4.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 4.5",
+       "p": 17.3
+      },
+      {
+       "n": "Moins de 4.5",
+       "p": 82.7
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts (5.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 5.5",
+       "p": 7.7
+      },
+      {
+       "n": "Moins de 5.5",
+       "p": 92.3
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Domicile (0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 81.9
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 18.1
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Domicile (1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 51.0
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 49.0
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Domicile (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 24.5
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 75.5
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Extérieur (0.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 70.4
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 29.6
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Extérieur (1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 34.4
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 65.6
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total Extérieur (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 12.5
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 87.5
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Les deux équipes marquent",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 58.6
+      },
+      {
+       "n": "Non",
+       "p": 41.4
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Total de buts pair / impair",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Pair",
+       "p": 51.9
+      },
+      {
+       "n": "Impair",
+       "p": 48.1
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Domicile : total pair / impair",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Pair",
+       "p": 51.6
+      },
+      {
+       "n": "Impair",
+       "p": 48.4
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Extérieur : total pair / impair",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Pair",
+       "p": 54.4
+      },
+      {
+       "n": "Impair",
+       "p": 45.6
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Nombre exact de buts dans le match",
+     "approx": false,
+     "issues": [
+      {
+       "n": "0",
+       "p": 6.2
+      },
+      {
+       "n": "1",
+       "p": 13.9
+      },
+      {
+       "n": "2",
+       "p": 23.8
+      },
+      {
+       "n": "3",
+       "p": 22.4
+      },
+      {
+       "n": "4",
+       "p": 16.4
+      },
+      {
+       "n": "5 ou plus",
+       "p": 17.3
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Nombre exact de buts Domicile",
+     "approx": false,
+     "issues": [
+      {
+       "n": "0",
+       "p": 18.1
+      },
+      {
+       "n": "1",
+       "p": 30.9
+      },
+      {
+       "n": "2",
+       "p": 26.4
+      },
+      {
+       "n": "3 ou plus",
+       "p": 24.5
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Nombre exact de buts Extérieur",
+     "approx": false,
+     "issues": [
+      {
+       "n": "0",
+       "p": 29.6
+      },
+      {
+       "n": "1",
+       "p": 36.0
+      },
+      {
+       "n": "2",
+       "p": 22.0
+      },
+      {
+       "n": "3 ou plus",
+       "p": 12.5
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Multi-buts",
+     "approx": false,
+     "issues": [
+      {
+       "n": "1-2 buts",
+       "p": 37.7
+      },
+      {
+       "n": "1-3 buts",
+       "p": 60.1
+      },
+      {
+       "n": "2-3 buts",
+       "p": 46.2
+      },
+      {
+       "n": "2-4 buts",
+       "p": 62.6
+      },
+      {
+       "n": "3-5 buts",
+       "p": 48.4
+      },
+      {
+       "n": "4-6 buts",
+       "p": 30.7
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Au moins une équipe marque",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 93.8
+      },
+      {
+       "n": "Non (0-0)",
+       "p": 6.2
+      }
+     ]
+    },
+    {
+     "groupe": "Buts",
+     "nom": "Une seule équipe marque",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 35.2
+      },
+      {
+       "n": "Non",
+       "p": 64.8
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Résultat + Total (1.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile et plus de 1.5",
+       "p": 39.8
+      },
+      {
+       "n": "Domicile et moins de 1.5",
+       "p": 8.3
+      },
+      {
+       "n": "Nul et plus de 1.5",
+       "p": 19.4
+      },
+      {
+       "n": "Nul et moins de 1.5",
+       "p": 6.2
+      },
+      {
+       "n": "Extérieur et plus de 1.5",
+       "p": 20.8
+      },
+      {
+       "n": "Extérieur et moins de 1.5",
+       "p": 5.6
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Résultat + Total (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile et plus de 2.5",
+       "p": 31.9
+      },
+      {
+       "n": "Domicile et moins de 2.5",
+       "p": 16.1
+      },
+      {
+       "n": "Nul et plus de 2.5",
+       "p": 7.3
+      },
+      {
+       "n": "Nul et moins de 2.5",
+       "p": 18.3
+      },
+      {
+       "n": "Extérieur et plus de 2.5",
+       "p": 16.8
+      },
+      {
+       "n": "Extérieur et moins de 2.5",
+       "p": 9.6
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Résultat + Total (3.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile et plus de 3.5",
+       "p": 18.0
+      },
+      {
+       "n": "Domicile et moins de 3.5",
+       "p": 30.1
+      },
+      {
+       "n": "Nul et plus de 3.5",
+       "p": 7.3
+      },
+      {
+       "n": "Nul et moins de 3.5",
+       "p": 18.3
+      },
+      {
+       "n": "Extérieur et plus de 3.5",
+       "p": 8.4
+      },
+      {
+       "n": "Extérieur et moins de 3.5",
+       "p": 18.0
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Résultat + Les deux équipes marquent",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile et les deux marquent",
+       "p": 24.7
+      },
+      {
+       "n": "Domicile et une équipe ne marque pas",
+       "p": 23.3
+      },
+      {
+       "n": "Nul et les deux marquent",
+       "p": 19.4
+      },
+      {
+       "n": "Nul et une équipe ne marque pas",
+       "p": 6.2
+      },
+      {
+       "n": "Extérieur et les deux marquent",
+       "p": 14.5
+      },
+      {
+       "n": "Extérieur et une équipe ne marque pas",
+       "p": 11.8
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Double chance + Total (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile ou nul et plus de 2.5",
+       "p": 39.3
+      },
+      {
+       "n": "Domicile ou nul et moins de 2.5",
+       "p": 34.3
+      },
+      {
+       "n": "Domicile ou extérieur et plus de 2.5",
+       "p": 48.7
+      },
+      {
+       "n": "Domicile ou extérieur et moins de 2.5",
+       "p": 25.7
+      },
+      {
+       "n": "Nul ou extérieur et plus de 2.5",
+       "p": 24.1
+      },
+      {
+       "n": "Nul ou extérieur et moins de 2.5",
+       "p": 27.9
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Double chance + Les deux équipes marquent",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile ou nul et les deux marquent",
+       "p": 44.1
+      },
+      {
+       "n": "Domicile ou nul et une équipe ne marque pas",
+       "p": 29.6
+      },
+      {
+       "n": "Domicile ou extérieur et les deux marquent",
+       "p": 39.2
+      },
+      {
+       "n": "Domicile ou extérieur et une équipe ne marque pas",
+       "p": 35.2
+      },
+      {
+       "n": "Nul ou extérieur et les deux marquent",
+       "p": 33.9
+      },
+      {
+       "n": "Nul ou extérieur et une équipe ne marque pas",
+       "p": 18.1
+      }
+     ]
+    },
+    {
+     "groupe": "Combinés",
+     "nom": "Les deux équipes marquent + Total (2.5)",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Oui et plus de 2.5",
+       "p": 46.6
+      },
+      {
+       "n": "Oui et moins de 2.5",
+       "p": 12.0
+      },
+      {
+       "n": "Non et plus de 2.5",
+       "p": 9.5
+      },
+      {
+       "n": "Non et moins de 2.5",
+       "p": 31.9
+      }
+     ]
+    },
+    {
+     "groupe": "Score exact",
+     "nom": "Score exact",
+     "approx": false,
+     "issues": [
+      {
+       "n": "1-1",
+       "p": 12.0
+      },
+      {
+       "n": "2-1",
+       "p": 9.5
+      },
+      {
+       "n": "1-0",
+       "p": 8.3
+      },
+      {
+       "n": "2-0",
+       "p": 7.8
+      },
+      {
+       "n": "1-2",
+       "p": 6.8
+      },
+      {
+       "n": "0-0",
+       "p": 6.2
+      },
+      {
+       "n": "2-2",
+       "p": 5.8
+      },
+      {
+       "n": "0-1",
+       "p": 5.6
+      },
+      {
+       "n": "3-1",
+       "p": 5.4
+      },
+      {
+       "n": "3-0",
+       "p": 4.5
+      },
+      {
+       "n": "0-2",
+       "p": 4.0
+      },
+      {
+       "n": "3-2",
+       "p": 3.3
+      },
+      {
+       "n": "1-3",
+       "p": 2.8
+      },
+      {
+       "n": "2-3",
+       "p": 2.4
+      },
+      {
+       "n": "4-1",
+       "p": 2.3
+      },
+      {
+       "n": "Autre score",
+       "p": 13.3
+      }
+     ]
+    },
+    {
+     "groupe": "Déroulement",
+     "nom": "Équipe qui marque le premier but",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 54.8
+      },
+      {
+       "n": "Extérieur",
+       "p": 38.9
+      },
+      {
+       "n": "Aucun but",
+       "p": 6.2
+      }
+     ]
+    },
+    {
+     "groupe": "Déroulement",
+     "nom": "Équipe qui marque le dernier but",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 54.8
+      },
+      {
+       "n": "Extérieur",
+       "p": 38.9
+      },
+      {
+       "n": "Aucun but",
+       "p": 6.2
+      }
+     ]
+    },
+    {
+     "groupe": "Déroulement",
+     "nom": "Premier but et résultat final",
+     "approx": false,
+     "issues": [
+      {
+       "n": "Domicile marque en premier et gagne",
+       "p": 40.5
+      },
+      {
+       "n": "Domicile marque en premier et fait nul",
+       "p": 9.7
+      },
+      {
+       "n": "Domicile marque en premier et perd",
+       "p": 4.7
+      },
+      {
+       "n": "Extérieur marque en premier et gagne",
+       "p": 21.7
+      },
+      {
+       "n": "Extérieur marque en premier et fait nul",
+       "p": 9.7
+      },
+      {
+       "n": "Extérieur marque en premier et perd",
+       "p": 7.5
+      },
+      {
+       "n": "Aucun but",
+       "p": 6.2
+      }
+     ]
+    },
+    {
+     "groupe": "Déroulement",
+     "nom": "Revient au score et gagne",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Domicile revient et gagne",
+       "p": 8.1
+      },
+      {
+       "n": "Extérieur revient et gagne",
+       "p": 5.0
+      },
+      {
+       "n": "Aucune remontée",
+       "p": 86.8
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Résultat à la mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Domicile",
+       "p": 37.1
+      },
+      {
+       "n": "Nul",
+       "p": 39.3
+      },
+      {
+       "n": "Extérieur",
+       "p": 23.6
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Mi-temps / Fin du match",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Domicile / Domicile",
+       "p": 29.8
+      },
+      {
+       "n": "Domicile / Nul",
+       "p": 5.5
+      },
+      {
+       "n": "Domicile / Extérieur",
+       "p": 1.8
+      },
+      {
+       "n": "Nul / Domicile",
+       "p": 15.4
+      },
+      {
+       "n": "Nul / Nul",
+       "p": 14.5
+      },
+      {
+       "n": "Nul / Extérieur",
+       "p": 9.4
+      },
+      {
+       "n": "Extérieur / Domicile",
+       "p": 2.9
+      },
+      {
+       "n": "Extérieur / Nul",
+       "p": 5.5
+      },
+      {
+       "n": "Extérieur / Extérieur",
+       "p": 15.2
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 1re mi-temps (0.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 73.2
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 26.8
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 1re mi-temps (1.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 38.0
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 62.0
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 1re mi-temps (2.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 14.7
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 85.3
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 2e mi-temps (0.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 0.5",
+       "p": 80.0
+      },
+      {
+       "n": "Moins de 0.5",
+       "p": 20.0
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 2e mi-temps (1.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 1.5",
+       "p": 47.9
+      },
+      {
+       "n": "Moins de 1.5",
+       "p": 52.1
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Total de buts en 2e mi-temps (2.5)",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Plus de 2.5",
+       "p": 21.9
+      },
+      {
+       "n": "Moins de 2.5",
+       "p": 78.1
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Mi-temps avec le plus de buts",
+     "approx": true,
+     "issues": [
+      {
+       "n": "1re mi-temps",
+       "p": 31.3
+      },
+      {
+       "n": "Égalité",
+       "p": 24.3
+      },
+      {
+       "n": "2e mi-temps",
+       "p": 44.3
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "But en 1re mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 73.2
+      },
+      {
+       "n": "Non",
+       "p": 26.8
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "But en 2e mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 80.0
+      },
+      {
+       "n": "Non",
+       "p": 20.0
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "But dans chaque mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 58.6
+      },
+      {
+       "n": "Non",
+       "p": 41.4
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Les deux équipes marquent en 1re mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 22.7
+      },
+      {
+       "n": "Non",
+       "p": 77.3
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Les deux équipes marquent en 2e mi-temps",
+     "approx": true,
+     "issues": [
+      {
+       "n": "Oui",
+       "p": 29.8
+      },
+      {
+       "n": "Non",
+       "p": 70.2
+      }
+     ]
+    },
+    {
+     "groupe": "Mi-temps",
+     "nom": "Moment du premier but",
+     "approx": true,
+     "issues": [
+      {
+       "n": "1-15 min",
+       "p": 33.3
+      },
+      {
+       "n": "16-30 min",
+       "p": 23.4
+      },
+      {
+       "n": "31-45 min",
+       "p": 15.9
+      },
+      {
+       "n": "46-60 min",
+       "p": 10.4
+      },
+      {
+       "n": "61-75 min",
+       "p": 6.6
+      },
+      {
+       "n": "76-90 min",
+       "p": 4.2
+      },
+      {
+       "n": "Aucun but",
+       "p": 6.2
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "historique": [
+  {
+   "source": "sdb",
+   "fixture_id": "2529632",
+   "date": "2026-11-10T19:45:00+00:00",
+   "competition": "English National League South",
+   "domicile": "Salisbury",
+   "exterieur": "Braintree Town",
+   "proba": [
+    44,
+    27,
+    29
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "source": "sdb",
+   "fixture_id": "2522946",
+   "date": "2026-11-10T18:00:00+00:00",
+   "competition": "Denmark A-Liga",
+   "domicile": "Midtjylland Women",
+   "exterieur": "Odense Q",
+   "proba": [
+    45,
+    27,
+    28
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "source": "sdb",
+   "fixture_id": "2420125",
+   "date": "2026-11-09T16:00:00+00:00",
+   "competition": "Georgian Erovnuli Liga",
+   "domicile": "Iberia 1999",
+   "exterieur": "Gagra",
+   "proba": [
+    45,
+    27,
+    28
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    1,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1640831,
+   "date": "2026-10-05T10:00:00+00:00",
+   "domicile": "Wales U19",
+   "exterieur": "Northern Ireland U19",
+   "proba": [
+    32,
+    33,
+    35
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    0,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1643006,
+   "date": "2026-10-05T09:00:00+00:00",
+   "domicile": "Finland U18",
+   "exterieur": "Wales U18",
+   "proba": [
+    46,
+    45,
+    9
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1643934,
+   "date": "2026-10-05T09:00:00+00:00",
+   "domicile": "Malaysia",
+   "exterieur": "Vietnam",
+   "proba": [
+    45,
+    45,
+    10
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    1,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Malaysia",
+     "joueur": "Fergus Tierney",
+     "minute": 62,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1640516,
+   "date": "2026-10-05T08:30:00+00:00",
+   "domicile": "Hungary U18",
+   "exterieur": "Italy U18",
+   "proba": [
+    6,
+    45,
+    49
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    3
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1640437,
+   "date": "2026-10-05T08:00:00+00:00",
+   "domicile": "Hunters",
+   "exterieur": "Amtat FC",
+   "proba": [
+    47,
+    45,
+    8
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    6,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Hunters",
+     "joueur": "T. Munkhbaatar",
+     "minute": 12,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hunters",
+     "joueur": "A. Sumyabazar",
+     "minute": 20,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hunters",
+     "joueur": "P. Bilegjargal",
+     "minute": 32,
+     "prolongation": null
+    },
+    {
+     "equipe": "Amtat FC",
+     "joueur": "T. Bilguun",
+     "minute": 50,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hunters",
+     "joueur": "T. Munkhbaatar",
+     "minute": 52,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hunters",
+     "joueur": "P. Bilegjargal",
+     "minute": 68,
+     "prolongation": null
+    },
+    {
+     "equipe": "Hunters",
+     "joueur": "T. Munkhbaatar",
+     "minute": 76,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1643812,
+   "date": "2026-10-05T06:30:00+00:00",
+   "domicile": "Ecuador",
+   "exterieur": "Panama",
+   "proba": [
+    46,
+    45,
+    9
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    1,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Panama",
+     "joueur": "Josue Vergara",
+     "minute": 38,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Juan Riquelme Angulo",
+     "minute": 58,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "Amir Murillo",
+     "minute": 92,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Pedro Vite",
+     "minute": 93,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "Carlos Harvey",
+     "minute": 93,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Anthony Valencia",
+     "minute": 94,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "Víctor Griffith",
+     "minute": 95,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "John Yeboah",
+     "minute": 96,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "Tomás Rodríguez",
+     "minute": 97,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Nilson Angulo",
+     "minute": 97,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "Rafael Mosquera",
+     "minute": 98,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Keny arroyo",
+     "minute": 99,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "César Blackman",
+     "minute": 100,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Willian Pacho",
+     "minute": 100,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "Dilan Herbert",
+     "minute": 101,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Fricio Caicedo",
+     "minute": 102,
+     "prolongation": null
+    },
+    {
+     "equipe": "Panama",
+     "joueur": "Deivis Murillo",
+     "minute": 102,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ecuador",
+     "joueur": "Juan Riquelme Angulo",
+     "minute": 103,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1607023,
+   "date": "2026-10-04T09:00:00+00:00",
+   "domicile": "Ingolstadt W",
+   "exterieur": "Bochum W",
+   "proba": [
+    10,
+    45,
+    45
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    3,
+    3
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1565737,
+   "date": "2026-10-04T08:30:00+00:00",
+   "domicile": "Ružomberok II",
+   "exterieur": "Banská Byst II",
+   "proba": [
+    36,
+    35,
+    29
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    3,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1566109,
+   "date": "2026-10-04T08:30:00+00:00",
+   "domicile": "Trenčín II",
+   "exterieur": "Nitra",
+   "proba": [
+    3,
+    49,
+    48
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    2,
+    4
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1566111,
+   "date": "2026-10-04T08:30:00+00:00",
+   "domicile": "DAC II",
+   "exterieur": "Komárno II",
+   "proba": [
+    35,
+    35,
+    30
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    4,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1589726,
+   "date": "2026-10-04T08:30:00+00:00",
+   "domicile": "Videm",
+   "exterieur": "Šampion Celje",
+   "proba": [
+    35,
+    35,
+    30
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    1,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1635987,
+   "date": "2026-10-04T01:00:00+00:00",
+   "domicile": "Los Cabos United",
+   "exterieur": "Cordobés",
+   "proba": [
+    49,
+    45,
+    6
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    2
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1643252,
+   "date": "2026-10-03T07:45:00+00:00",
+   "domicile": "LDF",
+   "exterieur": "Manonyane",
+   "proba": [
+    46,
+    45,
+    9
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    0,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1567447,
+   "date": "2026-10-03T07:00:00+00:00",
+   "domicile": "Machida Zelvia",
+   "exterieur": "Kyoto Sanga",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    0,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1569848,
+   "date": "2026-10-03T07:00:00+00:00",
+   "domicile": "Jinju Citizen",
+   "exterieur": "Geoje Citizen",
+   "proba": [
+    43,
+    45,
+    12
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    0,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1606678,
+   "date": "2026-10-03T07:00:00+00:00",
+   "domicile": "Ventforet Kofu",
+   "exterieur": "Kataller Toyama",
+   "proba": [
+    10,
+    45,
+    45
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    2
+   ],
+   "buteurs": [
+    {
+     "equipe": "Kataller Toyama",
+     "joueur": "T. Yoshihira",
+     "minute": 51,
+     "prolongation": null
+    },
+    {
+     "equipe": "Ventforet Kofu",
+     "joueur": "Y. Hiratsuka",
+     "minute": 64,
+     "prolongation": null
+    },
+    {
+     "equipe": "Kataller Toyama",
+     "joueur": "Y. Kunitake",
+     "minute": 69,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1637226,
+   "date": "2026-10-03T07:00:00+00:00",
+   "domicile": "UWC W",
+   "exterieur": "Pretoria U. W",
+   "proba": [
+    35,
+    35,
+    30
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Pretoria U. W",
+     "joueur": "?",
+     "minute": 27,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1643497,
+   "date": "2026-10-03T07:00:00+00:00",
+   "domicile": "Ararat",
+   "exterieur": "Ararat-Armenia",
+   "proba": [
+    5,
+    45,
+    50
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    4
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1643496,
+   "date": "2026-10-03T03:00:00+00:00",
+   "domicile": "Goa",
+   "exterieur": "Dempo",
+   "proba": [
+    33,
+    34,
+    33
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    2
+   ],
+   "buteurs": []
+  },
+  {
+   "fixture_id": 1640101,
+   "date": "2026-10-02T09:00:00+00:00",
+   "domicile": "Chattogram",
+   "exterieur": "Bangladesh Police",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    3
+   ],
+   "buteurs": [
+    {
+     "equipe": "Bangladesh Police",
+     "joueur": "M. Mollah",
+     "minute": 43,
+     "prolongation": null
+    },
+    {
+     "equipe": "Bangladesh Police",
+     "joueur": "J. Ngong Sam",
+     "minute": 45,
+     "prolongation": null
+    },
+    {
+     "equipe": "Bangladesh Police",
+     "joueur": "S. Kagimu",
+     "minute": 90,
+     "prolongation": 3
+    }
+   ]
+  },
+  {
+   "fixture_id": 1640102,
+   "date": "2026-10-02T09:00:00+00:00",
+   "domicile": "Fakirerpool",
+   "exterieur": "Mohammedan Dhaka",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Mohammedan Dhaka",
+     "joueur": "M. J. Hasan Shanta",
+     "minute": 18,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1640106,
+   "date": "2026-10-02T09:00:00+00:00",
+   "domicile": "PWD Sports Club",
+   "exterieur": "Brothers Union",
+   "proba": [
+    46,
+    45,
+    9
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    1,
+    1
+   ],
+   "buteurs": [
+    {
+     "equipe": "Brothers Union",
+     "joueur": "J. Santana",
+     "minute": 26,
+     "prolongation": null
+    },
+    {
+     "equipe": "PWD Sports Club",
+     "joueur": "Y. Mbida",
+     "minute": 60,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1641716,
+   "date": "2026-10-02T09:00:00+00:00",
+   "domicile": "Thailand",
+   "exterieur": "Philippines",
+   "proba": [
+    49,
+    48,
+    3
+   ],
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    2
+   ],
+   "buteurs": [
+    {
+     "equipe": "Philippines",
+     "joueur": "Bjorn Martin Kristensen",
+     "minute": 3,
+     "prolongation": null
+    },
+    {
+     "equipe": "Thailand",
+     "joueur": "Iklas Sanron",
+     "minute": 55,
+     "prolongation": null
+    },
+    {
+     "equipe": "Philippines",
+     "joueur": "Bjorn Martin Kristensen",
+     "minute": 68,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1641717,
+   "date": "2026-10-02T09:00:00+00:00",
+   "domicile": "Vietnam",
+   "exterieur": "Pakistan",
+   "proba": [
+    47,
+    45,
+    8
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    4,
+    2
+   ],
+   "buteurs": [
+    {
+     "equipe": "Pakistan",
+     "joueur": "Mohib Ullah",
+     "minute": 31,
+     "prolongation": null
+    },
+    {
+     "equipe": "Vietnam",
+     "joueur": "Nguyen Hai Long",
+     "minute": 50,
+     "prolongation": null
+    },
+    {
+     "equipe": "Vietnam",
+     "joueur": "Nguyen Hoang Duc",
+     "minute": 57,
+     "prolongation": null
+    },
+    {
+     "equipe": "Vietnam",
+     "joueur": "Nguyen Dinh Bac",
+     "minute": 80,
+     "prolongation": null
+    },
+    {
+     "equipe": "Pakistan",
+     "joueur": "Kaleemullah Khan",
+     "minute": 88,
+     "prolongation": null
+    },
+    {
+     "equipe": "Vietnam",
+     "joueur": "Lee Williams",
+     "minute": 90,
+     "prolongation": 1
+    }
+   ]
+  },
+  {
+   "fixture_id": 1642915,
+   "date": "2026-10-02T08:30:00+00:00",
+   "domicile": "Petrolul Ploiesti",
+   "exterieur": "CS Afumati",
+   "proba": [
+    3,
+    48,
+    49
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    3,
+    2
+   ],
+   "buteurs": [
+    {
+     "equipe": "CS Afumati",
+     "joueur": "L. Lis",
+     "minute": 38,
+     "prolongation": null
+    },
+    {
+     "equipe": "Petrolul Ploiesti",
+     "joueur": "D. N'Lundulu",
+     "minute": 62,
+     "prolongation": null
+    },
+    {
+     "equipe": "Petrolul Ploiesti",
+     "joueur": "A. Dumitrescu",
+     "minute": 68,
+     "prolongation": null
+    },
+    {
+     "equipe": "Petrolul Ploiesti",
+     "joueur": "F. Quizera",
+     "minute": 74,
+     "prolongation": null
+    },
+    {
+     "equipe": "CS Afumati",
+     "joueur": "C. McCarthy",
+     "minute": 80,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1643215,
+   "date": "2026-10-02T08:00:00+00:00",
+   "domicile": "Lokomotiv Plovdiv",
+   "exterieur": "Arda Kardzhali",
+   "proba": [
+    45,
+    45,
+    10
+   ],
+   "resultat_reel": "dom",
+   "score": [
+    2,
+    0
+   ],
+   "buteurs": [
+    {
+     "equipe": "Lokomotiv Plovdiv",
+     "joueur": "?",
+     "minute": 29,
+     "prolongation": null
+    },
+    {
+     "equipe": "Lokomotiv Plovdiv",
+     "joueur": "?",
+     "minute": 64,
+     "prolongation": null
+    }
+   ]
+  },
+  {
+   "fixture_id": 1643339,
+   "date": "2026-10-01T10:10:00+00:00",
+   "domicile": "Japan",
+   "exterieur": "Ecuador",
+   "proba": [
+    33,
+    34,
+    33
+   ],
+   "resultat_reel": "nul",
+   "score": [
+    0,
+    0
+   ],
+   "buteurs": []
+  }
+ ],
+ "taux_reussite": 59,
+ "nb_verifies": 68,
+ "maj_resultats": "2026-11-11T17:57:57.856851+00:00"
+}
