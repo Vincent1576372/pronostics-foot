@@ -2219,11 +2219,13 @@
   "domicile": "Barycz Sułów",
   "exterieur": "Miedź Legnica II",
   "proba": [
-   44,
-   27,
-   29
+   24,
+   24,
+   52
   ],
-  "resultat_reel": null
+  "resultat_reel": null,
+  "lh": 1.238,
+  "la": 1.913
  },
  {
   "source": "sdb",
@@ -2233,11 +2235,13 @@
   "domicile": "Alcoyano",
   "exterieur": "Elche Ilicitano",
   "proba": [
-   45,
-   27,
-   28
+   58,
+   23,
+   19
   ],
-  "resultat_reel": null
+  "resultat_reel": null,
+  "lh": 2.061,
+  "la": 1.112
  },
  {
   "source": "sdb",
@@ -2247,10 +2251,12 @@
   "domicile": "Londrina",
   "exterieur": "Náutico",
   "proba": [
-   44,
-   27,
-   29
+   48,
+   26,
+   26
   ],
-  "resultat_reel": null
+  "resultat_reel": null,
+  "lh": 1.71,
+  "la": 1.219
  }
 ]
