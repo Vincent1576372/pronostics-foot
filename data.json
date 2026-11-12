@@ -3996,6 +3996,69 @@
  "historique": [
   {
    "source": "sdb",
+   "fixture_id": "2431542",
+   "date": "2026-11-11T22:00:00+00:00",
+   "competition": "Brazilian Serie B",
+   "domicile": "Londrina",
+   "exterieur": "Náutico",
+   "proba": [
+    48,
+    26,
+    26
+   ],
+   "resultat_reel": "dom",
+   "lh": 1.71,
+   "la": 1.219,
+   "score": [
+    2,
+    1
+   ],
+   "buteurs": []
+  },
+  {
+   "source": "sdb",
+   "fixture_id": "2510236",
+   "date": "2026-11-11T18:30:00+00:00",
+   "competition": "Spanish Segunda Federación Group 3",
+   "domicile": "Alcoyano",
+   "exterieur": "Elche Ilicitano",
+   "proba": [
+    58,
+    23,
+    19
+   ],
+   "resultat_reel": "ext",
+   "lh": 2.061,
+   "la": 1.112,
+   "score": [
+    1,
+    2
+   ],
+   "buteurs": []
+  },
+  {
+   "source": "sdb",
+   "fixture_id": "2509205",
+   "date": "2026-11-11T14:00:00+00:00",
+   "competition": "Polish III liga Group III",
+   "domicile": "Barycz Sułów",
+   "exterieur": "Miedź Legnica II",
+   "proba": [
+    24,
+    24,
+    52
+   ],
+   "resultat_reel": "dom",
+   "lh": 1.238,
+   "la": 1.913,
+   "score": [
+    3,
+    0
+   ],
+   "buteurs": []
+  },
+  {
+   "source": "sdb",
    "fixture_id": "2529632",
    "date": "2026-11-10T19:45:00+00:00",
    "competition": "English National League South",
@@ -4738,104 +4801,9 @@
      "prolongation": 1
     }
    ]
-  },
-  {
-   "fixture_id": 1642915,
-   "date": "2026-10-02T08:30:00+00:00",
-   "domicile": "Petrolul Ploiesti",
-   "exterieur": "CS Afumati",
-   "proba": [
-    3,
-    48,
-    49
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    3,
-    2
-   ],
-   "buteurs": [
-    {
-     "equipe": "CS Afumati",
-     "joueur": "L. Lis",
-     "minute": 38,
-     "prolongation": null
-    },
-    {
-     "equipe": "Petrolul Ploiesti",
-     "joueur": "D. N'Lundulu",
-     "minute": 62,
-     "prolongation": null
-    },
-    {
-     "equipe": "Petrolul Ploiesti",
-     "joueur": "A. Dumitrescu",
-     "minute": 68,
-     "prolongation": null
-    },
-    {
-     "equipe": "Petrolul Ploiesti",
-     "joueur": "F. Quizera",
-     "minute": 74,
-     "prolongation": null
-    },
-    {
-     "equipe": "CS Afumati",
-     "joueur": "C. McCarthy",
-     "minute": 80,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1643215,
-   "date": "2026-10-02T08:00:00+00:00",
-   "domicile": "Lokomotiv Plovdiv",
-   "exterieur": "Arda Kardzhali",
-   "proba": [
-    45,
-    45,
-    10
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    2,
-    0
-   ],
-   "buteurs": [
-    {
-     "equipe": "Lokomotiv Plovdiv",
-     "joueur": "?",
-     "minute": 29,
-     "prolongation": null
-    },
-    {
-     "equipe": "Lokomotiv Plovdiv",
-     "joueur": "?",
-     "minute": 64,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1643339,
-   "date": "2026-10-01T10:10:00+00:00",
-   "domicile": "Japan",
-   "exterieur": "Ecuador",
-   "proba": [
-    33,
-    34,
-    33
-   ],
-   "resultat_reel": "nul",
-   "score": [
-    0,
-    0
-   ],
-   "buteurs": []
   }
  ],
- "taux_reussite": 59,
- "nb_verifies": 68,
- "maj_resultats": "2026-11-11T17:57:57.856851+00:00"
+ "taux_reussite": 58,
+ "nb_verifies": 71,
+ "maj_resultats": "2026-11-12T00:55:00.343415+00:00"
 }

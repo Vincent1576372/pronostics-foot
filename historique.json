@@ -774,7 +774,7 @@
    49
   ],
   "resultat_reel": null,
-  "tentatives": 8
+  "tentatives": 9
  },
  {
   "fixture_id": 1640226,
@@ -787,7 +787,7 @@
    3
   ],
   "resultat_reel": null,
-  "tentatives": 8
+  "tentatives": 9
  },
  {
   "fixture_id": 1640227,
@@ -800,7 +800,7 @@
    32
   ],
   "resultat_reel": null,
-  "tentatives": 8
+  "tentatives": 9
  },
  {
   "fixture_id": 1640263,
@@ -1878,7 +1878,7 @@
    10
   ],
   "resultat_reel": null,
-  "tentatives": 8
+  "tentatives": 9
  },
  {
   "fixture_id": 1635988,
@@ -1891,7 +1891,7 @@
    3
   ],
   "resultat_reel": null,
-  "tentatives": 8
+  "tentatives": 9
  },
  {
   "fixture_id": 1643812,
@@ -2223,9 +2223,14 @@
    24,
    52
   ],
-  "resultat_reel": null,
+  "resultat_reel": "dom",
   "lh": 1.238,
-  "la": 1.913
+  "la": 1.913,
+  "score": [
+   3,
+   0
+  ],
+  "buteurs": []
  },
  {
   "source": "sdb",
@@ -2239,9 +2244,14 @@
    23,
    19
   ],
-  "resultat_reel": null,
+  "resultat_reel": "ext",
   "lh": 2.061,
-  "la": 1.112
+  "la": 1.112,
+  "score": [
+   1,
+   2
+  ],
+  "buteurs": []
  },
  {
   "source": "sdb",
@@ -2255,8 +2265,13 @@
    26,
    26
   ],
-  "resultat_reel": null,
+  "resultat_reel": "dom",
   "lh": 1.71,
-  "la": 1.219
+  "la": 1.219,
+  "score": [
+   2,
+   1
+  ],
+  "buteurs": []
  }
 ]
