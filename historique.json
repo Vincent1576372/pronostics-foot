@@ -2293,7 +2293,12 @@
   ],
   "lh": 1.184,
   "la": 1.941,
-  "resultat_reel": null
+  "resultat_reel": "ext",
+  "score": [
+   1,
+   2
+  ],
+  "buteurs": []
  },
  {
   "source": "sdb",

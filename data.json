@@ -3998,6 +3998,27 @@
  "historique": [
   {
    "source": "sdb",
+   "fixture_id": "2442822",
+   "date": "2026-11-12T17:00:00+00:00",
+   "competition": "UEFA Nations League",
+   "domicile": "Turkey",
+   "exterieur": "Belgium",
+   "proba": [
+    22,
+    24,
+    54
+   ],
+   "lh": 1.184,
+   "la": 1.941,
+   "resultat_reel": "ext",
+   "score": [
+    1,
+    2
+   ],
+   "buteurs": []
+  },
+  {
+   "source": "sdb",
    "fixture_id": "2431542",
    "date": "2026-11-11T22:00:00+00:00",
    "competition": "Brazilian Serie B",
@@ -4749,63 +4770,9 @@
      "prolongation": null
     }
    ]
-  },
-  {
-   "fixture_id": 1641717,
-   "date": "2026-10-02T09:00:00+00:00",
-   "domicile": "Vietnam",
-   "exterieur": "Pakistan",
-   "proba": [
-    47,
-    45,
-    8
-   ],
-   "resultat_reel": "dom",
-   "score": [
-    4,
-    2
-   ],
-   "buteurs": [
-    {
-     "equipe": "Pakistan",
-     "joueur": "Mohib Ullah",
-     "minute": 31,
-     "prolongation": null
-    },
-    {
-     "equipe": "Vietnam",
-     "joueur": "Nguyen Hai Long",
-     "minute": 50,
-     "prolongation": null
-    },
-    {
-     "equipe": "Vietnam",
-     "joueur": "Nguyen Hoang Duc",
-     "minute": 57,
-     "prolongation": null
-    },
-    {
-     "equipe": "Vietnam",
-     "joueur": "Nguyen Dinh Bac",
-     "minute": 80,
-     "prolongation": null
-    },
-    {
-     "equipe": "Pakistan",
-     "joueur": "Kaleemullah Khan",
-     "minute": 88,
-     "prolongation": null
-    },
-    {
-     "equipe": "Vietnam",
-     "joueur": "Lee Williams",
-     "minute": 90,
-     "prolongation": 1
-    }
-   ]
   }
  ],
  "taux_reussite": 58,
- "nb_verifies": 71,
- "maj_resultats": "2026-11-12T18:29:28.160324+00:00"
+ "nb_verifies": 72,
+ "maj_resultats": "2026-11-12T23:47:49.544244+00:00"
 }
