@@ -2278,5 +2278,53 @@
    1
   ],
   "buteurs": []
+ },
+ {
+  "source": "sdb",
+  "fixture_id": "2442822",
+  "date": "2026-11-12T17:00:00+00:00",
+  "competition": "UEFA Nations League",
+  "domicile": "Turkey",
+  "exterieur": "Belgium",
+  "proba": [
+   22,
+   24,
+   54
+  ],
+  "lh": 1.184,
+  "la": 1.941,
+  "resultat_reel": null
+ },
+ {
+  "source": "sdb",
+  "fixture_id": "2431543",
+  "date": "2026-11-12T22:00:00+00:00",
+  "competition": "Brazilian Serie B",
+  "domicile": "Ponte Preta",
+  "exterieur": "Operário Ferroviário",
+  "proba": [
+   41,
+   24,
+   35
+  ],
+  "lh": 1.733,
+  "la": 1.58,
+  "resultat_reel": null
+ },
+ {
+  "source": "sdb",
+  "fixture_id": "2431544",
+  "date": "2026-11-12T23:00:00+00:00",
+  "competition": "Brazilian Serie B",
+  "domicile": "São Bernardo",
+  "exterieur": "Athletic Club-MG",
+  "proba": [
+   54,
+   22,
+   24
+  ],
+  "lh": 2.152,
+  "la": 1.418,
+  "resultat_reel": null
  }
 ]
