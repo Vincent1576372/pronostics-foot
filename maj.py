@@ -27,6 +27,10 @@ PTS = {"V": 3, "N": 1, "D": 0}
 MAXB = 10              # on calcule les scores de 0 a 10 buts par equipe
 RHO = -0.08            # correction Dixon-Coles (un peu plus de 0-0 et de 1-1)
 MOY_EQUIPE = 1.35      # buts par equipe et par match par defaut
+K_LISSAGE = 16.0       # banc d'essai : poids du passe du classement (avant : 5)
+K_PETITS = 5.0         # petits matchs : on n'a que 5 matchs de forme
+DISP = 0.8             # banc d'essai : prudence, on rapproche les previsions de la moyenne
+MEMOIRE = 0.5          # banc d'essai : la saison precedente compte comme une demi-saison
 LAMBDA_DEF = (1.485, 1.215)  # buts attendus par defaut (domicile, exterieur)
 PART_MT1 = 0.45        # part des buts marques en 1re mi-temps (moyenne du football)
 PROFIL_15MIN = [0.14, 0.15, 0.16, 0.17, 0.18, 0.20]  # buts par tranche de 15 minutes
@@ -127,19 +131,36 @@ def face_fd(mid, hid, aid):
     return v_h, nuls, v_a
 
 
+def lire_tableaux(data):
+    tabs = {"TOTAL": {}, "HOME": {}, "AWAY": {}}
+    for bloc in data.get("standings", []):
+        t = bloc.get("type")
+        if t not in tabs:
+            continue
+        for ligne in bloc.get("table", []):
+            if ligne.get("playedGames"):
+                tabs[t][ligne["team"]["id"]] = dict(ligne)
+    return tabs
+
+
 def charger_classements(codes):
-    """Classements TOTAL / HOME / AWAY de chaque competition : {code: {type: {id_equipe: ligne}}}."""
+    """Classements TOTAL / HOME / AWAY de chaque competition (+ saison precedente, si disponible)."""
     out = {}
     for code in sorted(codes):
         data = fd(f"/competitions/{code}/standings")
-        tabs = {"TOTAL": {}, "HOME": {}, "AWAY": {}}
-        for bloc in data.get("standings", []):
-            t = bloc.get("type")
-            if t not in tabs:
-                continue
-            for ligne in bloc.get("table", []):
-                if ligne.get("playedGames"):
-                    tabs[t][ligne["team"]["id"]] = ligne
+        tabs = lire_tableaux(data)
+        annee = ((data.get("season") or {}).get("startDate") or "")[:4]
+        if MEMOIRE > 0 and code != "CL" and annee.isdigit():
+            ancien = lire_tableaux(fd(f"/competitions/{code}/standings", {"season": int(annee) - 1}))
+            n = 0
+            for typ, tab in ancien.items():
+                for tid, r in tab.items():
+                    ligne = tabs[typ].setdefault(tid, {"team": {"id": tid}, "playedGames": 0,
+                                                       "goalsFor": 0, "goalsAgainst": 0})
+                    for cle in ("playedGames", "goalsFor", "goalsAgainst"):
+                        ligne[cle] = (ligne.get(cle) or 0) + MEMOIRE * (r.get(cle) or 0)
+                    n += 1
+            print("Saison precedente", code, ":", ("ajoutee (%d lignes)" % n) if n else "indisponible")
         out[code] = tabs
     return out
 
@@ -218,7 +239,7 @@ def somme(m, f):
     return sum(m[i][j] for i in range(MAXB + 1) for j in range(MAXB + 1) if f(i, j))
 
 
-def lisse(total, n, moyenne, k=5):
+def lisse(total, n, moyenne, k=K_LISSAGE):
     """Ramene vers la moyenne quand on a peu de matchs."""
     return (total + k * moyenne) / (n + k)
 
@@ -256,9 +277,14 @@ def lambdas_sdb(buts_h, buts_a):
         return len(liste), sum(x[0] for x in liste), sum(x[1] for x in liste)
     nh, gfh, gah = stats(buts_h)
     na, gfa, gaa = stats(buts_a)
-    ah, dh = lisse(gfh, nh, MOY_EQUIPE), lisse(gah, nh, MOY_EQUIPE)
-    aa, da = lisse(gfa, na, MOY_EQUIPE), lisse(gaa, na, MOY_EQUIPE)
+    ah, dh = lisse(gfh, nh, MOY_EQUIPE, K_PETITS), lisse(gah, nh, MOY_EQUIPE, K_PETITS)
+    aa, da = lisse(gfa, na, MOY_EQUIPE, K_PETITS), lisse(gaa, na, MOY_EQUIPE, K_PETITS)
     return ah * da / MOY_EQUIPE * 1.10, aa * dh / MOY_EQUIPE * 0.90
+
+
+def disperser(lh, la):
+    """Prudence : le banc d'essai montrait des pourcentages trop confiants, on les rapproche de la moyenne."""
+    return (LAMBDA_DEF[0] * (lh / LAMBDA_DEF[0]) ** DISP, LAMBDA_DEF[1] * (la / LAMBDA_DEF[1]) ** DISP)
 
 
 def ajuster(lh, la, forme_h, forme_a, v_h, v_a, avec_forme):
@@ -270,6 +296,7 @@ def ajuster(lh, la, forme_h, forme_a, v_h, v_a, avec_forme):
     d2 = v_h - v_a
     lh *= 1 + 0.015 * d2
     la *= 1 - 0.015 * d2
+    lh, la = disperser(lh, la)
     return min(3.5, max(0.3, lh)), min(3.5, max(0.3, la))
 
 
@@ -326,6 +353,15 @@ def jointe_mt_fin(principal, mu1h, mu1a, mu2h, mu2a):
     return J, ht
 
 
+def fiabilite(nom):
+    """Niveau mesure par le banc d'essai (3 802 matchs jamais vus). None = marche pas encore mesure."""
+    if nom.startswith("Total de buts (") or nom == "Les deux équipes marquent":
+        return "Faible"
+    if nom == "Double chance" or nom.startswith("Total Domicile") or nom.startswith("Total Extérieur"):
+        return "Moyenne"
+    return None
+
+
 def pct(p):
     return round(100 * max(0.0, min(1.0, p)), 1)
 
@@ -334,7 +370,7 @@ def tous_les_marches(m, lh, la):
     out = []
 
     def ajouter(groupe, nom, issues, approx=False):
-        out.append({"groupe": groupe, "nom": nom, "approx": approx,
+        out.append({"groupe": groupe, "nom": nom, "approx": approx, "fiab": fiabilite(nom),
                     "issues": [{"n": n, "p": pct(p)} for n, p in issues]})
 
     P = lambda f: somme(m, f)
@@ -494,7 +530,7 @@ def tous_les_marches(m, lh, la):
 
 
 def prevoir(lh0, la0, forme_h, forme_a, v_h, v_a, avec_forme):
-    m0 = matrice(lh0, la0)
+    m0 = matrice(*disperser(lh0, la0))
     base = p1x2(m0)
     lh, la = ajuster(lh0, la0, forme_h, forme_a, v_h, v_a, avec_forme)
     m = matrice(lh, la)

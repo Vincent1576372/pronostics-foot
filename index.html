@@ -85,6 +85,8 @@ nav button.on{background:var(--acc);color:#0B1640;border-color:var(--acc)}
 .mk summary::after{content:"▾";color:var(--muted);font-weight:400}
 .mk[open] summary::after{content:"▴"}
 .nm1{flex:1;min-width:0}
+.fia{font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:99px;margin-left:8px;white-space:nowrap;color:#0B1640}
+.fia.Bonne{background:var(--ok)}.fia.Moyenne{background:var(--mid)}.fia.Faible{background:var(--bad)}
 .est{font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--draw);color:var(--ink);margin-left:8px;white-space:nowrap}
 .g{display:grid;gap:8px;padding:0 12px 12px}
 .g.c1{grid-template-columns:1fr}
@@ -196,7 +198,7 @@ if(!m.marches||!m.marches.length)return "";
 var fams=[];
 m.marches.forEach(function(x){if(fams.indexOf(x.groupe)<0)fams.push(x.groupe)});
 if(fams.indexOf(famActive)<0)famActive=fams[0];
-var h='<h2>Tous les marchés</h2><p class="note" style="margin-bottom:0">Probabilités estimées par notre modèle. « estimation » = calcul plus approximatif.</p><div class="fams">';
+var h='<h2>Tous les marchés</h2><p class="note" style="margin-bottom:0">Probabilités estimées par notre modèle. « Fiabilité » = mesurée sur des milliers de matchs passés ; sans indication, le marché n\'a pas encore été mesuré. « estimation » = calcul plus approximatif.</p><div class="fams">';
 fams.forEach(function(f){h+='<button class="fam'+(f==famActive?' on':'')+'" data-fam="'+esc(f)+'">'+esc(f)+'</button>'});
 h+='</div>';
 var liste=m.marches.filter(function(x){return x.groupe==famActive&&x.nom!="Résultat du match (1X2)"});
@@ -204,7 +206,7 @@ liste.forEach(function(x,k){
 var best=0,maxL=0;
 x.issues.forEach(function(s,j){if(s.p>x.issues[best].p)best=j;maxL=Math.max(maxL,nomEq(s.n,m).length)});
 var cols=(x.issues.length>=3&&maxL<=11)?"c3":(maxL<=24?"c2":"c1");
-h+='<details class="mk"'+(k<2?' open':'')+'><summary><span class="nm1">'+esc(nomEq(x.nom,m))+(x.approx?'<span class="est">estimation</span>':'')+'</span></summary><div class="g '+cols+'">';
+h+='<details class="mk"'+(k<2?' open':'')+'><summary><span class="nm1">'+esc(nomEq(x.nom,m))+(x.approx?'<span class="est">estimation</span>':'')+(x.fiab?'<span class="fia '+esc(x.fiab)+'">Fiabilité '+esc(x.fiab.toLowerCase())+'</span>':'')+'</span></summary><div class="g '+cols+'">';
 x.issues.forEach(function(s,j){h+='<div class="cell'+(j==best?' best':'')+'"><span class="lb">'+esc(nomEq(s.n,m))+'</span><span class="pc">'+fmt(s.p)+' %</span><i style="width:'+Math.min(100,s.p)+'%"></i></div>'});
 h+='</div></details>';
 });
@@ -217,7 +219,7 @@ c.querySelectorAll(".fam").forEach(function(b){b.onclick=function(){famActive=b.
 function methodeTxt(m){
 var aj=m.ajustement||0;
 if(!m.buts_attendus)return "Méthode : probabilités estimées à partir de la forme récente et des confrontations directes.";
-return "Méthode : on estime les buts que chaque équipe devrait marquer ("+fmt1(m.buts_attendus[0])+" et "+fmt1(m.buts_attendus[1])+"), d'après leurs buts marqués et encaissés, puis on calcule la probabilité de chaque score et de chaque marché. Base du 1X2 : "+m.base_api.join(" / ")+" (domicile / nul / extérieur), puis ajustement selon la forme et les confrontations directes ("+(aj>0?"+":"")+aj+" pts). Les marchés « estimation » appliquent la répartition moyenne des buts dans le temps. Les blessures ne sont pas prises en compte.";
+return "Méthode : on estime les buts que chaque équipe devrait marquer ("+fmt1(m.buts_attendus[0])+" et "+fmt1(m.buts_attendus[1])+"), d'après leurs buts marqués et encaissés, puis on calcule la probabilité de chaque score et de chaque marché. Base du 1X2 : "+m.base_api.join(" / ")+" (domicile / nul / extérieur), puis ajustement selon la forme et les confrontations directes ("+(aj>0?"+":"")+aj+" pts). Les marchés « estimation » appliquent la répartition moyenne des buts dans le temps. Les blessures ne sont pas prises en compte. Banc d'essai sur 3 802 matchs passés de 8 championnats : bon résultat trouvé dans environ 49 % des cas (toujours « domicile » : 43 %, cotes des bookmakers : 53 %).";
 }
 
 function detail(i){
