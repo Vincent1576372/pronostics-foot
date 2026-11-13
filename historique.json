@@ -2341,5 +2341,53 @@
    2
   ],
   "buteurs": []
+ },
+ {
+  "source": "sdb",
+  "fixture_id": "2442829",
+  "date": "2026-11-13T19:45:00+00:00",
+  "competition": "UEFA Nations League",
+  "domicile": "Serbia",
+  "exterieur": "Germany",
+  "proba": [
+   33,
+   28,
+   39
+  ],
+  "lh": 1.239,
+  "la": 1.375,
+  "resultat_reel": null
+ },
+ {
+  "source": "sdb",
+  "fixture_id": "2442830",
+  "date": "2026-11-13T19:45:00+00:00",
+  "competition": "UEFA Nations League",
+  "domicile": "Netherlands",
+  "exterieur": "Greece",
+  "proba": [
+   44,
+   29,
+   27
+  ],
+  "lh": 1.365,
+  "la": 1.014,
+  "resultat_reel": null
+ },
+ {
+  "source": "sdb",
+  "fixture_id": "2442831",
+  "date": "2026-11-13T19:45:00+00:00",
+  "competition": "UEFA Nations League",
+  "domicile": "Slovakia",
+  "exterieur": "Faroe Islands",
+  "proba": [
+   45,
+   28,
+   27
+  ],
+  "lh": 1.525,
+  "la": 1.132,
+  "resultat_reel": null
  }
 ]
