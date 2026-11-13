@@ -32,10 +32,10 @@ LIGUES = {"E0": "Premier League", "E1": "Championship", "SP1": "La Liga", "I1": 
 SAISONS = ["2122", "2223", "2324", "2425", "2526", "2627"]
 URL = "https://www.football-data.co.uk/mmz4281/{s}/{l}.csv"
 DOSSIER_LOCAL = os.environ.get("ETALONNAGE_DOSSIER")  # pour les tests hors ligne
-ACTUEL = {"k": 5.0, "forme": 0.008, "h2h": 0.015, "rho": -0.08, "memoire": 0.0}
-GRILLES = {"k": [2.0, 3.0, 5.0, 8.0, 12.0], "forme": [0.0, 0.004, 0.008, 0.012, 0.016],
-           "h2h": [0.0, 0.01, 0.015, 0.025, 0.04], "rho": [-0.14, -0.10, -0.06, -0.03, 0.0],
-           "memoire": [0.0, 0.25, 0.5, 1.0]}
+ACTUEL = {"k": 5.0, "forme": 0.008, "h2h": 0.015, "rho": -0.08, "memoire": 0.0, "disp": 1.0}
+GRILLES = {"k": [5.0, 8.0, 12.0, 16.0, 24.0, 40.0], "forme": [0.0, 0.008, 0.016, 0.024, 0.032],
+           "h2h": [0.0, 0.015, 0.03, 0.045, 0.06, 0.08], "rho": [-0.14, -0.10, -0.06, -0.03, 0.0],
+           "memoire": [0.0, 0.25, 0.5, 0.75, 1.0], "disp": [0.6, 0.7, 0.8, 0.9, 1.0, 1.1]}
 EPS = 1e-6
 GAIN_MINI = 2e-4  # un réglage n'est retenu que s'il améliore nettement l'objectif
 
@@ -150,6 +150,9 @@ def predire(m, etat, forme, h2h, P):
         v_a += gagnant == m["a"]
     lh *= 1 + P["h2h"] * (v_h - v_a)
     la *= 1 - P["h2h"] * (v_h - v_a)
+    base_h, base_a = LAMBDA_DEF
+    lh = base_h * (lh / base_h) ** P["disp"]  # disp < 1 : on rapproche les prévisions de la moyenne
+    la = base_a * (la / base_a) ** P["disp"]
     lh, la = min(3.5, max(0.3, lh)), min(3.5, max(0.3, la))
     return lh, la, matrice(lh, la)
 
@@ -384,8 +387,8 @@ def mi_temps(recs, saisons):
 
 
 # ---------------------------------------------------------------- reglages
-def optimiser(matchs, saisons_app):
-    P = dict(ACTUEL)
+def optimiser(matchs, saisons_app, depart, fixes=()):
+    P = dict(depart)
     histo = []
     meilleur = objectif(enregistrements(matchs, P), saisons_app)
     histo.append(("départ", dict(P), meilleur))
@@ -393,6 +396,8 @@ def optimiser(matchs, saisons_app):
     for tour in range(2):
         modifie = False
         for nom, valeurs in GRILLES.items():
+            if nom in fixes:
+                continue
             for v in valeurs:
                 if v == P[nom]:
                     continue
@@ -429,87 +434,105 @@ def main():
     print("apprentissage :", app, "| test (jamais vu) :", test)
 
     print("1) modele actuel")
-    recs0 = enregistrements(matchs, ACTUEL)
-    base = frequences_base(recs0, app)
-    print("2) recherche de meilleurs reglages (sur", app, "seulement)")
-    best, histo = optimiser(matchs, app)
-    print("3) mesures finales")
-    recs1 = enregistrements(matchs, best) if best != ACTUEL else recs0
-    out = {"saisons_apprentissage": app, "saisons_test": test, "reglages_actuels": ACTUEL, "reglages_proposes": best,
-           "nb_matchs": len(matchs), "nb_ligues": len({m["l"] for m in matchs})}
-    res = {}
-    for nom, recs in (("actuel", recs0), ("propose", recs1)):
-        res[nom] = {"test": evaluer_jeu(recs, test, base), "app": evaluer_jeu(recs, app, base),
-                    "just": justesse(recs, test), "cal": calibration(recs, test, "1X2"),
-                    "cal_o25": calibration(recs, test, "O2.5")}
-    mt = mi_temps(recs1, test)
-    ecrire_rapport(out, res, histo, mt, time.time() - t0)
+    recs_a = enregistrements(matchs, ACTUEL)
+    base = frequences_base(recs_a, app)
+    print("2) reglages SANS memoire (applicables tout de suite au robot)")
+    P_sans, h_sans = optimiser(matchs, app, ACTUEL, fixes=("memoire",))
+    print("3) reglages AVEC memoire de la saison precedente")
+    P_avec, h_avec = optimiser(matchs, app, P_sans)
+    print("4) mesures finales")
+    recs_s = enregistrements(matchs, P_sans) if P_sans != ACTUEL else recs_a
+    recs_m = enregistrements(matchs, P_avec) if P_avec != P_sans else recs_s
+    jeux = {}
+    for nom, recs in (("actuel", recs_a), ("sans", recs_s), ("avec", recs_m)):
+        jeux[nom] = {"test": evaluer_jeu(recs, test, base), "just": justesse(recs, test),
+                     "cal": calibration(recs, test, "1X2")}
+    print("5) effet de chaque changement, pris isolement, sur les matchs jamais vus")
+    obj_actuel = objectif(recs_a, test)
+    isole = []
+    for nom in GRILLES:
+        if P_sans[nom] != ACTUEL[nom]:
+            Q = dict(ACTUEL)
+            Q[nom] = P_sans[nom]
+            isole.append((nom, ACTUEL[nom], P_sans[nom], objectif(enregistrements(matchs, Q), test) - obj_actuel))
+    if P_avec["memoire"] != ACTUEL["memoire"]:
+        Q = dict(ACTUEL)
+        Q["memoire"] = P_avec["memoire"]
+        isole.append(("memoire", ACTUEL["memoire"], P_avec["memoire"], objectif(enregistrements(matchs, Q), test) - obj_actuel))
+    mt = mi_temps(recs_s, test)
+    out = {"saisons_apprentissage": app, "saisons_test": test, "reglages_actuels": ACTUEL, "reglages_sans": P_sans,
+           "reglages_avec": P_avec, "nb_matchs": len(matchs), "nb_ligues": len({m["l"] for m in matchs})}
+    ecrire_rapport(out, jeux, isole, (h_sans, h_avec), mt, time.time() - t0)
 
 
-def ecrire_rapport(out, res, histo, mt, duree):
-    A, B = res["actuel"], res["propose"]
+NOMS_REGLAGES = {"k": "Poids du passé du classement (lissage)", "forme": "Poids de la forme récente",
+                 "h2h": "Poids des confrontations directes", "rho": "Correction des petits scores (nuls)",
+                 "memoire": "Mémoire de la saison précédente", "disp": "Prudence des pourcentages (1 = aucune)"}
+
+
+def niveau(prog):
+    return "Bonne" if prog >= 0.07 else ("Moyenne" if prog >= 0.03 else "Faible")
+
+
+def ecrire_rapport(out, jeux, isole, histos, mt, duree):
+    A, S, M = jeux["actuel"], jeux["sans"], jeux["avec"]
     nt = A["test"]["1X2"]["n"]
-    L = ["# Banc d'essai du modèle VM_R", "",
+    L = ["# Banc d'essai du modèle VM_R (version 2)", "",
          f"Généré le {datetime.now().strftime('%d/%m/%Y %H:%M')} · {out['nb_matchs']} matchs passés · "
          f"{out['nb_ligues']} championnats · durée {int(duree)} s", "",
-         f"Le modèle est réglé sur les saisons **{', '.join(out['saisons_apprentissage'])}** puis jugé sur "
-         f"**{', '.join(out['saisons_test'])}** ({nt} matchs qu'il n'a jamais vus pendant le réglage). "
-         "Pour chaque match, le modèle ne reçoit que ce qu'on savait avant le coup d'envoi.", ""]
-    ja, jb = A["just"], B["just"]
+         f"Réglage sur les saisons **{', '.join(out['saisons_apprentissage'])}**, jugement sur "
+         f"**{', '.join(out['saisons_test'])}** ({nt} matchs jamais vus pendant le réglage). "
+         "Pour chaque match, le modèle ne reçoit que ce qu'on savait avant le coup d'envoi.", "",
+         "« Sans mémoire » = réglages applicables tout de suite au robot. « Avec mémoire » = en plus, on tient compte de la saison précédente (à brancher plus tard).", ""]
     L += ["## 1. Résultat du match (1X2) — matchs jamais vus", "",
-          "| | Modèle actuel | Modèle réglé | Cotes du marché | Toujours « domicile » |", "|---|---|---|---|---|",
-          f"| Bon résultat trouvé | {pc(ja['modele'])} | {pc(jb['modele'])} | {pc(ja['marche'])} | {pc(ja['domicile'])} |", ""]
-    e1a, e1b = A["test"]["1X2"], B["test"]["1X2"]
-    L += ["Perte logarithmique du 1X2 (plus bas = mieux ; mesure la qualité des pourcentages, pas seulement le bon résultat) :", "",
-          f"- hasard moyen : **{fr(e1a['bas'] / e1a['n'])}**",
-          f"- modèle actuel : **{fr(e1a['mod'] / e1a['n'])}**",
-          f"- modèle réglé : **{fr(e1b['mod'] / e1b['n'])}**"]
-    if e1a["n_mk"]:
-        L.append(f"- cotes du marché : **{fr(e1a['mk'] / e1a['n_mk'])}** (sur {e1a['n_mk']} matchs avec cotes ; le modèle actuel y fait {fr(e1a['mod_mk'] / e1a['n_mk'])})")
-    L += ["", "## 2. Fiabilité des pourcentages (1X2, modèle réglé)", "",
-          "Quand le modèle annonce une certaine probabilité pour sa meilleure issue, combien de fois ça arrive vraiment ?", "",
+          "| | Actuel | Réglé sans mémoire | Réglé avec mémoire | Cotes du marché | Toujours « domicile » |", "|---|---|---|---|---|---|",
+          f"| Bon résultat trouvé | {pc(A['just']['modele'])} | {pc(S['just']['modele'])} | {pc(M['just']['modele'])} | {pc(A['just']['marche'])} | {pc(A['just']['domicile'])} |", ""]
+    e = {k: J["test"]["1X2"] for k, J in jeux.items()}
+    L += ["Perte logarithmique du 1X2 (plus bas = mieux ; mesure la qualité des pourcentages) :", "",
+          f"- hasard moyen : **{fr(e['actuel']['bas'] / e['actuel']['n'])}**",
+          f"- modèle actuel : **{fr(e['actuel']['mod'] / e['actuel']['n'])}**",
+          f"- réglé sans mémoire : **{fr(e['sans']['mod'] / e['sans']['n'])}**",
+          f"- réglé avec mémoire : **{fr(e['avec']['mod'] / e['avec']['n'])}**"]
+    if e["actuel"]["n_mk"]:
+        L.append(f"- cotes du marché : **{fr(e['actuel']['mk'] / e['actuel']['n_mk'])}**")
+    L += ["", "## 2. Fiabilité des pourcentages (1X2, réglé sans mémoire)", "",
+          "Quand le modèle annonce une probabilité pour sa meilleure issue, combien de fois ça arrive vraiment ?", "",
           "| Annoncé | Matchs | Annoncé en moyenne | Réellement arrivé |", "|---|---|---|---|"]
-    for lo, hi, n, moy, ok in B["cal"]:
+    for lo, hi, n, moy, ok in S["cal"]:
         L.append(f"| {int(lo * 100)}–{min(100, int(hi * 100))} % | {n} | {pc(moy)} | {pc(ok)} |")
-    L += ["", "## 3. Autres marchés — modèle réglé, matchs jamais vus", "",
-          "Progrès = amélioration de la perte logarithmique par rapport à la fréquence moyenne (hasard moyen).", "",
-          "| Marché | Matchs | Progrès sur le hasard | Écart avec le marché |", "|---|---|---|---|"]
-    for e, nom in NOMS.items():
-        r = B["test"][e]
+    L += ["", "## 3. Autres marchés — réglé sans mémoire, matchs jamais vus", "",
+          "Progrès = amélioration de la perte logarithmique par rapport à la fréquence moyenne. Fiabilité : Bonne ≥ 7 %, Moyenne 3–7 %, Faible < 3 %.", "",
+          "| Marché | Matchs | Progrès | Fiabilité | Écart avec le marché |", "|---|---|---|---|---|"]
+    for ev, nom in NOMS.items():
+        r = S["test"][ev]
         prog = 1 - r["mod"] / r["bas"] if r["bas"] else 0
-        ecart = ""
-        if e == "O2.5" and r["n_mk"]:
-            ecart = f"modèle {fr(r['mod_mk'] / r['n_mk'])} · marché {fr(r['mk'] / r['n_mk'])}"
-        L.append(f"| {nom} | {r['n']} | {pc(prog)} | {ecart} |")
-    L += ["", "## 4. Réglages", "", "| | Actuel | Proposé |", "|---|---|---|"]
-    noms = {"k": "Poids du passé du classement (lissage)", "forme": "Poids de la forme récente",
-            "h2h": "Poids des confrontations directes", "rho": "Correction des petits scores (nuls)",
-            "memoire": "Mémoire de la saison précédente"}
-    for k, nom in noms.items():
-        L.append(f"| {nom} | {out['reglages_actuels'][k]} | {out['reglages_proposes'][k]} |")
-    L += ["", "« Mémoire de la saison précédente » : 0 = on repart de zéro à chaque saison ; 0,5 = le bilan de la saison passée compte comme une demi-saison de matchs au départ.", "", "Étapes de l'optimisation (objectif sur les saisons d'apprentissage, plus bas = mieux) :", ""]
-    for nom, P, sc in histo:
-        L.append(f"- {nom} → {fr(sc, 5)}")
-    ta, tb = objectif_moyen(A["test"]), objectif_moyen(B["test"])
-    L += ["", f"Sur les matchs **jamais vus** : objectif {fr(ta, 5)} (actuel) → {fr(tb, 5)} (réglé). "
-          + ("Le réglage améliore bien le modèle." if tb < ta - GAIN_MINI else "Le réglage n'améliore pas le modèle sur les matchs jamais vus : on garde les réglages actuels.")]
+        ecart = f"modèle {fr(r['mod_mk'] / r['n_mk'])} · marché {fr(r['mk'] / r['n_mk'])}" if (ev == "O2.5" and r["n_mk"]) else ""
+        L.append(f"| {nom} | {r['n']} | {pc(prog)} | {niveau(prog)} | {ecart} |")
+    L += ["", "## 4. Réglages", "", "| | Actuel | Sans mémoire | Avec mémoire |", "|---|---|---|---|"]
+    for k, nom in NOMS_REGLAGES.items():
+        L.append(f"| {nom} | {out['reglages_actuels'][k]} | {out['reglages_sans'][k]} | {out['reglages_avec'][k]} |")
+    L += ["", "Valeurs testées pour chaque réglage : " + " ; ".join(f"{NOMS_REGLAGES[k].split(' (')[0]} {v}" for k, v in GRILLES.items()) + ".", ""]
+    L += ["## 5. Effet de chaque changement, pris isolément, sur les matchs jamais vus", "",
+          "Variation de l'objectif (plus bas = mieux ; un écart inférieur à 0,0005 est dans le bruit).", "",
+          "| Réglage | Avant → après | Effet |", "|---|---|---|"]
+    for nom, av, ap, delta in isole:
+        verdict = "mieux" if delta < -5e-4 else ("pire" if delta > 5e-4 else "neutre")
+        L.append(f"| {NOMS_REGLAGES[nom]} | {av} → {ap} | {('+' if delta > 0 else '')}{fr(delta, 4)} ({verdict}) |")
+    ta, ts, tm = (objectif_moyen(J["test"]) for J in (A, S, M))
+    L += ["", f"Objectif global sur les matchs jamais vus : actuel {fr(ta, 5)} · sans mémoire {fr(ts, 5)} · avec mémoire {fr(tm, 5)}.", ""]
     if mt:
-        L += ["", "## 5. Mi-temps", "",
+        L += ["## 6. Mi-temps", "",
               f"Part réelle des buts marqués en 1re mi-temps : **{pc(mt['part_reelle'])}** (notre modèle suppose 45 %, {mt['n']} matchs). "
               f"Meilleure valeur testée : **{int(mt['meilleure'] * 100)} %**."]
     open("etalonnage.md", "w", encoding="utf-8").write("\n".join(L) + "\n")
-    out["resume"] = {"justesse_actuel": ja, "justesse_propose": jb, "objectif_test": {"actuel": ta, "propose": tb},
-                     "mi_temps": mt}
+    out["resume"] = {"objectif_test": {"actuel": ta, "sans": ts, "avec": tm}, "isole": isole, "mi_temps": mt,
+                     "justesse": {k: J["just"] for k, J in jeux.items()}}
     json.dump(out, open("etalonnage.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1, default=str)
-    print("\n".join(L[:40]))
+    print("\n".join(L[:30]))
 
 
 def objectif_moyen(res):
-    tot = n = 0
-    for e in OBJECTIF:
-        tot += res[e]["mod"] / res[e]["n"]
-        n += 1
-    return tot / n
+    return sum(res[e]["mod"] / res[e]["n"] for e in OBJECTIF) / len(OBJECTIF)
 
 
 main()
