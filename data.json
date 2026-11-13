@@ -3998,6 +3998,48 @@
  "historique": [
   {
    "source": "sdb",
+   "fixture_id": "2431544",
+   "date": "2026-11-12T23:00:00+00:00",
+   "competition": "Brazilian Serie B",
+   "domicile": "São Bernardo",
+   "exterieur": "Athletic Club-MG",
+   "proba": [
+    54,
+    22,
+    24
+   ],
+   "lh": 2.152,
+   "la": 1.418,
+   "resultat_reel": "nul",
+   "score": [
+    2,
+    2
+   ],
+   "buteurs": []
+  },
+  {
+   "source": "sdb",
+   "fixture_id": "2431543",
+   "date": "2026-11-12T22:00:00+00:00",
+   "competition": "Brazilian Serie B",
+   "domicile": "Ponte Preta",
+   "exterieur": "Operário Ferroviário",
+   "proba": [
+    41,
+    24,
+    35
+   ],
+   "lh": 1.733,
+   "la": 1.58,
+   "resultat_reel": "ext",
+   "score": [
+    0,
+    2
+   ],
+   "buteurs": []
+  },
+  {
+   "source": "sdb",
    "fixture_id": "2442822",
    "date": "2026-11-12T17:00:00+00:00",
    "competition": "UEFA Nations League",
@@ -4704,75 +4746,9 @@
      "prolongation": null
     }
    ]
-  },
-  {
-   "fixture_id": 1640106,
-   "date": "2026-10-02T09:00:00+00:00",
-   "domicile": "PWD Sports Club",
-   "exterieur": "Brothers Union",
-   "proba": [
-    46,
-    45,
-    9
-   ],
-   "resultat_reel": "nul",
-   "score": [
-    1,
-    1
-   ],
-   "buteurs": [
-    {
-     "equipe": "Brothers Union",
-     "joueur": "J. Santana",
-     "minute": 26,
-     "prolongation": null
-    },
-    {
-     "equipe": "PWD Sports Club",
-     "joueur": "Y. Mbida",
-     "minute": 60,
-     "prolongation": null
-    }
-   ]
-  },
-  {
-   "fixture_id": 1641716,
-   "date": "2026-10-02T09:00:00+00:00",
-   "domicile": "Thailand",
-   "exterieur": "Philippines",
-   "proba": [
-    49,
-    48,
-    3
-   ],
-   "resultat_reel": "ext",
-   "score": [
-    1,
-    2
-   ],
-   "buteurs": [
-    {
-     "equipe": "Philippines",
-     "joueur": "Bjorn Martin Kristensen",
-     "minute": 3,
-     "prolongation": null
-    },
-    {
-     "equipe": "Thailand",
-     "joueur": "Iklas Sanron",
-     "minute": 55,
-     "prolongation": null
-    },
-    {
-     "equipe": "Philippines",
-     "joueur": "Bjorn Martin Kristensen",
-     "minute": 68,
-     "prolongation": null
-    }
-   ]
   }
  ],
- "taux_reussite": 58,
- "nb_verifies": 72,
- "maj_resultats": "2026-11-12T23:47:49.544244+00:00"
+ "taux_reussite": 57,
+ "nb_verifies": 74,
+ "maj_resultats": "2026-11-13T07:01:16.982244+00:00"
 }
