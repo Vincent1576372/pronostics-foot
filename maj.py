@@ -8,9 +8,11 @@ import json
 import os
 import time
 from datetime import datetime, timedelta, timezone
-from math import comb, exp, factorial
+from math import exp, factorial
 
 import requests
+
+from moteur import tous_les_marches  # marches et verification apres match (fichier moteur.py)
 
 CLE_FD = os.environ["FOOTBALL_DATA_KEY"]
 FD = "https://api.football-data.org/v4"
@@ -32,8 +34,6 @@ K_PETITS = 5.0         # petits matchs : on n'a que 5 matchs de forme
 DISP = 0.8             # banc d'essai : prudence, on rapproche les previsions de la moyenne
 MEMOIRE = 0.5          # banc d'essai : la saison precedente compte comme une demi-saison
 LAMBDA_DEF = (1.485, 1.215)  # buts attendus par defaut (domicile, exterieur)
-PART_MT1 = 0.45        # part des buts marques en 1re mi-temps (moyenne du football)
-PROFIL_15MIN = [0.14, 0.15, 0.16, 0.17, 0.18, 0.20]  # buts par tranche de 15 minutes
 HIST = "historique.json"
 DATA = "data.json"
 
@@ -305,230 +305,6 @@ def p1x2(m):
             somme(m, lambda i, j: i < j))
 
 
-def sans_remontee(i, j, cache={}):
-    """Parcours possibles ou l'equipe de gauche n'est jamais menee (pour 'revient au score')."""
-    if not cache:
-        n = MAXB + 1
-        t = [[0] * n for _ in range(n)]
-        for a in range(n):
-            for b in range(n):
-                if a < b:
-                    continue
-                if a == 0 and b == 0:
-                    t[a][b] = 1
-                else:
-                    t[a][b] = (t[a - 1][b] if a >= 1 else 0) + (t[a][b - 1] if b >= 1 else 0)
-        cache["t"] = t
-    return cache["t"][i][j]
-
-
-def jointe_mt_fin(principal, mu1h, mu1a, mu2h, mu2a):
-    """Probabilite (resultat mi-temps, resultat final), 0=dom 1=nul 2=ext, calee sur le modele principal."""
-    N = 9
-    p1 = [[poisson(a, mu1h) * poisson(b, mu1a) for b in range(N)] for a in range(N)]
-    p2 = [[poisson(c, mu2h) * poisson(d, mu2a) for d in range(N)] for c in range(N)]
-    J = [[0.0] * 3 for _ in range(3)]
-    ht = [0.0] * 3
-    for a in range(N):
-        for b in range(N):
-            r1 = 0 if a > b else (1 if a == b else 2)
-            ht[r1] += p1[a][b]
-            for c in range(N):
-                for d in range(N):
-                    fa, fb = a + c, b + d
-                    r2 = 0 if fa > fb else (1 if fa == fb else 2)
-                    J[r1][r2] += p1[a][b] * p2[c][d]
-    tot_ht = sum(ht)
-    ht = [x / tot_ht for x in ht]
-    for _ in range(30):  # on cale les lignes sur la mi-temps, puis les colonnes sur le resultat final
-        for r1 in range(3):
-            s_ = sum(J[r1])
-            if s_ > 0:
-                J[r1] = [x * ht[r1] / s_ for x in J[r1]]
-        for r2 in range(3):
-            s_ = sum(J[r1][r2] for r1 in range(3))
-            if s_ > 0:
-                for r1 in range(3):
-                    J[r1][r2] *= principal[r2] / s_
-    return J, ht
-
-
-def fiabilite(nom):
-    """Niveau mesure par le banc d'essai (3 802 matchs jamais vus). None = marche pas encore mesure."""
-    if nom.startswith("Total de buts (") or nom == "Les deux équipes marquent":
-        return "Faible"
-    if nom == "Double chance" or nom.startswith("Total Domicile") or nom.startswith("Total Extérieur"):
-        return "Moyenne"
-    return None
-
-
-def pct(p):
-    return round(100 * max(0.0, min(1.0, p)), 1)
-
-
-def tous_les_marches(m, lh, la):
-    out = []
-
-    def ajouter(groupe, nom, issues, approx=False):
-        out.append({"groupe": groupe, "nom": nom, "approx": approx, "fiab": fiabilite(nom),
-                    "issues": [{"n": n, "p": pct(p)} for n, p in issues]})
-
-    P = lambda f: somme(m, f)
-    dom, nul, ext = p1x2(m)
-    R, B, C, S, D, T = "Résultat", "Buts", "Combinés", "Score exact", "Déroulement", "Mi-temps"
-
-    # ----- Résultat -----
-    ajouter(R, "Résultat du match (1X2)", [("Domicile", dom), ("Nul", nul), ("Extérieur", ext)])
-    ajouter(R, "Double chance", [("Domicile ou nul", dom + nul), ("Domicile ou extérieur", dom + ext),
-                                 ("Nul ou extérieur", nul + ext)])
-    ajouter(R, "Remboursé si match nul", [("Domicile", dom / (dom + ext)), ("Extérieur", ext / (dom + ext))])
-    iss = [("Domicile par %d but%s" % (k, "s" if k > 1 else ""), P(lambda i, j, k=k: i - j == k)) for k in (1, 2, 3)]
-    iss.append(("Domicile par 4 buts ou plus", P(lambda i, j: i - j >= 4)))
-    iss.append(("Nul", nul))
-    iss += [("Extérieur par %d but%s" % (k, "s" if k > 1 else ""), P(lambda i, j, k=k: j - i == k)) for k in (1, 2, 3)]
-    iss.append(("Extérieur par 4 buts ou plus", P(lambda i, j: j - i >= 4)))
-    ajouter(R, "Va gagner par", iss)
-    ajouter(R, "Victoire sans encaisser de but", [("Domicile", P(lambda i, j: i > j and j == 0)),
-                                                  ("Extérieur", P(lambda i, j: j > i and i == 0))])
-    ajouter(R, "N'encaisse pas de but", [("Domicile n'encaisse pas", P(lambda i, j: j == 0)),
-                                        ("Extérieur n'encaisse pas", P(lambda i, j: i == 0))])
-    for h in (-2, -1, 1, 2):
-        sg = lambda x: ("+%d" % x) if x > 0 else ("%d" % x)
-        ajouter(R, "Handicap européen Domicile (%s)" % sg(h),
-                [("Domicile (%s)" % sg(h), P(lambda i, j, h=h: i + h > j)),
-                 ("Nul (%s)" % sg(h), P(lambda i, j, h=h: i + h == j)),
-                 ("Extérieur (%s)" % sg(-h), P(lambda i, j, h=h: i + h < j))])
-    for h in (-1.5, -0.5, 0.5, 1.5):
-        p_dom = P(lambda i, j, h=h: i + h > j)
-        ajouter(R, "Handicap asiatique Domicile (%+.1f)" % h,
-                [("Domicile (%+.1f)" % h, p_dom), ("Extérieur (%+.1f)" % -h, 1 - p_dom)])
-
-    # ----- Buts -----
-    for L in (0.5, 1.5, 2.5, 3.5, 4.5, 5.5):
-        p_plus = P(lambda i, j, L=L: i + j > L)
-        ajouter(B, "Total de buts (%.1f)" % L, [("Plus de %.1f" % L, p_plus), ("Moins de %.1f" % L, 1 - p_plus)])
-    for nom, idx in (("Domicile", 0), ("Extérieur", 1)):
-        for L in (0.5, 1.5, 2.5):
-            p_plus = P(lambda i, j, L=L, idx=idx: (i if idx == 0 else j) > L)
-            ajouter(B, "Total %s (%.1f)" % (nom, L), [("Plus de %.1f" % L, p_plus), ("Moins de %.1f" % L, 1 - p_plus)])
-    btts = P(lambda i, j: i > 0 and j > 0)
-    ajouter(B, "Les deux équipes marquent", [("Oui", btts), ("Non", 1 - btts)])
-    pair = P(lambda i, j: (i + j) % 2 == 0)
-    ajouter(B, "Total de buts pair / impair", [("Pair", pair), ("Impair", 1 - pair)])
-    for nom, idx in (("Domicile", 0), ("Extérieur", 1)):
-        p_pair = P(lambda i, j, idx=idx: (i if idx == 0 else j) % 2 == 0)
-        ajouter(B, "%s : total pair / impair" % nom, [("Pair", p_pair), ("Impair", 1 - p_pair)])
-    iss = [(str(k), P(lambda i, j, k=k: i + j == k)) for k in range(5)]
-    iss.append(("5 ou plus", P(lambda i, j: i + j >= 5)))
-    ajouter(B, "Nombre exact de buts dans le match", iss)
-    for nom, idx in (("Domicile", 0), ("Extérieur", 1)):
-        iss = [(str(k), P(lambda i, j, k=k, idx=idx: (i if idx == 0 else j) == k)) for k in range(3)]
-        iss.append(("3 ou plus", P(lambda i, j, idx=idx: (i if idx == 0 else j) >= 3)))
-        ajouter(B, "Nombre exact de buts %s" % nom, iss)
-    ajouter(B, "Multi-buts", [("%d-%d buts" % (a, b), P(lambda i, j, a=a, b=b: a <= i + j <= b))
-                              for a, b in ((1, 2), (1, 3), (2, 3), (2, 4), (3, 5), (4, 6))])
-    ajouter(B, "Au moins une équipe marque", [("Oui", 1 - m[0][0]), ("Non (0-0)", m[0][0])])
-    une = P(lambda i, j: (i > 0) != (j > 0))
-    ajouter(B, "Une seule équipe marque", [("Oui", une), ("Non", 1 - une)])
-
-    # ----- Combinés -----
-    res = (("Domicile", lambda i, j: i > j), ("Nul", lambda i, j: i == j), ("Extérieur", lambda i, j: i < j))
-    dc = (("Domicile ou nul", lambda i, j: i >= j), ("Domicile ou extérieur", lambda i, j: i != j),
-          ("Nul ou extérieur", lambda i, j: i <= j))
-    for L in (1.5, 2.5, 3.5):
-        iss = []
-        for nom, f in res:
-            iss.append(("%s et plus de %.1f" % (nom, L), P(lambda i, j, f=f, L=L: f(i, j) and i + j > L)))
-            iss.append(("%s et moins de %.1f" % (nom, L), P(lambda i, j, f=f, L=L: f(i, j) and i + j < L)))
-        ajouter(C, "Résultat + Total (%.1f)" % L, iss)
-    iss = []
-    for nom, f in res:
-        iss.append(("%s et les deux marquent" % nom, P(lambda i, j, f=f: f(i, j) and i > 0 and j > 0)))
-        iss.append(("%s et une équipe ne marque pas" % nom, P(lambda i, j, f=f: f(i, j) and (i == 0 or j == 0))))
-    ajouter(C, "Résultat + Les deux équipes marquent", iss)
-    iss = []
-    for nom, f in dc:
-        iss.append(("%s et plus de 2.5" % nom, P(lambda i, j, f=f: f(i, j) and i + j > 2.5)))
-        iss.append(("%s et moins de 2.5" % nom, P(lambda i, j, f=f: f(i, j) and i + j < 2.5)))
-    ajouter(C, "Double chance + Total (2.5)", iss)
-    iss = []
-    for nom, f in dc:
-        iss.append(("%s et les deux marquent" % nom, P(lambda i, j, f=f: f(i, j) and i > 0 and j > 0)))
-        iss.append(("%s et une équipe ne marque pas" % nom, P(lambda i, j, f=f: f(i, j) and (i == 0 or j == 0))))
-    ajouter(C, "Double chance + Les deux équipes marquent", iss)
-    ajouter(C, "Les deux équipes marquent + Total (2.5)", [
-        ("Oui et plus de 2.5", P(lambda i, j: i > 0 and j > 0 and i + j > 2.5)),
-        ("Oui et moins de 2.5", P(lambda i, j: i > 0 and j > 0 and i + j < 2.5)),
-        ("Non et plus de 2.5", P(lambda i, j: (i == 0 or j == 0) and i + j > 2.5)),
-        ("Non et moins de 2.5", P(lambda i, j: (i == 0 or j == 0) and i + j < 2.5))])
-
-    # ----- Score exact -----
-    scores = sorted(((m[i][j], i, j) for i in range(MAXB + 1) for j in range(MAXB + 1)), reverse=True)[:15]
-    iss = [("%d-%d" % (i, j), p) for p, i, j in scores]
-    iss.append(("Autre score", 1 - sum(p for p, _, _ in scores)))
-    ajouter(S, "Score exact", iss)
-
-    # ----- Déroulement -----
-    prem_dom = sum(m[i][j] * i / (i + j) for i in range(MAXB + 1) for j in range(MAXB + 1) if i + j > 0)
-    prem_ext = sum(m[i][j] * j / (i + j) for i in range(MAXB + 1) for j in range(MAXB + 1) if i + j > 0)
-    ajouter(D, "Équipe qui marque le premier but", [("Domicile", prem_dom), ("Extérieur", prem_ext), ("Aucun but", m[0][0])])
-    ajouter(D, "Équipe qui marque le dernier but", [("Domicile", prem_dom), ("Extérieur", prem_ext), ("Aucun but", m[0][0])])
-
-    def prem_et(equipe, cond):
-        tot = 0.0
-        for i in range(MAXB + 1):
-            for j in range(MAXB + 1):
-                if i + j and cond(i, j):
-                    tot += m[i][j] * ((i if equipe == 0 else j) / (i + j))
-        return tot
-    ajouter(D, "Premier but et résultat final", [
-        ("Domicile marque en premier et gagne", prem_et(0, lambda i, j: i > j)),
-        ("Domicile marque en premier et fait nul", prem_et(0, lambda i, j: i == j)),
-        ("Domicile marque en premier et perd", prem_et(0, lambda i, j: i < j)),
-        ("Extérieur marque en premier et gagne", prem_et(1, lambda i, j: j > i)),
-        ("Extérieur marque en premier et fait nul", prem_et(1, lambda i, j: i == j)),
-        ("Extérieur marque en premier et perd", prem_et(1, lambda i, j: j < i)),
-        ("Aucun but", m[0][0])])
-    rem_dom = sum(m[i][j] * (1 - sans_remontee(i, j) / comb(i + j, i))
-                  for i in range(MAXB + 1) for j in range(MAXB + 1) if i > j)
-    rem_ext = sum(m[i][j] * (1 - sans_remontee(j, i) / comb(i + j, i))
-                  for i in range(MAXB + 1) for j in range(MAXB + 1) if j > i)
-    ajouter(D, "Revient au score et gagne", [("Domicile revient et gagne", rem_dom), ("Extérieur revient et gagne", rem_ext),
-                                              ("Aucune remontée", 1 - rem_dom - rem_ext)], approx=True)
-
-    # ----- Mi-temps (estimations : on applique la répartition moyenne des buts) -----
-    mu1h, mu1a, mu2h, mu2a = PART_MT1 * lh, PART_MT1 * la, (1 - PART_MT1) * lh, (1 - PART_MT1) * la
-    mu1, mu2 = mu1h + mu1a, mu2h + mu2a
-    J, ht = jointe_mt_fin(p1x2(m), mu1h, mu1a, mu2h, mu2a)
-    ajouter(T, "Résultat à la mi-temps", [("Domicile", ht[0]), ("Nul", ht[1]), ("Extérieur", ht[2])], True)
-    noms = ("Domicile", "Nul", "Extérieur")
-    ajouter(T, "Mi-temps / Fin du match", [("%s / %s" % (noms[a], noms[b]), J[a][b]) for a in range(3) for b in range(3)], True)
-    for titre, mu, lignes in (("1re mi-temps", mu1, (0.5, 1.5, 2.5)), ("2e mi-temps", mu2, (0.5, 1.5, 2.5))):
-        for L in lignes:
-            p_moins = sum(poisson(k, mu) for k in range(int(L) + 1))
-            ajouter(T, "Total de buts en %s (%.1f)" % (titre, L), [("Plus de %.1f" % L, 1 - p_moins), ("Moins de %.1f" % L, p_moins)], True)
-    p_m1 = sum(poisson(a, mu1) * poisson(b, mu2) for a in range(15) for b in range(15) if a > b)
-    p_m2 = sum(poisson(a, mu1) * poisson(b, mu2) for a in range(15) for b in range(15) if a < b)
-    ajouter(T, "Mi-temps avec le plus de buts", [("1re mi-temps", p_m1), ("Égalité", 1 - p_m1 - p_m2), ("2e mi-temps", p_m2)], True)
-    g1, g2 = 1 - exp(-mu1), 1 - exp(-mu2)
-    ajouter(T, "But en 1re mi-temps", [("Oui", g1), ("Non", 1 - g1)], True)
-    ajouter(T, "But en 2e mi-temps", [("Oui", g2), ("Non", 1 - g2)], True)
-    ajouter(T, "But dans chaque mi-temps", [("Oui", g1 * g2), ("Non", 1 - g1 * g2)], True)
-    b1 = (1 - exp(-mu1h)) * (1 - exp(-mu1a))
-    b2 = (1 - exp(-mu2h)) * (1 - exp(-mu2a))
-    ajouter(T, "Les deux équipes marquent en 1re mi-temps", [("Oui", b1), ("Non", 1 - b1)], True)
-    ajouter(T, "Les deux équipes marquent en 2e mi-temps", [("Oui", b2), ("Non", 1 - b2)], True)
-    lam_tot = lh + la
-    cum, brut = 0.0, []
-    for part in PROFIL_15MIN:
-        brut.append(exp(-lam_tot * cum) - exp(-lam_tot * (cum + part)))
-        cum += part
-    facteur = (1 - m[0][0]) / sum(brut)
-    noms_t = ("1-15 min", "16-30 min", "31-45 min", "46-60 min", "61-75 min", "76-90 min")
-    ajouter(T, "Moment du premier but", [(n, b * facteur) for n, b in zip(noms_t, brut)] + [("Aucun but", m[0][0])], True)
-    return out
-
-
 def prevoir(lh0, la0, forme_h, forme_a, v_h, v_a, avec_forme):
     m0 = matrice(*disperser(lh0, la0))
     base = p1x2(m0)
@@ -653,11 +429,13 @@ def main():
     }
     if anciennes_donnees.get("maj_resultats"):
         data["maj_resultats"] = anciennes_donnees["maj_resultats"]
+    if anciennes_donnees.get("stats_marches"):
+        data["stats_marches"] = anciennes_donnees["stats_marches"]
 
     with open(DATA, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
     with open(HIST, "w", encoding="utf-8") as f:
-        json.dump(historique, f, ensure_ascii=False, indent=1)
+        f.write("[\n" + ",\n".join(json.dumps(h, ensure_ascii=False, separators=(",", ":")) for h in historique) + "\n]\n")
 
     print(len(grands), "grands matchs,", petites, "petits matchs,",
           len(confirmes), "verifies, taux :", taux)

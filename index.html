@@ -85,6 +85,10 @@ nav button.on{background:var(--acc);color:#0B1640;border-color:var(--acc)}
 .mk summary::after{content:"▾";color:var(--muted);font-weight:400}
 .mk[open] summary::after{content:"▴"}
 .nm1{flex:1;min-width:0}
+.cell.real{background:rgba(61,220,151,.18)}
+.cell.real .pc{color:var(--ok)}
+.verd{font-size:.72rem;font-weight:800;padding:3px 9px;border-radius:99px;white-space:nowrap;color:#0B1640}
+.verd.ok{background:var(--ok)}.verd.bad{background:var(--bad)}.verd.na{background:var(--draw);color:#fff}
 .fia{font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:99px;margin-left:8px;white-space:nowrap;color:#0B1640}
 .fia.Bonne{background:var(--ok)}.fia.Moyenne{background:var(--mid)}.fia.Faible{background:var(--bad)}
 .est{font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--draw);color:var(--ink);margin-left:8px;white-space:nowrap}
@@ -198,7 +202,8 @@ if(!m.marches||!m.marches.length)return "";
 var fams=[];
 m.marches.forEach(function(x){if(fams.indexOf(x.groupe)<0)fams.push(x.groupe)});
 if(fams.indexOf(famActive)<0)famActive=fams[0];
-var h='<h2>Tous les marchés</h2><p class="note" style="margin-bottom:0">Probabilités estimées par notre modèle. « Fiabilité » = mesurée sur des milliers de matchs passés ; sans indication, le marché n\'a pas encore été mesuré. « estimation » = calcul plus approximatif.</p><div class="fams">';
+var note=m.categorie=="secondaire"?"Probabilités estimées par notre modèle. Ce match est hors des championnats testés : sa fiabilité n'a pas été mesurée, ses pourcentages sont plus incertains. « estimation » = calcul plus approximatif.":"Probabilités estimées par notre modèle. « Fiabilité » = mesurée sur des milliers de matchs passés de championnats ; sans indication, le marché n'a pas encore été mesuré. « estimation » = calcul plus approximatif.";
+var h='<h2>Tous les marchés</h2><p class="note" style="margin-bottom:0">'+esc(note)+'</p><div class="fams">';
 fams.forEach(function(f){h+='<button class="fam'+(f==famActive?' on':'')+'" data-fam="'+esc(f)+'">'+esc(f)+'</button>'});
 h+='</div>';
 var liste=m.marches.filter(function(x){return x.groupe==famActive&&x.nom!="Résultat du match (1X2)"});
@@ -206,7 +211,7 @@ liste.forEach(function(x,k){
 var best=0,maxL=0;
 x.issues.forEach(function(s,j){if(s.p>x.issues[best].p)best=j;maxL=Math.max(maxL,nomEq(s.n,m).length)});
 var cols=(x.issues.length>=3&&maxL<=11)?"c3":(maxL<=24?"c2":"c1");
-h+='<details class="mk"'+(k<2?' open':'')+'><summary><span class="nm1">'+esc(nomEq(x.nom,m))+(x.approx?'<span class="est">estimation</span>':'')+(x.fiab?'<span class="fia '+esc(x.fiab)+'">Fiabilité '+esc(x.fiab.toLowerCase())+'</span>':'')+'</span></summary><div class="g '+cols+'">';
+h+='<details class="mk"'+(k<2?' open':'')+'><summary><span class="nm1">'+esc(nomEq(x.nom,m))+(x.approx?'<span class="est">estimation</span>':'')+(x.fiab&&m.categorie!="secondaire"?'<span class="fia '+esc(x.fiab)+'">Fiabilité '+esc(x.fiab.toLowerCase())+'</span>':'')+'</span></summary><div class="g '+cols+'">';
 x.issues.forEach(function(s,j){h+='<div class="cell'+(j==best?' best':'')+'"><span class="lb">'+esc(nomEq(s.n,m))+'</span><span class="pc">'+fmt(s.p)+' %</span><i style="width:'+Math.min(100,s.p)+'%"></i></div>'});
 h+='</div></details>';
 });
@@ -219,7 +224,7 @@ c.querySelectorAll(".fam").forEach(function(b){b.onclick=function(){famActive=b.
 function methodeTxt(m){
 var aj=m.ajustement||0;
 if(!m.buts_attendus)return "Méthode : probabilités estimées à partir de la forme récente et des confrontations directes.";
-return "Méthode : on estime les buts que chaque équipe devrait marquer ("+fmt1(m.buts_attendus[0])+" et "+fmt1(m.buts_attendus[1])+"), d'après leurs buts marqués et encaissés, puis on calcule la probabilité de chaque score et de chaque marché. Base du 1X2 : "+m.base_api.join(" / ")+" (domicile / nul / extérieur), puis ajustement selon la forme et les confrontations directes ("+(aj>0?"+":"")+aj+" pts). Les marchés « estimation » appliquent la répartition moyenne des buts dans le temps. Les blessures ne sont pas prises en compte. Banc d'essai sur 3 802 matchs passés de 8 championnats : bon résultat trouvé dans environ 49 % des cas (toujours « domicile » : 43 %, cotes des bookmakers : 53 %).";
+return "Méthode : on estime les buts que chaque équipe devrait marquer ("+fmt1(m.buts_attendus[0])+" et "+fmt1(m.buts_attendus[1])+"), d'après leurs buts marqués et encaissés, puis on calcule la probabilité de chaque score et de chaque marché. Base du 1X2 : "+m.base_api.join(" / ")+" (domicile / nul / extérieur), puis ajustement selon la forme et les confrontations directes ("+(aj>0?"+":"")+aj+" pts). Les marchés « estimation » appliquent la répartition moyenne des buts dans le temps. Les blessures ne sont pas prises en compte."+(m.categorie=="secondaire"?" Ce match est hors des 8 championnats testés : ses pourcentages reposent seulement sur les 5 derniers matchs des équipes et n'ont pas été mesurés, ils sont plus incertains.":" Banc d'essai sur 3 802 matchs passés de 8 championnats : bon résultat trouvé dans environ 49 % des cas (toujours « domicile » : 43 %, cotes des bookmakers : 53 %).");
 }
 
 function detail(i){
@@ -252,6 +257,46 @@ h+='<h2>5 derniers matchs</h2>'+
 h+='<p class="note" style="margin-top:14px">'+esc(methodeTxt(m))+'</p>';
 app.innerHTML=h;brancherMarches(m);lancerCd(m);window.scrollTo(0,0);
 document.getElementById("bk").onclick=function(){vue="jour";rendre()};
+}
+
+var famBil="Résultat";
+function bilanHtml(x){
+if(!x.bilan||!x.bilan.length)return '<p class="note">Détail des marchés non disponible pour ce match (analysé avant l\'ajout de cette fonction).</p>';
+var ver=x.bilan.filter(function(b){return b[3]!==null}),bons=ver.filter(function(b){return b[3]===1}).length;
+var h='<div class="score"><b>'+bons+'/'+ver.length+'</b><span>marchés bien prédits'+(ver.length<x.bilan.length?' ('+(x.bilan.length-ver.length)+' non vérifiables : détail du match manquant)':'')+'</span></div>';
+var fams=[];x.bilan.forEach(function(b){if(fams.indexOf(b[0])<0)fams.push(b[0])});
+if(fams.indexOf(famBil)<0)famBil=fams[0];
+h+='<div class="fams">';
+fams.forEach(function(f){var v=x.bilan.filter(function(b){return b[0]==f&&b[3]!==null}),g=v.filter(function(b){return b[3]===1}).length;h+='<button class="fam'+(f==famBil?' on':'')+'" data-fam="'+esc(f)+'">'+esc(f)+' '+g+'/'+v.length+'</button>'});
+h+='</div><p class="note" style="margin:0 0 10px">Cadre orange = notre choix (l\'issue la plus probable). Fond vert avec ✓ = ce qui s\'est réellement passé.</p>';
+x.bilan.filter(function(b){return b[0]==famBil}).forEach(function(b,k){
+var iss=b[2],best=0,maxL=0;
+iss.forEach(function(s,j){if(s[1]>iss[best][1])best=j;maxL=Math.max(maxL,nomEq(s[0],x).length)});
+var cols=(iss.length>=3&&maxL<=11)?"c3":(maxL<=24?"c2":"c1");
+var v=b[3]===null?'<span class="verd na">non vérifiable</span>':(b[3]===1?'<span class="verd ok">✓ Bon</span>':'<span class="verd bad">✗ Raté</span>');
+h+='<details class="mk"'+(k<3?' open':'')+'><summary><span class="nm1">'+esc(nomEq(b[1],x))+(b[4]?'<span class="est">estimation</span>':'')+'</span>'+v+'</summary><div class="g '+cols+'">';
+iss.forEach(function(s,j){h+='<div class="cell'+(j==best?' best':'')+(s[2]===1?' real':'')+'"><span class="lb">'+esc(nomEq(s[0],x))+'</span><span class="pc">'+(s[2]===1?'✓ ':'')+fmt(s[1])+' %</span><i style="width:'+Math.min(100,s[1])+'%"></i></div>'});
+h+='</div></details>';
+});
+return h;
+}
+function brancherBilan(x){
+var c=document.getElementById("bil");if(!c)return;
+c.querySelectorAll(".fam").forEach(function(b){b.onclick=function(){famBil=b.getAttribute("data-fam");c.innerHTML=bilanHtml(x);brancherBilan(x)}});
+}
+function statsHtml(){
+var S=D.stats_marches;if(!S||!S.length)return "";
+var tn=0,tb=0;S.forEach(function(e){tn+=e.n;tb+=e.bons});
+var h='<h2>Réussite par marché</h2><p class="note">Pour chaque marché, on compte combien de fois l\'issue la plus probable s\'est produite. Plus il y a de matchs vérifiés, plus ces chiffres sont fiables.</p>';
+h+='<div class="score"><b>'+Math.round(100*tb/tn)+' %</b><span>de bons choix sur '+tn+' vérifications de marchés</span></div>';
+var fams=[];S.forEach(function(e){if(fams.indexOf(e.groupe)<0)fams.push(e.groupe)});
+fams.forEach(function(f){
+var L=S.filter(function(e){return e.groupe==f}),n=0,b=0;L.forEach(function(e){n+=e.n;b+=e.bons});
+h+='<details class="mk"><summary><span class="nm1">'+esc(f)+'</span><span class="note" style="margin:0">'+Math.round(100*b/n)+' % · '+L.length+' marchés</span></summary><div style="padding:0 12px 12px">';
+L.forEach(function(e){h+='<div class="p"><div class="row"><span>'+esc(nomEq(e.nom,{domicile:"Domicile",exterieur:"Extérieur"}))+(e.approx?'<span class="est">estimation</span>':'')+'<br><span class="note">annoncé en moyenne '+fmt(e.p_moy)+' % · '+e.n+' match(s)</span></span><span class="tag '+(e.bons/e.n*100>=e.p_moy?'ok':'bad')+'">'+Math.round(100*e.bons/e.n)+' %</span></div></div>'});
+h+='</div></details>';
+});
+return h;
 }
 
 function jourLabel(d){
@@ -290,6 +335,7 @@ dossierOuvert=null;
 var h='<h1>Résultats</h1><p class="sub">Efficacité des prédictions passées de ce site.</p>';
 if(D.taux_reussite==null){h+='<p class="sub">Pas encore assez de matchs terminés pour calculer un taux.</p>';app.innerHTML=h;return}
 h+='<div class="score"><b>'+D.taux_reussite+' %</b><span>de bons pronostics sur les '+D.nb_verifies+' derniers matchs vérifiés (toutes dates confondues)</span></div>';
+h+=statsHtml();
 var g=grouperParJour();
 h+='<h2>Par date</h2>';
 g.ordre.forEach(function(lbl){
@@ -330,7 +376,8 @@ if(x.buteurs&&x.buteurs.length){h+=butsHtml(x)}
 else if(x.score&&(x.score[0]+x.score[1])>0){h+='<p class="note">Détail des buteurs non disponible pour ce match.</p>'}
 else{h+='<p class="note">Aucun but marqué dans ce match.</p>'}
 h+='<h2>Notre prédiction</h2><div class="p"><div class="row"><span>Meilleur pari : '+libIssue(meilleur)+' ('+x.proba[ordre.indexOf(meilleur)]+' %)</span><span class="tag '+(bon?'ok':'bad')+'">'+(bon?'✓ Correct':'✗ Incorrect')+'</span></div></div>';
-app.innerHTML=h;window.scrollTo(0,0);
+h+='<h2>Vérification de tous les marchés</h2><div id="bil">'+bilanHtml(x)+'</div>';
+app.innerHTML=h;brancherBilan(x);window.scrollTo(0,0);
 document.getElementById("bk").onclick=function(){vue="res";if(dossierOuvert){resultatsJour(dossierOuvert)}else{resultats()}};
 }
 

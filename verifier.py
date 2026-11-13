@@ -11,6 +11,8 @@ from datetime import datetime, timedelta, timezone
 
 import requests
 
+from moteur import bilan, marches_verifiables, matrice  # marches et verification (moteur.py)
+
 CLE_FD = os.environ["FOOTBALL_DATA_KEY"]
 FD = "https://api.football-data.org/v4"
 SDB = "https://www.thesportsdb.com/api/v1/json/123"
@@ -118,7 +120,9 @@ def resultat_fd(mid, nom_dom, nom_ext):
             "prolongation": g.get("injuryTime"),
         })
     buteurs.sort(key=lambda x: x["minute"] or 0)
-    return sh, sa, buteurs
+    ht = s.get("halfTime") or {}
+    mt = (ht["home"], ht["away"]) if ht.get("home") is not None and ht.get("away") is not None else None
+    return sh, sa, buteurs, mt
 
 
 # ---------- TheSportsDB ----------
@@ -154,7 +158,7 @@ def resultat_sdb_evenement(e, nom_dom, nom_ext):
     buteurs = (buts_sdb(e.get("strHomeGoalDetails"), nom_dom)
                + buts_sdb(e.get("strAwayGoalDetails"), nom_ext))
     buteurs.sort(key=lambda x: x["minute"] or 0)
-    return sh, sa, buteurs
+    return sh, sa, buteurs, None
 
 
 def resultat_sdb(eid, nom_dom, nom_ext):
@@ -183,6 +187,40 @@ def resultat_ancien(h, cache_fd, cache_sdb):
         if meme_equipe(e.get("strHomeTeam"), h["domicile"]) and meme_equipe(e.get("strAwayTeam"), h["exterieur"]):
             return resultat_sdb_evenement(e, h["domicile"], h["exterieur"])
     return None
+
+
+def calculer_bilan(h, sh, sa, buteurs, mt):
+    """Verifie chaque marche annonce avant le match (recalcule a partir des buts attendus memorises)."""
+    buts = [("D" if b.get("equipe") == h["domicile"] else "E", b.get("minute") or 0, b.get("prolongation") or 0)
+            for b in (buteurs or [])]
+    ctx = {"fh": sh, "fa": sa, "hh": mt[0] if mt else None, "ha": mt[1] if mt else None, "buts": buts}
+    try:
+        return bilan(marches_verifiables(matrice(h["lh"], h["la"]), h["lh"], h["la"]), ctx)
+    except Exception as e:
+        print("Bilan des marches impossible :", h.get("domicile"), e)
+        return None
+
+
+def stats_marches(historique):
+    """Taux de reussite de chaque marche : l'issue la plus probable s'est-elle produite ?"""
+    st = {}
+    for h in historique:
+        for groupe, nom, issues, verdict, approx in (h.get("bilan") or []):
+            if verdict is None:
+                continue
+            top = max(issues, key=lambda x: x[1])
+            e = st.setdefault(nom, {"nom": nom, "groupe": groupe, "approx": approx, "n": 0, "bons": 0, "p": 0.0})
+            e["n"] += 1
+            e["bons"] += verdict
+            e["p"] += top[1]
+    out = [{"nom": e["nom"], "groupe": e["groupe"], "approx": e["approx"], "n": e["n"], "bons": e["bons"],
+            "p_moy": round(e["p"] / e["n"], 1)} for e in st.values()]
+    return sorted(out, key=lambda e: (-e["n"], e["nom"]))
+
+
+def ecrire_historique(historique):
+    with open(HIST, "w", encoding="utf-8") as f:
+        f.write("[\n" + ",\n".join(json.dumps(h, ensure_ascii=False, separators=(",", ":")) for h in historique) + "\n]\n")
 
 
 def main():
@@ -216,17 +254,24 @@ def main():
             if res == "plus_tard":
                 continue
         if res:
-            sh, sa, buteurs = res
+            sh, sa, buteurs, mt = res
             h["resultat_reel"] = issue(sh, sa)
             h["score"] = [sh, sa]
             h["buteurs"] = buteurs
+            if h.get("lh") is not None and h.get("la") is not None:
+                h["bilan"] = calculer_bilan(h, sh, sa, buteurs, mt)
         elif maintenant - debut > timedelta(hours=36):
             h["tentatives"] = h.get("tentatives", 0) + 1
             if h["tentatives"] >= 10:
                 h["abandon"] = True
 
-    with open(HIST, "w", encoding="utf-8") as f:
-        json.dump(historique, f, ensure_ascii=False, indent=1)
+    # rattrapage : matchs deja verifies avant l'ajout du bilan par marche
+    for h in historique:
+        if h.get("resultat_reel") in ("dom", "nul", "ext") and h.get("score") and h.get("lh") is not None \
+                and h.get("la") is not None and "bilan" not in h:
+            h["bilan"] = calculer_bilan(h, h["score"][0], h["score"][1], h.get("buteurs"), None)
+
+    ecrire_historique(historique)
 
     confirmes = [h for h in historique if h.get("resultat_reel") in ("dom", "nul", "ext")]
     bons = 0
@@ -240,8 +285,9 @@ def main():
     data["taux_reussite"] = taux
     data["nb_verifies"] = len(confirmes)
     data["maj_resultats"] = maintenant.isoformat()
+    data["stats_marches"] = stats_marches(historique)
     with open(DATA, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=1)
+        json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
 
     print("Taux de reussite :", taux, "sur", len(confirmes), "matchs verifies")
 
